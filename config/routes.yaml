@@ -1,5 +1,50 @@
 controllers:
+    prefix: "{_locale}"
+    requirements:
+        _locale: fr|en|de|es|it|nl|pt
+    defaults:
+        _locale: fr
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+        path: ../src/Http/Controller/
+        namespace: App\Http\Controller
     type: attribute
+    schemes: [https]
+redirect_to_locale:
+    path: /
+    controller: App\Http\Controller\RedirectToLocaleController
+    schemes: [https]
+
+pages.privacy.policy:
+    path:          /privacy-policy
+    controller:    Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    schemes: [https]
+    prefix: "{_locale}"
+    requirements:
+        _locale: fr|en|de|es|it|nl|pt
+    defaults:
+        template:  'pages/privacy_policy.html.twig'
+        _locale: fr
+        statusCode: 200
+        maxAge:    86400
+        sharedAge: 86400
+        private: false
+        public : true
+        headers:
+            Content-Type: 'text/html'
+pages.terms.and.conditions:
+    path:          /terms-and-conditions
+    controller:    Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    schemes: [https]
+    prefix: "{_locale}"
+    requirements:
+        _locale: fr|en|de|es|it|nl|pt
+    defaults:
+        template:  'pages/terms_and_conditions.html.twig'
+        _locale: fr
+        statusCode: 200
+        maxAge:    86400
+        sharedAge: 86400
+        private: false
+        public : true
+        headers:
+            Content-Type: 'text/html'

@@ -1,0 +1,121 @@
+
+/* Ajustements supplémentaires pour les très petits écrans (smartphones classiques) */
+@media (max-width: 575.98px) {
+    .hero-slide {
+        min-height: 450px; /* Encore plus petit pour les très petits mobiles */
+        height:100vh;
+    }
+    .hero-section h1.display-3 {
+        font-size: 2rem; /* Encore plus petit pour les écrans très étroits */
+        margin-top: 70px !important;
+    }
+    .hero-section p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .hero-section .btn-lg {
+        width: 90%; /* Encore un peu plus large */
+    }
+}
+/* ----------------------------------------------------------- */
+/* AJUSTEMENTS POUR LES GRANDS ÉCRANS DE HAUTEUR (DESKTOP)   */
+/* (y compris les grands laptops, moniteurs externes, etc.)   */
+/* ----------------------------------------------------------- */
+@media (min-height: 800px) {
+    .hero-slide {
+        min-height: 800px; /* Force une hauteur minimale plus grande pour les écrans hauts */
+    }
+
+    .hero-content {
+        padding-top: 150px; /* Augmenter le padding supérieur pour centrer visuellement */
+        padding-bottom: 150px; /* Augmenter le padding inférieur */
+        padding-left: auto;
+        align-items: center;
+        align-content: center;
+    }
+
+    .hero-section h1.display-3 {
+        font-size:3rem; /* Peut-être plus grand sur un grand écran */
+        margin-bottom: 1.5rem !important;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.5rem; /* Texte plus grand sur grand écran */
+        margin-bottom: 3rem !important;
+    }
+
+    .hero-section .btn-lg {
+        padding: 1rem 2.5rem; /* Boutons plus grands */
+        font-size: 1.2rem;
+    }
+}
+/* ----------------------------------------------------------- */
+/* NOUVELLE MEDIA QUERY POUR LES ÉCRANS TRÈS HAUTS (>= 1024px) */
+/* ----------------------------------------------------------- */
+@media (min-height: 1024px) {
+    .hero-slide {
+        min-height: 90vh; /* Utilise 90% de la hauteur du viewport pour mieux remplir l'écran */
+        /* Ou une hauteur fixe si vous préférez, ex: min-height: 950px; */
+    }
+
+    .hero-content {
+        /* Augmenter les paddings pour répartir le contenu sur la hauteur disponible */
+        padding-top: 180px; /* Plus d'espace en haut */
+        padding-bottom: 180px; /* Plus d'espace en bas */
+        padding-left: auto;
+        align-items: center;
+        align-content: center;
+    }
+
+    .hero-section h1.display-3 {
+        font-size: 5rem; /* Titre plus grand pour ces résolutions */
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.8rem; /* Texte d'introduction plus grand */
+        margin-bottom: 4rem !important;
+    }
+
+    .hero-section .btn-lg {
+        padding: 1.2rem 3rem; /* Boutons encore plus grands */
+        font-size: 1.3rem;
+    }
+}
+
+/* ----------------------------------------------------------- */
+/* NOUVELLE MEDIA QUERY POUR LES ÉCRANS TRÈS TRÈS HAUTS (>= 1280px) */
+/* ----------------------------------------------------------- */
+@media (min-height: 1280px) {
+    .hero-slide {
+        min-height: 95vh; /* Encore plus de hauteur pour ces écrans géants */
+        /* Ou une hauteur fixe très grande, ex: min-height: 1100px; */
+        height: auto;
+    }
+
+    .hero-content {
+        /* Augmenter encore les paddings pour centrer le contenu */
+        padding-top: 250px; /* Plus d'espace en haut */
+        padding-bottom: 250px; /* Plus d'espace en bas */
+        padding-left: auto;
+        align-items: center;
+        align-content: center;
+    }
+
+    .hero-section h1.display-3 {
+        font-size: 5.5rem; /* Peut-être un peu plus grand pour remplir l'espace */
+        margin-bottom: 2.5rem !important;
+    }
+
+    .hero-section p.lead {
+        font-size: 2rem; /* Texte d'introduction plus grand */
+        margin-bottom: 5rem !important;
+    }
+
+    .hero-section .btn-lg {
+        padding: 1.5rem 3.5rem; /* Boutons encore plus grands et plus épais */
+        font-size: 1.5rem;
+    }
+}
+
+

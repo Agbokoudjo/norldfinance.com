@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+{% block title %}Crédit Immobilier - {{NAME_SITE}}{% endblock %}
+{% block body %}
+    <main class="professional-loan">
+        <section class="hero-section hero-immobilier text-white d-flex align-items-center justify-content-center text-center">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold">Crédit Immobilier</h1>
+                <p class="lead mt-3">Concrétisez votre rêve de propriété. Nous trouvons le meilleur prêt immobilier adapté à votre projet.</p>
+                <a href="#details" class="btn btn-primary-custom btn-lg mt-4">En savoir plus</a>
+            </div>
+        </section>
+
+        <section id="introduction" class="py-5 bg-light-blue">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="section-title text-primary-dark mb-4">Comprendre le Crédit Immobilier</h2>
+                        <p class="lead text-secondary-dark">
+                            L'acquisition d'un bien immobilier, qu'il s'agisse de votre résidence principale, d'un investissement locatif ou d'un terrain, représente souvent l'un des projets les plus importants d'une vie. Pour concrétiser ce rêve, un financement adapté est la clé. Chez <strong>{{NAME_SITE}}</strong>, nous mettons notre expertise à votre service pour vous aider à naviguer dans le complexe monde du Crédit Immobilier, en vous offrant des solutions personnalisées qui correspondent parfaitement à votre situation et à vos objectifs de propriété.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="col-lg-10 col-md-12 mx-auto">
+                        <h2 class="section-title text-primary-dark mb-4 text-center">Notre Approche du Crédit Immobilier</h2>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                         <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <video autoplay muted loop playsinline  preload="metadata" 
+                                   poster="{{asset('img/img17.jpg')}}" 
+                                   class="w-100 h-100 object-fit-cover">
+                                <source src="{{asset('video/video12.mp4')}}" type="video/mp4">
+                                Votre navigateur ne supporte pas la balise vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="feature-title text-accent-red mb-3">Qu'est-ce que le Crédit Immobilier concrètement ?</h3>
+                        <p class="text-secondary-dark">
+                            Le Crédit Immobilier est un prêt destiné à financer l'achat, la construction ou la rénovation de biens immobiliers (maison, appartement, terrain). Il se caractérise généralement par des montants importants et des durées de remboursement longues. Ce type de prêt est assorti de conditions spécifiques (taux d'intérêt, garanties, assurance emprunteur) qui doivent être adaptées à votre profil financier et à la nature de votre projet pour garantir sa viabilité et votre tranquillité d'esprit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-md-6">
+                       <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <video autoplay muted loop playsinline  preload="metadata" 
+                                   poster="{{asset('img/img18.jpg')}}" 
+                                   class="w-100 h-100 object-fit-cover">
+                                <source src="{{asset('video/video13.mp4')}}" type="video/mp4">
+                                Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="feature-title text-accent-red mb-3">Pourquoi choisir {{NAME_SITE}} pour votre Crédit Immobilier ?</h3>
+                        <p class="text-secondary-dark">
+                            L'obtention d'un crédit immobilier est une étape majeure. Chez <span class="fw-bold">{{NAME_SITE}}</span>, nous vous offrons :
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Conseil Personnalisé :** Des experts dédiés pour analyser votre situation et vos besoins.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Meilleures Conditions :** Recherche des taux et des garanties les plus avantageux pour votre projet.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Accompagnement Complet :** De la simulation à la signature, nous sommes à vos côtés.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Simplicité des Démarches :** Processus fluidifié pour vous faire gagner du temps et de l'énergie.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Transparence :** Informations claires et complètes sur toutes les facettes de votre prêt.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">À qui s'adresse ce service ?</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-home fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Premiers Accédants</h5>
+                                        <p class="card-text text-secondary-dark">Pour l'achat de votre résidence principale.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-city fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Investisseurs Locatifs</h5>
+                                        <p class="card-text text-secondary-dark">Financement de biens pour la location.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-wrench fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Projets de Rénovation</h5>
+                                        <p class="card-text text-secondary-dark">Améliorez ou agrandissez votre patrimoine.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">Comment ça marche ? (Processus simplifié)</h3>
+                        <div class="process-steps">
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                                <h5 class="step-title text-primary-dark">Définition du Projet</h5>
+                                <p class="text-secondary-dark">Analyse de votre projet d'achat ou de construction.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                                <h5 class="step-title text-primary-dark">Étude de Faisabilité</h5>
+                                <p class="text-secondary-dark">Évaluation de votre capacité d'emprunt et de votre profil.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                                <h5 class="step-title text-primary-dark">Recherche des Offres</h5>
+                                <p class="text-secondary-dark">Sélection des meilleures propositions de nos partenaires.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                                <h5 class="step-title text-primary-dark">Montage du Dossier</h5>
+                                <p class="text-secondary-dark">Aide à la constitution et soumission de votre dossier.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                                <h5 class="step-title text-primary-dark">Signature et Concrétisation</h5>
+                                <p class="text-secondary-dark">Accompagnement jusqu'à la signature de l'acte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto">
+                        <h3 class="feature-title text-accent-red mb-4 text-center">Les avantages pour vous :</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-hand-holding-usd fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Conditions optimales</h5>
+                                        <p class="card-text">Accédez aux taux les plus compétitifs du marché et aux meilleures garanties.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-clipboard-check fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Dossier solide</h5>
+                                        <p class="card-text">Bénéficiez de notre expertise pour un dossier de demande de prêt irréprochable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-hourglass-half fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Gain de temps</h5>
+                                        <p class="card-text">Nous gérons les démarches complexes, vous vous concentrez sur votre projet immobilier.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-comments-dollar fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Conseil indépendant</h5>
+                                        <p class="card-text">Profitez de conseils objectifs pour un choix de financement éclairé.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-lock fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Sérénité assurée</h5>
+                                        <p class="card-text">Réalisez votre projet en toute confiance, avec un plan financier sécurisé.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-white text-center py-5">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="fs-2 fw-bold text-primary-dark">Prêt à concrétiser votre rêve immobilier ?</h2>
+                <p class="lead mt-3 text-secondary-dark">Contactez-nous dès aujourd'hui pour obtenir une étude personnalisée et gratuite de votre projet.</p>
+                <a href="{{path('loan.application.credit')}}" class="btn btn-secondary-custom btn-lg mt-4">Simuler mon prêt immobilier</a>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

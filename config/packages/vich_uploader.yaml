@@ -1,0 +1,15 @@
+vich_uploader:
+    db_driver: orm
+
+    metadata:
+        type: attribute
+
+    mappings:
+       identitydocument:
+           uri_prefix: /documents/identity
+           upload_destination: '%kernel.project_dir%/medias/documents/identity'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+       identityphoto:
+           uri_prefix: /images/identity
+           upload_destination: '%kernel.project_dir%/medias/images/identity'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

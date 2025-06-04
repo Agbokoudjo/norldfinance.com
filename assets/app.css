@@ -1,0 +1,2621 @@
+/* --- Couleurs personnalisées (à définir en haut de votre CSS ou dans un fichier de variables) --- */
+:root {
+    --primary-color: #00427E; /* Votre bleu principal */
+    --danger-color: #ea3249; /* Votre rouge d'accentuation */
+    --text-dark: #212529; /* Couleur de texte sombre standard */
+    --text-muted: #6c757d; /* Couleur de texte muet standard */
+   /* Classes personnalisées pour les couleurs de fond basées sur les variables */
+    --primary-custom-bg: var(--primary-color);
+    --danger-custom-bg: var(--danger-color);
+     --primary-custom-text: var(--primary-color);
+    --danger-custom-text: var(--danger-color);
+    --success-color: #28a745; /* Vert pour les succès */
+    --info-color: #17a2b8;   /* Cyan/Bleu clair pour les infos */
+    --warning-color: #ffc107; /* Jaune/Orange pour les avertissements */
+      --primary-dark: #00427E; /* Votre bleu foncé */
+    --accent-red: #ea3249;   /* Votre rouge vif */
+    --white: #ffffff;
+    --light-blue: #e0f2f7; /* Une teinte plus claire de votre bleu pour les fonds */
+    --secondary-dark: #333333; /* Pour le texte sombre standard */
+
+
+    /* Classes personnalisées pour les couleurs de texte basées sur les variables */
+    --primary-custom-text: var(--primary-color);
+    --danger-custom-text: var(--danger-color);
+    --success-custom-text: var(--success-color);
+    --info-custom-text: var(--info-color);
+    --warning-custom-text: var(--warning-color);
+
+    /* Classes personnalisées pour les couleurs de fond basées sur les variables */
+    --primary-custom-bg: var(--primary-color);
+    --danger-custom-bg: var(--danger-color);
+}
+body{
+  font-size:1rem;
+   font-family: 'Fraunces', serif;
+   width:100%;
+   min-width:100%;
+   max-width:100%;
+   overflow-x:hidden;
+   -webkit-user-select: none;  /* Chrome, Safari, Edge */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;          /* Standard */
+}
+
+.hero-section {
+  background-size: cover; /* L'image couvrira toute la section */
+  background-position: center center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  height: 70vh; /* Hauteur de la section (par exemple, 70% de la hauteur de la fenêtre) */
+  position: relative; /* Nécessaire pour positionner des éléments à l'intérieur si besoin */
+  color: white; /* Pour que le texte soit lisible sur le fond sombre */
+  display: flex; /* Utiliser flexbox pour centrer le contenu si vous en ajoutez */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  text-align: center;
+  overflow: hidden;
+}
+.navbar {
+  position: absolute; /* Positionne la navbar par rapport au conteneur parent (.hero-section ou <body>) */
+  width: 100%; 
+  top: 0; /* Positionne la navbar en haut */
+  left: 0; /* Positionne la navbar à gauche */
+  z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Fond blanc semi-transparent rgba(255, 255, 255, 0.8)*/
+            /* Ou si vous voulez une navbar transparente sans fond, utilisez : */
+}
+.navbar-nav .nav-link{
+  color:#00427E; /* RGB(0,66,126)*/
+  font-size:1.25rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+.navbar-brand img {
+   height: 50px; 
+   width: auto;
+   border:none;
+   border-color:none;
+}
+.navbar-toggler-icon {
+  filter: invert(1); /* Pour que l'icône du menu burger soit visible sur fond clair */
+}
+.hero-slide {
+  height: 70vh; /* Chaque slide prend la même hauteur que la section parente */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex; /* Pour centrer le contenu textuel à l'intérieur de la slide */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Optionnel: Ajouter un léger overlay pour améliorer la lisibilité du texte */
+  position: relative;
+  z-index: 1;
+  color:#fff;
+}
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 50, 0.4), rgba(0, 0, 100, 0.7));
+  z-index: 1;
+}
+
+/* Texte au-dessus de l’overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-slide h1 {
+  font-size: 3.2rem; /* ≈ 51px */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-slide p {
+  font-size: 1.25rem; /* ≈ 20px */
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero-slide a.btn {
+  font-size: 1.1rem; /* ≈ 17.5px */
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+}
+a.btn.loan-application,a.btn.btn-color-red{
+  background-color: #EA3249 ;/*rgb(228,50,73)*/
+  color:#fff;
+}
+
+/* Ajustements pour les contrôles et indicateurs d'Owl Carousel si vous les ajoutez */
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #fff;
+    font-size: 50px; /* Taille des flèches */
+    background: transparent;
+    margin: 5px;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: #fff;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #007bff; /* Couleur d'activation des points, ex: Bootstrap primary */
+}
+.video-thumbnail-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0.5rem; /* Correspond au rounded-lg de Bootstrap */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Une ombre légère */
+}
+
+.video-thumbnail-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out; /* Effet de zoom au survol */
+}
+
+.video-thumbnail-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.video-thumbnail-wrapper .play-icon {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 4rem; /* Taille de l'icône de lecture */
+background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour l'icône */
+border-radius: 50%;
+padding: 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: background-color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.video-thumbnail-wrapper:hover .play-icon {
+   background-color: #EA3249; /* Rouge Youtube au survol */
+    font-size: 4.5rem; /* Icône un peu plus grande au survol */
+  }
+.text-processus{
+  color:#00427E;
+}
+#comment-ca-marche .step-icon {
+    /* Exemple pour un fond circulaire rouge avec chiffre blanc */
+    width: 3rem; /* Ajustez la taille du cercle */
+    height: 3rem; /* Ajustez la taille du cercle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Couleur de fond pour le cercle */
+    color:#ea3249;
+}
+.text-services-blue,.icon-services-blue{
+  color:#00427E;
+}
+.text-services-red,.icon-services-red{
+  color:#EA3249;
+}
+/* Style pour btn-outline-red */
+.btn-outline-red {
+  color: #ea3249; /* Couleur du texte par défaut */
+  border-color: #ea3249; /* Couleur de la bordure par défaut */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: all 0.3s ease; /* Transition douce pour l'effet de survol */
+}
+
+.btn-outline-red:hover {
+  color: white; /* Texte blanc au survol */
+  background-color: #ea3249; /* Fond rouge au survol */
+  border-color: #ea3249; /* Bordure rouge au survol (pour maintenir la forme) */
+}
+
+/* Style pour btn-outline-blue */
+.btn-outline-blue {
+  color: #00427E; /* Couleur du texte par défaut */
+  border-color: #00427E; /* Couleur de la bordure par défaut */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: all 0.3s ease; /* Transition douce pour l'effet de survol */
+}
+
+.btn-outline-blue:hover {
+  color: white; /* Texte blanc au survol */
+  background-color: #00427E; /* Fond bleu au survol */
+  border-color: #00427E; /* Bordure bleue au survol */
+}
+
+/* Styles spécifiques pour la Section: Appel à l'Action Final */
+#cta-final {
+    background-color: #00427e; position: relative; overflow: hidden;
+}
+
+#cta-final .container {
+    position: relative; /* Pour que le contenu soit au-dessus des cercles */
+    z-index: 1; /* S'assure que le contenu est par-dessus les décorations */
+}
+
+#cta-final h2 {
+    /* Fraunces serait excellent ici si vous l'utilisez pour les titres */
+    font-family: 'Fraunces', serif; 
+}
+
+/* Styles pour les éléments décoratifs (cercles) */
+.cta-decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1; /* Transparence pour un effet subtil */
+    filter: blur(5px); /* Un léger flou pour un effet doux */
+}
+
+.cta-circle-1 {
+    width: 250px;
+    height: 250px;
+    background-color: #ea3249; /* Couleur rouge du logo */
+    top: -50px;
+    left: -50px;
+}
+
+.cta-circle-2 {
+    width: 180px;
+    height: 180px;
+    background-color: white; /* Ou l'autre couleur du logo si vous préférez */
+    bottom: -80px;
+    right: -80px;
+}
+
+.cta-circle-3 {
+    width: 120px;
+    height: 120px;
+    background-color: #ea3249; /* Couleur rouge du logo */
+    top: 60%;
+    left: 20%;
+    transform: rotate(45deg); /* Exemple de transformation */
+}
+
+/* Styles spécifiques pour la Section: Actualités / Blog */
+
+
+/* Style général pour les cartes d'articles de blog */
+.blog-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ajoute une transition sur le survol */
+}
+
+.blog-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée au survol */
+}
+
+.blog-card .card-img-top {
+    height: 200px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Assure que l'image couvre l'espace sans être déformée */
+    background-color: 00427e;
+}
+
+.blog-card .card-title {
+    min-height: 50px; /* Assure une hauteur minimale pour les titres, pour l'alignement */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite le titre à 2 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-card .card-text {
+    min-height: 70px; /* Hauteur minimale pour les descriptions */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limite la description à 3 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Styles spécifiques pour la Section: Pied de Page (Footer) */
+#main-footer {
+   background-color: #00427E;
+
+    /* NOUVEAU: Utilisation de l'image de fond pour la texture */
+    background-repeat: repeat; /* Pour que le motif se répète si l'image est petite */
+    background-size: auto; /* Ou 'contain' ou 'cover' si vous préférez */
+    background-image:url('img/img11.webp');
+    /* Superposition de couleur pour teinter le motif */
+    position: relative; /* Nécessaire pour le pseudo-élément */
+    overflow: hidden;
+
+    /* Assurez-vous que le texte reste visible */
+    color: white; /* Pour être sûr que le texte est blanc */
+}
+#main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dégradé de bleu avec une opacité pour laisser transparaître le motif */
+    background: linear-gradient(
+        135deg,
+        rgba(0, 66, 126, 0.9) 0%, /* Votre bleu principal avec 90% d'opacité */
+        rgba(0, 51, 102, 0.95) 50%, /* Nuance plus foncée avec 95% d'opacité */
+        rgba(0, 33, 66, 0.98) 100% /* Nuance encore plus foncée avec 98% d'opacité */
+    );
+    z-index: 0; /* Assure que le pseudo-élément est en arrière-plan */
+}
+#main-footer .container,
+#main-footer .footer-logo-link,
+#main-footer .text-white-50,
+#main-footer .contact-info,
+#main-footer .social-icons,
+#main-footer .list-unstyled,
+#main-footer .newsletter-form,
+#main-footer hr,
+.whatsapp-btn, /* Assurez-vous que le bouton whatsapp a bien son z-index */
+.creator-credit, /* Ciblez la section du créateur */
+.creator-credit p,
+.creator-credit .creator-link,
+.creator-credit .creator-heart-icon,
+.creator-credit .creator-separator ,
+#main-footer .row:last-child { /* Cible spécifiquement la dernière ligne pour le copyright/WhatsApp */
+    position: relative; /* Assure que ces éléments ont une position relative */
+    z-index: 1; /* Place ces éléments au-dessus du pseudo-élément */
+}
+
+/* Le reste de votre CSS pour le footer (liens, titres, newsletter, etc.) reste inchangé */
+/* ... (votre CSS existant) ... */
+
+/* Effet de survol pour les liens qui ne sont pas des boutons */
+#main-footer .text-white-50.hover-red:hover {
+    color: #ea3249 !important; /* Couleur rouge du logo au survol */
+    transition: color 0.3s ease;
+}
+
+#main-footer .text-white-50.hover-white-custom:hover {
+    color: white !important; /* Blanc pur au survol */
+    transition: color 0.3s ease;
+}
+
+/* Titres de colonne du footer */
+#main-footer .footer-title {
+    position: relative;
+    padding-bottom: 8px; /* Espace sous le titre pour la ligne */
+}
+
+#main-footer .footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px; /* Longueur de la ligne */
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: #fff; /* Couleur rouge du logo pour la ligne */
+    border-radius: 5px;
+}
+
+/* Style de l'input de la newsletter */
+#main-footer .newsletter-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+    color: white; /* Texte blanc */
+}
+
+#main-footer .newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Couleur du placeholder */
+}
+
+#main-footer .newsletter-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Fond plus opaque au focus */
+    border-color: #ea3249; /* Bordure rouge au focus */
+    box-shadow: 0 0 0 0.25rem rgba(234, 50, 73, 0.25); /* Ombre rouge au focus */
+}
+
+/* Bouton WhatsApp flottant */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px; /* Distance du bas de l'écran */
+    right: 20px; /* Distance du côté droit de l'écran */
+    z-index: 1000; /* Assure qu'il est au-dessus des autres éléments */
+    background-color: #25d366 !important; /* Vert WhatsApp */
+    border-color: #25d366 !important;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05); /* Léger agrandissement au survol */
+}
+
+/* S'assurer que le logo dans le footer est bien visible */
+.footer-logo {
+    filter: brightness(1.2); /* Peut aider à faire ressortir un logo blanc sur fond sombre */
+}
+
+/* Optionnel : Ajuster la couleur du texte des liens du footer au survol pour qu'il soit bien blanc */
+#main-footer .list-unstyled a:hover {
+    color: white !important; /* Force le blanc au survol */
+}
+/* Styles spécifiques pour le Crédit Créateur du Site */
+.creator-credit {
+    /* Ligne de séparation subtile au-dessus de cette section */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Espace au-dessus de la ligne et de la section */
+    padding-top: 15px;
+    margin-top: 10px; /* Ajoute un peu plus d'espace après le copyright si nécessaire */
+}
+
+/* Style du paragraphe contenant les informations du créateur */
+.creator-credit p {
+    line-height: 1.6; /* Améliore la lisibilité si le texte s'étend sur plusieurs lignes */
+}
+
+/* Couleur du texte général de cette section */
+.creator-credit .text-white-75 {
+    color: rgba(255, 255, 255, 0.75) !important; /* Texte un peu plus lumineux que text-white-50 de Bootstrap */
+    font-weight: 300; /* Légèrement plus léger pour le texte entourant les liens */
+}
+
+/* Styles des liens (Nom de l'entreprise, numéro de téléphone, email) */
+.creator-credit .creator-link {
+    color: #ea3249; /* La couleur rouge distinctive de votre logo pour les liens */
+    text-decoration: none; /* Pas de soulignement par défaut */
+    font-weight: 600; /* Plus gras pour bien faire ressortir le nom de l'entreprise et contacts */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transition douce pour le survol */
+}
+
+/* Effet au survol des liens */
+.creator-credit .creator-link:hover {
+    color: white; /* Le texte devient blanc pur au survol */
+    text-decoration: underline; /* Ajout d'un soulignement élégant au survol */
+}
+
+/* Style de l'icône de cœur Font Awesome */
+.creator-heart-icon {
+    color: #ea3249 !important; /* Force la couleur rouge pour le cœur */
+    margin: 0 5px; /* Petite marge autour du cœur pour l'éloigner du texte */
+    animation: pulse-heart 1.5s infinite ease-in-out; /* Animation de pulsation continue */
+}
+
+/* Définition de l'animation de pulsation pour l'icône de cœur */
+@keyframes pulse-heart {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; } /* Pulsation un peu plus prononcée */
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Style du séparateur vertical (|) entre les informations de contact */
+.creator-separator {
+    color: rgba(255, 255, 255, 0.3); /* Couleur très subtile pour le séparateur */
+    margin: 0 10px; /* Espace autour du séparateur pour une meilleure lisibilité */
+    /* Assure que le séparateur est bien aligné verticalement avec le texte */
+    vertical-align: middle;
+}
+
+/* Média query pour ajuster l'affichage sur les petits écrans */
+@media (max-width: 575.98px) { /* S'applique aux écrans extra-petits (moins de 576px de largeur) */
+    .creator-credit .d-sm-inline-block {
+        display: block !important; /* Force l'affichage en bloc pour chaque élément (tél, email) */
+        margin-top: 5px; /* Petite marge entre les lignes lorsque les éléments sont empilés */
+    }
+    .creator-credit .creator-separator {
+        display: none !important; /* Masque les séparateurs '|' quand les éléments sont en bloc */
+    }
+}
+/* Styles spécifiques pour le bouton Toggler de la barre de navigation sur mobile */
+@media (max-width: 991.98px) { /* Applique ces styles pour les écrans jusqu'à la taille 'lg' de Bootstrap */
+    .navbar-toggler {
+        /* Couleur de fond du bouton Toggler (le rouge de votre logo) */
+        background-color: #ea3249; /* Votre rouge principal */
+        border-color: #ea3249; /* Assurez-vous que la bordure correspond */
+        /* Ajout d'une petite ombre pour le rendre plus visible */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* Optionnel: un petit rayon de bordure pour l'adoucir */
+        border-radius: 5px;
+        color:#EA3249;
+    }
+
+    /* Couleur de l'icône "hamburger" à l'intérieur du bouton */
+    .navbar-toggler-icon {
+      color:#fff;
+        /* Applique un filtre SVG pour changer la couleur de l'icône de Bootstrap en blanc */
+        /* C'est la méthode recommandée par Bootstrap pour recolorer l'icône par défaut */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        /* Note: le %23ffffff représente le code hexadécimal pour le blanc (#ffffff) encodé pour l'URL */
+    }
+
+    /* Effet au survol ou au focus du bouton (optionnel) */
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
+        background-color: #d12e43; /* Une nuance légèrement plus foncée du rouge au survol */
+        border-color: #d12e43;
+        outline: none; /* Supprime le contour par défaut lors du focus */
+    }
+}
+
+/* --- Section Héro "À Propos" --- */
+.about-hero-section {
+    min-height: 550px;
+    height: 70vh;
+    background-color: #00427E; /* Couleur de secours pour le fond si la vidéo ne charge pas */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Important pour cacher le débordement de la vidéo si elle est trop grande */
+}
+
+.about-hero-section .background-video {
+    position: absolute;
+    top: 50%; /* Centre la vidéo verticalement */
+    left: 50%; /* Centre la vidéo horizontalement */
+    min-width: 100%; /* Assure que la vidéo couvre au moins 100% de la largeur */
+    min-height: 100%; /* Assure que la vidéo couvre au moins 100% de la hauteur */
+    width: auto; /* Permet à la largeur de s'ajuster */
+    height: auto; /* Permet à la hauteur de s'ajuster */
+    z-index: 0; /* Place la vidéo en arrière-plan */
+    transform: translate(-50%, -50%); /* Ajuste le positionnement pour un centrage parfait */
+    /* Empêche la vidéo d'être mise en pause ou d'afficher des contrôles sur certains navigateurs */
+    pointer-events: none;
+    /* Assure que la vidéo couvre l'élément parent tout en conservant son ratio d'aspect */
+    object-fit: cover;
+    /* Masque les contrôles si les navigateurs les affichent par défaut */
+    /* -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAQHpxxfaAAAAAElFTkSuQmCC); */
+}
+
+
+.about-hero-section .overlay-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 66, 126, 0.75); /* Votre bleu #00427E avec 75% d'opacité */
+    z-index: 1; /* Au-dessus de la vidéo, sous le contenu */
+}
+
+.about-hero-section .container {
+    position: relative;
+    z-index: 2; /* S'assure que le contenu est au-dessus de tout */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-hero-section h1.display-3 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-section p.lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsive pour la section Héro "À Propos" --- */
+
+/* Pour les écrans de taille moyenne (tablettes et grands mobiles) */
+@media (max-width: 991.98px) {
+    .about-hero-section {
+        min-height: 450px;
+        height: 60vh;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        align-items: flex-start;
+    }
+
+    .about-hero-section .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .about-hero-section h1.display-3 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem !important;
+    }
+
+    .about-hero-section p.lead {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+/* Pour les très petits écrans (smartphones) */
+@media (max-width: 575.98px) {
+    .about-hero-section {
+        min-height: 380px;
+        height: 55vh;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .about-hero-section h1.display-3 {
+        font-size: 2.2rem;
+        margin-top: 0;
+    }
+
+    .about-hero-section p.lead {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
+
+/* --- Ajustements pour la hauteur des écrans --- */
+
+/* Écrans hauts (>= 1024px de hauteur) */
+@media (min-height: 1024px) {
+    .about-hero-section {
+        min-height: 800px;
+        height: 90vh;
+    }
+    .about-hero-section .container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .about-hero-section h1.display-3 {
+        font-size: 4.5rem;
+    }
+    .about-hero-section p.lead {
+        font-size: 1.6rem;
+    }
+}
+
+/* Très grands écrans (>= 1280px de hauteur) */
+@media (min-height: 1280px) {
+    .about-hero-section {
+        min-height: 950px;
+        height: 95vh;
+    }
+    .about-hero-section .container {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .about-hero-section h1.display-3 {
+        font-size: 5rem;
+    }
+    .about-hero-section p.lead {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* --- Classes utilitaires de couleurs personnalisées --- */
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-danger-custom {
+    background-color: var(--danger-color) !important;
+}
+
+.text-danger-custom {
+    color: var(--danger-color) !important;
+}
+
+
+/* --- Section Mission, Vision, Valeurs --- */
+.mission-vision-values h2 {
+    color: var(--text-dark); /* Couleur du titre de section */
+}
+
+.mission-vision-values p.lead {
+    color: var(--text-muted); /* Couleur du sous-titre */
+}
+
+.mission-vision-values .value-item {
+    background-color: #fff; /* Fond blanc pour les cartes */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Légère bordure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.mission-vision-values .value-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée */
+}
+
+.mission-vision-values .value-item h3 {
+    color: var(--primary-color); /* Titre de la mission/vision/valeur en bleu */
+}
+
+.mission-vision-values .value-item p {
+    color: var(--text-muted); /* Texte des descriptions */
+}
+
+.mission-vision-values .icon-circle {
+    width: 80px; /* Taille du cercle */
+    height: 80px;
+    border-radius: 50%; /* Forme circulaire */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Espace sous l'icône */
+}
+
+.mission-vision-values .icon-circle i {
+    font-size: 2.5rem; /* Taille de l'icône */
+}
+
+/* Styles pour les cartes de valeurs détaillées */
+.mission-vision-values .value-card {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.1); /* Bordure légèrement visible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision-values .value-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.mission-vision-values .value-card h4 {
+    color: var(--text-dark);
+}
+
+.mission-vision-values .value-card p.small {
+    font-size: 0.9rem; /* Texte plus petit pour ces descriptions */
+}
+
+/* --- Responsive pour la section Mission, Vision, Valeurs --- */
+
+@media (max-width: 767.98px) { /* Pour les mobiles */
+    .mission-vision-values h2{
+        font-size: 2.2rem; /* Réduire la taille du titre */
+    }
+    .mission-vision-values p.lead {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .mission-vision-values .value-item,
+    .mission-vision-values .value-card {
+        padding: 20px; /* Réduire le padding interne des cartes */
+    }
+    .mission-vision-values .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+    .mission-vision-values .icon-circle i {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- Section Notre Histoire --- */
+.our-history {
+    background-color: #f8f9fa; /* Un léger gris clair pour différencier de la section précédente si elle est blanche */
+    /* Ou laissez-le à la couleur par défaut si la section précédente est déjà bg-light */
+}
+
+.our-history h2 {
+    color: var(--text-dark);
+}
+
+.our-history h3 {
+    color: var(--primary-color); /* Vos titres en bleu par défaut */
+}
+
+.our-history p {
+    color: var(--text-muted);
+}
+
+/* Style pour un lead légèrement plus petit si nécessaire */
+.our-history p.lead-sm {
+    font-size: 1.15rem; /* Ajustez selon vos préférences */
+    font-weight: 400;
+}
+
+.our-history img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Styles pour la Timeline --- */
+.timeline {
+    position: relative;
+    max-width: 900px; /* Limite la largeur de la timeline */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before { /* La ligne verticale de la timeline */
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #e9ecef; /* Couleur de la ligne */
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; /* Espace entre les items */
+    padding: 10px 0;
+}
+
+.timeline-item:nth-child(odd) { /* Contenu à gauche pour les éléments impairs */
+    padding-right: 50%; /* Espace pour le contenu de droite */
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) { /* Contenu à droite pour les éléments pairs */
+    padding-left: 50%; /* Espace pour le contenu de gauche */
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Au-dessus de la ligne */
+    border: 3px solid #fff; /* Bordure blanche pour le faire ressortir */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05); /* Petite ombre */
+}
+
+.timeline-date {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--primary-color); /* Année en couleur primaire */
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    left: calc(50% + 25px); /* Position à droite du dot */
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    right: calc(50% + 25px); /* Position à gauche du dot */
+}
+
+
+.timeline-content {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.timeline-content h4 {
+    color: var(--primary-color); /* Titres des jalons en bleu */
+}
+
+
+/* --- Responsive pour la Timeline --- */
+@media (max-width: 767.98px) { /* Pour les mobiles */
+    .timeline::before { /* La ligne verticale se décale vers la gauche */
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item { /* Tous les contenus sont à droite */
+        padding-left: 60px; /* Espace pour la ligne et le dot */
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-dot { /* Les dots restent sur la ligne de gauche */
+        left: 20px;
+        transform: translate(-50%, -50%);
+    }
+
+    .timeline-date { /* La date est juste après le dot */
+        position: relative;
+        top: auto;
+        transform: none;
+        left: 0 !important;
+        right: auto !important;
+        margin-left: 40px; /* Décalage de la date */
+        margin-top: -10px; /* Remonte un peu pour être proche du dot */
+        margin-bottom: 5px; /* Espace sous la date */
+        display: block; /* S'assure que la date prend sa propre ligne */
+        text-align: left;
+    }
+
+    .timeline-content { /* Le contenu s'aligne bien */
+        margin-top: 0;
+    }
+}
+
+
+
+.our-team h2 {
+    color: var(--text-dark);
+}
+
+.our-team p.lead {
+    color: var(--text-muted);
+}
+
+.our-team .team-member-card {
+    background-color: #fff; /* Fond blanc pour la carte */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Légère bordure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.our-team .team-member-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée */
+}
+
+.our-team .team-member-card img {
+    width: 150px; /* Taille de la photo de profil */
+    height: 150px;
+    object-fit: cover; /* Assure que la photo remplit le cercle sans distorsion */
+    border: 3px solid; /* La bordure personnalisée est définie par les classes Bootstrap (ex: border-primary-custom) */
+    transition: border-color 0.3s ease; /* Animation de la couleur de bordure si elle change au survol */
+}
+
+.our-team .team-member-card h3 {
+    color: var(--text-dark); /* Nom de l'équipe en noir */
+}
+
+.our-team .team-member-card p.text-muted.small {
+    font-size: 0.9rem; /* Taille du texte des descriptions */
+}
+
+.our-team .team-member-card .social-icon {
+    color: var(--primary-color); /* Couleur des icônes sociales (bleu) */
+    transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.our-team .team-member-card .social-icon:hover {
+    color: var(--danger-color); /* Au survol, l'icône devient rouge */
+}
+
+
+/* --- Responsive pour la section Notre Équipe --- */
+
+@media (max-width: 767.98px) { /* Pour les mobiles */
+    .our-team h2 {
+        font-size: 2.2rem;
+    }
+    .our-team p.lead {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .our-team .team-member-card {
+        padding: 20px;
+    }
+    .our-team .team-member-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .our-team .team-member-card h3 {
+        font-size: 1.25rem;
+    }
+    .our-team .team-member-card p.text-muted.small {
+        font-size: 0.85rem;
+    }
+    .our-team .team-member-card .social-icon {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* --- Section Notre Approche / Ce Qui Nous Différencie --- */
+.our-approach {
+    background-color: #fff; /* Fond blanc pour cette section */
+    /* Si la section précédente est bg-light, cette section sera un contraste clair */
+}
+
+.our-approach h2 {
+    color: var(--text-dark);
+}
+
+.our-approach p.lead {
+    color: var(--text-muted);
+}
+
+.our-approach .approach-item {
+    background-color: #fff; /* Fond blanc pour les cartes */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Légère bordure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.our-approach .approach-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée */
+}
+
+.our-approach .approach-item h3 {
+    color: var(--text-dark); /* Titre de l'avantage en noir */
+}
+
+.our-approach .approach-item p {
+    color: var(--text-muted); /* Texte de la description */
+}
+
+.our-approach .icon-square {
+    width: 80px; /* Taille du carré */
+    height: 80px;
+    border-radius: 15px; /* Légers coins arrondis pour les carrés */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Espace sous l'icône */
+}
+
+.our-approach .icon-square i {
+    font-size: 2.5rem; /* Taille de l'icône */
+}
+
+/* --- Responsive pour la section Notre Approche --- */
+
+@media (max-width: 767.98px) { /* Pour les mobiles */
+    .our-approach h2 {
+        font-size: 2.2rem;
+    }
+    .our-approach p.lead {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .our-approach .approach-item {
+        padding: 20px;
+    }
+    .our-approach .icon-square {
+        width: 60px;
+        height: 60px;
+    }
+    .our-approach .icon-square i {
+        font-size: 1.8rem;
+    }
+    .our-approach .approach-item h3 {
+        font-size: 1.15rem;
+    }
+    .our-approach .approach-item p {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Section Chiffres Clés / Notre Impact --- */
+.key-figures {
+    /* bg-primary-custom et text-white sont déjà définis dans le HTML */
+    padding-top: 80px; /* Assurez-vous d'avoir un bon padding en haut et en bas */
+    padding-bottom: 80px;
+    position: relative; /* Pour le positionnement des pseudo-éléments/motifs de fond */
+    overflow: hidden;
+}
+
+/* Motif de fond optionnel */
+.key-figures-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 8H8V16H0V8Z" fill="%2300305E"/%3E%3C/svg%3E'); /* Un motif carré subtil */
+    background-size: 32px 32px; /* Taille du motif */
+    opacity: 0.1; /* Très léger */
+    z-index: 0;
+}
+
+
+.key-figures h2 {
+    color: #FFFFFF; /* Titre principal en blanc */
+}
+
+.key-figures p.lead {
+    color: rgba(255, 255, 255, 0.8); /* Sous-titre blanc transparent */
+}
+
+.key-figures .figure-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent pour chaque chiffre */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure blanche transparente */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation au survol */
+}
+
+.key-figures .figure-item:hover {
+    transform: translateY(-5px); /* Élévation au survol */
+    background-color: rgba(255, 255, 255, 0.15); /* Plus opaque au survol */
+}
+
+.key-figures .figure-item i {
+    color: var(--danger-color); /* Icônes en rouge */
+}
+
+.key-figures .figure-item h3 {
+    color: #FFFFFF; /* Les chiffres eux-mêmes en blanc */
+}
+
+.key-figures .figure-item p {
+    color: rgba(255, 255, 255, 0.9); /* Description sous le chiffre en blanc */
+}
+
+/* Pour le texte lead-sm */
+.key-figures .lead-sm {
+    font-size: 1.1rem; /* Taille du texte sous les chiffres */
+    font-weight: 300;
+}
+
+/* --- Responsive pour la section Chiffres Clés --- */
+
+@media (max-width: 991.98px) { /* Pour les tablettes et mobiles */
+    .key-figures {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .key-figures h2{
+        font-size: 2.5rem;
+    }
+    .key-figures p.lead {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    .key-figures .figure-item {
+        padding: 20px;
+    }
+    .key-figures .figure-item i {
+        font-size: 2.5rem;
+    }
+    .key-figures .figure-item h3.display-4 {
+        font-size: 3rem; /* Réduire la taille des chiffres */
+    }
+    .key-figures .lead-sm {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) { /* Pour les smartphones */
+    .key-figures {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .key-figures h2{
+        font-size: 2rem;
+    }
+    .key-figures .figure-item h3.display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Section Appel à l'Action (CTA) --- */
+.cta-section {
+    /* bg-dark et text-white sont définis directement dans le HTML */
+    padding-top: 100px; /* Plus de padding pour bien faire ressortir la section */
+    padding-bottom: 100px;
+}
+
+.cta-section h2 {
+    color: var(--text-dark); /* Le titre est en blanc */
+}
+
+.cta-section p.lead {
+    color: var(--text-muted); /* Le paragraphe est en blanc légèrement transparent */
+    max-width: 800px; /* Limite la largeur du texte pour la lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .btn {
+    border: none; /* Pas de bordure par défaut pour le bouton */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre légère pour le faire ressortir */
+    transition: all 0.3s ease; /* Transition douce pour le survol */
+}
+
+.cta-section .btn-danger-custom {
+    background-color: var(--danger-color); /* Couleur de fond rouge */
+    color: #fff; /* Texte du bouton en blanc */
+}
+
+.cta-section .btn-danger-custom:hover {
+    background-color: #c0283c; /* Rouge légèrement plus foncé au survol */
+    transform: translateY(-3px); /* Élévation subtile au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+}
+
+/* --- Responsive pour la section CTA --- */
+
+@media (max-width: 991.98px) { /* Pour les tablettes et mobiles */
+    .cta-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .cta-section h2{
+        font-size: 2.5rem;
+    }
+    .cta-section p.lead {
+        font-size: 1.15rem;
+    }
+    .cta-section .btn-lg {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 575.98px) { /* Pour les smartphones */
+    .cta-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    .cta-section p.lead {
+        font-size: 1rem;
+        padding: 0 10px; /* Moins de padding sur les côtés pour le texte */
+    }
+    .cta-section .btn-lg {
+        width: 90%; /* Le bouton prend presque toute la largeur sur petit écran */
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+.services-hero-section {
+    /* Retirez background-image, background-size, background-position, background-repeat car la vidéo gère ça */
+    min-height: 550px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Important pour que la vidéo ne dépasse pas */
+}
+
+.services-hero-section .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* Placé sous l'overlay */
+    transform: translate(-50%, -50%); /* Centre la vidéo */
+    object-fit: cover; /* Assure que la vidéo couvre toute la zone, coupant les bords si nécessaire */
+}
+
+.services-hero-section .overlay {
+    background-color: var(--primary-color);
+    opacity: 0.8; /* Ajustez si nécessaire pour la lisibilité sur la vidéo */
+    z-index: 1; /* L'overlay est maintenant au-dessus de la vidéo */
+}
+
+/* Le contenu du texte et des boutons doit être au-dessus de l'overlay */
+.services-hero-section .container {
+    position: relative; /* S'assure que le container respecte le z-index */
+    z-index: 2; /* Place le contenu au-dessus de l'overlay et de la vidéo */
+}
+
+
+/* Le reste du CSS reste le même pour le texte et les boutons */
+.services-hero-section h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+}
+
+.services-hero-section h1 span {
+    color: var(--danger-color);
+}
+
+.services-hero-section p.lead {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-hero-section .btn {
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.services-hero-section .btn-outline-light:hover {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services-hero-section .btn-danger-custom {
+    background-color: var(--danger-color);
+    color: #fff;
+    border-color: var(--danger-color);
+}
+
+.services-hero-section .btn-danger-custom:hover {
+    background-color: #c0283c;
+    border-color: #c0283c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive pour la Section Héro des Services --- */
+@media (max-width: 991.98px) {
+    .services-hero-section {
+        min-height: 450px;
+        height: 60vh;
+    }
+    .services-hero-section h1.display-3 {
+        font-size: 2.8rem;
+    }
+    .services-hero-section p.lead {
+        font-size: 1.15rem;
+    }
+    .services-hero-section .btn-lg {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+    .services-hero-section .btn + .btn {
+        margin-top: 15px;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-hero-section {
+        min-height: 400px;
+        height: 60vh;
+    }
+    .services-hero-section h1.display-3{
+        font-size: 2.2rem;
+         margin-top: 70px !important;
+    }
+    .services-hero-section p.lead {
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .services-hero-section .btn-lg {
+        width: 80%;
+        max-width: 300px;
+    }
+    .services-hero-section .btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-hero-section h1.display-3 {
+        font-size: 1.8rem;
+        margin-top: 70px !important;
+    }
+}
+
+/* Ajoutez ces classes si elles n'existent pas déjà */
+.bg-primary-custom {
+    background-color: var(--primary-custom-bg) !important;
+}
+
+.bg-danger-custom {
+    background-color: var(--danger-custom-bg) !important;
+}
+
+/* --- Section Introduction aux Services --- */
+.services-intro-section {
+    background-color: var(--bs-light); /* Utilise la variable Bootstrap pour bg-light */
+}
+
+.services-intro-section h2 {
+    color: var(--text-dark);
+}
+
+.services-intro-section h2 span {
+    color: var(--primary-color); /* Utilise votre bleu principal */
+}
+
+.services-intro-section p.lead {
+    color: var(--text-muted);
+}
+
+.services-intro-section .service-process-item {
+    background-color: #fff; /* Fond blanc pour les cartes */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Légère bordure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.services-intro-section .service-process-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée */
+}
+
+.services-intro-section .service-process-item h3 {
+    color: var(--text-dark);
+}
+
+.services-intro-section .service-process-item p {
+    color: var(--text-muted);
+}
+
+.services-intro-section .icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Pour faire des cercles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.services-intro-section .icon-circle i {
+    font-size: 2.5rem; /* Taille de l'icône */
+}
+
+
+/* --- Responsive pour la section Introduction aux Services --- */
+@media (max-width: 991.98px) {
+    .services-intro-section h2 {
+        font-size: 2.5rem;
+    }
+    .services-intro-section p.lead {
+        font-size: 1.15rem;
+    }
+    .services-intro-section .service-process-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-intro-section h2 {
+        font-size: 2.2rem;
+    }
+    .services-intro-section p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .services-intro-section .icon-circle {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    .services-intro-section .icon-circle i {
+        font-size: 2rem;
+    }
+    .services-intro-section .service-process-item h3 {
+        font-size: 1.2rem;
+    }
+    .services-intro-section .service-process-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-intro-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ajoutez ces classes si elles n'existent pas déjà */
+.text-primary-custom {
+    color: var(--primary-custom-text) !important;
+}
+
+.text-danger-custom {
+    color: var(--danger-custom-text) !important;
+}
+
+.btn-outline-primary-custom {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary-custom:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* --- Section Services Détaillés --- */
+.services-detailed-section {
+    background-color: #fff; /* Fond blanc */
+}
+
+.services-detailed-section h2 {
+    color: var(--text-dark);
+}
+
+.services-detailed-section h2 span {
+    color: var(--primary-color); /* Utilise votre bleu principal */
+}
+
+.services-detailed-section p.lead {
+    color: var(--text-muted);
+}
+
+.services-detailed-section .service-card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Légère bordure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.services-detailed-section .service-card:hover {
+    transform: translateY(-8px); /* Élévation plus marquée au survol */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Ombre plus prononcée */
+}
+
+.services-detailed-section .service-card .icon-wrapper {
+    /* Styles pour l'icône, pas de cercle ici, juste l'icône elle-même */
+    /* Vous pouvez ajouter une bordure si vous voulez un effet */
+    border: 2px solid var(--primary-color); 
+    border-radius: 50%; 
+     padding: 15px; 
+}
+
+.services-detailed-section .service-card h3 {
+    color: var(--text-dark);
+}
+
+.services-detailed-section .service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem; /* Légèrement plus petit pour les descriptions de service */
+}
+
+/* --- Responsive pour la section Services Détaillés --- */
+@media (max-width: 991.98px) {
+    .services-detailed-section h2 {
+        font-size: 2.5rem;
+    }
+    .services-detailed-section p.lead {
+        font-size: 1.15rem;
+    }
+    .services-detailed-section .service-card {
+        padding: 30px; /* Ajuster padding sur tablette */
+    }
+    .services-detailed-section .service-card .icon-wrapper i {
+        font-size: 3.5rem; /* Taille de l'icône */
+    }
+    .services-detailed-section .service-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-detailed-section h2 {
+        font-size: 2.2rem;
+    }
+    .services-detailed-section p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .services-detailed-section .service-card {
+        padding: 25px; /* Ajuster padding sur mobile */
+    }
+    .services-detailed-section .service-card .icon-wrapper i {
+        font-size: 3rem; /* Taille de l'icône */
+    }
+    .services-detailed-section .service-card h3 {
+        font-size: 1.2rem;
+    }
+    .services-detailed-section .service-card p {
+        font-size: 0.85rem;
+    }
+    .services-detailed-section .btn-outline-primary-custom {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-detailed-section h2 {
+        font-size: 1.8rem;
+    }
+    .services-detailed-section .service-card {
+        padding: 20px;
+    }
+}
+.bg-primary-custom {
+    background-color: var(--primary-custom-bg) !important;
+}
+
+.bg-danger-custom {
+    background-color: var(--danger-custom-bg) !important;
+}
+/* --- Section Pourquoi Choisir World Finance (Services) --- */
+.why-choose-us-services {
+    background-color: var(--primary-color); /* Fond bleu primaire */
+    color: #fff; /* Texte blanc par défaut pour la section */
+    padding-top: 100px; /* Plus de padding pour bien la distinguer */
+    padding-bottom: 100px;
+}
+
+.why-choose-us-services h2 {
+    color: #fff; /* Le titre principal est en blanc */
+}
+
+.why-choose-us-services h2 span {
+    color: var(--danger-color); /* Le mot clé est en rouge */
+}
+
+.why-choose-us-services p.lead {
+    color: rgba(255, 255, 255, 0.9); /* Paragraphe lead légèrement transparent pour plus de douceur */
+}
+
+.why-choose-us-services .advantage-item {
+    /* Pas de fond spécifique pour les cartes pour les rendre plus légères sur le fond bleu */
+    /* Vous pouvez ajouter un background-color: rgba(255, 255, 255, 0.1); si vous voulez un léger fond transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure blanche transparente */
+    border-radius: 0.5rem; /* Coins légèrement arrondis */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition au survol */
+}
+
+.why-choose-us-services .advantage-item:hover {
+    background-color: rgba(255, 255, 255, 0.08); /* Fond blanc transparent au survol */
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Ombre légère au survol */
+}
+
+/*.why-choose-us-services .advantage-item i {
+    // Les icônes ont déjà leurs couleurs définies dans le HTML (text-danger-custom ou text-white) 
+}*/
+
+.why-choose-us-services .advantage-item h3 {
+    color: #fff; /* Titres des avantages en blanc */
+}
+
+.why-choose-us-services .advantage-item p {
+    color: rgba(255, 255, 255, 0.7); /* Texte des avantages en blanc légèrement transparent */
+}
+
+/* --- Responsive pour la section Pourquoi Choisir World Finance --- */
+@media (max-width: 991.98px) {
+    .why-choose-us-services {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .why-choose-us-services h2 {
+        font-size: 2.5rem;
+    }
+    .why-choose-us-services p.lead {
+        font-size: 1.15rem;
+    }
+    .why-choose-us-services .advantage-item {
+        padding: 25px;
+    }
+    .why-choose-us-services .advantage-item i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .why-choose-us-services {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .why-choose-us-services h2{
+        font-size: 2.2rem;
+    }
+    .why-choose-us-services p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .why-choose-us-services .advantage-item {
+        padding: 20px;
+    }
+    .why-choose-us-services .advantage-item i {
+        font-size: 2rem;
+    }
+    .why-choose-us-services .advantage-item h3 {
+        font-size: 1.2rem;
+    }
+    .why-choose-us-services .advantage-item p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .why-choose-us-services h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- Section FAQ des Services --- */
+.services-faq-section {
+    background-color: var(--bs-light); /* Fond gris clair */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.services-faq-section h2 {
+    color: var(--text-dark);
+}
+
+.services-faq-section h2 span {
+    color: var(--primary-color); /* Le mot clé est en bleu */
+}
+
+.services-faq-section p.lead {
+    color: var(--text-muted);
+}
+
+.services-faq-section .accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Légère bordure pour chaque élément */
+    margin-bottom: 15px; /* Espace entre les éléments */
+    border-radius: 0.5rem; /* Coins arrondis pour chaque élément */
+    overflow: hidden; /* Pour que les coins arrondis fonctionnent bien */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Petite ombre pour les faire ressortir */
+    transition: all 0.3s ease; /* Transition douce pour le survol */
+}
+
+.services-faq-section .accordion-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée au survol */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+.services-faq-section .accordion-button {
+    background-color: #fff; /* Fond blanc pour le bouton/titre de question */
+    color: var(--primary-color); /* Couleur du texte du bouton en bleu */
+    font-size: 1.1rem;
+    padding: 20px 25px; /* Plus de padding pour le bouton */
+    border: none; /* Pas de bordure pour le bouton */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.services-faq-section .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color); /* Fond bleu quand la question est ouverte */
+    color: #fff; /* Texte blanc quand la question est ouverte */
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+    border-bottom: 1px solid var(--primary-color); /* Bordure en bas pour séparer du corps */
+}
+
+.services-faq-section .accordion-button:focus {
+    box-shadow: none; /* Supprime l'ombre de focus de Bootstrap */
+    border-color: transparent; /* Supprime la bordure de focus */
+}
+
+.services-faq-section .accordion-button::after {
+    /* Personnalisation de l'icône de flèche de l'accordéon */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300427E'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    /* Changer fill='%2300427E' pour la couleur de votre flèche (bleu ici) */
+    transition: transform 0.3s ease;
+}
+
+.services-faq-section .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    /* Changer fill='%23FFFFFF' pour la couleur de votre flèche quand le bouton est ouvert (blanc ici) */
+    transform: rotate(-180deg);
+}
+
+.services-faq-section .accordion-body {
+    background-color: #fff; /* Fond blanc pour le corps de la réponse */
+    color: var(--text-dark); /* Texte de la réponse en couleur foncée */
+    padding: 20px 25px;
+    font-size: 0.95rem;
+}
+
+
+/* --- Responsive pour la section FAQ des Services --- */
+@media (max-width: 991.98px) {
+    .services-faq-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .services-faq-section h2 {
+        font-size: 2.5rem;
+    }
+    .services-faq-section p.lead {
+        font-size: 1.15rem;
+    }
+    .services-faq-section .accordion-button {
+        font-size: 1rem;
+        padding: 18px 20px;
+    }
+    .services-faq-section .accordion-body {
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-faq-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .services-faq-section h2 {
+        font-size: 2.2rem;
+    }
+    .services-faq-section p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .services-faq-section .accordion-item {
+        margin-bottom: 10px;
+    }
+    .services-faq-section .accordion-button {
+        font-size: 0.95rem;
+        padding: 15px 18px;
+    }
+    .services-faq-section .accordion-body {
+        font-size: 0.9rem;
+        padding: 15px 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-faq-section h2 {
+        font-size: 1.8rem;
+    }
+    .services-faq-section .accordion-item {
+        margin-bottom: 8px;
+    }
+}
+
+
+/* --- Section Appel à l'Action (Services) --- */
+.services-cta-section {
+    padding-top: 80px; /* Paddings généreux */
+    padding-bottom: 80px;
+}
+
+.services-cta-section h2 {
+    color: var(--text-dark); /* Titre en blanc */
+}
+
+.services-cta-section h2 span {
+    color: var(--primary-color); /* Mot clé en bleu sur fond rouge */
+}
+
+.services-cta-section p.lead {
+    color: var(--text-muted); /* Paragraphe lead légèrement transparent */
+    max-width: 900px; /* Limite la largeur du texte pour la lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-cta-section .btn-light {
+    color:#fff; /* Texte du bouton blanc en bleu */
+    background-color:var(--danger-custom-bg); /* Fond blanc */
+    border-color: var(--danger-color); /* Bordure blanche */
+    transition: all 0.3s ease; /* Animation douce au survol */
+}
+
+.services-cta-section .btn-light:hover {
+    /* Bordure bleue au survol */
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Ombre plus prononcée */
+}
+
+/* --- Responsive pour la section Appel à l'Action --- */
+@media (max-width: 991.98px) {
+    .services-cta-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .services-cta-section h2 {
+        font-size: 2.5rem;
+    }
+    .services-cta-section p.lead {
+        font-size: 1.15rem;
+    }
+    .services-cta-section .btn-lg {
+        font-size: 1.1rem;
+        padding: 14px 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-cta-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .services-cta-section h2 {
+        font-size: 2.2rem;
+    }
+    .services-cta-section p.lead {
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .services-cta-section .btn-lg {
+        font-size: 1rem;
+        padding: 12px 30px;
+        width: 90%; /* Le bouton prend plus de largeur */
+        max-width: 350px; /* Limite la largeur max */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-cta-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Styles pour les boutons personnalisés (assurez-vous qu'ils sont présents) */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+.btn-primary-custom:hover {
+    background-color: #003666; 
+    border-color: #003666;
+    color: #fff;
+}
+.btn-danger-custom {
+    background-color: var(--danger-color);
+    color: #fff;
+    border-color: var(--danger-color);
+}
+.btn-danger-custom:hover {
+    background-color: #c0283c; 
+    border-color: #c0283c;
+    color: #fff;
+}
+.btn-outline-light { /* Ajout pour s'assurer que le texte est visible sur le bouton */
+    color: #fff;
+    border-color: #fff;
+}
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: var(--primary-color); /* Texte bleu au survol */
+}
+/* Styles spécifiques au bouton outline-light sur cette section (pour revenir au rouge au survol) */
+.contact-hero-section .btn-outline-light:hover {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Section Héro de la Page Contact (CORRIGÉE) --- */
+.contact-hero-section {
+    min-height: 550px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative; /* Important: pour que les z-index des enfants fonctionnent */
+    overflow: hidden;
+}
+
+.contact-hero-section .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* La vidéo est en arrière-plan */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.contact-hero-section .overlay {
+    background-color: var(--primary-color); /* Votre bleu principal */
+    opacity: 0.8; /* Opacité de 80% */
+    z-index: 1; /* L'overlay est au-dessus de la vidéo */
+    position: absolute; /* S'assurer qu'il couvre bien toute la section */
+    top: 0;
+    left: 0;
+}
+
+/* Ajoutez cette classe utilitaire dans votre CSS */
+.z-index-content {
+    z-index: 2; /* Le contenu est au-dessus de l'overlay */
+    position: relative; /* Important pour que le z-index fonctionne */
+}
+
+.contact-hero-section h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+}
+
+.contact-hero-section h1 span {
+    color: var(--danger-color); /* Accentuation du mot clé en rouge */
+}
+
+.contact-hero-section p.lead {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-hero-section .btn {
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Les styles responsive restent les mêmes */
+@media (max-width: 991.98px) {
+    .contact-hero-section {
+        min-height: 450px;
+        height: 60vh;
+    }
+    .contact-hero-section h1 { /* Pas display-2 ici pour le responsive */
+        font-size: 2.8rem;
+    }
+    .contact-hero-section p.lead {
+        font-size: 1.15rem;
+    }
+    .contact-hero-section .btn-lg {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+    .contact-hero-section .btn + .btn {
+        margin-top: 15px;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-hero-section {
+        min-height: 400px;
+        height: 60vh;
+    }
+    .contact-hero-section h1 { /* Pas display-2 ici pour le responsive */
+        font-size: 2.2rem;
+        margin-top: 50px !important;
+    }
+    .contact-hero-section p.lead {
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .contact-hero-section .btn-lg {
+        width: 80%;
+        max-width: 300px;
+    }
+    .contact-hero-section .btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-hero-section h1 { /* Pas display-2 ici pour le responsive */
+        font-size: 1.8rem;
+        margin-top: 70px !important;
+    }
+}
+
+/* --- Section Héro de la Page Demande de Prêt --- */
+.request-hero-section {
+    min-height: 550px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.request-hero-section .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* La vidéo est en arrière-plan */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.request-hero-section .overlay {
+    background-color: var(--primary-color); /* Utilisation de votre bleu principal */
+    opacity: 0.8; /* Opacité de 80% */
+    z-index: 1; /* L'overlay est au-dessus de la vidéo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Assurez-vous que cette classe utilitaire est définie globalement */
+.z-index-content {
+    z-index: 2; /* Le contenu est au-dessus de l'overlay */
+    position: relative; /* Important pour que le z-index fonctionne */
+}
+
+.request-hero-section h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+}
+
+.request-hero-section h1 span {
+    color: var(--danger-color); /* Accentuation du mot clé en rouge */
+}
+
+.request-hero-section p.lead {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.request-hero-section .btn {
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.request-hero-section .btn-outline-light:hover {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive pour cette section (similaire à la page de contact) */
+@media (max-width: 991.98px) {
+    .request-hero-section {
+        min-height: 450px;
+        height: 60vh;
+    }
+    .request-hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .request-hero-section p.lead {
+        font-size: 1.15rem;
+    }
+    .request-hero-section .btn-lg {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .request-hero-section {
+        min-height: 400px;
+        height: 50vh;
+    }
+    .request-hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .request-hero-section p.lead {
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .request-hero-section .btn-lg {
+        width: 80%;
+        max-width: 300px;
+        display: block; /* Empile le bouton sur très petit écran */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .request-hero-section h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Assurez-vous que ces classes utilitaires sont bien définies si vous les utilisez dans le HTML */
+.text-primary-custom { color: var(--primary-custom-text) !important; }
+.text-danger-custom { color: var(--danger-custom-text) !important; }
+.text-success-custom { color: var(--success-custom-text) !important; }
+.text-info-custom { color: var(--info-custom-text) !important; }
+.text-warning-custom { color: var(--warning-custom-text) !important; }
+
+.bg-primary-custom { background-color: var(--primary-custom-bg) !important; }
+.bg-danger-custom { background-color: var(--danger-custom-bg) !important; }
+
+
+/* Styles pour les boutons personnalisés (si pas déjà définis) */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+.btn-primary-custom:hover {
+    background-color: #003666; /* Bleu légèrement plus foncé */
+    border-color: #003666;
+    color: #fff;
+}
+
+
+/* --- Section Formulaire de Demande de Prêt --- */
+.loan-request-section {
+    background-color: var(--bs-light); /* Fond gris clair */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.loan-request-section h2 {
+    color: var(--text-dark);
+}
+
+.loan-request-section h2 span {
+    color: var(--primary-color); /* Le mot clé est en bleu */
+}
+
+.loan-request-section p.lead {
+    color: var(--text-muted);
+}
+
+/* Styles pour la colonne latérale (avantanges/processus) */
+.loan-request-section .form-sidebar {
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.loan-request-section .form-sidebar h3 {
+    color: var(--primary-color); /* Titre en bleu */
+}
+
+.loan-request-section .loan-process-list li {
+    line-height: 1.4;
+}
+
+.loan-request-section .loan-process-list li i {
+    font-size: 1.8rem; /* Taille des icônes */
+}
+
+/* Styles pour le conteneur du formulaire */
+.loan-request-section .loan-form-container {
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+}
+
+.loan-request-section .loan-form-container h3 {
+    color: var(--danger-color); /* Titre du formulaire en rouge */
+}
+
+.loan-request-section .form-label {
+    color: var(--text-dark); /* Couleur des labels */
+    font-size: 0.9rem; /* Taille de police légèrement plus petite pour les labels */
+    text-transform: uppercase; /* Labels en majuscules comme sur la capture */
+    margin-bottom: 0.2rem; /* Réduit l'espace sous les labels */
+}
+
+.loan-request-section .form-control,
+.loan-request-section .form-select {
+    border-radius: 0.375rem; /* Coins légèrement arrondis */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure légère */
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+}
+
+.loan-request-section .form-control:focus,
+.loan-request-section .form-select:focus {
+    border-color: var(--primary-color); /* Bordure bleue au focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 66, 126, 0.25); /* Ombre au focus avec couleur primaire */
+}
+
+.loan-request-section .form-check-label a {
+    font-weight: bold; /* Liens en gras */
+}
+
+.loan-request-section .btn-lg {
+    padding: 14px 40px;
+}
+
+
+/* --- Responsive pour la Section Formulaire de Demande de Prêt --- */
+@media (max-width: 991.98px) {
+    .loan-request-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .loan-request-section h2 {
+        font-size: 2.5rem;
+    }
+    .loan-request-section p.lead {
+        font-size: 1.15rem;
+    }
+    .loan-request-section .form-sidebar,
+    .loan-request-section .loan-form-container {
+        padding: 30px;
+    }
+    .loan-request-section .form-sidebar h3 {
+        font-size: 1.4rem;
+    }
+    .loan-request-section .loan-form-container h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .loan-request-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .loan-request-section h2 {
+        font-size: 2.2rem;
+    }
+    .loan-request-section p.lead {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    .loan-request-section .form-sidebar,
+    .loan-request-section .loan-form-container {
+        padding: 25px;
+    }
+    .loan-request-section .loan-form-container .btn-lg {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+        padding: 12px 20px;
+    }
+    .loan-request-section .form-sidebar .loan-process-list li i {
+        font-size: 1.5rem;
+    }
+    .loan-request-section .form-sidebar .loan-process-list li div h4 {
+        font-size: 0.95rem;
+    }
+    .loan-request-section .form-sidebar .loan-process-list li div small {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .loan-request-section h2 {
+        font-size: 1.8rem;
+    }
+    .loan-request-section .form-label {
+        font-size: 0.8rem;
+    }
+    .loan-request-section .form-control,
+    .loan-request-section .form-select {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+.professional-loan{
+    color: var(--secondary-dark);
+}
+/* --- Typographie et Titres --- */
+.professional-loan h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+.professional-loan h1 {
+    color:var(--white)
+}
+.professional-loan .section-title {
+    font-size: 2 rem; /* Ajustez selon vos préférences */
+    font-weight: 700;
+}
+
+.professional-loan .feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* --- Boutons Personnalisés --- */
+.professional-loan .btn-primary-custom {
+   background-color: var(--accent-red);
+  border-color: var(--accent-red);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+.professional-loan .btn-primary-custom:hover {
+    background-color: #002d5a; /* Un bleu plus foncé au survol */
+    border-color: #002d5a;
+    color: var(--white);
+}
+
+.professional-loan .btn-secondary-custom {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+.professional-loan .btn-secondary-custom:hover {
+    background-color: #c7293d; /* Un rouge plus foncé au survol */
+    border-color: #c7293d;
+    color: var(--white);
+}
+
+/* --- Backgrounds --- */
+.professional-loan .bg-primary-dark {
+    background-color: var(--primary-dark) !important;
+}
+.professional-loan .text-primary-dark {
+    color: var(--primary-dark) !important;
+}
+.professional-loan .bg-accent-red {
+    background-color: var(--accent-red) !important;
+}
+.professional-loan .text-accent-red {
+    color: var(--accent-red) !important;
+}
+.professional-loan .bg-light-blue {
+    background-color: var(--light-blue) !important;
+}
+.professional-loan .text-secondary-dark {
+    color: var(--secondary-dark) !important;
+}
+
+/* --- Hero Section (Bannière d'accroche) --- */
+.professional-loan .hero-section {
+    background-color: var(--primary-custom-bg); /*linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8)), no-repeat center center/cover;*/
+    min-height: 400px;
+    padding: 80px 0;
+    color: var(--white);
+}
+
+/* --- Espacement des sections --- */
+.professional-loan section {
+    padding: 60px 0;
+}
+
+/* --- Feature Row (Inversion d'image/texte) --- */
+.professional-loan .feature-row:nth-child(even) .col-md-6:first-child {
+    order: 2; /* Inversion de l'ordre pour les lignes paires */
+}
+.professional-loan .feature-row:nth-child(even) .col-md-6:last-child {
+    order: 1;
+}
+@media (max-width: 767.98px) {
+    .professional-loan .feature-row .col-md-6 {
+        order: unset !important; /* Réinitialise l'ordre sur mobile */
+    }
+}
+
+/* --- Process Steps (Comment ça marche) --- */
+.professional-loan .process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espace entre les étapes */
+    margin-top: 40px;
+}
+
+.professional-loan .process-step {
+    flex: 1 1 180px; /* Flexbox pour gérer la taille des éléments */
+    max-width: 200px; /* Taille max par étape */
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.professional-loan .step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ligne de connexion entre les étapes (CSS avancé, pour un effet plus graphique) */
+/* Ce n'est qu'un exemple, peut nécessiter des ajustements précis */
+.professional-loan .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 50px; /* Ajuster en fonction de la position des icônes */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--primary-dark);
+    z-index: -1;
+    display: none; /* Cache par défaut, activez sur les grands écrans */
+}
+
+@media (min-width: 768px) {
+   .professional-loan .process-steps::before {
+        display: block;
+    }
+}
+
+/* Cache les numéros d'icônes FontAwesome si vous avez déjà un cercle avec le numéro */
+.process-step .fas.fa-1::before,
+.process-step .fas.fa-2::before,
+.process-step .fas.fa-3::before,
+.process-step .fas.fa-4::before,
+.process-step .fas.fa-5::before {
+    content: none; /* Ne pas afficher le content généré par FontAwesome pour ces chiffres */
+}
+
+
+
+/* --- Call to Action Section --- */
+.professional-loan .cta-section {
+    background-color: var(--white) !important; /* Force le fond blanc */
+    /* Ancien : background-color: var(--accent-red); */
+    color: var(--secondary-dark); /* Couleur de texte par défaut pour cette section */
+    text-align: center;
+    padding: 80px 0;
+    /* Ajoutez une petite ombre pour la faire ressortir si vous voulez */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+/* Le bouton dans cette section doit conserver le style du bouton rouge vif */
+.professional-loan .cta-section .btn {
+    background-color: var(--accent-red); /* Le fond du bouton sera votre rouge vif */
+    color: var(--white); /* Le texte du bouton sera blanc */
+    border-color: var(--accent-red); /* La bordure du bouton sera rouge vif */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.professional-loan .cta-section .btn:hover {
+    background-color: #c7293d; /* Un rouge plus foncé au survol */
+    border-color: #c7293d;
+    color: var(--white);
+}
+
+/* Vous pouvez aussi cibler spécifiquement les titres et paragraphes si les classes Bootstrap ne suffisent pas */
+.professional-loan .cta-section h2 {
+    color: var(--primary-dark); /* Le titre sera en bleu foncé */
+}
+.professional-loan .cta-section p {
+    color: var(--secondary-dark); /* Le paragraphe sera en gris foncé */
+}
+.professional-loan .video-container {
+    overflow: hidden; 
+    /* L'ombre est une bonne touche visuelle */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+/*.hero-immobilier {
+    background: linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8))  no-repeat center center/cover;
+}
+
+.hero-consommation {
+    background: linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8))  no-repeat center center/cover;
+}
+.hero-etudiant {
+    background-color: linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8)) ;
+    background-size:  cover;
+    background-repeat:no-repeat ;
+    background-position: center center;
+}
+
+.hero-investissement {
+  
+    background: linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8)), no-repeat center center/cover;
+}
+
+.hero-rachat-credit {
+    background: linear-gradient(rgba(0, 66, 126, 0.8), rgba(0, 66, 126, 0.8)),no-repeat center center/cover;
+}*/
+.hero-confidentialite {
+    /* Vous pouvez choisir une couleur ou une image de fond pertinente */
+    background-color: var(--primary-custom-bg); /*linear-gradient(rgba(0, 66, 126, 0.85), rgba(0, 66, 126, 0.85));*/
+    background-size: cover; /* S'assure que l'image couvre toute la zone */
+    color: var(--bs-white); /* Assurez-vous que le texte reste blanc pour contraster avec le fond sombre */
+    padding: 100px 0; /* Ajustez le padding si nécessaire pour l'espacement */
+    height: 400px; /* Hauteur fixe pour la bannière, ajustez selon votre design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/*.hero-termes-conditions {
+    
+}*/

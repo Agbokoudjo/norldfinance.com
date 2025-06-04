@@ -1,0 +1,22 @@
+
+    <style>
+        .body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { padding: 20px; }
+        .header { font-size: 18px; font-weight: bold; }
+        .content { margin-top: 15px; }
+        .footer { margin-top: 30px; font-size: 12px; color: #888; }
+    </style>
+<div class="body container">
+    <div class="header">{{'sendEmailAdmin.header'|trans({'%organization_name%':{{ organization_name }}},'ContactForm',app.request.locale)}}</div>
+
+    <div class="content">
+        <p><strong>Nom:</strong> {{ fullname }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+         <p><strong>Téléphone :</strong> {{ phone }}</p>
+        <p><strong>Sujet:</strong> {{ subject }}</p>
+        <p><strong>Message:</strong><br>{{ content|nl2br }}</p>
+    </div>
+    <div class="footer">
+        {{'sendEmailAdmin.footer'|trans({'%organization_name%':{{ organization_name }}},'ContactForm',app.request.locale)}}
+    </div>
+</div>

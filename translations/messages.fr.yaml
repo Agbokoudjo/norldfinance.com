@@ -1,0 +1,3 @@
+vich_uploader.form_label.delete_confirm: 'Supprimer?'
+vich_uploader.link.download: Télécharger
+subject.placeholder: __subject.placeholder

@@ -1,0 +1,72 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+       <div class="container-fluid d-flex justify-content-between align-items-center">
+          <a class="navbar-brand aos-item" href="{{path('home')}}"
+           data-aos="fade-right"
+           data-aos-duration="2000"
+            data-aos-delay="500"
+          >
+            <img src="{{asset('img/logo.svg')}}" alt="NorldFinance Logo" 
+            class="d-block img-fluid"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white" style="color:#ffff;"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end aos-item"
+          data-aos="fade-left"
+           data-aos-duration="2000"
+            data-aos-delay="500"
+                data-aos-once="false"
+           id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('home')}}">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('about')}}">À Propos</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link"   href="{{path('services.home')}}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="{{path('contact.form.us')}}">Contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"   href="{{path('loan.application.credit')}}">Demande de prêt</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown no-translate" translate="no">
+
+                <a class="nav-link text-color-primary text-color-hover-dark dropdown-toggle" 
+                    href="#" role="button" id="dropdownLanguage"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   {# Afficher le drapeau et le code de la langue actuelle #}
+                  <i class="flag flag-icon flag-icon-{{ currentLocale }}" alt="{{ currentLocale }}"></i>
+                  <span class="text-uppercase">{{ currentLocale }}</span>
+                  <i class="fas fa-angle-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end min-width-0" aria-labelledby="dropdownLanguage">
+                    {% for locale in availableLocales %}
+                {# Construisez les paramètres de la route pour la langue cible #}
+                {% set targetRouteParams = currentRouteParams|merge({'_locale': locale}) %}
+                <a class="dropdown-item language-switcher" 
+                   hreflang="{{ locale }}" 
+                   href="{{ path(currentRoute, targetRouteParams) }}" {# Génération de l'URL spécifique à la langue #}
+                   data-lang="{{ locale }}" 
+                   title="{{ locale|trans({}, 'lang',currentLocale) }}">
+                     {% if locale =="en" %}
+                        {% set locale = "gb" %}
+                     {% endif %}
+                    <i class="flag flag-icon flag-icon-{{ locale }}" alt="{{ locale }}"></i>
+                    <span class="text-capitalize">{{ locale|trans({}, 'lang',currentLocale) }}</span> {# Traduction du nom complet de la langue #}
+                </a>
+            {% endfor %}
+                </div>
+            </li>
+        </ul>
+          </div>
+       </div>
+    </nav>
+  </header>

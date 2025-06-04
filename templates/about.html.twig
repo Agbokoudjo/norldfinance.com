@@ -1,0 +1,527 @@
+{% extends 'base.html.twig' %}
+{% block title %}À Propos de {{NAME_SITE}}{% endblock %}
+{% block body %}
+    <section class="about-hero-section position-relative overflow-hidden text-white d-flex align-items-center justify-content-center">
+    <video class="background-video" autoplay loop muted playsinline 
+    poster="{{asset('img/img4.jpg')}}">
+        <source src="{{asset('video/video4.mp4')}}" type="video/mp4">
+        Votre navigateur ne supporte pas l'élément vidéo.
+    </video>
+
+    <div class="overlay-custom"></div>
+
+    <div class="container text-center position-relative z-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <h1 class="display-3 fw-bold mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200">
+                    Qui Sommes-Nous : Votre <span style="color: #ea3249;">Partenaire</span> de Confiance
+                </h1>
+                <p class="lead mb-5"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="400">
+                    Depuis notre fondation, nous nous engageons à transformer vos aspirations financières en réalité, avec intégrité et transparence.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mission-vision-values py-5">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Notre <span style="color: #ea3249;">Engagement</span> : Mission, Vision & Valeurs
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Découvrez ce qui nous motive et les principes qui guident chaque interaction avec nos clients.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="value-item p-4 h-100 shadow-sm rounded-3">
+                    <div class="icon-circle mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-bullseye fa-2x"></i> </div>
+                    <h3 class="h4 fw-bold mb-3">Notre Mission</h3>
+                    <p class="text-muted">
+                        Simplifier l'accès à des solutions de financement adaptées, en accompagnant chaque particulier et entreprise vers la réalisation de ses projets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="value-item p-4 h-100 shadow-sm rounded-3">
+                    <div class="icon-circle mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-lightbulb fa-2x"></i> </div>
+                    <h3 class="h4 fw-bold mb-3">Notre Vision</h3>
+                    <p class="text-muted">
+                        Devenir le partenaire financier de référence, reconnu pour notre innovation, notre transparence et la confiance que nous inspirons.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="800">
+                <div class="value-item p-4 h-100 shadow-sm rounded-3">
+                    <div class="icon-circle mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-handshake fa-2x"></i> </div>
+                    <h3 class="h4 fw-bold mb-3">Nos Valeurs</h3>
+                    <p class="text-muted">
+                        Intégrité, Transparence et Engagement sont les piliers sur lesquels repose notre relation avec vous.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-lg-10">
+                <h3 class="h2 fw-bold mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="1000">
+                    Les Piliers de Notre Succès
+                </h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="1100">
+                        <div class="value-card p-4 h-100 border rounded-3">
+                            <i class="fas fa-eye fa-3x text-primary-custom mb-3"></i>
+                            <h4 class="h5 fw-bold mb-2">Transparence</h4>
+                            <p class="text-muted small">
+                                Nous croyons en une communication claire et honnête, sans frais cachés ni conditions obscures.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="1200">
+                        <div class="value-card p-4 h-100 border rounded-3">
+                            <i class="fas fa-shield-alt fa-3x text-danger-custom mb-3"></i>
+                            <h4 class="h5 fw-bold mb-2">Intégrité</h4>
+                            <p class="text-muted small">
+                                Nos actions sont guidées par l'éthique et la responsabilité, pour votre tranquillité d'esprit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="1300">
+                        <div class="value-card p-4 h-100 border rounded-3">
+                            <i class="fas fa-users fa-3x text-primary-custom mb-3"></i>
+                            <h4 class="h5 fw-bold mb-2">Engagement</h4>
+                            <p class="text-muted small">
+                                Votre satisfaction est notre priorité, nous nous engageons à trouver les meilleures solutions pour vous.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our-history py-5">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Notre <span style="color: #ea3249;">Histoire</span> : Un Parcours Bâti sur la Confiance
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Découvrez les étapes clés qui ont forgé notre identité et notre engagement envers un financement juste et accessible.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 gx-5">
+            <div class="col-lg-6 mb-4 mb-lg-0"
+                 data-aos="fade-right"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <h3 class="h2 fw-bold mb-3 text-primary-custom">Nos Débuts : Une Vision Audacieuse</h3>
+                <p class="lead-sm text-muted">
+                    Fondée en {{FOUNDATION_CREATED_AT}}, notre entreprise a vu le jour avec une conviction simple : rendre le processus de demande de prêt plus transparent, plus rapide et plus humain. Face aux complexités bancaires traditionnelles, nous avons imaginé une plateforme où chaque client serait véritablement accompagné, du premier contact à l'obtention de son financement.
+                </p>
+                <p class="text-muted">
+                    Nous avons commencé avec une petite équipe de passionnés, animés par la volonté de faire la différence. Chaque jour, nous nous efforçons de simplifier l'accès au crédit et de bâtir des relations durables basées sur la confiance et l'écoute.
+                </p>
+            </div>
+            <div class="col-lg-6"
+                 data-aos="fade-left"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <img src="{{asset('img/equipe.jpg')}}" class="img-fluid rounded-3 shadow-lg" alt="Notre équipe fondatrice">
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 gx-5 flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0"
+                 data-aos="fade-left"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <h3 class="h2 fw-bold mb-3 text-primary-custom">Croissance et Innovation Continue</h3>
+                <p class="lead-sm text-muted">
+                    Au fil des ans, <strong class="text-capitalize">{{NAME_SITE}}</strong> a connu une croissance constante, portée par la satisfaction de nos clients et l'évolution de nos services. Nous avons investi dans les dernières technologies pour optimiser nos processus, tout en renforçant notre approche personnalisée.
+                </p>
+                <p class="text-muted">
+                    De l'élargissement de nos partenariats bancaires à l'intégration de nouvelles solutions numériques, chaque étape a été franchie avec un objectif unique : vous offrir les meilleures conditions de prêt possibles et une expérience utilisateur inégalée.
+                </p>
+            </div>
+            <div class="col-lg-6"
+                 data-aos="fade-right"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <video class="small-video img-fluid rounded-3 shadow-lg" autoplay loop muted playsinline 
+                     poster="{{asset('img/img4.jpg')}}">
+                     <source src="{{asset('video/video5.mp4')}}" type="video/mp4">
+                           <img src="{{asset('img/img12.jpg')}}" class="img-fluid rounded-3 shadow-lg" alt="Symbole de croissance financière">
+                </video>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10">
+                <h3 class="h2 fw-bold mb-5 text-center"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="800">
+                    Nos Moments Clés
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-delay="900">
+                        <div class="timeline-dot bg-primary-custom"></div>
+                        <div class="timeline-date">2010</div>
+                        <div class="timeline-content p-3 border rounded-3 shadow-sm bg-white">
+                            <h4 class="h5 fw-bold text-primary-custom">Fondation de World Finance</h4>
+                            <p class="text-muted small mb-0">Lancement de notre plateforme avec une ambition : réinventer le courtage en crédit.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-delay="1000">
+                        <div class="timeline-dot bg-danger-custom"></div>
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content p-3 border rounded-3 shadow-sm bg-white">
+                            <h4 class="h5 fw-bold text-danger-custom">Expansion des Services</h4>
+                            <p class="text-muted small mb-0">Intégration de nouvelles offres de prêts et expansion de notre réseau de partenaires bancaires.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item"
+                         data-aos="fade-up-right"
+                         data-aos-duration="1000"
+                         data-aos-delay="1100">
+                        <div class="timeline-dot bg-primary-custom"></div>
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content p-3 border rounded-3 shadow-sm bg-white">
+                            <h4 class="h5 fw-bold text-primary-custom">Digitalisation Avancée</h4>
+                            <p class="text-muted small mb-0">Lancement de notre plateforme en ligne simplifiée et de l'application mobile pour une expérience fluide.</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our-team py-5">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Notre <span style="color: #ea3249;">Équipe</span> : Des Experts à Votre Service
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Découvrez les professionnels passionnés qui s'engagent chaque jour à concrétiser vos projets financiers.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-left"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
+                    <img src="{{asset('img/directeur.jpg')}}" 
+                    class="img-fluid rounded-circle mb-3 img-thumbnail border border-3 border-primary-custom" 
+                    alt="Photo de membre de l'équipe 1">
+                    <h3 class="h4 fw-bold mb-1 text-dark-custom">Jean Dupont</h3>
+                    <p class="text-muted small mb-3 text-danger-custom">Directeur des Opérations</p>
+                    <p class="text-muted small">
+                        Fort de 15 ans d'expérience, Jean assure la fluidité de nos processus pour une efficacité maximale.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="https://linkedin.com/in/jean-dupont" target="_blank" class="social-icon mx-2 text-primary-custom"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-right"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
+                    <img src="{{asset('img/responsable.jpg')}}" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-danger-custom" alt="Photo de membre de l'équipe 2">
+                    <h3 class="h4 fw-bold mb-1 text-dark-custom">Marie Curie</h3>
+                    <p class="text-muted small mb-3 text-primary-custom">Responsable Crédit Immobilier</p>
+                    <p class="text-muted small">
+                        Spécialiste du crédit immobilier, Marie trouve des solutions sur mesure pour votre acquisition.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="https://linkedin.com/in/marie-curie" target="_blank" class="social-icon mx-2 text-primary-custom"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
+                    <img src="{{asset('img/contact_financier.jpg')}}" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-primary-custom" alt="Photo de membre de l'équipe 3">
+                    <h3 class="h4 fw-bold mb-1 text-dark-custom">Luc Martin</h3>
+                    <p class="text-muted small mb-3 text-danger-custom">Conseiller en Financement Pro</p>
+                    <p class="text-muted small">
+                        Luc est votre contact privilégié pour le financement de vos projets professionnels et d'entreprise.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="https://linkedin.com/in/luc-martin" target="_blank" class="social-icon mx-2 text-primary-custom"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </div>
+</section>
+<section class="our-approach py-5">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Notre <span style="color: #ea3249;">Approche</span> Unique : Votre Succès Financier
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Découvrez les piliers de notre service, conçus pour vous offrir une expérience de financement transparente, simple et efficace.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-eye fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Transparence Totale</h3>
+                    <p class="text-muted small">
+                        Aucuns frais cachés, aucune surprise. Nous vous expliquons chaque détail clairement, dès le départ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-rocket fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Processus Simplifié</h3>
+                    <p class="text-muted small">
+                        Une demande rapide et intuitive. Nous gérons la complexité pour que vous puissiez vous concentrer sur vos projets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-handshake-alt fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Accompagnement Personnalisé</h3>
+                    <p class="text-muted small">
+                        Un conseiller dédié vous guide à chaque étape, avec des conseils adaptés à votre situation unique.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-percent fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Taux Compétitifs</h3>
+                    <p class="text-muted small">
+                        Nous recherchons pour vous les meilleures offres du marché grâce à notre réseau étendu de partenaires.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="700">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-lock fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Sécurité des Données</h3>
+                    <p class="text-muted small">
+                        Vos informations personnelles sont protégées par les technologies de cryptage les plus avancées.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="flip-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="800">
+                <div class="approach-item text-center p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-square mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-exchange-alt fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Options Flexibles</h3>
+                    <p class="text-muted small">
+                        Des solutions de financement adaptées à diverses situations, nous nous adaptons à vos besoins.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="key-figures py-5 bg-primary-custom text-white position-relative overflow-hidden">
+    <div class="key-figures-bg-pattern"></div>
+
+    <div class="container py-md-5 position-relative z-1">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Notre <span style="color: #ea3249;">Impact</span> en Chiffres
+                </h2>
+                <p class="lead text-white-50"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    La confiance de nos clients est notre plus grande réussite. Voici quelques données qui témoignent de notre engagement et de notre expertise.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="zoom-in"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="figure-item p-3 p-md-4 h-100 rounded-3">
+                    <i class="fas fa-users fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="display-4 fw-bold mb-1"><span class="counter-up" data-count="5000">0</span>+</h3>
+                    <p class="lead-sm text-white-75 mb-0">Clients Satisfaits</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="zoom-in"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="figure-item p-3 p-md-4 h-100 rounded-3">
+                    <i class="fas fa-hand-holding-usd fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="display-4 fw-bold mb-1"><span class="counter-up" data-count="150">0</span>M€+</h3>
+                    <p class="lead-sm text-white-75 mb-0">Prêts Octroyés</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="zoom-in"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="figure-item p-3 p-md-4 h-100 rounded-3">
+                    <i class="fas fa-calendar-alt fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="display-4 fw-bold mb-1"><span class="counter-up" data-count="10">0</span>+</h3>
+                    <p class="lead-sm text-white-75 mb-0">Années d'Expérience</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="zoom-in"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="figure-item p-3 p-md-4 h-100 rounded-3">
+                    <i class="fas fa-star fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="display-4 fw-bold mb-1"><span class="counter-up" data-count="98">0</span>%</h3>
+                    <p class="lead-sm text-white-75 mb-0">Taux de Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section py-5 text-center  text-white">
+    <div class="container py-md-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="fs-2 fw-bold mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Prêt à démarrer votre projet avec <strong>{{NAME_SITE}}</strong> ?
+                </h2>
+                <p class="lead mb-5"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Notre équipe est à votre écoute pour vous conseiller et trouver la solution de financement idéale.
+                </p>
+                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                    <a href="{{path('contact.form.us')}}" class="btn btn-lg btn-danger-custom fw-bold px-5 py-3 rounded-pill text-uppercase">
+                        Contactez-nous dès aujourd'hui
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

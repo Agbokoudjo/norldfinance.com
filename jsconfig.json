@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "baseUrl": "./",
+    "paths": {
+      "@hotwired/turbo": ["./assets/vendor/@hotwired/turbo"],
+      "@wlindabla/form_validator": ["./assets/vendor/@wlindabla/form_validator"],
+      "@hotwired/stimulus":["./assets/vendor/@hotwired/stimulus"]
+    }
+  },
+  "include": ["./assets/**/*"]
+}

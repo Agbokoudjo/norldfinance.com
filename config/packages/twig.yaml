@@ -1,5 +1,16 @@
 twig:
     file_name_pattern: '*.twig'
+    charset: "UTF-8"
+    globals:
+        NAME_SITE: "NORLD FINANCE"
+        FOUNDATION_CREATED_AT: "2010"
+        EMAIL_ADMIN: contact@norldfinance.com
+        PHONE_ADMIN: +33757848285
+        LINK_WHATSAPP: https://api.whatsapp.com/send?phone=33757848285&amp;text=Hello!
+        UPDATED_SITE: 03 Juin 2025
+        AVAILABLE_LOCALES: 'fr,en,de,es,it,nl,pt'
+    form_themes:
+        - 'bootstrap_5_layout.html.twig'
 
 when@test:
     twig:
