@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+{% block title %}Crédit à la Consommation - {{NAME_SITE}} {% endblock %}
+{% block body %}
+    <main class="professional-loan">
+        <section class="hero-section hero-consommation text-white d-flex align-items-center justify-content-center text-center">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold">Crédit à la Consommation</h1>
+                <p class="lead mt-3">Financez vos projets personnels (véhicule, travaux, loisirs) avec des solutions flexibles.</p>
+                <a href="#details" class="btn btn-primary-custom btn-lg mt-4">En savoir plus</a>
+            </div>
+        </section>
+
+        <section id="introduction" class="py-5 bg-light-blue">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="section-title text-primary-dark mb-4">Comprendre le Crédit à la Consommation</h2>
+                        <p class="lead text-secondary-dark">
+                            Des envies de voyager, des besoins de travaux, l'achat d'un nouveau véhicule ou d'équipements pour la maison ? Le Crédit à la Consommation est la solution idéale pour concrétiser vos projets personnels sans impacter votre épargne. Chez <strong>{{NAME_SITE}}</strong>, nous vous offrons des prêts à la consommation flexibles et adaptés, conçus pour vous donner la liberté de réaliser vos désirs et d'améliorer votre quotidien en toute sérénité.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="col-lg-10 col-md-12 mx-auto">
+                        <h2 class="section-title text-primary-dark mb-4 text-center">Notre Approche du Crédit à la Consommation</h2>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <video autoplay muted loop playsinline  preload="metadata" 
+                                   poster="{{asset('img/img19.png')}}" 
+                                   class="w-100 h-100 object-fit-cover">
+                                <source src="{{asset('video/video14.mp4')}}" type="video/mp4">
+                                Votre navigateur ne supporte pas la balise vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="feature-title text-accent-red mb-3">Qu'est-ce que le Crédit à la Consommation concrètement ?</h3>
+                        <p class="text-secondary-dark">
+                            Le Crédit à la Consommation est un prêt accordé aux particuliers pour financer l'achat de biens de consommation ou de services, autres que l'immobilier. Cela inclut des projets variés comme l'achat d'une voiture, le financement de travaux d'aménagement, l'organisation de voyages, des études, ou l'acquisition d'équipements électroménagers. Il se présente sous différentes formes (prêt personnel, prêt affecté, crédit renouvelable), et ses caractéristiques (montant, durée, taux) sont adaptées à la nature de votre projet et à votre capacité de remboursement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-md-6">
+                       <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <video autoplay muted loop playsinline  preload="metadata" 
+                                   poster="{{asset('img/img20.png')}}" 
+                                   class="w-100 h-100 object-fit-cover">
+                                <source src="{{asset('video/video15.mp4')}}" type="video/mp4">
+                                Votre navigateur ne supporte pas la balise vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="feature-title text-accent-red mb-3">Pourquoi choisir {{NAME_SITE}} pour votre Crédit à la Consommation ?</h3>
+                        <p class="text-secondary-dark">
+                            Choisir notre institution, c'est opter pour la simplicité, la rapidité et la personnalisation :
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Solutions Flexibles :** Des offres de prêt ajustées à vos besoins et à votre budget.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Démarches Simplifiées :** Un processus de demande clair et rapide pour un déblocage des fonds efficace.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Transparence Absolue :** Aucuns frais cachés, toutes les conditions sont expliquées clairement.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Conseil Expert :** Nos conseillers sont là pour vous guider vers la meilleure option de financement.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Rapidité de Réponse :** Obtenez une réponse rapide à votre demande.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">À qui s'adresse ce service ?</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-car fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Achat de Véhicule</h5>
+                                        <p class="card-text text-secondary-dark">Financer une voiture, une moto, etc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-hammer fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Travaux & Aménagements</h5>
+                                        <p class="card-text text-secondary-dark">Rénover, équiper votre logement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-plane fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Voyages & Loisirs</h5>
+                                        <p class="card-text text-secondary-dark">Financer des vacances, un hobby, des études.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">Comment ça marche ? (Processus simplifié)</h3>
+                        <div class="process-steps">
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                                <h5 class="step-title text-primary-dark">Identifiez votre Projet</h5>
+                                <p class="text-secondary-dark">Définissez clairement votre besoin de financement.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                                <h5 class="step-title text-primary-dark">Demande en Ligne</h5>
+                                <p class="text-secondary-dark">Remplissez notre formulaire rapide et sécurisé.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                                <h5 class="step-title text-primary-dark">Analyse & Proposition</h5>
+                                <p class="text-secondary-dark">Nous évaluons votre dossier et vous proposons l'offre adaptée.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                                <h5 class="step-title text-primary-dark">Signature du Contrat</h5>
+                                <p class="text-secondary-dark">Validez les conditions et signez votre contrat de prêt.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                                <h5 class="step-title text-primary-dark">Fonds Débloqués</h5>
+                                <p class="text-secondary-dark">Les fonds sont rapidement mis à votre disposition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto">
+                        <h3 class="feature-title text-accent-red mb-4 text-center">Les avantages pour vous :</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-sliders-h fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Flexibilité</h5>
+                                        <p class="card-text">Des options de remboursement adaptées à votre capacité financière.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-hourglass-start fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Rapidité</h5>
+                                        <p class="card-text">Obtenez une réponse et les fonds rapidement pour vos projets urgents.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-shield-alt fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Sécurité</h5>
+                                        <p class="card-text">Un cadre clair et transparent, sans mauvaises surprises.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-user-friends fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Accompagnement</h5>
+                                        <p class="card-text">Nos experts vous conseillent pour le meilleur choix.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-piggy-bank fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Préservation de l'épargne</h5>
+                                        <p class="card-text">Réalisez vos projets sans toucher à vos économies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-white text-center py-5">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="display-5 fw-bold text-primary-dark">Un projet personnel en tête ?</h2>
+                <p class="lead mt-3 text-secondary-dark">Déposez votre demande de crédit à la consommation dès aujourd'hui et obtenez une réponse rapide !</p>
+                <a href="{{path('loan.application.credit')}}" class="btn btn-secondary-custom btn-lg mt-4">Demander un crédit conso</a>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

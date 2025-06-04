@@ -1,0 +1,45 @@
+lastname: 'VOTRE NOM DE FAMILLE'
+firstname: "VOS PRÉNOMS"
+email: 'ADRESSE EMAIL'
+phone: 'WHATSAPP'
+country: "PAYS"
+city: "VILLE"
+adresse: ADDRESSE
+montant: MONTANT
+devise: DEVISE MONÉTAIRE
+subject.placeholder: "Ex: Demande de Rachat de Crédit"
+subject.label: OBJET DE VOTRE DEMANDE DE PRET
+devise.placeholder: "Choississez votre devise de demande de pret"
+duration: DURÉE DU REMBOURSEMENT (MOIS)
+identitydocument: Pièce d'identité (Carte d'identité ou Passeport)
+helperIdentiydocument: Veuillez scanner ou photographier votre pièce d'identité (recto/verso ou pages importantes) et l'enregistrer au format PDF.
+identityphoto1: Photo d'identité 1
+identityphoto2: Photo d'identité 2
+helperPhoto: Format JPG ou PNG ou JPEG.
+consentCheckbox: >
+  En soumettant ce formulaire, j'accepte les <a href="#" class="text-primary-custom text-decoration-none fw-bold">conditions générales</a> de <strong>%organization_name%</strong> et la <a href="#" class="text-primary-custom text-decoration-none fw-bold">politique de confidentialité</a>
+
+country.placeholder: "Choississez votre pays"
+adresse.placeholder: Votre adresse complète
+adresse.helper: "Ex: Numéro, Rue, Quartier, Ville/Localité"
+helpdocument.generale: Documents et Photos
+btn.submit: Soumettre la Demande
+context_form: Détails de la demande
+Form.success.title: 'Demande de prêt reçue, %name% !'
+Form.success.message: >
+  Bonjour **%name%**,
+  <br/><br/>
+  Nous vous remercions d'avoir soumis votre demande de prêt à **%organization%**.
+  Votre dossier est maintenant en cours de traitement.
+  <br/><br/>
+  Notre équipe spécialisée étudiera attentivement votre demande et vous contactera
+  dans les **24 à 48 heures ouvrables** pour vous informer de la suite donnée à votre dossier
+  ou pour demander des informations complémentaires si nécessaire.
+  <br/><br/>
+  En attendant, vous pouvez consulter notre <a href="{{path('home')}}#faq">FAQ</a> pour toute question
+  fréquemment posée ou nous suivre sur nos réseaux sociaux pour rester informé(e) de nos actualités.
+  <br/><br/>
+  Nous sommes impatients de vous accompagner dans la réalisation de vos projets.
+  <br/><hr/>
+  Cordialement,<br/>
+  L’équipe **%organization%**

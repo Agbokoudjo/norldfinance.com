@@ -1,0 +1,201 @@
+{% extends 'base.html.twig' %}
+{% block title %}Prêts Étudiants - {{NAME_SITE}} {% endblock %}
+{% block body %}
+    <main class="professional-loan">
+        <section class="hero-section hero-etudiant text-white d-flex align-items-center justify-content-center text-center"
+            >
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold">Prêts Étudiants</h1>
+                <p class="lead mt-3">Financement pour vos études supérieures, frais de scolarité ou logement.</p>
+                <a href="#details" class="btn btn-primary-custom btn-lg mt-4">En savoir plus</a>
+            </div>
+        </section>
+
+        <section id="introduction" class="py-5 bg-light-blue">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="section-title text-primary-dark mb-4">Comprendre les Prêts Étudiants</h2>
+                        <p class="lead text-secondary-dark">
+                            Poursuivre des études supérieures est un investissement majeur dans votre avenir. Cependant, les frais de scolarité, le logement, le matériel pédagogique et les dépenses quotidiennes peuvent représenter un frein. Le Prêt Étudiant est une solution de financement conçue spécifiquement pour vous permettre de vous concentrer pleinement sur vos études, sans vous soucier des contraintes financières. Chez <strong>{{NAME_SITE}}</strong>, nous vous accompagnons pour trouver le prêt étudiant adapté à vos besoins, afin que votre projet d'études devienne une réalité accessible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="col-lg-10 col-md-12 mx-auto">
+                        <h2 class="section-title text-primary-dark mb-4 text-center">Notre Approche des Prêts Étudiants</h2>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <img  src="{{asset('img/img22.jpg')}}"
+                                   class="w-100 img-fluid h-100 rounded shadow-sm object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="feature-title text-accent-red mb-3">Qu'est-ce que le Prêt Étudiant concrètement ?</h3>
+                        <p class="text-secondary-dark">
+                            Le Prêt Étudiant est un emprunt bancaire spécifiquement conçu pour les étudiants inscrits dans l'enseignement supérieur. Il permet de financer une grande variété de dépenses liées aux études, telles que les frais de scolarité (universités, grandes écoles), l'achat de matériel pédagogique (ordinateurs, livres), les frais de logement (loyer, caution), le transport, ou même les dépenses quotidiennes. Les conditions de remboursement sont généralement très avantageuses, avec un différé de remboursement possible pendant la durée des études et une période de grâce, ce qui allège la charge financière immédiate.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-md-6">
+                       <div class="ratio ratio-16x9 video-container shadow-sm rounded"> <img src="{{asset('img/img23.jpg')}}" class="w-100 img-fluid h-100 rounded shadow-sm object-fit-cover" alt="Illustration Étudiant Révisant"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="feature-title text-accent-red mb-3">Pourquoi choisir {{NAME_SITE}} pour votre Prêt Étudiant ?</h3>
+                        <p class="text-secondary-dark">
+                            Nous sommes votre partenaire idéal pour un financement serein de vos études :
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Conditions Avantageuses :** Taux compétitifs et modalités de remboursement flexibles (différé total ou partiel).</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Simplicité et Rapidité :** Un processus de demande allégé pour un accès rapide aux fonds.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Accompagnement Personnalisé :** Nos conseillers vous guident à chaque étape, de la simulation à la mise en place.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Large Couverture :** Financement adapté à différents types d'études et de besoins.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Flexibilité de Montant :** Un prêt modulable selon le coût réel de vos études et dépenses.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">À qui s'adresse ce service ?</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-user-graduate fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Étudiants Post-Bac</h5>
+                                        <p class="card-text text-secondary-dark">Universités, BTS, DUT, classes préparatoires.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-university fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Grandes Écoles</h5>
+                                        <p class="card-text text-secondary-dark">Écoles de commerce, d'ingénieurs, spécialisées.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-globe-americas fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Études à l'Étranger</h5>
+                                        <p class="card-text text-secondary-dark">Financement de cursus internationaux.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">Comment ça marche ? (Processus simplifié)</h3>
+                        <div class="process-steps">
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                                <h5 class="step-title text-primary-dark">Évaluez vos Besoins</h5>
+                                <p class="text-secondary-dark">Estimez les coûts de vos études et dépenses.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                                <h5 class="step-title text-primary-dark">Demande en Ligne</h5>
+                                <p class="text-secondary-dark">Soumettez votre dossier via notre formulaire.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                                <h5 class="step-title text-primary-dark">Étude Personnalisée</h5>
+                                <p class="text-secondary-dark">Nos experts analysent votre situation et vous proposent une offre.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                                <h5 class="step-title text-primary-dark">Signature du Contrat</h5>
+                                <p class="text-secondary-dark">Formalisation du prêt et des modalités de remboursement.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                                <h5 class="step-title text-primary-dark">Déblocage des Fonds</h5>
+                                <p class="text-secondary-dark">Les fonds sont mis à votre disposition pour vos besoins.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto">
+                        <h3 class="feature-title text-accent-red mb-4 text-center">Les avantages pour vous :</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-piggy-bank fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Maîtrise du budget</h5>
+                                        <p class="card-text">Couvrez vos dépenses d'études sans pression sur votre épargne.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-calendar-alt fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Remboursement différé</h5>
+                                        <p class="card-text">Commencez à rembourser après la fin de vos études.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-hand-holding-heart fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Sérénité d'esprit</h5>
+                                        <p class="card-text">Concentrez-vous sur vos études, nous gérons le financement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-chart-line fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Investissement d'avenir</h5>
+                                        <p class="card-text">Financez une formation qui ouvrira les portes de votre carrière.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-check-circle fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Simplicité</h5>
+                                        <p class="card-text">Des démarches claires et un accompagnement de A à Z.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-white text-center py-5">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="display-5 fw-bold text-primary-dark">Prêt à investir dans votre avenir ?</h2>
+                <p class="lead mt-3 text-secondary-dark">Déposez votre demande de prêt étudiant et assurez le succès de vos études !</p>
+                <a href="{{path('loan.application.credit')}}" class="btn btn-secondary-custom btn-lg mt-4">Demander un prêt étudiant</a>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

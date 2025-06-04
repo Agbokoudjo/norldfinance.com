@@ -1,0 +1,200 @@
+{% extends 'base.html.twig' %}
+{% block title %} Rachat de Crédit - {{NAME_SITE}} {% endblock %}
+{% block body %}
+     <main class="professional-loan">
+        <section class="hero-section hero-rachat-credit text-white d-flex align-items-center justify-content-center text-center">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold">Rachat de Crédit</h1>
+                <p class="lead mt-3">Simplifiez votre budget en regroupant vos crédits et réduisez vos mensualités.</p>
+                <a href="#details" class="btn btn-primary-custom btn-lg mt-4">En savoir plus</a>
+            </div>
+        </section>
+
+        <section id="introduction" class="py-5 bg-light-blue">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="section-title text-primary-dark mb-4">Comprendre le Rachat de Crédit</h2>
+                        <p class="lead text-secondary-dark">
+                            Face à des mensualités de prêts multiples, un budget qui se tend, ou un projet nécessitant de nouvelles capacités de financement, le rachat de crédit offre une bouffée d'oxygène. Cette solution financière consiste à regrouper l'ensemble de vos prêts en un seul, avec une mensualité unique, souvent plus faible, et une durée de remboursement adaptée. Chez <strong>{{NAME_SITE}}</strong>, nous vous aidons à retrouver une gestion budgétaire sereine et à dégager du pouvoir d'achat pour vos projets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="details" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="col-lg-10 col-md-12 mx-auto">
+                        <h2 class="section-title text-primary-dark mb-4 text-center">Notre Approche du Rachat de Crédit</h2>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <img src="{{asset('img/img26.jpg')}}" class="rounded shadow-sm img-fluid w-100 h-100 object-fit-cover"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="feature-title text-accent-red mb-3">Qu'est-ce que le Rachat de Crédit concrètement ?</h3>
+                        <p class="text-secondary-dark">
+                            Le rachat de crédit, également appelé regroupement de crédits, est une opération financière qui permet de rassembler plusieurs prêts (crédit immobilier, prêts à la consommation, crédits auto, revolving, dettes diverses) en un seul et unique emprunt. L'objectif principal est de réduire le montant de vos mensualités en allongeant la durée de remboursement et/ou en bénéficiant d'un taux d'intérêt potentiellement plus bas. Cette solution simplifie la gestion de votre budget avec une seule échéance par mois, et peut même dégager un capital supplémentaire pour un nouveau projet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-md-6">
+                       <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                            <img src="{{asset('img/img27.png')}}" class="rounded shadow-sm img-fluid w-100 h-100 object-fit-cover"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="feature-title text-accent-red mb-3">Pourquoi choisir {{NAME_SITE}} pour votre Rachat de Crédit ?</h3>
+                        <p class="text-secondary-dark">
+                            Nous sommes votre expert pour une solution de regroupement de crédits efficace :
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Analyse Approfondie :** Une étude personnalisée de votre situation pour une solution sur mesure.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Réduction de Mensualités :** Objectif principal d'alléger votre charge financière mensuelle.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Simplicité Administrative :** Un seul interlocuteur et un dossier simplifié.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Taux Optimisés :** Accès à des conditions de marché négociées pour votre nouveau prêt.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Nouvel Élan :** Possibilité d'intégrer un besoin de trésorerie pour un nouveau projet.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">À qui s'adresse ce service ?</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-money-check-alt fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Personnes Multi-créditées</h5>
+                                        <p class="card-text text-secondary-dark">Ceux qui ont plusieurs prêts en cours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-chart-line-down fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Baisse de Revenus</h5>
+                                        <p class="card-text text-secondary-dark">En cas de changement de situation financière.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-lightbulb fa-3x text-primary-dark mb-3"></i>
+                                        <h5 class="card-title text-primary-dark">Nouveaux Projets</h5>
+                                        <p class="card-text text-secondary-dark">Pour financer un projet en dégageant de la trésorerie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h3 class="feature-title text-accent-red mb-4">Comment ça marche ? (Processus simplifié)</h3>
+                        <div class="process-steps">
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                                <h5 class="step-title text-primary-dark">Simuler en Ligne</h5>
+                                <p class="text-secondary-dark">Estimez vos nouvelles mensualités.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                                <h5 class="step-title text-primary-dark">Dépôt du Dossier</h5>
+                                <p class="text-secondary-dark">Rassemblez les documents nécessaires avec notre aide.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                                <h5 class="step-title text-primary-dark">Étude et Offre</h5>
+                                <p class="text-secondary-dark">Nous analysons votre situation et vous proposons la meilleure offre.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                                <h5 class="step-title text-primary-dark">Acceptation et Signature</h5>
+                                <p class="text-secondary-dark">Vous acceptez l'offre, le contrat est signé.</p>
+                            </div>
+                            <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                                <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                                <h5 class="step-title text-primary-dark">Regroupement Effectif</h5>
+                                <p class="text-secondary-dark">Vos anciens crédits sont remboursés, vous n'avez qu'une seule mensualité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-10 mx-auto">
+                        <h3 class="feature-title text-accent-red mb-4 text-center">Les avantages pour vous :</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-hand-holding-usd fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Mensualités réduites</h5>
+                                        <p class="card-text">Allégez votre budget mensuel et retrouvez du pouvoir d'achat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-wallet fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Budget simplifié</h5>
+                                        <p class="card-text">Une seule mensualité, une date unique, une gestion plus claire.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-chart-pie fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Taux optimisé</h5>
+                                        <p class="card-text">Bénéficiez d'un taux d'intérêt potentiellement plus avantageux.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-lightbulb fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Nouveaux projets</h5>
+                                        <p class="card-text">Intégrez une trésorerie supplémentaire pour un projet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-heartbeat fa-2x mb-3 text-accent-red"></i>
+                                        <h5 class="card-title">Sérénité retrouvée</h5>
+                                        <p class="card-text">Évitez le surendettement et respirez financièrement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-white text-center py-5">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="display-5 fw-bold text-primary-dark">Simplifiez votre budget dès maintenant !</h2>
+                <p class="lead mt-3 text-secondary-dark">Contactez nos experts pour une simulation gratuite et sans engagement de votre rachat de crédit.</p>
+                <a href="{{path('loan.application.credit')}}" class="btn btn-secondary-custom btn-lg mt-4">Demander un rachat de crédit</a>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

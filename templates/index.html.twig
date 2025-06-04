@@ -1,0 +1,657 @@
+{% extends 'base.html.twig' %}
+{% block title %}Bienvenue chez {{NAME_SITE}}{% endblock %}
+{% block body %}
+<section class="hero-section">
+    <div class="owl-carousel owl-theme hero-slider  owl-carousel-light owl-carousel-light-init-fadeIn">
+              <div class="item hero-slide position-relative overlay overlay-show overlay-op-7"
+               style="background-image: url('{{asset('img/img3.jpg')}}');">
+            <div class="container hero-content">
+                <h1 class="display-3 fw-bold aos-item"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+                data-aos-duration="3000"
+                data-aos-once="false"
+                >
+                  Votre Partenaire de Financement
+                </h1>
+                <p class="lead mt-4 aos-item"
+                data-aos="zoom-out-up"
+                data-aos-delay="1500"
+                data-aos-duration="3000"
+                data-aos-once="false"
+                >Des solutions de prêt adaptées à vos besoins.</p>
+                <a href="{{path('loan.application.credit')}}" class="btn loan-application btn-lg mt-3 aos-item"
+                data-aos="flip-left"
+                data-aos-duration="3000"
+                data-aos-once="false"
+                >Demander un prêt</a>
+            </div>
+        </div>
+
+        <div class="item hero-slide" style="background-image: url('{{asset('img/img6.jpg')}}');">
+            <div class="container hero-content">
+                <h1 class="display-3 fw-bold"
+                >Crédits Simples et Rapides</h1>
+                <p class="lead mt-4"
+                >Obtenez un financement en toute simplicité, sans paperasse inutile.</p>
+                <a href="{{path('loan.application.credit')}}" class="btn btn-outline-light btn-lg mt-3"
+                >Simuler mon prêt</a>
+            </div>
+        </div>
+
+        <div class="item hero-slide" style="background-image: url('{{asset('img/img8.jpg')}}');">
+            <div class="container hero-content">
+                <h1 class="display-3 fw-bold"
+                >Réalisez Vos Projets</h1>
+                <p class="lead mt-4">Que ce soit pour une voiture, une maison ou un imprévu, nous sommes là.</p>
+                <a href="#" class="btn btn-outline-light btn-lg mt-3" 
+                >Voir nos offres</a>
+            </div>
+        </div>
+
+        <div class="item hero-slide" style="background-image: url('{{asset('img/img7.jpg')}}');">
+            <div class="container hero-content">
+                <h1 class="display-3  fw-bold">Votre <span style="color: #ea3249;">Crédit</span> avec un Expert Dévoué</h1>
+                <p class="lead mt-4">Nos experts vous guident à chaque étape de votre demande.</p>
+                <a href="{{path('contact.form.us')}}" class="btn btn-outline-light btn-lg mt-3 aos-item"
+                 data-aos="flip-right"
+                data-aos-duration="3000"
+                data-aos-once="false"
+                >Prendre rendez-vous</a>
+            </div>
+        </div>
+    </div>
+  </section>
+  <main class="container my-5">
+  <section id="pourquoi-nous-choisir" class="py-5">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <h2 class="fs-2 fw-bold aos-item" 
+          data-aos="fade-up" 
+            data-aos-once="false"
+          data-aos-duration="800">
+            Pourquoi Choisir  {{NAME_SITE}} ?
+          </h2> 
+          <p class="lead text-muted mt-3 aos-item" data-aos="fade-up" data-aos-duration="1000"
+           data-aos-delay="200"
+            data-aos-once="false"
+           >
+            Découvrez les avantages qui font de nous le choix privilégié pour vos demandes de prêt et solutions de financement.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card-body text-center">
+              <i class="fas fa-rocket fa-3x text-primary- icon-services-blue mb-3"></i>
+              <h3 class="h5 card-title fw-bold text-services-blue">Rapidité et Efficacité</h3>
+              <p class="card-text text-muted">
+                Obtenez une réponse à votre demande de prêt en <strong class="text-dark">moins de 24h</strong>. Nous traitons vos dossiers avec une célérité inégalée pour vos projets urgents.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="card-body text-center">
+              <i class="fas fa-hand-pointer fa-3x text-success- icon-services-red mb-3"></i>
+              <h3 class="h5 card-title fw-bold text-services-red">Processus 100% Simplifié</h3>
+              <p class="card-text text-muted">
+                Dites adieu à la paperasse ! Notre plateforme intuitive vous permet de soumettre votre demande de financement <strong class="text-dark">entièrement en ligne</strong>, en quelques clics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            <div class="card-body text-center">
+              <i class="fas fa-shield-alt fa-3x text-info- icon-services-blue mb-3"></i>
+              <h3 class="h5 card-title fw-bold text-services-blue">Transparence Totale</h3>
+              <p class="card-text text-muted">
+                Pas de frais cachés ni de mauvaises surprises. Nos offres de prêt sont présentées avec une <strong class="text-dark">clarté absolue</strong>, pour une confiance mutuelle.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 aos-item"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+              <div class="card-body text-center">
+                <i class="fas fa-handshake fa-3x text-warning- icon-services-blue mb-3"></i>
+                <h3 class="h5 card-title fw-bold text-services-blue">Solutions Personnalisées</h3>
+                <p class="card-text text-muted">
+                  Chaque projet est unique. Nous proposons des <strong class="text-dark">solutions de financement flexibles</strong> et adaptées à votre situation spécifique, pour des conditions optimales.
+                </p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+              <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-danger- icon-services-red mb-3"></i>
+                <h3 class="h5 card-title fw-bold text-services-red">Accompagnement Expert</h3>
+                <p class="card-text text-muted">
+                  Notre équipe d'experts financiers est à votre écoute pour vous conseiller et vous guider à chaque étape de votre <strong class="text-dark">demande de financement</strong>.
+                </p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-left" 
+            data-aos-duration="1000" data-aos-delay="1000">
+              <div class="card-body text-center">
+                <i class="fas fa-lock fa-3x text-secondary- icon-services-blue mb-3"></i>
+                <h3 class="h5 card-title fw-bold text-services-blue">Sécurité et Confidentialité</h3>
+                <p class="card-text text-muted">
+                  Vos données sont protégées. Nous garantissons une <strong class="text-dark">sécurité maximale</strong> et une confidentialité absolue pour toutes vos informations personnelles.
+                </p>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <a href="#nos-services" class="btn btn-color-red btn-lg shadow-lg aos-item" data-aos="zoom-in" data-aos-duration="1200">
+            Découvrez toutes nos solutions de financement <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="nos-services" class="py-5">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <h2 class="fw-bold fs-2" data-aos="fade-up" data-aos-duration="800">
+            Nos Solutions de Prêts
+          </h2>
+          <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Que vous soyez un particulier ou une entreprise, nous avons la solution de financement qu'il vous faut.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item" 
+           data-aos-duration="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-user-friends fa-4x text-primary- icon-services-red mb-3"></i>
+              <h3 class="h4 card-title fw-bold text-services-red">Prêt Personnel</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Financez tous vos besoins personnels : mariage, voyages, études, ou autres dépenses imprévues. Une solution simple et rapide.
+              </p>
+              <a href="{{path('services.professional.loan')}}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="200">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item" 
+           data-aos-duration="1000" data-aos-delay="200" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-building fa-4x text-success- icon-services-blue mb-3"></i>
+              <h3 class="h4 card-title fw-bold text-services-blue">Financement d'Entreprise</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Développez votre activité, investissez dans de nouveaux équipements ou gérez votre trésorerie avec nos solutions de financement sur mesure pour les professionnels.
+              </p>
+              <a href="{{path('services.investment.financing')}}" class="btn btn-outline-blue mt-auto" data-aos="fade-up" data-aos-delay="400">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item" 
+           data-aos-duration="1000" data-aos-delay="400" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-home fa-4x text-info- mb-3 icon-services-red"></i>
+              <h3 class="h4 card-title fw-bold text-services-red">Crédit Immobilier</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Réalisez votre rêve de propriété. Nous vous accompagnons à chaque étape pour obtenir le meilleur taux pour votre prêt immobilier.
+              </p>
+              <a href="{{path('services.consumer.credit')}}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="600">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"  
+          data-aos-duration="1000" data-aos-delay="600"   data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-sync-alt fa-4x text-warning- icon-services-red mb-3"></i>
+              <h3 class="h4 card-title fw-bold text-services-red">Rachat de Crédit</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Simplifiez la gestion de votre budget en regroupant tous vos crédits en un seul. Réduisez vos mensualités et respirez financièrement.
+              </p>
+              <a href="{{path('services.loan.buyback')}}" class="btn btn-outline-red mt-auto" 
+              data-aos="fade-up" data-aos-delay="800">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item" 
+           data-aos-duration="1000" data-aos-delay="800" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-car fa-4x text-danger- icon-services-blue mb-3"></i>
+              <h3 class="h4 card-title fw-bold text-services-blue">Prêt Auto / Moto</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Financer l'achat de votre nouveau véhicule n'a jamais été aussi simple. Obtenez un crédit auto/moto rapidement et à des conditions avantageuses.
+              </p>
+              <a href="{{path('services.consumer.credit')}}" class="btn btn-outline-blue mt-auto" data-aos="fade-up" data-aos-delay="1000">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-lg aos-item" 
+           data-aos-duration="1000" data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="card-body d-flex flex-column text-center">
+              <i class="fas fa-paint-roller fa-4x text-secondary- icon-services-red mb-3"></i>
+              <h3 class="h4 card-title fw-bold text-services-red">Prêt Travaux</h3>
+              <p class="card-text text-muted flex-grow-1">
+                Rénovez, agrandissez ou embellissez votre intérieur. Un financement adapté pour concrétiser vos projets de travaux et améliorer votre habitat.
+              </p>
+              <a href="{{path('services.investment.financing')}}" class="btn btn-outline-red mt-auto" 
+              data-aos="fade-up" data-aos-delay="1200">
+                En savoir plus <i class="fas fa-chevron-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <p class="lead text-muted" data-aos="fade-up" data-aos-duration="1000">
+            Vous ne trouvez pas la solution idéale ? Notre équipe est là pour vous guider.
+          </p>
+          <a href="{{path('contact.form.us')}}#contact-form-section" class="btn btn-color-red btn-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+            Contactez un conseiller <i class="fas fa-headset ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="comment-ca-marche" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-12">
+                    <h2 class="text-center aos-item fw-bold fs-2" data-aos="fade-right" data-aos-duration="800">
+                                Demander un Prêt : <span class="text-processus">Un Processus Simple</span>
+                      </h2></div>
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="text-center text-lg-start mb-4">
+                            <p class="lead text-muted mt-3" data-aos="fade-right" data-aos-duration="1000" 
+                            data-aos-delay="200">
+                                Suivez nos quelques étapes faciles pour obtenir rapidement le financement dont vous avez besoin, sans complication.
+                            </p>
+                        </div>
+
+                        <div class="process-steps">
+                            <div class="d-flex align-items-start mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                                <div class="step-icon me-4 icon-check">
+                                     <i class="fas fa-check-circle fs-3"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold">
+                                      Simulation et Demande en Ligne</h3>
+                                    <p class="text-muted">
+                                        Utilisez notre simulateur en ligne pour définir votre besoin et remplissez notre formulaire de demande de prêt en quelques minutes. C'est simple et intuitif.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start mb-4 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                                <div class="step-icon me-4 icon-check">
+                                     <i class="fas fa-check-circle fs-3"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold">Étude de Votre Dossier et Réponse Rapide</h3>
+                                    <p class="text-muted">
+                                        Notre équipe d'experts analyse votre demande avec la plus grande attention. Vous recevez une réponse de principe dans les 24 heures ouvrées.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start mb-4 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+                                <div class="step-icon me-4 icon-check">
+                                     <i class="fas fa-check-circle fs-3"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold"> Signature et Déblocage des Fonds</h3>
+                                    <p class="text-muted">
+                                        Après acceptation, signez votre contrat en ligne. Les fonds sont ensuite débloqués et disponibles sur votre compte dans les meilleurs délais.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4">
+                            <a href="{{path('loan.application.credit')}}" class="btn loan-application btn-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1000">
+                                Commencer ma demande maintenant <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 aos-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
+                        <a href="{{asset('video/video7.mp4')}}" class="video-thumbnail-wrapper popup-vimeo">
+                        <img src="{{asset('img/img10.jpg')}}" alt="Aperçu vidéo du processus de demande de prêt" class="img-fluid rounded-lg">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </a>
+                        <p class="text-center text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            Regardez notre courte vidéo explicative pour comprendre toutes les étapes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="nos-chiffres-cles" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fs-2  fw-bold aos-item" data-aos="fade-up" data-aos-duration="800">
+                        En savoir plus sur nous <span style="color: #ea3249;">nos chiffres</span>
+                    </h2>
+                    <p class="lead text-muted mt-3 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        Notre succès se mesure à travers des indicateurs clés qui témoignent de notre engagement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            <i class="fas fa-users fa-5x mb-3" style="color: #00427e;"></i>
+                            <h3 class="display-2 fw-bolder" style="color: #00427e;">850<span class="fs-4">+</span></h3>
+                            <p class="lead text-dark mb-0">Collaborateurs dévoués</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            <i class="fas fa-building fa-5x mb-3" style="color: #ea3249;"></i>
+                            <h3 class="display-2 fw-bolder" style="color: #ea3249;">27<span class="fs-4">+</span></h3>
+                            <p class="lead text-dark mb-0">Bureaux à votre service</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            <i class="fas fa-smile-beam fa-5x mb-3" style="color: #00427e;"></i>
+                            <h3 class="display-2 fw-bolder" style="color: #00427e;">99<span class="fs-4">%</span></h3>
+                            <p class="lead text-dark mb-0">Clients satisfaits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <section id="temoignages-clients" class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fs-2 fw-bold" data-aos="fade-up" data-aos-duration="800">
+                    Ce que disent nos clients <span style="color: #00427e;">satisfaits</span>
+                </h2>
+                <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Découvrez les avis et expériences de ceux qui nous ont fait confiance.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/sophie.jpg')}}" 
+                            class="rounded-circle me-3 border border-3 img-fluid" 
+                             width="100"
+                             height="100"
+                            style="border-color: #ea3249!important;" alt="Photo de profil Sophie L.">
+                            <div>
+                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Sophie L.</h5>
+                                <p class="text-muted small mb-0">Client Particulier</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "La rapidité et la clarté du processus m'ont impressionnée. J'ai obtenu mon prêt en un temps record. Un service exceptionnel et une équipe très réactive !"
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Prêt Personnel</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/marc.png')}}"
+                             class="rounded-circle me-3 border border-3 img-fluid"
+                             width="100"
+                             height="100"
+                             style="border-color: #00427e!important;" 
+                             alt="Photo de profil Marc D.">
+                            <div>
+                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Marc D.</h5>
+                                <p class="text-muted small mb-0">Gérant d'entreprise</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "Le financement de notre projet était crucial. L'accompagnement personnalisé et l'expertise de leur équipe ont fait toute la différence. Très satisfait !"
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Financement Professionnel</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/julie.jpg')}}" 
+                            class="rounded-circle me-3 border border-3 img-fluid"
+                            width="100"
+                            height="100"
+                             style="border-color: #ea3249!important;" alt="Photo de profil Julie R.">
+                            <div>
+                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Julie R.</h5>
+                                <p class="text-muted small mb-0">Client Fidèle</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "J'avais besoin d'un rachat de crédit rapide et efficace. Leur solution a allégé mes mensualités et m'a apporté une tranquillité d'esprit inestimable."
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Rachat de Crédit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <div class="col-12">
+                <a href="#" class="btn btn-lg shadow-lg" 
+                   style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold;" 
+                   data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
+                    Lire tous nos témoignages <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="faq" class="py-5 bg-white">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fs-2 fw-bold" data-aos="fade-up" data-aos-duration="800">
+                    Vos questions, nos <span style="color: #ea3249;">réponses</span>
+                </h2>
+                <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Retrouvez ici les réponses aux questions les plus fréquentes concernant nos services de prêt.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Qui peut bénéficier d'un prêt ?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Nos prêts sont ouverts à un large éventail de profils : particuliers, professionnels, jeunes entreprises, et même les seniors. Chaque demande est étudiée individuellement pour s'adapter à votre situation financière et à vos besoins spécifiques. Nous offrons des solutions personnalisées pour garantir l'inclusion financière.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Quels sont les documents requis pour une demande de prêt ?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Généralement, vous aurez besoin d'une pièce d'identité valide, d'un justificatif de domicile, de vos derniers bulletins de salaire ou bilans comptables (pour les professionnels), et d'un relevé d'identité bancaire (RIB). Des documents supplémentaires peuvent être demandés selon le type de prêt et votre situation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Combien de temps faut-il pour obtenir une réponse ?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Nous nous engageons à vous fournir une réponse de principe dans les 24 heures ouvrées suivant la réception de votre dossier complet. Le déblocage des fonds intervient généralement quelques jours après l'acceptation finale et la signature du contrat.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Puis-je faire une simulation avant de déposer ma demande ?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Oui, absolument ! Nous vous encourageons à utiliser notre simulateur de prêt en ligne. C'est un outil gratuit et sans engagement qui vous permet d'estimer vos mensualités et les coûts totaux de votre prêt en fonction du montant et de la durée souhaités.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Quelles sont les options de remboursement disponibles ?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Nous proposons des options de remboursement flexibles, adaptées à votre capacité financière. Vous pouvez choisir la durée de votre prêt, et dans certains cas, bénéficier de paliers de remboursement ou de la possibilité de remboursements anticipés (partiels ou totaux) sans frais supplémentaires.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-5">
+            <div class="col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <p class="lead text-muted">Vous n'avez pas trouvé la réponse à votre question ?</p>
+                <a href="{{path('contact.form.us')}}" class="btn btn-lg shadow-lg"
+                   style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold;">
+                    Contactez-nous directement <i class="fas fa-envelope ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cta-final" class="py-5 text-white">
+    <div class="container text-center position-relative z-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-4" data-aos="fade-up" data-aos-duration="900">
+                    Prêt à concrétiser <span style="color: #ea3249;">vos projets</span> ?
+                </h2>
+                <p class="lead mb-5" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="200">
+                    N'attendez plus ! Lancez votre demande de prêt en ligne dès aujourd'hui et obtenez une réponse rapide pour le financement de vos ambitions personnelles ou professionnelles.
+                </p>
+                <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+                    <a href="{{path('loan.application.credit')}}" class="btn btn-lg shadow-lg"
+                       style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold; padding: 0.8rem 2.5rem; font-size: 1.3rem;">
+                        Je démarre ma demande maintenant <i class="fas fa-arrow-circle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta-decoration-circle cta-circle-1" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600"></div>
+    <div class="cta-decoration-circle cta-circle-2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800"></div>
+    <div class="cta-decoration-circle cta-circle-3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000"></div>
+</section>
+  </main>
+{% endblock %}

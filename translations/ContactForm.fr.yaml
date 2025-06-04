@@ -1,0 +1,18 @@
+fullname: 'Votre Nom Complet'
+email: 'Votre Adresse E-mail'
+phone: 'Votre Numéro de Téléphone (Optionnel)'
+subject.label: 'Objet du message'
+subject.placeholder: 'Demande de renseignement, Devis...'
+content.label: 'Votre Message'
+content.placeholder: 'Décrivez votre besoin ici...'
+btn.submit: 'Envoyer le Message'
+Form.success.title: 'Merci pour votre message, %name% !'
+Form.success.message: > 
+  Bonjour %name%, Nous vous remercions d’avoir contacté %organization%. Votre message a bien été reçu, et notre équipe vous répondra dans les plus brefs délais. En attendant, n''hésitez pas à nous appeler directement ou consulter notre <a href="/faq">FAQ</a>  ou à nous suivre sur nos réseaux sociaux. <br/><hr/> Cordialement, <br/> L’équipe %organization%
+sendEmailAdmin.header: 'Nouveau message de contact reçu sur %organization_name%'
+sendEmailAdmin.footer: 'Ce message vous a été envoyé automatiquement depuis le formulaire de contact de %organization_name%'
+sendEmailAdmin.field.fullname: Nom
+sendEmailAdmin.field.email: Email
+sendEmailAdmin.field.phone: Téléphone
+sendEmailAdmin.field.subject: Sujet
+sendEmailAdmin.field.content: Message
