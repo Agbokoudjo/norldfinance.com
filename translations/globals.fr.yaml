@@ -1,0 +1,13 @@
+description: >
+  %NAME_SITE% est votre partenaire de confiance pour les demandes de prêt et de financement, offrant des solutions adaptées aux particuliers et aux entreprises.
+description.site.creator: INTERNATIONALES WEB SERVICES est une entreprise spécialisée dans la conception de sites web sur mesure et le développement de logiciels performants pour les entreprises et les particuliers.
+knowsAbout.site.creator: > 
+           "Conception de sites web",
+            "Développement de logiciels",
+            "Solutions web sur mesure",
+            "Symfony",
+            "ReactJS",
+            "TypeScript",
+            "PostgreSQL",
+            "Django"
+offers.description.site.creator: "Services de création de sites web professionnels, vitrine et e-commerce, en utilisant Symfony, ReactJS et TypeScript."

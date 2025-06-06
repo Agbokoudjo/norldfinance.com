@@ -5,13 +5,16 @@ twig:
         NAME_SITE: "NORLD FINANCE"
         FOUNDATION_CREATED_AT: "2010"
         EMAIL_ADMIN: contact@norldfinance.com
-        PHONE_ADMIN: +33757848285
+        PHONE_ADMIN: '+33757848285'
         LINK_WHATSAPP: https://api.whatsapp.com/send?phone=33757848285&amp;text=Hello!
         UPDATED_SITE: 03 Juin 2025
         AVAILABLE_LOCALES: 'fr,en,de,es,it,nl,pt'
+        BASE_HOST_URL: '%env(BASE_HOST)%'
+        ADRESSE: 123 Rue de la Finance,75001 Paris France
+        SITE_CREATOR: INTERNATIONALES WEB SERVICES
+        SITE_CREATOR_URL_LINKEDIN: "https://www.linkedin.com/in/internationales-web-services-120520193/"
     form_themes:
         - 'bootstrap_5_layout.html.twig'
-
 when@test:
     twig:
         strict_variables: true

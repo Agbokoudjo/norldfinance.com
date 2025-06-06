@@ -3,7 +3,10 @@ namespace App\Domain\LoanRequest;
 
 use libphonenumber\PhoneNumber;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\FloatType;
+use Doctrine\DBAL\Types\IntegerType;
 use App\Domain\SharedModel\CreatedAt;
+use Doctrine\DBAL\Types\BooleanType;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 #[ORM\Entity]
@@ -17,34 +20,47 @@ class LoanRequest
     #[ORM\Column(type: 'integer')]
     protected ?int $id = null;
 
+    #[ORM\Column(type: 'string', length: 200)]
     private string $lastname;
 
+    #[ORM\Column(type: 'string', length: 200)]
     private string $firstname;
 
-    private string $email;
+    #[ORM\Column(type: 'string', length: 180)]
+    protected string $email;
 
 
-    #[ORM\Column(type: 'phone_number')]
+    #[ORM\Column(type: 'phone_number',length:80)]
     protected PhoneNumber $phone;
 
+    #[ORM\Column(type: 'string', length: 255)]
     private string $country;
 
+    #[ORM\Column(type: 'string', length: 255)]
     private string $city;
 
+    #[ORM\Column(type: 'string', length: 255)]
     private string $adresse;
 
+    #[ORM\Column(type:FloatType::class)]
     private float|int $montant;
 
+    #[ORM\Column(type: 'string')]
     private string $devise;
 
+    #[ORM\Column(type:IntegerType::class)]
     private int $duration;
 
+    #[ORM\Column(type: 'string', length: 255)]
     private string $subject;
-    
+
+    #[ORM\Column(type: 'string')]
     private string $identitydocumentname;
 
+    #[ORM\Column(type: 'string')]
     private string $identityphotoname1;
 
+    #[ORM\Column(type: 'string')]
     private string $identityphotoname2;
 
     #[Vich\UploadableField(
@@ -65,6 +81,7 @@ class LoanRequest
     )]
     private File $identityphotofile2;
 
+    #[ORM\Column(type:BooleanType::class)]
     private bool $consentcheckbox;
 
     

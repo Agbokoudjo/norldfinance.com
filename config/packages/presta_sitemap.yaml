@@ -1,0 +1,3 @@
+when@prod:
+  presta_sitemap:
+    base_host: '%env(BASE_HOST)%'

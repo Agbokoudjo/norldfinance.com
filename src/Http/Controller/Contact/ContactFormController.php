@@ -7,6 +7,7 @@ use App\Model\ContactFormModel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Infrastructure\Helper\ProcessingErrorFormHandleInterface;
@@ -19,7 +20,15 @@ final class ContactFormController extends AbstractController{
     {
         
     }
-    #[Route('create',name:'contact.form.us',methods: ['POST','GET'])]
+    #[Route(
+        path:'create',
+        name:'contact.form.us',
+        methods: ['POST','GET'],
+        options:['sitemap' => [
+            'priority' => 0.7, 
+            'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]
+       ])
+    ]
     public function create(
     Request $requestContactForm,
     ProcessingErrorFormHandleInterface $formErrorHandle,

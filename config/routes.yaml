@@ -21,6 +21,10 @@ pages.privacy.policy:
     prefix: "{_locale}"
     requirements:
         _locale: fr|en|de|es|it|nl|pt
+    options:
+        sitemap:
+            priority: 0.7
+            changefreq: weekly
     defaults:
         template:  'pages/privacy_policy.html.twig'
         _locale: fr
@@ -38,6 +42,10 @@ pages.terms.and.conditions:
     prefix: "{_locale}"
     requirements:
         _locale: fr|en|de|es|it|nl|pt
+    options:
+        sitemap:
+            priority: 0.7
+            changefreq: weekly
     defaults:
         template:  'pages/terms_and_conditions.html.twig'
         _locale: fr
@@ -48,3 +56,5 @@ pages.terms.and.conditions:
         public : true
         headers:
             Content-Type: 'text/html'
+presta_sitemap:
+  resource: "@PrestaSitemapBundle/config/routing.yml"
