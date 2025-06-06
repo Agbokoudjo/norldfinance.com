@@ -3,13 +3,32 @@
 namespace App\Domain\Contact;
 
 use App\Domain\SharedModel\CreatedAt;
-use App\Domain\Contact\ContactDataInterface;
 
-abstract class AbstractContactData implements ContactDataInterface
+use libphonenumber\PhoneNumber;
+use Doctrine\ORM\Mapping as ORM;
+
+abstract class AbstractContactData 
 {
     use CreatedAt;
-    use ContactFormPropertyTrait ;
-    protected ?int $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type: 'integer')]
+    protected ?int $id = null;
+
+    #[ORM\Column(type: 'string', length: 200)]
+    protected string $fullname;
+
+    #[ORM\Column(type: 'string', length: 180)]
+    protected string $email;
+
+    #[ORM\Column(type: 'phone_number', nullable: true)]
+    protected ?PhoneNumber $phone = null;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    protected string $subject;
+
+    #[ORM\Column(type: 'text')]
+    protected string $content;
     public function getId(): int
     {
         return $this->id;
@@ -25,7 +44,7 @@ abstract class AbstractContactData implements ContactDataInterface
         return $this->email;
     }
 
-    public function getPhone(): string
+    public function getPhone(): ?PhoneNumber
     {
         return $this->phone;
     }
@@ -52,7 +71,7 @@ abstract class AbstractContactData implements ContactDataInterface
         return $this;
     }
 
-    public function setPhone(string $phone): static
+    public function setPhone(?PhoneNumber $phone=null): static
     {
         $this->phone = $phone;
         return $this;

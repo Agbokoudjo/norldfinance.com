@@ -75,9 +75,9 @@ return [
         'version' => '0.2.4',
     ],
     'libphonenumber-js' => [
-        'version' => '1.12.8',
+        'version' => '1.12.9',
     ],
     '@wlindabla/form_validator' => [
-        'version' => '1.3.4',
+        'version' => '1.3.6',
     ],
 ];

@@ -2,7 +2,6 @@ import "./app.css";
 import './styles/responsive.css'
 import * as Turbo from "@hotwired/turbo"
 import { Application,Controller } from '@hotwired/stimulus'
-//pdfjsLib.GlobalWorkerOptions.workerSrc ='https://cdn.jsdelivr.net/npm/pdfjs-dist@5.2.133/build/pdf.worker.min.mjs';
 import {
     Logger, httpFetchHandler,
     HttpResponse, handleErrorsManyForm,
@@ -14,9 +13,11 @@ import {
     addErrorMessageFieldDom,
     clearErrorInput,
     FormFormattingEvent,
-    configurePDFWorker
+    configurePDFWorker,
+    toBoolean
 } from "@wlindabla/form_validator"
 configurePDFWorker('https://cdn.jsdelivr.net/npm/pdfjs-dist@5.2.133/build/pdf.worker.min.mjs')
+import {config} from "./js/index.js"
 const application = Application.start()
 application.register("example", class tubrno extends Controller {
   connect() {
@@ -313,7 +314,7 @@ function formValidator() {
         if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
             if (jQuery(target).val()) {
                 clearErrorInput(jQuery(target))
-                formValidate.clearErrorDataChildren()
+                formValidate.clearErrorDataChildren(target)
             }
         }
         $submitButton.removeAttr('disabled');
@@ -324,7 +325,7 @@ function formValidator() {
     if (target instanceof HTMLInputElement) {
       if (target) {
         clearErrorInput(jQuery(target))
-        formValidate.clearErrorDataChildren()
+        formValidate.clearErrorDataChildren(target)
       }
     }
     Logger.log(event);
@@ -574,11 +575,11 @@ function formFormattingEvent(){
     formFormattingEvent.init(document," "," ",{locales:lang})
   }
 
-function disableUserInteractions() { // Ou preventContentCopying() ou disableRightClickAndInspect()
-    jQuery(document).on('contextmenu', function(e) {
+function disableUserInteractions() { 
+    if (toBoolean(config.param('DEBUG')) && config.param('APP_ENV') === "dev") { return; }
+  jQuery(document).on('contextmenu', function(e) {
         e.preventDefault(); // Empêche le comportement par défaut du clic droit
     });
-
     jQuery(document).on('keydown', function(e) {
         // e.which est l'équivalent de e.keyCode en jQuery, mieux supporté sur les anciens navigateurs
         if (e.which === 123 || // F12

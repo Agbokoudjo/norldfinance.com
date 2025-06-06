@@ -16,7 +16,7 @@ final class ContactFormType extends AbstractType{
             'label'=>'fullname',
             'label_attr'=>['class'=> 'form-label fw-bold'],
             'attr'=>[
-                'placeholder' => 'AGBOKOUDJO Franck',
+                'placeholder' => 'Ex:Jean Dupond',
                 'autocomplete' => 'on', // corrigé
                 'minlength' => 6,       // corrigé
                 'maxlength' => 200,     // corrigé
@@ -47,11 +47,11 @@ final class ContactFormType extends AbstractType{
                 'required' => true,
                 'format' => PhoneNumberFormat::INTERNATIONAL,
                 'attr' => [
-                    'placeholder' => '+229 XX XX XX XX',
+                    'placeholder' => 'Ex: +33 XX XX XX XX',
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
-                    "data-eg-await" => '+229 XX XX XX XX',
+                    "data-eg-await" => '+33 XX XX XX XX',
                     'autocomplete' => 'on',
                     'minlength' => 8,
                     'maxlength' => 80,

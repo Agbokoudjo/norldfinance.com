@@ -3,14 +3,15 @@ namespace App\Http\Controller\LoanApplication;
 
 use App\Form\LoanRequestType;
 use App\Model\LoanRequestModel;
+use App\Message\LoanRequestMessage;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Infrastructure\Helper\ProcessingErrorFormHandleInterface;
-use App\Message\LoanRequestMessage;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[Route('/loan-application-credit/')]
@@ -19,7 +20,16 @@ final class LoanApplicationController extends AbstractController{
     {
         
     }
-    #[Route('request/new',name:"loan.application.credit",methods:['POST','GET'])]
+    #[Route(path:'request/new',
+            name:"loan.application.credit",
+            methods:['POST','GET'],
+            options: [
+            'sitemap' => [
+                'priority' => 0.7,
+                'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
+            ]
+        ]
+    )]
     public function create(
         Request $request,
         ProcessingErrorFormHandleInterface $formErrorHandle,

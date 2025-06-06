@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block title %}À Propos de {{NAME_SITE}}{% endblock %}
+{% block meta %}
+    {{ parent() }}
+    <meta name="description" content=" {% block description %}Découvrez {{NAME_SITE}} : notre histoire, notre équipe d'experts dédiée, notre mission de vous accompagner avec confiance et transparence dans tous vos projets de financement.{% endblock %}">
+     <meta property="og:title" content="{% block og_title %}{{NAME_SITE}} : Qui Sommes-Nous ? Découvrez Notre Engagement{% endblock %}">
+{% endblock %}
 {% block body %}
     <section class="about-hero-section position-relative overflow-hidden text-white d-flex align-items-center justify-content-center">
     <video class="background-video" autoplay loop muted playsinline 
@@ -57,7 +62,7 @@
                         <i class="fas fa-bullseye fa-2x"></i> </div>
                     <h3 class="h4 fw-bold mb-3">Notre Mission</h3>
                     <p class="text-muted">
-                        Simplifier l'accès à des solutions de financement adaptées, en accompagnant chaque particulier et entreprise vers la réalisation de ses projets.
+                        Simplifier l'accès à des solutions de <strong>financement adaptées</strong>, en accompagnant chaque particulier et entreprise vers la réalisation de ses projets.
                     </p>
                 </div>
             </div>
@@ -71,7 +76,7 @@
                         <i class="fas fa-lightbulb fa-2x"></i> </div>
                     <h3 class="h4 fw-bold mb-3">Notre Vision</h3>
                     <p class="text-muted">
-                        Devenir le partenaire financier de référence, reconnu pour notre innovation, notre transparence et la confiance que nous inspirons.
+                        Devenir le <strong>partenaire financier de référence</strong>, reconnu pour notre innovation, notre transparence et la confiance que nous inspirons.
                     </p>
                 </div>
             </div>
@@ -85,7 +90,7 @@
                         <i class="fas fa-handshake fa-2x"></i> </div>
                     <h3 class="h4 fw-bold mb-3">Nos Valeurs</h3>
                     <p class="text-muted">
-                        Intégrité, Transparence et Engagement sont les piliers sur lesquels repose notre relation avec vous.
+                        <strong>Intégrité, Transparence et Engagement</strong> sont les piliers sur lesquels repose notre relation avec vous.
                     </p>
                 </div>
             </div>
@@ -154,7 +159,7 @@
                    data-aos="fade-up"
                    data-aos-duration="1200"
                    data-aos-delay="200">
-                    Découvrez les étapes clés qui ont forgé notre identité et notre engagement envers un financement juste et accessible.
+                    Découvrez les étapes clés qui ont forgé notre identité et notre engagement envers un <strong>financement</strong> juste et accessible.
                 </p>
             </div>
         </div>
@@ -166,10 +171,10 @@
                  data-aos-delay="400">
                 <h3 class="h2 fw-bold mb-3 text-primary-custom">Nos Débuts : Une Vision Audacieuse</h3>
                 <p class="lead-sm text-muted">
-                    Fondée en {{FOUNDATION_CREATED_AT}}, notre entreprise a vu le jour avec une conviction simple : rendre le processus de demande de prêt plus transparent, plus rapide et plus humain. Face aux complexités bancaires traditionnelles, nous avons imaginé une plateforme où chaque client serait véritablement accompagné, du premier contact à l'obtention de son financement.
+                    Fondée en {{FOUNDATION_CREATED_AT}}, notre entreprise a vu le jour avec une conviction simple : rendre le processus de <strong>demande de prêt</strong> plus transparent, plus rapide et plus humain. Face aux complexités bancaires traditionnelles, nous avons imaginé une plateforme où chaque client serait véritablement accompagné, du premier contact à l'obtention de son <strong>financement</strong>.
                 </p>
-                <p class="text-muted">
-                    Nous avons commencé avec une petite équipe de passionnés, animés par la volonté de faire la différence. Chaque jour, nous nous efforçons de simplifier l'accès au crédit et de bâtir des relations durables basées sur la confiance et l'écoute.
+                <p class="lead-sm text-muted">
+                    Nous avons commencé avec une petite équipe de passionnés, animés par la volonté de faire la différence. Chaque jour, nous nous efforçons de simplifier <strong>l'accès au crédit</strong> et de bâtir des relations durables basées sur la confiance et l'écoute.
                 </p>
             </div>
             <div class="col-lg-6"
@@ -189,15 +194,15 @@
                 <p class="lead-sm text-muted">
                     Au fil des ans, <strong class="text-capitalize">{{NAME_SITE}}</strong> a connu une croissance constante, portée par la satisfaction de nos clients et l'évolution de nos services. Nous avons investi dans les dernières technologies pour optimiser nos processus, tout en renforçant notre approche personnalisée.
                 </p>
-                <p class="text-muted">
-                    De l'élargissement de nos partenariats bancaires à l'intégration de nouvelles solutions numériques, chaque étape a été franchie avec un objectif unique : vous offrir les meilleures conditions de prêt possibles et une expérience utilisateur inégalée.
+                <p class="lead-sm text-muted">
+                    De l'élargissement de nos partenariats bancaires à l'intégration de nouvelles <strong>solutions numériques</strong>, chaque étape a été franchie avec un objectif unique : vous offrir les meilleures <strong>conditions de prêt</strong> possibles et une expérience utilisateur inégalée.
                 </p>
             </div>
             <div class="col-lg-6"
                  data-aos="fade-right"
                  data-aos-duration="1000"
                  data-aos-delay="600">
-                <video class="small-video img-fluid rounded-3 shadow-lg" autoplay loop muted playsinline 
+                <video class="small-video img-fluid rounded-3 shadow-lg h-100" autoplay loop muted playsinline 
                      poster="{{asset('img/img4.jpg')}}">
                      <source src="{{asset('video/video5.mp4')}}" type="video/mp4">
                            <img src="{{asset('img/img12.jpg')}}" class="img-fluid rounded-3 shadow-lg" alt="Symbole de croissance financière">
@@ -221,8 +226,8 @@
                         <div class="timeline-dot bg-primary-custom"></div>
                         <div class="timeline-date">2010</div>
                         <div class="timeline-content p-3 border rounded-3 shadow-sm bg-white">
-                            <h4 class="h5 fw-bold text-primary-custom">Fondation de World Finance</h4>
-                            <p class="text-muted small mb-0">Lancement de notre plateforme avec une ambition : réinventer le courtage en crédit.</p>
+                            <h4 class="h5 fw-bold text-primary-custom">Fondation de {{NAME_SITE}} </h4>
+                            <p class="text-muted small mb-0">Lancement de notre plateforme avec une ambition : réinventer le courtage en <strong>crédit</strong>.</p>
                         </div>
                     </div>
                     <div class="timeline-item"
@@ -233,7 +238,7 @@
                         <div class="timeline-date">2015</div>
                         <div class="timeline-content p-3 border rounded-3 shadow-sm bg-white">
                             <h4 class="h5 fw-bold text-danger-custom">Expansion des Services</h4>
-                            <p class="text-muted small mb-0">Intégration de nouvelles offres de prêts et expansion de notre réseau de partenaires bancaires.</p>
+                            <p class="text-muted small mb-0">Intégration de <strong> nouvelles offres de prêts</strong> et expansion de notre réseau de partenaires bancaires.</p>
                         </div>
                     </div>
                     <div class="timeline-item"
@@ -291,7 +296,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4"
-                 data-aos="flip-right"
+                 data-aos="flip-left"
                  data-aos-duration="1000"
                  data-aos-delay="400">
                 <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
@@ -299,7 +304,7 @@
                     <h3 class="h4 fw-bold mb-1 text-dark-custom">Marie Curie</h3>
                     <p class="text-muted small mb-3 text-primary-custom">Responsable Crédit Immobilier</p>
                     <p class="text-muted small">
-                        Spécialiste du crédit immobilier, Marie trouve des solutions sur mesure pour votre acquisition.
+                        Spécialiste du <strong>crédit immobilier</strong>, Marie trouve des solutions sur mesure pour votre acquisition.
                     </p>
                     <div class="social-links mt-3">
                         <a href="https://linkedin.com/in/marie-curie" target="_blank" class="social-icon mx-2 text-primary-custom"><i class="fab fa-linkedin-in fa-lg"></i></a>
@@ -308,7 +313,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4"
-                 data-aos="flip-up"
+                 data-aos="flip-left"
                  data-aos-duration="1000"
                  data-aos-delay="500">
                 <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
@@ -316,7 +321,7 @@
                     <h3 class="h4 fw-bold mb-1 text-dark-custom">Luc Martin</h3>
                     <p class="text-muted small mb-3 text-danger-custom">Conseiller en Financement Pro</p>
                     <p class="text-muted small">
-                        Luc est votre contact privilégié pour le financement de vos projets professionnels et d'entreprise.
+                        Luc est votre contact privilégié pour le <strong>financement de vos projets professionnels et d'entreprise</strong>.
                     </p>
                     <div class="social-links mt-3">
                         <a href="https://linkedin.com/in/luc-martin" target="_blank" class="social-icon mx-2 text-primary-custom"><i class="fab fa-linkedin-in fa-lg"></i></a>
@@ -340,7 +345,7 @@
                    data-aos="fade-up"
                    data-aos-duration="1200"
                    data-aos-delay="200">
-                    Découvrez les piliers de notre service, conçus pour vous offrir une expérience de financement transparente, simple et efficace.
+                    Découvrez les piliers de notre service, conçus pour vous offrir une expérience de <strong>financement transparente</strong>, simple et efficace.
                 </p>
             </div>
         </div>
@@ -425,7 +430,7 @@
                         <i class="fas fa-exchange-alt fa-2x"></i> </div>
                     <h3 class="h5 fw-bold mb-2">Options Flexibles</h3>
                     <p class="text-muted small">
-                        Des solutions de financement adaptées à diverses situations, nous nous adaptons à vos besoins.
+                        Des <strong>solutions de financement</strong> adaptées à diverses situations, nous nous adaptons à vos besoins.
                     </p>
                 </div>
             </div>
@@ -512,7 +517,7 @@
                    data-aos="fade-up"
                    data-aos-duration="1200"
                    data-aos-delay="200">
-                    Notre équipe est à votre écoute pour vous conseiller et trouver la solution de financement idéale.
+                    Notre équipe est à votre écoute pour vous conseiller et trouver la <strong>solution de financement</strong> idéale.
                 </p>
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                     <a href="{{path('contact.form.us')}}" class="btn btn-lg btn-danger-custom fw-bold px-5 py-3 rounded-pill text-uppercase">
@@ -524,4 +529,33 @@
         </div>
     </div>
 </section>
+{% endblock %}
+{% block json_ld_schema %}
+    {{ parent() }} {# IMPORTANT : Conserve le Schema.org de base (Norld Finance et Internationales Web Services) #}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "À Propos de " {{NAME_SITE}},
+      "url": {{app.request.uri}},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": {{absolute_url('home')}}
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "À Propos",
+            "item": {{ absolute_url('about') }}
+          }
+        ]
+      }
+    }
+    </script>
 {% endblock %}

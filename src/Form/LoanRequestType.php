@@ -36,7 +36,7 @@ final class LoanRequestType extends AbstractType
             'label' => 'lastname',
             'label_attr' => ['class' => 'form-label fw-bold'],
             'attr' => [
-                'placeholder' => 'AGBOKOUDJO',
+                'placeholder' => 'Ex: Dupond',
                 'autocomplete' => 'on', // corrigé
                 'minlength' => 6,       // corrigé
                 'maxlength' => 200,     // corrigé
@@ -52,7 +52,7 @@ final class LoanRequestType extends AbstractType
             'label' => 'firstname',
             'label_attr' => ['class' => 'form-label fw-bold'],
             'attr' => [
-                'placeholder' => 'Ex: Hounha Franck',
+                'placeholder' => 'Ex: Elisabeth',
                 'autocomplete' => 'on', // corrigé
                 'minlength' => 6,       // corrigé
                 'maxlength' => 200,     // corrigé
@@ -68,7 +68,7 @@ final class LoanRequestType extends AbstractType
                 'label' => 'email',
                 'label_attr' => ['class' => 'form-label fw-bold'],
                 'attr' => [
-                    'placeholder' => 'franckagbokoudjo301@gmail.com',
+                    'placeholder' => 'Ex: votre.email@gmail.com',
                     'autocomplete' => 'on',
                     'data-escapestrip-html-and-php-tags' => false,
                     'data-event-validate-blur' => 'blur',
@@ -83,7 +83,7 @@ final class LoanRequestType extends AbstractType
                 'required' => true,
                 'format' => PhoneNumberFormat::INTERNATIONAL,
                 'attr' => [
-                    'placeholder' => '+229 XX XX XX XX',
+                    'placeholder' => 'Ex: +33 XX XX XX XX',
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
@@ -118,7 +118,7 @@ final class LoanRequestType extends AbstractType
                 'label_attr' => ['class' => 'form-label fw-bold'],
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Paris',
+                    'placeholder' => 'Ex: Paris',
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
