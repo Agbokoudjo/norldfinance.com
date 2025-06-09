@@ -1,22 +1,113 @@
-
+{% apply inline_css %}
     <style>
-        .body { font-family: Arial, sans-serif; line-height: 1.6; }
-        .container { padding: 20px; }
-        .header { font-size: 18px; font-weight: bold; }
-        .content { margin-top: 15px; }
-        .footer { margin-top: 30px; font-size: 12px; color: #888; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #007bff; /* Barre bleue distinctive */
+        }
+        .header-message {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        .header-message strong {
+            color: #007bff;
+        }
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        /* Styles spécifiques pour le tableau d'informations */
+        .info-table {
+            width: 100%;
+            font-size: 15px;
+            border-collapse: collapse; /* Supprime les espaces entre les cellules */
+            margin-bottom: 20px;
+        }
+        .info-table td {
+            padding: 10px 15px;
+            vertical-align: top; /* Alignement en haut pour les contenus multi-lignes */
+            border-bottom: 1px solid #eee; /* Ligne séparatrice */
+        }
+        .info-table tr:last-child td {
+            border-bottom: none; /* Pas de bordure pour la dernière ligne */
+        }
+        .info-table td strong {
+            color: #555;
+            display: inline-block; /* Permet d'appliquer min-width */
+            min-width: 100px; /* Assure un alignement des valeurs */
+        }
+        .message-box {
+            background-color: #f9f9f9;
+            border-left: 3px solid #007bff;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            color: #444;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
     </style>
-<div class="body container">
-    <div class="header">{{'sendEmailAdmin.header'|trans({'%organization_name%':{{ organization_name }}},'ContactForm',app.request.locale)}}</div>
 
-    <div class="content">
-        <p><strong>Nom:</strong> {{ fullname }}</p>
-        <p><strong>Email:</strong> {{ email }}</p>
-         <p><strong>Téléphone :</strong> {{ phone }}</p>
-        <p><strong>Sujet:</strong> {{ subject }}</p>
-        <p><strong>Message:</strong><br>{{ content|nl2br }}</p>
+    <div class="email-container">
+        {% set NAME_SITE = organization_name %}
+
+        <p class="header-message">
+            Nouveau message reçu via votre formulaire de contact <strong style="color: #007bff;">NORLD FINANCE</strong>.
+        </p>
+
+        <h2>{{'sendEmailAdmin.header'|trans({'%organization_name%':NAME_SITE},'ContactForm',locale)}}</h2>
+
+        <table class="info-table" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td><strong>Nom :</strong></td>
+                <td>{{ fullname }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email :</strong></td>
+                <td>{{ contact_sender_email }}</td>
+            </tr>
+            <tr>
+                <td><strong>Téléphone :</strong></td>
+                <td>{{ phone }}</td>
+            </tr>
+            <tr>
+                <td><strong>Sujet :</strong></td>
+                <td>{{ subject }}</td>
+            </tr>
+            <tr>
+                <td><strong>Message :</strong></td>
+                <td>
+                    <div class="message-box">
+                        {{ content|nl2br }}
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            {{'sendEmailAdmin.footer'|trans({'%organization_name%':NAME_SITE},'ContactForm',locale)}}
+        </div>
     </div>
-    <div class="footer">
-        {{'sendEmailAdmin.footer'|trans({'%organization_name%':{{ organization_name }}},'ContactForm',app.request.locale)}}
-    </div>
-</div>
+{% endapply %}

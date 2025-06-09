@@ -9,7 +9,7 @@ twig:
         LINK_WHATSAPP: https://api.whatsapp.com/send?phone=33757848285&amp;text=Hello!
         UPDATED_SITE: 03 Juin 2025
         AVAILABLE_LOCALES: 'fr,en,de,es,it,nl,pt'
-        BASE_HOST_URL: '%env(BASE_HOST)%'
+        BASE_HOST_URL: https://norldfinance.com
         ADRESSE: 123 Rue de la Finance,75001 Paris France
         SITE_CREATOR: INTERNATIONALES WEB SERVICES
         SITE_CREATOR_URL_LINKEDIN: "https://www.linkedin.com/in/internationales-web-services-120520193/"

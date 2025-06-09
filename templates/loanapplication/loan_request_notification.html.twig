@@ -1,0 +1,216 @@
+
+{% apply inline_css %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+         .header-message {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        .header-message strong {
+            color: #007bff; /* Assure que le nom de l'entreprise est en bleu */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #007bff; /* Barre bleue distinctive */
+        }
+        h2 {
+            color: #007bff; /* Bleu plus vif pour le titre */
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            font-size: 15px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px 15px; /* Augmenter le padding pour plus d'espace */
+            vertical-align: top;
+            border-bottom: 1px solid #eee; /* Ligne séparatrice légère */
+        }
+        td strong {
+            color: #555;
+            display: inline-block;
+            min-width: 120px; /* Assure un alignement pour les labels */
+        }
+        tr:last-child td {
+            border-bottom: none; /* Pas de bordure pour la dernière ligne */
+        }
+        .section-title {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #007bff;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .section-title span {
+            margin-right: 8px;
+            font-size: 20px; /* Taille de l'icône */
+        }
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+
+    <div class="container">
+    <h2 style="text-align: center; color: #666; font-size: 13px; margin-bottom: 20px;">
+    Nouvelle demande de prêt reçue via votre site <strong style="color: #007bff;">{{NAME_SITE}}</strong>.
+</h2>
+
+        <table>
+            <tr>
+                <td><strong>Nom :</strong></td>
+                <td>{{ lastname }}</td>
+            </tr>
+            <tr>
+                <td><strong>Prénom :</strong></td>
+                <td>{{ firstname }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email :</strong></td>
+                <td>{{ request_sender_email }}</td>
+            </tr>
+            <tr>
+                <td><strong>Téléphone :</strong></td>
+                <td>{{ phone }}</td>
+            </tr>
+            <tr>
+                <td><strong>Adresse :</strong></td>
+                <td>{{ adresse }}</td>
+            </tr>
+            <tr>
+                <td><strong translate="no">Pays :</strong></td>
+                <td>{{ country }}</td>
+            </tr>
+            <tr>
+                <td><strong>Ville :</strong></td>
+                <td>{{ city }}</td>
+            </tr>
+            <tr>
+                <td><strong>Montant demandé :</strong></td>
+                <td>{{ montant }} {{ devise }}</td>
+            </tr>
+            <tr>
+                <td><strong>Durée :</strong></td>
+                <td>{{ duration }} mois</td>
+            </tr>
+            <tr>
+                <td><strong>Objet de la demande :</strong></td> {# Modifié pour être plus générique #}
+                <td>{{ subject }}</td> {# J'ai retiré le " mois" car le sujet n'est pas toujours en mois #}
+            </tr>
+            <tr>
+                <td><strong>Consentement :</strong></td>
+                <td>{{ consentcheckbox ? 'Oui' : 'Non' }}</td>
+            </tr>
+        </table>
+
+        <div class="section-title">
+            <span>📎</span> Pièces Jointes
+        </div>
+        <p style="margin-top: 0; color: #555;">Les documents d'identité et photos sont joints à cette demande.</p>
+        
+        <div class="footer-text">
+            Ceci est un e-mail automatique. Veuillez ne pas y répondre directement.
+        </div>
+    </div>
+{% endapply %}
+{# 
+{% apply inline_css %}
+    <style>
+        h2 {
+        color: #2c3e50;
+      }
+
+      table {
+        width: 100%;
+        font-size: 14px;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 8px;
+        vertical-align: top;
+      }
+
+      .photo {
+        border: 1px solid #ccc;
+        width: 150px;
+      }
+    </style>
+ <h2>Nouvelle demande de prêt</h2>
+
+    <table cellspacing="0" cellpadding="8" border="0" style="max-width: 600px;">
+      <tr>
+        <td><strong>Nom :</strong></td>
+        <td>{{ lastname }}</td>
+      </tr>
+      <tr>
+        <td><strong>Prénom :</strong></td>
+        <td>{{ firstname }}</td>
+      </tr>
+      <tr>
+        <td><strong>Email :</strong></td>
+        <td>{{ request_sender_email }}</td>
+      </tr>
+      <tr>
+        <td><strong>Téléphone :</strong></td>
+        <td>{{ phone }}</td>
+      </tr>
+      <tr>
+        <td><strong>Adresse :</strong></td>
+        <td>{{ adresse }}</td>
+      </tr>
+      <tr>
+        <td><strong translate="no">Pays :</strong></td>
+        <td>{{ country }}</td>
+      </tr>
+      <tr>
+        <td><strong>Ville :</strong></td>
+        <td>{{ city }}</td>
+      </tr>
+      <tr>
+        <td><strong>Montant demandé :</strong></td>
+        <td>{{ montant }} {{ devise }}</td>
+      </tr>
+      <tr>
+        <td><strong>Durée :</strong></td>
+        <td>{{ duration }} mois</td>
+      </tr>
+      <tr>
+        <td><strong>OBJET DE LA DEMANDE DE PRET :</strong></td>
+        <td>{{ subject }} mois</td>
+      </tr>
+      <tr>
+        <td><strong>Consentement :</strong></td>
+        <td>{{ consentcheckbox ? 'Oui' : 'Non' }}</td>
+      </tr>
+    </table>
+
+    <hr style="margin: 20px 0;">
+
+    <p style="margin-top: 20px;color: #2c3e50;">📎 Document et photo d’identité</p>
+   
+{% endapply %} #}

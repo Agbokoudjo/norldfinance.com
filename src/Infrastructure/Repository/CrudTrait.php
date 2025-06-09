@@ -10,7 +10,6 @@ trait CrudTrait{
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-        $this->getEntityManager()->refresh($entity);
         return $entity;
     }
     public function remove(object|int $entityOrId): void{

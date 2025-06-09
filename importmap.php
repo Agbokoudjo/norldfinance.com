@@ -78,6 +78,6 @@ return [
         'version' => '1.12.9',
     ],
     '@wlindabla/form_validator' => [
-        'version' => '1.3.6',
+        'version' => '1.3.7',
     ],
 ];

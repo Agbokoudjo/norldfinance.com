@@ -3,10 +3,7 @@ namespace App\Domain\LoanRequest;
 
 use libphonenumber\PhoneNumber;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\DBAL\Types\FloatType;
-use Doctrine\DBAL\Types\IntegerType;
 use App\Domain\SharedModel\CreatedAt;
-use Doctrine\DBAL\Types\BooleanType;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 #[ORM\Entity]
@@ -42,13 +39,13 @@ class LoanRequest
     #[ORM\Column(type: 'string', length: 255)]
     private string $adresse;
 
-    #[ORM\Column(type:FloatType::class)]
+    #[ORM\Column(type:"float")]
     private float|int $montant;
 
     #[ORM\Column(type: 'string')]
     private string $devise;
 
-    #[ORM\Column(type:IntegerType::class)]
+    #[ORM\Column(type: 'integer')]
     private int $duration;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -70,22 +67,34 @@ class LoanRequest
     private File  $identitydocumentfile;
 
     #[Vich\UploadableField(
-        mapping: ' identityphoto',
+        mapping: 'identityphoto',
         fileNameProperty: 'identityphotoname1',
     )]
     private File  $identityphotofile1;
 
     #[Vich\UploadableField(
-        mapping: ' identityphoto',
+        mapping: 'identityphoto',
         fileNameProperty: 'identityphotoname2',
     )]
     private File $identityphotofile2;
 
-    #[ORM\Column(type:BooleanType::class)]
+    #[ORM\Column(type:'boolean')]
     private bool $consentcheckbox;
 
-    
+    #[ORM\Column(type: 'datetime_immutable',nullable:true)]
+    private ?\DateTimeImmutable $updatedAt = null;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
     /**
      * Get the value of id
      */
@@ -260,7 +269,7 @@ class LoanRequest
     /**
      * Set the value of identitydocumentname
      */
-    public function setIdentitydocumentname(string $identitydocumentname): self
+    public function setIdentitydocumentname(?string $identitydocumentname): self
     {
         $this->identitydocumentname = $identitydocumentname;
 
@@ -278,7 +287,7 @@ class LoanRequest
     /**
      * Set the value of identityphotoname1
      */
-    public function setIdentityphotoname1(string $identityphotoname1): self
+    public function setIdentityphotoname1(?string $identityphotoname1): self
     {
         $this->identityphotoname1 = $identityphotoname1;
 
@@ -296,7 +305,7 @@ class LoanRequest
     /**
      * Set the value of identityphotoname2
      */
-    public function setIdentityphotoname2(string $identityphotoname2): self
+    public function setIdentityphotoname2(?string $identityphotoname2): self
     {
         $this->identityphotoname2 = $identityphotoname2;
 
@@ -316,6 +325,9 @@ class LoanRequest
      */
     public function setIdentitydocumentfile(File $identitydocumentfile): self
     {
+        if($identitydocumentfile){
+            $this->createdAt=new \DateTimeImmutable();
+        }
         $this->identitydocumentfile = $identitydocumentfile;
 
         return $this;

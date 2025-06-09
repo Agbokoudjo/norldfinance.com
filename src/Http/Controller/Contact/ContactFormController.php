@@ -1,10 +1,10 @@
 <?php
 namespace App\Http\Controller\Contact;
 
-use App\Form\ContactFormType;
-use App\Message\ContactMessage;
-use App\Model\ContactFormModel;
+use App\Application\UseCase\Command\ContactMessageCommand;
+use App\Http\Form\ContactFormType;
 use Symfony\Component\HttpFoundation\Request;
+use App\Infrastructure\Model\ContactFormModel;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
@@ -40,11 +40,11 @@ final class ContactFormController extends AbstractController{
         if($modelContactForm->isSubmitted()){
             if (!$modelContactForm->isValid()) {
                 return $this->json([
-                    'title' => $translator->trans('Form.Error.title', [], 'Validators', $requestContactForm->getLocale()),
-                    'details' => $translator->trans('Form.Error.detail', [], 'Validators', $requestContactForm->getLocale()),
+                    'title' => $translator->trans('Form.Error.title', [], 'validators', $requestContactForm->getLocale()),
+                    'details' => $translator->trans('Form.Error.detail', [], 'validators', $requestContactForm->getLocale()),
                     'violations' => $formErrorHandle->handleFormData(
                         $modelContactForm,
-                        'Validators',
+                        'validators',
                         $requestContactForm->getLocale()
                     ),
                     'formName'=> $modelContactForm->getName()
@@ -57,10 +57,9 @@ final class ContactFormController extends AbstractController{
             /**
              * Enregistrer les données du contacts dans la base de données en async avec messenger
              */
-          $bus->dispatch(new ContactMessage(
+        $bus->dispatch(new ContactMessageCommand(
                 $contactData->fullname,
                 $contactData->email,
-                $contactData->phone,
                 $contactData->subject,
                 $contactData->content,
                 $requestContactForm->getClientIp(),

@@ -13,7 +13,7 @@ validator.contact_form.subject.length: "L'objet doit contenir entre 10 et 255 ca
 validator.contact_form.subject.regex: "L'objet ne doit contenir que des lettres, chiffres et ponctuations simples."
 validator.contact_form.content.not_blank: 'Le contenu du message ne peut pas être vide.'
 validator.contact_form.content.length: 'Le contenu doit contenir entre 20 et 20 000 caractères.'
-validator.contact_form.content.regex: 'Le message contient des caractères non autorisés.'
+validator.contact_form.content.regex:  'Le message contient des caractères non autorisés.'
 validator.country.message: "Ce pays n'est pas valide."
 validator.country.not_blank: 'Le nom du pays ne doit pas être vide.'
 validator.country.not_null: 'Le champ pays est requis.'
