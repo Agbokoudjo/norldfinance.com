@@ -18,13 +18,14 @@
         <meta name="twitter:image" content="{% block twitter_image %}{{block('og_image')}}{% endblock %}">
         <meta property="og:title" content="{{NAME_SITE}}">
         <meta property="og:url" content="{{ absolute_url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
-        <meta name="iws-config" content='{{ {
-            DEBUG: app.debug ,
-            APP_ENV: app.environment,
-            LOCALE: app.locale,
-            ENABLE_LOCALE: app.enabled_locales
-        }|json_encode()|raw }}'
-        >
+        <meta name="iws-config" content="{{ {
+    DEBUG: app.debug ?? false,
+    APP_ENV: app.environment ?? 'prod',
+    LOCALE: app.locale ?? 'fr',
+    ENABLE_LOCALE: app.enabled_locales ?? []
+}|json_encode()|e('html_attr') }}">
+
+
         {% endblock %}
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block link %}

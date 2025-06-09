@@ -1,6 +1,5 @@
 
 export function getMetaContent(name) {
-  const element = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
-  if (element === null) { return null }
-  return element.content;
+  const element = document.querySelector(`meta[name="${name}"]`);
+  return element?.content || null;
 }

@@ -2,7 +2,7 @@
 {% block title %}Bienvenue chez {{NAME_SITE}}{% endblock %}
 {% block meta %}
   {{ parent() }}
-  {% block description %} {{NAME_SITE}} offre des solutions de prêts personnels, crédits immobiliers, financements d'entreprise et rachat de crédit. Obtenez votre simulation gratuite et un accompagnement sur mesure{% endblock %}
+   <meta name="description" content="  {% block description %} {{NAME_SITE}} offre des solutions de prêts personnels, crédits immobiliers, financements d'entreprise et rachat de crédit. Obtenez votre simulation gratuite et un accompagnement sur mesure{% endblock %}">
 {% endblock %}
 {% block body %}
 <section class="hero-section">
@@ -678,7 +678,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Accueil -" {{NAME_SITE}},
-      "url": {{BAE_HOST_URL}},
+      "url": {{BASE_HOST_URL}},
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [

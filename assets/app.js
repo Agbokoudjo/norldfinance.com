@@ -12,11 +12,8 @@ import {
     addHashToIds,FieldValidationSuccess,
     addErrorMessageFieldDom,
     clearErrorInput,
-    FormFormattingEvent,
-    configurePDFWorker,
-    toBoolean
+    FormFormattingEvent
 } from "@wlindabla/form_validator"
-configurePDFWorker('https://cdn.jsdelivr.net/npm/pdfjs-dist@5.2.133/build/pdf.worker.min.mjs')
 import {config} from "./js/index.js"
 const application = Application.start()
 application.register("example", class tubrno extends Controller {
@@ -25,8 +22,8 @@ application.register("example", class tubrno extends Controller {
   }
 })
 const logger = Logger.getInstance();
-logger.APP_ENV = "prod";
-logger.DEBUG = false;
+logger.APP_ENV = config.param('APP_ENV');
+logger.DEBUG = config.param('DEBUG');
 Logger.log(application)
 Logger.log(Turbo)
 jQuery(document).on("load", initialize);
@@ -410,6 +407,10 @@ function formSubmitHander() {
             });
             form.get()[0].reset();
             $submitButton.text(originalText);
+            Logger.log(originalText)
+            $submitButton.prop('disabled', false);
+            $submitButton.removeAttr('disabled');
+            return;
         } catch (error) {
             Logger.error('fetch result error',error)
             console.error('fetch result error',error)
@@ -460,10 +461,10 @@ function formSubmitHander() {
                 });
             }
             originalText="Réessayer"
-        } finally {
             Logger.log(originalText)
             $submitButton.prop('disabled', false);
             $submitButton.removeAttr('disabled');
+        } finally {
             return;
         }
     });
@@ -575,8 +576,8 @@ function formFormattingEvent(){
     formFormattingEvent.init(document," "," ",{locales:lang})
   }
 
-function disableUserInteractions() { 
-    if (toBoolean(config.param('DEBUG')) && config.param('APP_ENV') === "dev") { return; }
+function disableUserInteractions() {
+    if (config.param('DEBUG') ===true && config.param('APP_ENV') === "dev") { return; }
   jQuery(document).on('contextmenu', function(e) {
         e.preventDefault(); // Empêche le comportement par défaut du clic droit
     });

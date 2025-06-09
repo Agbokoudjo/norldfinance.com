@@ -148,54 +148,54 @@ Error: Erreur
 'Please select a valid option.': 'Veuillez sélectionner une option valide.'
 'Please select a valid range.': 'Veuillez sélectionner une plage valide.'
 'Please enter a valid week.': 'Veuillez entrer une semaine valide.'
-validator.fullname.not_blank: __validator.fullname.not_blank
-validator.fullname.not_null: __validator.fullname.not_null
-validator.fullname.length: __validator.fullname.length
-validator.contact_form.fullname.regex: __validator.contact_form.fullname.regex
-validator.email.not_blank: __validator.email.not_blank
-validator.email.not_null: __validator.email.not_null
-validator.email.length: __validator.email.length
-validator.email.invalid: __validator.email.invalid
-validator.phone.regex: __validator.phone.regex
-validator.contact_form.subject.not_blank: __validator.contact_form.subject.not_blank
-validator.contact_form.subject.not_null: __validator.contact_form.subject.not_null
-validator.contact_form.email.length: __validator.contact_form.email.length
-validator.contact_form.subject.regex: __validator.contact_form.subject.regex
-validator.contact_form.content.not_blank: __validator.contact_form.content.not_blank
-validator.contact_form.content.regex: __validator.contact_form.content.regex
-validator.country.message: __validator.country.message
-validator.country.not_blank: __validator.country.not_blank
-validator.country.not_null: __validator.country.not_null
-validator.country.regex: __validator.country.regex
-validator.country.min: __validator.country.min
-validator.country.max: __validator.country.max
-validator.city.not_blank: __validator.city.not_blank
-validator.city.not_null: __validator.city.not_null
-validator.city.regex: __validator.city.regex
-validator.city.min: __validator.city.min
-validator.city.max: __validator.city.max
-"L'adresse ne peut pas être vide.": "__L'adresse ne peut pas être vide."
-validator.adresse.regex: __validator.adresse.regex
-validator.adresse.min: __validator.adresse.min
-validator.adresse.max: __validator.adresse.max
-validator.montant.not_blank: __validator.montant.not_blank
-validator.montant.not_null: __validator.montant.not_null
-validator.devise.not_blank: __validator.devise.not_blank
-validator.devise.not_null: __validator.devise.not_null
-validator.devise.regex: __validator.devise.regex
-validator.duration.not_blank: __validator.duration.not_blank
-validator.duration.not_null: __validator.duration.not_null
-validator.duration.range: __validator.duration.range
-validator.duration.regex: __validator.duration.regex
-validator.File.not_blank: __validator.File.not_blank
-validator.File.not_null: __validator.File.not_null
-validator.File.document.extensionsMessage: __validator.File.document.extensionsMessage
-validator.File.document.mimeTypesMessage: __validator.File.document.mimeTypesMessage
-validator.File.document.maxSizeMessage: __validator.File.document.maxSizeMessage
-validator.File.document.filenameTooLongMessage: __validator.File.document.filenameTooLongMessage
-validator.File.image.maxSizeMessage: __validator.File.image.maxSizeMessage
-validator.File.image.mimeTypesMessage: __validator.File.image.mimeTypesMessage
-validator.File.image.extensionsMessage: __validator.File.image.extensionsMessage
-validator.File.image.filenameTooLongMessage: __validator.File.image.filenameTooLongMessage
-validator.File.image.uploadErrorMessage: __validator.File.image.uploadErrorMessage
-validator.consentCheckbox: Vous devez accepter les conditions générales et la politique de confidentialité pour soumettre votre demande.
+validator.fullname.not_blank: 'Votre nom ne doit pas être vide.'
+validator.fullname.not_null: 'Le champ nom est requis.'
+validator.fullname.length: 'Le nom doit contenir entre 6 et 200 caractères.'
+validator.fullname.regex: 'Le nom complet ne doit contenir que des lettres, des espaces, des tirets et des apostrophes.'
+validator.email.not_blank: "L'adresse électronique ne doit pas être vide."
+validator.email.not_null: 'Le champ adresse email est requis.'
+validator.email.length: "L'adresse email doit contenir entre 6 et 180 caractères."
+validator.email.invalid: 'L''adresse email "{{ value }}" n''est pas valide.'
+validator.phone.regex: 'Votre numéro de téléphone est invalide.'
+validator.contact_form.subject.not_blank: "L'objet du message est obligatoire."
+validator.contact_form.subject.not_null: 'Le champ objet est requis.'
+validator.contact_form.subject.length: "L'objet doit contenir entre 10 et 255 caractères."
+validator.contact_form.subject.regex: "L'objet ne doit contenir que des lettres, chiffres et ponctuations simples."
+validator.contact_form.content.not_blank: 'Le contenu du message ne peut pas être vide.'
+validator.contact_form.content.length: 'Le contenu doit contenir entre 20 et 20 000 caractères.'
+validator.contact_form.content.regex:  'Le message contient des caractères non autorisés.'
+validator.country.message: "Ce pays n'est pas valide."
+validator.country.not_blank: 'Le nom du pays ne doit pas être vide.'
+validator.country.not_null: 'Le champ pays est requis.'
+validator.country.regex: 'Le nom du pays contient des caractères invalides.'
+validator.country.min: 'Le nom du pays doit contenir au moins 3 caractères.'
+validator.country.max: 'Le nom du pays ne peut pas dépasser 150 caractères.'
+validator.city.not_blank: 'Le nom de la ville ne doit pas être vide.'
+validator.city.not_null: 'Le champ ville est requis.'
+validator.city.regex: 'Le nom de la ville contient des caractères invalides.'
+validator.city.min: 'Le nom de la ville doit contenir au moins 2 caractères.'
+validator.city.max: 'Le nom de la ville ne peut pas dépasser 150 caractères.'
+validator.adresse.regex: "L'adresse contient des caractères invalides."
+validator.adresse.min: "L'adresse doit contenir au moins 5 caractères."
+validator.adresse.max: "L'adresse ne peut pas dépasser 255 caractères."
+validator.montant.not_blank: 'Le montant de pret ne doit pas etre vide.'
+validator.montant.not_null: 'Le montant de pret est obligatoire.'
+validator.montant.positive: 'Le montant de pret doit etre un nombre positive'
+validator.devise.not_blank: 'La devise du montant ne doit pas etre vide.'
+validator.devise.not_null: 'La devise du montant de pret est obligatoire.'
+validator.devise.regex: 'La devise du montant est invalide'
+validator.duration.range: 'La durée de remboursement doit être au moins {{min}}.'
+validator.duration.not_blank: 'La durée de remboursement du montant ne doit pas etre vide.'
+validator.duration.not_null: 'La durée de remboursement du montant de pret est obligatoire.'
+validator.duration.regex: 'La devise du montant est invalide'
+validator.File.document.filenameTooLongMessage: 'Le nom du fichier est trop long ({{ filename_max_length }} caractères maximum).'
+validator.File.document.extensionsMessage: 'Veuillez téléverser un fichier PDF valide. Les extensions autorisées sont : {{ extensions }}.'
+validator.File.document.mimeTypesMessage: "Le type de fichier n'est pas valide. Les types autorisés sont : PDF,x-pdf."
+validator.File.document.maxSizeMessage: 'Le fichier est trop volumineux ({{ size }} {{ suffix }}). La taille maximale autorisée est de {{ limit }} {{ suffix }}.'
+validator.File.image.filenameTooLongMessage: "Le nom de l'image est trop long ({{ filename_max_length }} caractères maximum)."
+validator.File.image.extensionsMessage: "Veuillez téléverser une image valide. Les extensions autorisées sont : {{ extensions | join(',') }}."
+validator.File.image.mimeTypesMessage: "Le type de fichier n'est pas valide. Les types autorisés sont : JPEG, JPG et PNG."
+validator.File.image.maxSizeMessage: "L'image  est trop volumineux ({{ size }} {{ suffix }}). La taille maximale autorisée est de {{ size }} {{ suffix }}."
+Form.Error.title: 'Erreur de validation'
+Form.Error.detail: 'Certaines informations sont invalides ou manquantes. Veuillez corriger les champs concernés et réessayer.'
+
