@@ -262,8 +262,6 @@
               <h3 class="h4 card-title fw-bold text-services-blue">Prêt Auto / Moto</h3>
               <p class="card-text text-muted flex-grow-1">
               Le <strong>prêt auto/moto</strong> est une solution rapide et flexible pour <strong>financer l’achat de votre véhicule, neuf ou d’occasion</strong>. Que vous soyez particulier ou professionnel, ce type de financement peut compléter un <strong>financement d’entreprises</strong> pour la mobilité de vos équipes. Si vous avez déjà plusieurs emprunts, un <strong>rachat de crédit</strong> peut vous permettre d’intégrer votre <strong>prêt auto/moto</strong> dans une seule mensualité. Certains clients combinent également leur demande avec un <strong>prêt travaux ...</strong>
-              {# , notamment pour l’aménagement d’un garage ou d’une borne de recharge. En parallèle d’un <strong>crédit immobilier, le prêt auto/moto </strong> reste une solution indépendante et accessible. Profitez de taux compétitifs et d’une gestion simplifiée pour rouler en toute sérénité. #}
-                {# Financer l'achat de votre nouveau véhicule n'a jamais été aussi simple. Obtenez un crédit auto/moto rapidement et à des conditions avantageuses. #}
               </p>
               <a href="{{path('services.consumer.credit')}}" class="btn btn-outline-blue mt-auto" data-aos="fade-up" data-aos-delay="1000">
                 En savoir plus <i class="fas fa-chevron-right ms-2"></i>
@@ -280,7 +278,6 @@
               <h3 class="h4 card-title fw-bold text-services-red">Prêt Travaux</h3>
               <p class="card-text text-muted flex-grow-1">
               Le <strong>prêt travaux </strong> est idéal pour rénover, aménager ou embellir votre logement. Que ce soit pour une cuisine, une salle de bain ou une isolation, vous financez vos projets sans attendre. Les <strong>montants empruntés</strong> peuvent s’adapter à tout type de chantier. Une <strong>simulation prêt travaux</strong> vous permet de <strong>planifier votre budget</strong>. Profitez de conditions avantageuses, même sans apport. Investissez dans votre confort tout en valorisant votre <strong>bien immobilier</strong>.
-                {# Rénovez, agrandissez ou embellissez votre intérieur. Un financement adapté pour concrétiser vos projets de travaux et améliorer votre habitat. #}
               </p>
               <a href="{{path('services.investment.financing')}}" class="btn btn-outline-red mt-auto" 
               data-aos="fade-up" data-aos-delay="1200">
@@ -674,7 +671,7 @@
   </main>
 {% endblock %}
 {% block json_ld_schema %}
-    {{ parent() }} {# Ceci est important pour conserver tous les blocs JSON-LD définis dans base.html.twig, comme celui d'Internationales Web Services si vous l'y avez mis #}
+    {{ parent() }} 
 
     <script type="application/ld+json">
     { 
