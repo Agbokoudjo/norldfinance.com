@@ -7,7 +7,7 @@
             data-aos-delay="500"
           >
             <img src="{{asset('img/logo.svg')}}" alt="NorldFinance Logo" 
-            class="d-block img-fluid"/>
+            class="d-block img-fluid">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
                     href="#" role="button" id="dropdownLanguage"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    {# Afficher le drapeau et le code de la langue actuelle #}
-                  <i class="flag flag-icon flag-icon-{{ currentLocale }}" alt="{{ currentLocale }}"></i>
+                  <i class="flag flag-icon flag-icon-{{ currentLocale }}"></i>
                   <span class="text-uppercase">{{ currentLocale }}</span>
                   <i class="fas fa-angle-down"></i>
                 </a>
@@ -59,7 +59,7 @@
                      {% if locale =="en" %}
                         {% set locale = "gb" %}
                      {% endif %}
-                    <i class="flag flag-icon flag-icon-{{ locale }}" alt="{{ locale }}"></i>
+                    <i class="flag flag-icon flag-icon-{{ locale }}"></i>
                     <span class="text-capitalize">{{ locale|trans({}, 'lang',currentLocale) }}</span> {# Traduction du nom complet de la langue #}
                 </a>
             {% endfor %}

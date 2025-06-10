@@ -38,6 +38,7 @@ final class AdminNotificationMessageCommandHandler
         $email = (new TemplatedEmail())
             ->from($message->email)
             ->to($this->params->get('email.admin'))
+            ->replyTo($message->email)
             ->subject(sprintf('Nouvelle demande de prêt de %s %s', $message->lastname, $message->firstname))
             ->htmlTemplate('loanapplication/loan_request_notification.html.twig');
 

@@ -99,7 +99,7 @@ final class LoanRequestMessageCommandHandler
             $loan_request_persist->isConsentcheckbox(),
         );
         $this->bus->dispatch(
-                new Envelope($event_loan_request)->with(new DispatchAfterCurrentBusStamp())
+                (new Envelope($event_loan_request))->with(new DispatchAfterCurrentBusStamp())
             );
     }
 }

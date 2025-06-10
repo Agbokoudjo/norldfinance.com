@@ -2,7 +2,15 @@
 {% block title %} Nos Services de Prêts et Financements - {{NAME_SITE}} {% endblock %}
 {% block meta %}
     {{ parent() }}
-    <meta name="description" content=" {% block description %}Découvrez la gamme complète des services {{NAME_SITE}} : crédit immobilier, consommation, rachat, prêt professionnel, financement d'investissement et prêts étudiants. Trouvez la solution adaptée à vos besoins.{% endblock %}">
+    {% block description %}
+      <meta name="description" 
+            content=" Découvrez la gamme complète des services {{NAME_SITE}} : crédit immobilier, consommation, rachat, prêt professionnel, financement d'investissement et prêts étudiants. 
+                        Trouvez la solution adaptée à vos besoins.
+                         Découvrez les services de Norld Finance : prêt personnel, prêt étudiant, crédit immobilier et plus encore.
+                            {{NAME_SITE}} offre des solutions de prêts personnels, crédits immobiliers, financements d'entreprise et rachat de crédit. 
+                            Obtenez votre simulation gratuite et un accompagnement sur mesure
+            ">
+    {% endblock %}
      <meta property="og:title" content=" {% block og_title %}{{NAME_SITE}} :Solutions Complètes de Crédits et Financements{% endblock %}">
 {% endblock %}
 {% block body %}

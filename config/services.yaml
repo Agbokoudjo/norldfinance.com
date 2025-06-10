@@ -22,24 +22,4 @@ services:
     App\Http\EventSubscriber\LocaleSubscriber:
          tags: [kernel.event_subscriber]
     
-    # #Message
-    # App\Application\UseCase\Command\ContactMessageCommand:
-    #     tags: ['@message']
-    # App\Application\UseCase\Command\SendContactEmailCommand:
-    #     tags: ['@message']
-    # App\Application\UseCase\Command\LoanRequestMessageCommand:
-    #     tags: ['@message']
-    # App\Application\UseCase\Command\AdminNotificationMessageCommand:
-    #     tags: ['@message']
-    # App\Infrastructure\MessageHandler\ContactMessageCommandHandler:
-    #     tags:
-    #         -
-    #             name: messenger.message_handler
-    #             handles: App\Application\UseCase\Command\ContactMessageCommand
-    # App\Infrastructure\MessageHandler\SendContactEmailCommandHandler:
-    #     tags:
-    #         -
-    #             name: messenger.message_handler
-    #             handles: App\Application\UseCase\Command\SendContactEmailCommand
- 
         
