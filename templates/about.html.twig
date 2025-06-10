@@ -2,7 +2,11 @@
 {% block title %}À Propos de {{NAME_SITE}}{% endblock %}
 {% block meta %}
     {{ parent() }}
-    <meta name="description" content=" {% block description %}Découvrez {{NAME_SITE}} : notre histoire, notre équipe d'experts dédiée, notre mission de vous accompagner avec confiance et transparence dans tous vos projets de financement.{% endblock %}">
+     {% block description %}
+        <meta name="description" 
+              content="Découvrez {{NAME_SITE}} : notre histoire, notre équipe d'experts dédiée, notre mission de vous accompagner avec confiance et transparence dans tous vos projets de financement."
+              >
+     {% endblock %}
      <meta property="og:title" content="{% block og_title %}{{NAME_SITE}} : Qui Sommes-Nous ? Découvrez Notre Engagement{% endblock %}">
 {% endblock %}
 {% block body %}
@@ -181,7 +185,7 @@
                  data-aos="fade-left"
                  data-aos-duration="1000"
                  data-aos-delay="600">
-                <img src="{{asset('img/equipe.jpg')}}" class="img-fluid rounded-3 shadow-lg" alt="Notre équipe fondatrice">
+                <img src="{{asset('img/equipe.jpg')}}" loading="lazy" class="img-fluid rounded-3 shadow-lg" alt="Notre équipe fondatrice">
             </div>
         </div>
 
@@ -202,10 +206,10 @@
                  data-aos="fade-right"
                  data-aos-duration="1000"
                  data-aos-delay="600">
-                <video class="small-video img-fluid rounded-3 shadow-lg h-100" autoplay loop muted playsinline 
+                <video loading="lazy" class="small-video img-fluid rounded-3 shadow-lg h-100" autoplay loop muted playsinline 
                      poster="{{asset('img/img4.jpg')}}">
                      <source src="{{asset('video/video5.mp4')}}" type="video/mp4">
-                           <img src="{{asset('img/img12.jpg')}}" class="img-fluid rounded-3 shadow-lg" alt="Symbole de croissance financière">
+                           <img src="{{asset('img/img12.jpg')}}" loading="lazy" class="img-fluid rounded-3 shadow-lg" alt="Symbole de croissance financière">
                 </video>
             </div>
         </div>
@@ -283,7 +287,7 @@
                 <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
                     <img src="{{asset('img/directeur.jpg')}}" 
                     class="img-fluid rounded-circle mb-3 img-thumbnail border border-3 border-primary-custom" 
-                    alt="Photo de membre de l'équipe 1">
+                    alt="Photo de membre de l'équipe 1" loading="lazy">
                     <h3 class="h4 fw-bold mb-1 text-dark-custom">Jean Dupont</h3>
                     <p class="text-muted small mb-3 text-danger-custom">Directeur des Opérations</p>
                     <p class="text-muted small">
@@ -300,7 +304,7 @@
                  data-aos-duration="1000"
                  data-aos-delay="400">
                 <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
-                    <img src="{{asset('img/responsable.jpg')}}" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-danger-custom" alt="Photo de membre de l'équipe 2">
+                    <img src="{{asset('img/responsable.jpg')}}" loading="lazy" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-danger-custom" alt="Photo de membre de l'équipe 2">
                     <h3 class="h4 fw-bold mb-1 text-dark-custom">Marie Curie</h3>
                     <p class="text-muted small mb-3 text-primary-custom">Responsable Crédit Immobilier</p>
                     <p class="text-muted small">
@@ -317,7 +321,7 @@
                  data-aos-duration="1000"
                  data-aos-delay="500">
                 <div class="team-member-card text-center p-4 h-100 rounded-3 shadow-sm">
-                    <img src="{{asset('img/contact_financier.jpg')}}" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-primary-custom" alt="Photo de membre de l'équipe 3">
+                    <img src="{{asset('img/contact_financier.jpg')}}" loading="lazy" class="img-thumbnail img-fluid rounded-circle mb-3 border border-3 border-primary-custom" alt="Photo de membre de l'équipe 3">
                     <h3 class="h4 fw-bold mb-1 text-dark-custom">Luc Martin</h3>
                     <p class="text-muted small mb-3 text-danger-custom">Conseiller en Financement Pro</p>
                     <p class="text-muted small">
@@ -531,7 +535,7 @@
 </section>
 {% endblock %}
 {% block json_ld_schema %}
-    {{ parent() }} {# IMPORTANT : Conserve le Schema.org de base (Norld Finance et Internationales Web Services) #}
+    {{ parent() }} 
 
     <script type="application/ld+json">
     {

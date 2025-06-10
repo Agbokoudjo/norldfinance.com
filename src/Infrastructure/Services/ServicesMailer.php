@@ -22,7 +22,7 @@ use App\Application\Mailer\ServicesMailerInterface;
  */
 final class ServicesMailer implements ServicesMailerInterface
 {
-    public function __construct(private readonly MailerInterface $mailer){}
+    public function __construct(private MailerInterface $mailer){}
     public function send(
         string $from,
         string $to,
@@ -33,6 +33,7 @@ final class ServicesMailer implements ServicesMailerInterface
         $email=new TemplatedEmail();
         $email->from($from)
             ->to($to)
+            ->replyTo($from)
             ->subject($subject)
             ->htmlTemplate($htmlTemplate)
             ;

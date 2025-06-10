@@ -1,9 +1,5 @@
 {% extends 'base.html.twig' %}
 {% block title %}Bienvenue chez {{NAME_SITE}}{% endblock %}
-{% block meta %}
-  {{ parent() }}
-   <meta name="description" content="  {% block description %} {{NAME_SITE}} offre des solutions de prêts personnels, crédits immobiliers, financements d'entreprise et rachat de crédit. Obtenez votre simulation gratuite et un accompagnement sur mesure{% endblock %}">
-{% endblock %}
 {% block body %}
 <section class="hero-section">
     <div class="owl-carousel owl-theme hero-slider  owl-carousel-light owl-carousel-light-init-fadeIn">
@@ -370,7 +366,9 @@
 
                     <div class="col-lg-6 aos-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
                         <a href="{{asset('video/video7.mp4')}}" class="video-thumbnail-wrapper popup-vimeo">
-                        <img src="{{asset('img/img10.jpg')}}" alt="Aperçu vidéo du processus de demande de prêt" class="img-fluid rounded-lg">
+                        <img src="{{asset('img/img10.jpg')}}" 
+                        alt="Aperçu vidéo du processus de demande de prêt" 
+                        class="img-fluid rounded-lg" loading="lazy">
                         <div class="play-icon">
                             <i class="fas fa-play"></i>
                         </div>
@@ -450,9 +448,11 @@
                             class="rounded-circle me-3 border border-3 img-fluid" 
                              width="100"
                              height="100"
-                            style="border-color: #ea3249!important;" alt="Photo de profil Sophie L.">
+                             loading="lazy"
+                            style="border-color: #ea3249!important;"
+                             alt="Photo de profil Sophie L.">
                             <div>
-                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Sophie L.</h5>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Sophie L.</p>
                                 <p class="text-muted small mb-0">Client Particulier</p>
                             </div>
                         </div>
@@ -479,12 +479,13 @@
                         <div class="d-flex align-items-center mb-3">
                             <img src="{{asset('img/marc.png')}}"
                              class="rounded-circle me-3 border border-3 img-fluid"
-                             width="100"
-                             height="100"
+                             width="90"
+                             height="90"
+                             loading="lazy"
                              style="border-color: #00427e!important;" 
                              alt="Photo de profil Marc D.">
                             <div>
-                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Marc D.</h5>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Marc D.</p>
                                 <p class="text-muted small mb-0">Gérant d'entreprise</p>
                             </div>
                         </div>
@@ -513,9 +514,11 @@
                             class="rounded-circle me-3 border border-3 img-fluid"
                             width="100"
                             height="100"
-                             style="border-color: #ea3249!important;" alt="Photo de profil Julie R.">
+                            loading="lazy"
+                             style="border-color: #ea3249!important;" 
+                             alt="Photo de profil Julie R.">
                             <div>
-                                <h5 class="mb-0 fw-bold" style="color: #00427e;">Julie R.</h5>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Julie R.</p>
                                 <p class="text-muted small mb-0">Client Fidèle</p>
                             </div>
                         </div>

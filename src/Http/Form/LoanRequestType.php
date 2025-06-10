@@ -212,7 +212,7 @@ final class LoanRequestType extends AbstractType
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
-                    'data-pattern' => "^[\p{L}\p{M}\p{N}\s\.,!\'\"()\-]+$" // Regex unicode compatible
+                    'data-pattern' => "^[\p{L}\p{M}\p{N}\s\.,!'\"()\-]+$" // Regex unicode compatible
                 ]
             ])
             ->add('identitydocumentfile', FileType::class,[
