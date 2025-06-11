@@ -1,17 +1,30 @@
 User-agent: *
+
+# Pages principales accessibles
 Allow: /
+Allow: /contact-us/create
+Allow: /loan-application-credit/request/new
+Allow: /about
+Allow: /services/home
+Allow: /services/professional-loan
+Allow: /services/home-loan
+Allow: /services/consumer-credit
+Allow: /services/students-loans
+Allow: /services/investment-financing
+Allow: /services/loan-buyback
+Allow: /privacy-policy
+Allow: /terms-and-conditions
 
-# Disallow paths for areas not meant to be indexed by search engines.
-# Disallow: /admin/                # Pages d'administration
-# Disallow: /login/                # Pages de connexion
-# Disallow: /register/             # Pages d'inscription
-# Disallow: /reset-password/       # Pages de réinitialisation de mot de passe
-Disallow: /profile/              # Pages de profil utilisateur (si elles contiennent des données privées non pertinentes pour le SEO)
-Disallow: /simulation-results/   # Résultats de simulation si générés dynamiquement et très nombreux/uniques pour chaque utilisateur
-Disallow: /api/                  # Endpoints API (si vous en avez)
-Disallow: /_wdt/                 # Symfony profiler (dev env only)
-Disallow: /_error/               # Symfony error pages (dev env only)
+# Empêche l’indexation des pages sensibles ou inutiles pour le SEO
+Disallow: /admin/
+Disallow: /profile/
+Disallow: /api/
+Disallow: /_wdt/
+Disallow: /_error/
 Disallow: /.env
+Disallow: /compose.json
+Disallow: /compose.lock
+Disallow: /compose.yaml
 
-Sitemap: https://norldfinance.com/sitemaps/fr/sitemap.default.xml
-Sitemap: https://norldfinance.com/sitemaps/fr/sitemap.xml
+# Sitemap(s)
+Sitemap: https://norldfinance.com/sitemap.xml
