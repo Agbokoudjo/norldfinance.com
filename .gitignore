@@ -8,6 +8,8 @@
 /public/bundles/
 /var/
 /vendor/
+/htaccess_save.txt
+htaccess_save.txt
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
