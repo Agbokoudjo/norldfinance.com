@@ -10,6 +10,10 @@
 /vendor/
 /htaccess_save.txt
 htaccess_save.txt
+/.htaccess_composer
+.htaccess_composer
+htaccess_save_composer.txt
+/htaccess_save_composer.txt
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###

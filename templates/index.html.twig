@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
-{% block title %}Bienvenue chez {{NAME_SITE}}{% endblock %}
+{% block title %}Simulation de prêt immobilier et financement en ligne{% endblock %}
+{% block meta_description %}
+         Comparez les taux et obtenez une simulation de prêt immobilier personnalisée. Lancez votre projet avec un accompagnement sur mesure.
+{% endblock %}
+{% block meta_keywords %}
+  prêt immobilier, simulation prêt, financement immobilier, taux prêt immobilier, crédit immobilier
+{% endblock %}
 {% block body %}
 <section class="hero-section">
     <div class="owl-carousel owl-theme hero-slider  owl-carousel-light owl-carousel-light-init-fadeIn">
@@ -19,7 +25,7 @@
                 data-aos-delay="1500"
                 data-aos-duration="3000"
                 data-aos-once="false"
-                >Des solutions de prêt adaptées à vos besoins.</p>
+                >Obtenez facilement votre financement avec un accompagnement sur mesure.</p>
                 <a href="{{path('loan.application.credit')}}" class="btn loan-application btn-lg mt-3 aos-item"
                 data-aos="flip-left"
                 data-aos-duration="3000"
@@ -31,7 +37,7 @@
         <div class="item hero-slide" style="background-image: url('{{asset('img/img6.jpg')}}');">
             <div class="container hero-content">
                 <h1 class="display-3 fw-bold"
-                >Crédits Simples et Rapides</h1>
+                >Simulation de prêt immobilier</h1>
                 <p class="lead mt-4"
                 >Obtenez un financement en toute simplicité, sans paperasse inutile.</p>
                 <a href="{{path('loan.application.credit')}}" class="btn btn-outline-light btn-lg mt-3"

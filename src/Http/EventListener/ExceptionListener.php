@@ -33,20 +33,17 @@ final class ExceptionListener
     public function onExceptionEvent(ExceptionEvent $event): void
     {
         $isProd = ($_ENV['APP_ENV'] ?? 'prod') === 'prod';
-        if (!$isProd) {
-            return;
-        }
+        if (!$isProd) {return;}
 
         $exception = $event->getThrowable();
         $request = $event->getRequest();
 
+        if (!$exception instanceof HttpExceptionInterface) { return ;}
         $statusCode = Response::HTTP_INTERNAL_SERVER_ERROR;
         $headers = [];
 
-        if ($exception instanceof HttpExceptionInterface) {
-            $statusCode = $exception->getStatusCode();
-            $headers = $exception->getHeaders();
-        }
+        $statusCode = $exception->getStatusCode();
+        $headers = $exception->getHeaders();
 
         // Requête Ajax
         if ($request->isXmlHttpRequest()) {
@@ -55,7 +52,8 @@ final class ExceptionListener
             ], $statusCode, $headers));
             return;
         }
-        // Requête normale => redirection page d’accueil
-        $event->setResponse(new RedirectResponse($this->router->generate('home')));
+        if($statusCode ===Response::HTTP_NOT_FOUND || $statusCode === Response::HTTP_FORBIDDEN){
+            $event->setResponse(new RedirectResponse($this->router->generate('home')));
+        }
     }
 }

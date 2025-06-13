@@ -1,198 +1,178 @@
 <!DOCTYPE html>
 <html lang="{{app.locale}}" translate="yes">
-    <head>
-        {% block meta %}
-        <meta charset="UTF-8">
-      {% if app.environment == 'prod' %}
-       <meta name="google-site-verification" content="_hEd8X5kXmy6ycu5uQkrlIlCMMyrEbJXJbChr6aqIsg">
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0YE1H6WX6"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-Z0YE1H6WX6');
-      </script>
-      <meta name="google-site-verification" content="t0KDBpGkviLSxUksZVOn4FIJdmLcY4pEusLrQlnYhrg">
-      {% block json_ld_schema %}
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness", 
-            "name": {{NAME_SITE}},
-            "url": {{ BASE_HOST_URL}},
-            "logo": {{asset('img/logo.svg')}}, 
-            "description": {{ 'description'|trans({"%NAME_SITE%": 'NORLD FINANCE'},'globals',app.locale) }},
-            "telephone": {{PHONE_ADMIN}}, 
-            "email": {{EMAIL_ADMIN}},
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": {{ADRESSE}},
-              "addressLocality": "Paris",     
-              "addressCountry": "Fr"         
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Lundi",
-                "Mardi",
-                "Mercredi",
-                "Jeudi",
-                "Vendredi"
-                "Samedi"
-              ],
-              "opens": "08:30",
-              "closes": "18:00"
-            },
-            "sameAs": [
-              "https://www.facebook.com/norldfinance",
-              "https://twitter.com/norldfinance",
-              "https://www.linkedin.com/company/norldfinance"
-            ],
-          },
-          { 
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": {{block('title')}},
-          "url": {{app.request.uri}},
-          "creator": {
-            "@type": "Organization",
-            "name": {{SITE_CREATOR}},
-            "url": {{SITE_CREATOR_URL_LINKEDIN}},
-            "telephone": "+229 0167 25 18 86",
-            "description": {{ 'description.site.creator' |trans({},'globals',app.locale) }},
-            "knowsAbout": {
-              {{ 'knowsAbout.site.creator' |trans({},'globals',app.locale) }}
-          },
-          "offers": {
-            {
-              "@type": "Service",
-              "name": "Conception de Sites Web",
-              "description":  {{ 'offers.description.site.creator' |trans({},'globals',app.locale) }}
-            },
-            {
-              "@type": "Service",
-              "name": "Développement de Logiciels sur Mesure",
-              "description": "Création de logiciels métier et d'applications spécifiques pour entreprises et particuliers, avec des technologies telles que Django et PostgreSQL."
-            }
-          }
-        }
-      }
-        </script>
-      {% endblock %}
-      {% endif %}
-      <meta name="keywords" 
-            content="prêt personnel, crédit immobilier, financement étudiant">
-        <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1, user-scalable=no">
-         {% block description %}
-           <meta name="description" 
-              content=" 
-                          {{NAME_SITE}}, votre partenaire en prêts personnels, 
-                            crédits immobiliers et financements d'entreprise. 
-                            Simulez votre prêt en ligne.
-                            Financement de projet et immobilier.
-                            Demandez en ligne en quelques clics.
-                      ">
-         {% endblock %}
-         <meta property="og:image" content="{% block og_image %} {{asset('img/logo.svg')}} {% endblock %}">
-          <meta property="og:title" content="{% block og_title %} {{block('title')}} {% endblock %}">
-         <meta property="og:type" content="website">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{% block twitter_title %} {{block('title')}}{% endblock %}">
-        <meta name="twitter:image" content="{% block twitter_image %}{{block('og_image')}}{% endblock %}">
-        <meta property="og:title" content="{{NAME_SITE}}">
-        <meta property="og:url" content="{{ absolute_url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
-        <meta name="iws-config" content="{{ {
+<head>
+   <title>{% block title %} Bienvenue chez {{NAME_SITE}} {% endblock %}</title>
+   {% set  current_page_url = absolute_url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))  %}
+   {% block head %}
+     {% block meta %}
+          <meta charset="UTF-8">
+          <meta name="robots" content="index, follow">
+          <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1, user-scalable=no">
+          <meta name="iws-config" content="{{ {
                           DEBUG: app.debug ?? false,
                           APP_ENV: app.environment ?? 'prod',
                           LOCALE: app.locale ?? 'fr',
                           ENABLE_LOCALE: app.enabled_locales ?? []
                       }|json_encode()|e('html_attr') }}">
-        {% endblock %}
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block link %}
-        {% if  not is_partial_request %}
-        <link rel="canonical" 
-              href="{{ absolute_url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" 
-              rel="stylesheet" 
-             integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
-             crossorigin="anonymous">
-      <link rel="stylesheet" 
-            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.min.css" 
-            integrity="sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0=" 
-            crossorigin="anonymous">
-      <link rel="stylesheet" 
-            href="https://unpkg.com/aos@next/dist/aos.css">
-      <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
-            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
-          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-      <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" 
-          integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
-           crossorigin="anonymous" 
-           referrerpolicy="no-referrer">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer">
-     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap" 
-          rel="stylesheet">
-    <link rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css">
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" 
-        integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" 
-          rel="stylesheet">
-         <link rel="stylesheet" 
-              href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css">
-        <link rel="icon" 
-             href="{{asset('img/logo.svg')}}" 
-             width="50" height="50">
-        
-            {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+          {% if app.environment =="prod" %}
+              <meta property="og:image" content="{% block og_image %} {{asset('img/logo.svg')}} {% endblock %}">
+            <meta name="google-site-verification" content="_hEd8X5kXmy6ycu5uQkrlIlCMMyrEbJXJbChr6aqIsg">
+            <meta name="google-site-verification" content="t0KDBpGkviLSxUksZVOn4FIJdmLcY4pEusLrQlnYhrg">
+             <meta name="description" content="{% block meta_description %} 
+                            {{NAME_SITE}}, votre partenaire en prêts personnels, 
+                            crédits immobiliers et financements d'entreprise. 
+                            Simulez votre prêt en ligne.
+                            Financement de projet et immobilier.
+                            Demandez en ligne en quelques clics.
+                           {% endblock %}">
+            <meta name="keywords" content="{% block meta_keywords %} prêt personnel, crédit immobilier, financement étudiant {% endblock %}">
+            {% block meta_opengraph %}
+               <meta property="og:title" content="{% block og_title %} {{block('title')}} {% endblock %}">
+               <meta property="og:type" content="website">
+               <meta name="twitter:title" content="{% block twitter_title %} {{block('title')}}{% endblock %}">
+               <meta name="twitter:image" content="{% block twitter_image %}{{block('og_image')}}{% endblock %}">
+              <meta property="og:url" content="{{ current_page_url }}">
+              <meta property="og:description" content="{{ block('meta_description') }}">
+            {% endblock %}
         {% endif %}
         {% endblock %}
-    </head>
-    <body class="bg-light">
-        {% set currentRoute = app.current_route %}
+      {% block link %}
+          <link rel="canonical" href="{{ current_page_url }}">
+          {% block cdn_link %}
+              {% if  not is_partial_request %}
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
+                    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.min.css" 
+                    integrity="sha256-NWFDlc+2O5YBqGykjREpkSKDMB6yEu5qPecoRrhcsC0="  crossorigin="anonymous">
+              <link rel="stylesheet"  href="https://unpkg.com/aos@next/dist/aos.css">
+              <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+                    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" 
+                    referrerpolicy="no-referrer">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
+                     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
+                    crossorigin="anonymous" referrerpolicy="no-referrer">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" 
+                    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer">
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+               <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+                    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+                     crossorigin="anonymous" referrerpolicy="no-referrer">
+              <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap" rel="stylesheet">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" 
+                    integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ==" 
+                    crossorigin="anonymous" referrerpolicy="no-referrer">
+             <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"  rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css">
+            <link rel="icon" href="{{asset('img/logo.svg')}}" width="50" height="50">
+            {% endif %}
+          {% endblock %}
+      {% endblock %}
+       {% block javascripts %}
+       {% block importmap %}{{ importmap('app') }}{% endblock %}
+          {% if app.environment =="prod" %} 
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0YE1H6WX6"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-Z0YE1H6WX6');
+            </script>
+            {% block json_ld_schema %}
+                <script type="application/ld+json">
+                 {
+                  "@context": "https://schema.org",
+                  "@type": "LocalBusiness", 
+                  "name": {{NAME_SITE}},
+                  "url": {{ BASE_HOST_URL}},
+                  "logo": {{asset('img/logo.svg')}}, 
+                  "description": {{ 'description'|trans({"%NAME_SITE%": 'NORLD FINANCE'},'globals',app.locale) }},
+                  "telephone": {{PHONE_ADMIN}}, 
+                  "email": {{EMAIL_ADMIN}},
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": {{ADRESSE}},
+                    "addressLocality": "Paris",     
+                    "addressCountry": "Fr"         
+                  },
+                  "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Lundi",
+                      "Mardi",
+                      "Mercredi",
+                      "Jeudi",
+                      "Vendredi"
+                      "Samedi"
+                    ],
+                    "opens": "08:30",
+                    "closes": "18:00"
+                  },
+                  "sameAs": [
+                    "https://www.facebook.com/norldfinance",
+                    "https://twitter.com/norldfinance",
+                    "https://www.linkedin.com/company/norldfinance"
+                  ],
+                },
+                { 
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": {{block('title')}},
+                "url": {{app.request.uri}},
+                "creator": {
+                  "@type": "Organization",
+                  "name": {{SITE_CREATOR}},
+                  "url": {{SITE_CREATOR_URL_LINKEDIN}},
+                  "telephone": "+229 0167 25 18 86",
+                  "description": {{ 'description.site.creator' |trans({},'globals',app.locale) }},
+                  "knowsAbout": {
+                    {{ 'knowsAbout.site.creator' |trans({},'globals',app.locale) }}
+                },
+                "offers": {
+                  {
+                    "@type": "Service",
+                    "name": "Conception de Sites Web",
+                    "description":  {{ 'offers.description.site.creator' |trans({},'globals',app.locale) }}
+                  },
+                  {
+                    "@type": "Service",
+                    "name": "Développement de Logiciels sur Mesure",
+                    "description": "Création de logiciels métier et d'applications spécifiques pour entreprises et particuliers, avec des technologies telles que Django et PostgreSQL."
+                  }
+                }
+              }
+            }
+          </script>
+        {% endblock %}
+      {% endif %}
+      {% endblock %}
+   {% endblock %}
+</head>
+<body class="bg-light">
+   {% set currentRoute = app.current_route %}
     {% set currentRouteParams = app.current_route_parameters %}
     {% set currentLocale = app.locale %}
     {% set availableLocales = AVAILABLE_LOCALES|split(',') %}
-        {% if not is_partial_request %}
-             {% include 'header.html.twig' %}
-        {% endif %}
+
+    {% if not is_partial_request %}{% include 'header.html.twig' %}{% endif %}
+
     {% block body %}{% endblock %}
-        {% if not is_partial_request %}
-            {% include "footer.html.twig" %}
-        {% endif %}
-        {% if not is_partial_request  %}
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-           integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
-           crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-    </script>
+
+    {% if not is_partial_request %}{% include "footer.html.twig" %}{% endif %}
+    {% if not is_partial_request  %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+       </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
           integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" 
-          crossorigin="anonymous" 
-          referrerpolicy="no-referrer">
+          crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" 
           integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ==" 
@@ -203,16 +183,15 @@
             crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js" 
-   integrity="sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=" crossorigin="anonymous">
+          integrity="sha256-WjwoxFTbs4JzyDmrHgK4VgR+Dz7he8HYwCbocAlNn9k=" crossorigin="anonymous">
    </script>
-        {% endif %}
-        
-    <script>
+    {% endif %}
+     <script>
         AOS.init({
                 once: false,
                 startEvent: 'DOMContentLoaded'
         });
         AOS.refresh();
     </script>
-    </body>
+</body>
 </html>

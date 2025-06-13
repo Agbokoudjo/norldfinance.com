@@ -1,13 +1,10 @@
 {% extends 'base.html.twig' %}
-{% block title %}À Propos de {{NAME_SITE}}{% endblock %}
-{% block meta %}
-    {{ parent() }}
-     {% block description %}
-        <meta name="description" 
-              content="Découvrez {{NAME_SITE}} : notre histoire, notre équipe d'experts dédiée, notre mission de vous accompagner avec confiance et transparence dans tous vos projets de financement."
-              >
-     {% endblock %}
-     <meta property="og:title" content="{% block og_title %}{{NAME_SITE}} : Qui Sommes-Nous ? Découvrez Notre Engagement{% endblock %}">
+{% block title %}Experts en financement d’entreprise et prêt professionnel{% endblock %}
+{% block meta_description %}
+        Découvrez une équipe spécialisée dans le financement d’entreprise. Bénéficiez d’un accompagnement dédié pour vos projets professionnels.
+{% endblock %}
+{% block meta_keywords %}
+ financement entreprise, prêt professionnel, accompagnement entreprise, crédit entreprise, financement projet professionnel
 {% endblock %}
 {% block body %}
     <section class="about-hero-section position-relative overflow-hidden text-white d-flex align-items-center justify-content-center">
@@ -22,17 +19,17 @@
     <div class="container text-center position-relative z-1">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8">
-                <h1 class="display-3 fw-bold mb-4"
+                <h1 class="display-3 fw-bold mb-4 mt-5 "
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200">
-                    Qui Sommes-Nous : Votre <span style="color: #ea3249;">Partenaire</span> de Confiance
+                    À Propos de notre expertise en <span style="color: #ea3249;">Financement d’Entreprise</span>
                 </h1>
-                <p class="lead mb-5"
-                   data-aos="fade-up"
-                   data-aos-duration="1200"
-                   data-aos-delay="400">
-                    Depuis notre fondation, nous nous engageons à transformer vos aspirations financières en réalité, avec intégrité et transparence.
+                <p class="lead mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay="400">
+                        Nous accompagnons les entreprises de toutes tailles avec des solutions de financement sur mesure, adaptées à leurs projets et à leurs besoins.
                 </p>
             </div>
         </div>

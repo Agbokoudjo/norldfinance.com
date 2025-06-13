@@ -36,36 +36,34 @@
                 <a class="nav-link"   href="{{path('loan.application.credit')}}">Demande de prêt</a>
               </li>
             </ul>
-            <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
+            {# <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
             <li class="nav-item dropdown no-translate" translate="no">
 
                 <a class="nav-link text-color-primary text-color-hover-dark dropdown-toggle" 
                     href="#" role="button" id="dropdownLanguage"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   {# Afficher le drapeau et le code de la langue actuelle #}
                   <i class="flag flag-icon flag-icon-{{ currentLocale }}"></i>
                   <span class="text-uppercase">{{ currentLocale }}</span>
                   <i class="fas fa-angle-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end min-width-0" aria-labelledby="dropdownLanguage">
                     {% for locale in availableLocales %}
-                {# Construisez les paramètres de la route pour la langue cible #}
                 {% set targetRouteParams = currentRouteParams|merge({'_locale': locale}) %}
                 <a class="dropdown-item language-switcher" 
                    hreflang="{{ locale }}" 
-                   href="{{ path(currentRoute, targetRouteParams) }}" {# Génération de l'URL spécifique à la langue #}
+                   href="{{ path(currentRoute, targetRouteParams) }}" 
                    data-lang="{{ locale }}" 
                    title="{{ locale|trans({}, 'lang',currentLocale) }}">
                      {% if locale =="en" %}
                         {% set locale = "gb" %}
                      {% endif %}
                     <i class="flag flag-icon flag-icon-{{ locale }}"></i>
-                    <span class="text-capitalize">{{ locale|trans({}, 'lang',currentLocale) }}</span> {# Traduction du nom complet de la langue #}
+                    <span class="text-capitalize">{{ locale|trans({}, 'lang',currentLocale) }}</span>
                 </a>
             {% endfor %}
                 </div>
             </li>
-        </ul>
+        </ul> #}
           </div>
        </div>
     </nav>
