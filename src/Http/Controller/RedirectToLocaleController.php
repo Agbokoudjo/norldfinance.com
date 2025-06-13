@@ -12,10 +12,10 @@ final class RedirectToLocaleController
     public function __invoke(Request $request): RedirectResponse
     {
         // Essaie de récupérer la langue stockée en session
-        $locale = $request->getSession()->get('_locale',$request->getDefaultLocale());
+        //$locale = $request->getDefaultLocale();// $request->getSession()->get('_locale',$request->getDefaultLocale());
 
         // Sinon, détecte la langue préférée du navigateur (ou 'fr' par défaut)
-        $preferredLocale = $locale ?? $request->getPreferredLanguage(['fr', 'en', 'de', 'es', 'it', 'nl', 'pt']);
+        $preferredLocale = $request->getDefaultLocale() ;//$locale ;//?? $request->getPreferredLanguage(['fr', 'en', 'de', 'es', 'it', 'nl', 'pt']);
 
         return new RedirectResponse("/$preferredLocale/",301);
     }
