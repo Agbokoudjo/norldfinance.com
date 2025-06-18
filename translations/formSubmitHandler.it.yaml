@@ -1,0 +1,4 @@
+submitButton: Invio in corso...
+messageBeforeSendData:
+  title: Elaborazione
+  content: Trasmissione dei dati in corso. Grazie per la tua pazienza.

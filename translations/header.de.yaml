@@ -1,0 +1,11 @@
+home: Startseite
+about: Über Uns
+services.home: Dienstleistungen
+contact.form.us: Kontakt
+loan.application.credit: Kreditantrag
+pages:
+  terms:
+    and:
+      conditions: "Allgemeine Geschäftsbedingungen"
+  privacy:
+    policy: "Datenschutzerklärung"

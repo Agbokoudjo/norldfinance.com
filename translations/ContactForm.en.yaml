@@ -1,0 +1,46 @@
+fullname: 'Your Full Name'
+email: 'Your Email Address'
+phone: 'Your Phone Number (Optional)'
+subject.label: 'Subject'
+subject.placeholder: 'Inquiry, Quote Request...'
+content.label: 'Your Message'
+content.placeholder: 'Describe your needs here...'
+btn.submit: 'Send Message'
+Form.success.title: 'Thank you for your message, %name%!'
+Form.success.message: >
+  Hello %name%, Thank you for contacting %organization%. Your message has been received, and our team will respond to you as soon as possible. In the meantime, feel free to call us directly or check our <a href="/faq">FAQ</a> or follow us on our social media. <br/><hr/> Sincerely, <br/> The %organization% team
+sendEmailAdmin.header: 'New contact message received on %organization_name%'
+sendEmailAdmin.footer: 'This message was sent to you automatically from the contact form of %organization_name%'
+sendEmailAdmin.field.fullname: 'Name'
+sendEmailAdmin.field.email: 'Email'
+sendEmailAdmin.field.phone: 'Phone'
+sendEmailAdmin.field.subject: 'Subject'
+sendEmailAdmin.field.content: 'Message'
+
+contact.h1: >
+  Contact a <span style="color: #ea3249;">consumer credit</span> advisor
+contact.p: >
+  We are here to answer all your questions, provide quotes, or give advice.
+  Fill out the form below or use our direct contact details.
+
+contactFormSectionAnchor: Go to the Form
+contactInfoSectionAnchor: Call Us
+
+contactFormSection.h2: >
+  Let's talk about your <span style="color: var(--danger-color);">Financing</span>
+
+contactFormSection.p: >
+  Fill out the form below to send us your request.
+
+contactInfoSection.h2: >
+  Our <span style="color: var(--primary-color);">Contact Information</span>
+
+contactInfoSection.p: >
+  Feel free to contact us directly using the information below.
+
+contactInfoWrapper:
+  address: 
+    title: Address
+    content: 123 Rue de la Finance, 75001 Paris, France
+  phone: Phone
+  email: Email

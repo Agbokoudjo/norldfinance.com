@@ -1,0 +1,67 @@
+lastname: 'IHR NACHNAME'
+firstname: 'IHRE VORNAMEN'
+email: 'E-MAIL-ADRESSE'
+phone: 'WHATSAPP'
+country: 'LAND'
+city: 'STADT'
+adresse: 'ADRESSE'
+montant: 'BETRAG'
+devise: 'WÄHRUNG'
+subject.placeholder: 'Bsp.: Anfrage für Kreditablösung'
+subject.label: 'BETREFF IHRER KREDITANFRAGE'
+devise.placeholder: 'Wählen Sie Ihre gewünschte Kreditwährung'
+duration: 'RÜCKZAHLUNGSDAUER (MONATE)'
+identitydocument: 'Ausweisdokument (Personalausweis oder Reisepass)'
+helperIdentiydocument: 'Bitte scannen oder fotografieren Sie Ihr Ausweisdokument (Vorder-/Rückseite oder wichtige Seiten) und speichern Sie es im PDF-Format.'
+identityphoto1: 'Ausweisfoto 1'
+identityphoto2: 'Ausweisfoto 2'
+helperPhoto: 'Format JPG oder PNG oder JPEG.'
+consentCheckbox: >
+  Durch das Absenden dieses Formulars akzeptiere ich die <a href="#" class="text-primary-custom text-decoration-none fw-bold">Allgemeinen Geschäftsbedingungen</a> von <strong>%organization_name%</strong> und die <a href="#" class="text-primary-custom text-decoration-none fw-bold">Datenschutzrichtlinie</a>
+country.placeholder: 'Wählen Sie Ihr Land'
+adresse.placeholder: 'Ihre vollständige Adresse'
+adresse.helper: 'Bsp.: Nummer, Straße, Viertel, Stadt/Ort'
+helpdocument.generale: 'Dokumente und Fotos'
+btn.submit: 'Antrag einreichen'
+context_form: 'Details der Anfrage'
+Form.success.title: 'Kreditantrag erhalten, %name%!'
+Form.success.message: >
+  Hallo **%name%**,
+  <br/><br/>
+  Vielen Dank für Ihren Kreditantrag bei **%organization%**.
+  Ihr Antrag wird derzeit bearbeitet.
+  <br/><br/>
+  Unser spezialisiertes Team wird Ihren Antrag sorgfältig prüfen und Sie
+  innerhalb von **24 bis 48 Arbeitsstunden** kontaktieren, um Sie über den Status Ihres Antrags
+  zu informieren oder bei Bedarf weitere Informationen anzufordern.
+  <br/><br/>
+  In der Zwischenzeit können Sie unsere <a href="{{path('home')}}#faq">FAQ</a> für häufig gestellte
+  Fragen konsultieren oder uns in den sozialen Medien folgen, um über unsere Neuigkeiten auf dem Laufenden zu bleiben.
+  <br/><br/>
+  Wir freuen uns darauf, Sie bei der Umsetzung Ihrer Projekte zu unterstützen.
+  <br/><hr/>
+  Mit freundlichen Grüßen,<br/>
+  Das Team von **%organization%**
+
+requestherosection.h1: >
+  Beantragen Sie Ihren <span style="color: #ea3249;">Kredit</span> online
+
+requestherosection.p: >
+  Stellen Sie Ihren Finanzierungsantrag einfach und sicher.
+  Wir finden die passende Lösung für Ihr Projekt.
+
+requestherosection.a: Zum Formular
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Antragsformular</span>
+
+loanrequestform.p: >
+  Füllen Sie dieses Formular aus, um Ihren Kreditantrag zu starten. Unsere Experten werden Sie schnell kontaktieren.
+
+meta_description: >
+  {{NAME_SITE}}, Ihr Partner für Privatkredite, Immobilienkredite und Unternehmensfinanzierungen.
+  Simulieren Sie Ihren Kredit online. Projekt- und Immobilienfinanzierung. Stellen Sie Ihren Antrag mit wenigen Klicks online.
+
+meta_keywords: Privatkredit, Immobilienkredit, Studienfinanzierung
+
+page_title: Kreditanfrage

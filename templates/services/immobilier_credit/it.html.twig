@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+{% block title %}Mutuo immobiliare: tassi attuali e simulazione gratuita{% endblock %}
+{% block meta_description %}
+      Confronta le offerte di mutuo. Tassi competitivi intorno al 3%, simulazione rapida e assistenza personalizzata.
+{% endblock %}
+{% block meta_keywords %}mutuo immobiliare{% endblock %}
+{% block body %}
+     <main class="professional-loan">
+     <section class="hero-section hero-immobilier text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Mutuo Immobiliare</h1>
+        <p class="lead mt-3">Realizza il tuo sogno di proprietà. Troviamo il miglior mutuo immobiliare adatto al tuo progetto.</p>
+        <a href="#details" class="btn btn-primary-custom btn-lg mt-4">Scopri di più</a>
+    </div>
+</section>
+<section id="introduction" class="py-5 bg-light-blue">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title text-primary-dark mb-4">Comprendere il Mutuo Immobiliare</h2>
+                <p class="lead text-secondary-dark">
+                    L'acquisto di un immobile, che si tratti della tua residenza principale, di un investimento locativo o di un terreno, rappresenta spesso uno dei progetti più importanti della vita. Per realizzare questo sogno, un <strong>finanziamento</strong> adeguato è la chiave. Da <strong>{{NAME_SITE}}</strong> mettiamo la nostra esperienza al tuo servizio per aiutarti a navigare nel complesso mondo del <strong>mutuo immobiliare</strong>, offrendoti soluzioni personalizzate che corrispondono perfettamente alla tua situazione e ai tuoi obiettivi di proprietà.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+     <section id="details" class="py-5 bg-white">
+    <div class="container">
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="col-lg-10 col-md-12 mx-auto">
+                <h2 class="section-title text-primary-dark mb-4 text-center">Il Nostro Approccio al Mutuo Immobiliare</h2>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+            <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video loading="lazy" autoplay muted loop playsinline  preload="metadata"
+                           poster="{{asset('img/img17.jpg')}}"
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video12.mp4')}}" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="feature-title text-accent-red mb-3">Cos'è concretamente il Mutuo Immobiliare?</h3>
+                <p class="text-secondary-dark">
+                    Il <strong>Mutuo Immobiliare</strong> è un prestito destinato a finanziare l'acquisto, la costruzione o la ristrutturazione di beni immobili (casa, appartamento, terreno). Si caratterizza generalmente per importi significativi e durate di rimborso lunghe. Questo tipo di prestito è accompagnato da condizioni specifiche (tasso di interesse, garanzie, assicurazione del mutuatario) che devono essere adattate al tuo profilo finanziario e alla natura del tuo progetto per garantirne la fattibilità e la tua tranquillità.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video loading="lazy" autoplay muted loop playsinline  preload="metadata"
+                           poster="{{asset('img/img18.jpg')}}"
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video13.mp4')}}" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title text-accent-red mb-3">Perché scegliere {{NAME_SITE}} per il tuo Mutuo Immobiliare?</h3>
+                <p class="text-secondary-dark">
+                    Ottenere un mutuo immobiliare è un passo importante. Presso <span class="fw-bold">{{NAME_SITE}}</span>, ti offriamo:
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Consulenza Personalizzata:** Esperti dedicati per analizzare la tua situazione e le tue esigenze.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Migliori Condizioni:** Ricerca dei tassi e delle garanzie più vantaggiose per il tuo progetto.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Accompagnamento Completo:** Dalla simulazione alla firma, siamo al tuo fianco.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Semplicità delle Pratiche:** Processo snellito per farti risparmiare tempo ed energia.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Trasparenza:** Informazioni chiare e complete su tutti gli aspetti del tuo prestito.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">A chi si rivolge questo servizio?</h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-home fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title text-primary-dark">Primi Acquirenti</h5>
+                                <p class="card-text text-secondary-dark">Per l'acquisto della tua residenza principale.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-city fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title text-primary-dark">Investitori Immobiliari</h5>
+                                <p class="card-text text-secondary-dark">Finanziamento di immobili per l'affitto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-wrench fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title text-primary-dark">Progetti di Ristrutturazione</h5>
+                                <p class="card-text text-secondary-dark">Migliora o amplia il tuo patrimonio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">Come funziona? (Processo Semplificato)</h3>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                        <h5 class="step-title text-primary-dark">Definizione del Progetto</h5>
+                        <p class="text-secondary-dark">Analisi del tuo progetto di acquisto o costruzione.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                        <h5 class="step-title text-primary-dark">Studio di Fattibilità</h5>
+                        <p class="text-secondary-dark">Valutazione della tua capacità di indebitamento e del tuo profilo.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                        <h5 class="step-title text-primary-dark">Ricerca delle Offerte</h5>
+                        <p class="text-secondary-dark">Selezione delle migliori proposte dai nostri partner.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                        <h5 class="step-title text-primary-dark">Preparazione del Dossier</h5>
+                        <p class="text-secondary-dark">Aiuto nella costituzione e presentazione della tua pratica.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                        <h5 class="step-title text-primary-dark">Firma e Concretizzazione</h5>
+                        <p class="text-secondary-dark">Accompagnamento fino alla firma dell'atto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto">
+                <h3 class="feature-title text-accent-red mb-4 text-center">I vantaggi per te:</h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-hand-holding-usd fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Condizioni ottimali</h5>
+                                <p class="card-text">Accedi ai tassi più competitivi del mercato e alle migliori garanzie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-clipboard-check fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Pratica solida</h5>
+                                <p class="card-text">Approfitta della nostra esperienza per una richiesta di prestito impeccabile.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-hourglass-half fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Risparmio di tempo</h5>
+                                <p class="card-text">Gestiamo le pratiche complesse, tu ti concentri sul tuo progetto immobiliare.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-comments-dollar fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Consulenza indipendente</h5>
+                                <p class="card-text">Approfitta di consigli obiettivi per una scelta di finanziamento informata.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-lock fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Serenità assicurata</h5>
+                                <p class="card-text">Realizza il tuo progetto in tutta fiducia, con un piano finanziario sicuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section bg-white text-center py-5">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+        <h2 class="fs-2 fw-bold text-primary-dark">Pronto a realizzare il tuo sogno immobiliare?</h2>
+        <p class="lead mt-3 text-secondary-dark">Contattaci oggi per ricevere un'analisi personalizzata e gratuita del tuo progetto.</p>
+        <a href="{{ path('loan.application.credit') }}" class="btn btn-secondary-custom btn-lg mt-4">Simula il mio mutuo</a>
+    </div>
+</section>
+     </main>
+{% endblock %}

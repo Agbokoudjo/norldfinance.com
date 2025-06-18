@@ -1,0 +1,46 @@
+fullname: 'Ihr vollständiger Name'
+email: 'Ihre E-Mail-Adresse'
+phone: 'Ihre Telefonnummer (Optional)'
+subject.label: 'Betreff der Nachricht'
+subject.placeholder: 'Anfrage, Angebot...'
+content.label: 'Ihre Nachricht'
+content.placeholder: 'Beschreiben Sie hier Ihr Anliegen...'
+btn.submit: 'Nachricht senden'
+Form.success.title: 'Vielen Dank für Ihre Nachricht, %name%!'
+Form.success.message: >
+  Hallo %name%, vielen Dank, dass Sie %organization% kontaktiert haben. Ihre Nachricht wurde erfolgreich empfangen und unser Team wird Ihnen so schnell wie möglich antworten. In der Zwischenzeit können Sie uns gerne direkt anrufen oder unsere <a href="/faq">FAQ</a> konsultieren oder uns in den sozialen Medien folgen. <br/><hr/> Mit freundlichen Grüßen, <br/> Das Team von %organization%
+sendEmailAdmin.header: 'Neue Kontaktanfrage erhalten auf %organization_name%'
+sendEmailAdmin.footer: 'Diese Nachricht wurde Ihnen automatisch über das Kontaktformular von %organization_name% gesendet'
+sendEmailAdmin.field.fullname: 'Name'
+sendEmailAdmin.field.email: 'E-Mail'
+sendEmailAdmin.field.phone: 'Telefon'
+sendEmailAdmin.field.subject: 'Betreff'
+sendEmailAdmin.field.content: 'Nachricht'
+
+contact.h1: >
+  Kontaktieren Sie einen Berater für <span style="color: #ea3249;">Verbraucherkredite</span>
+contact.p: >
+  Wir sind für Sie da, um alle Ihre Fragen, Kostenvoranschläge oder Beratungsanfragen zu beantworten.
+  Füllen Sie das untenstehende Formular aus oder nutzen Sie unsere direkten Kontaktdaten.
+
+contactFormSectionAnchor: Zum Formular
+contactInfoSectionAnchor: Rufen Sie uns an
+
+contactFormSection.h2: >
+  Sprechen wir über Ihre <span style="color: var(--danger-color);">Finanzierung</span>
+
+contactFormSection.p: >
+  Füllen Sie das folgende Formular aus, um uns Ihre Anfrage zu senden.
+
+contactInfoSection.h2: >
+  Unsere <span style="color: var(--primary-color);">Kontaktdaten</span>
+
+contactInfoSection.p: >
+  Zögern Sie nicht, uns direkt über die untenstehenden Informationen zu kontaktieren.
+
+contactInfoWrapper:
+  address: 
+    title: Adresse
+    content: 123 Rue de la Finance, 75001 Paris, Frankreich
+  phone: Telefon
+  email: E-Mail

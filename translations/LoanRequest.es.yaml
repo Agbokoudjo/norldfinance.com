@@ -1,0 +1,68 @@
+lastname: 'SU APELLIDO'
+firstname: 'SUS NOMBRES'
+email: 'DIRECCIÓN DE CORREO ELECTRÓNICO'
+phone: 'WHATSAPP'
+country: 'PAÍS'
+city: 'CIUDAD'
+adresse: 'DIRECCIÓN'
+montant: 'MONTO'
+devise: 'MONEDA'
+subject.placeholder: 'Ej: Solicitud de Recompra de Crédito'
+subject.label: 'ASUNTO DE SU SOLICITUD DE PRÉSTAMO'
+devise.placeholder: 'Elija la moneda de su solicitud de préstamo'
+duration: 'DURACIÓN DEL REEMBOLSO (MESES)'
+identitydocument: 'Documento de Identidad (DNI o Pasaporte)'
+helperIdentiydocument: 'Por favor, escanee o fotografíe su documento de identidad (anverso/reverso o páginas importantes) y guárdelo en formato PDF.'
+identityphoto1: 'Foto de identidad 1'
+identityphoto2: 'Foto de identidad 2'
+helperPhoto: 'Formato JPG o PNG o JPEG.'
+consentCheckbox: >
+  Al enviar este formulario, acepto los <a href="#" class="text-primary-custom text-decoration-none fw-bold">términos y condiciones</a> de <strong>%organization_name%</strong> y la <a href="#" class="text-primary-custom text-decoration-none fw-bold">política de privacidad</a>
+country.placeholder: 'Elija su país'
+adresse.placeholder: 'Su dirección completa'
+adresse.helper: 'Ej: Número, Calle, Barrio, Ciudad/Localidad'
+helpdocument.generale: 'Documentos y Fotos'
+btn.submit: 'Enviar Solicitud'
+context_form: 'Detalles de la Solicitud'
+Form.success.title: 'Solicitud de préstamo recibida, %name%!'
+Form.success.message: >
+  Hola **%name%**,
+  <br/><br/>
+  Gracias por enviar su solicitud de préstamo a **%organization%**.
+  Su expediente está siendo procesado.
+  <br/><br/>
+  Nuestro equipo especializado revisará cuidadosamente su solicitud y se pondrá en contacto
+  con usted en un plazo de **24 a 48 horas hábiles** para informarle sobre el estado de su expediente
+  o para solicitar información adicional si es necesario.
+  <br/><br/>
+  Mientras tanto, puede consultar nuestras <a href="{{path('home')}}#faq">Preguntas Frecuentes</a> para cualquier
+  pregunta frecuente o seguirnos en nuestras redes sociales para mantenerse informado(a) sobre nuestras noticias.
+  <br/><br/>
+  Esperamos poder acompañarle en la realización de sus proyectos.
+  <br/><hr/>
+  Atentamente,<br/>
+  El equipo de **%organization%**
+
+requestherosection.h1: >
+  Solicita tu <span style="color: #ea3249;">Préstamo</span> en línea
+
+requestherosection.p: >
+  Presenta tu solicitud de financiación de forma fácil y segura.
+  Encontramos la solución más adecuada para tu proyecto.
+
+requestherosection.a: Acceder al Formulario
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Formulario de Solicitud</span>
+
+loanrequestform.p: >
+  Completa este formulario para iniciar tu solicitud de préstamo. Nuestros expertos te contactarán rápidamente.
+
+
+meta_description: >
+  {{NAME_SITE}}, tu socio en préstamos personales, hipotecas y financiación empresarial.
+  Simula tu préstamo en línea. Financiación de proyectos e inmobiliaria. Solicita en línea en solo unos clics.
+
+meta_keywords: préstamo personal, crédito hipotecario, financiación estudiantil
+
+page_title: Solicitud de Préstamo

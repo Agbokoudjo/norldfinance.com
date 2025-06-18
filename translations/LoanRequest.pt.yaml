@@ -1,0 +1,69 @@
+lastname: 'SEU SOBRENOME'
+firstname: 'SEUS NOMES PRÓPRIOS'
+email: 'ENDEREÇO DE E-MAIL'
+phone: 'WHATSAPP'
+country: 'PAÍS'
+city: 'CIDADE'
+adresse: 'ENDEREÇO'
+montant: 'VALOR'
+devise: 'MOEDA'
+subject.placeholder: 'Ex: Pedido de Refinanciamento de Crédito'
+subject.label: 'ASSUNTO DA SUA SOLICITAÇÃO DE EMPRÉSTIMO'
+devise.placeholder: 'Escolha a moeda da sua solicitação de empréstimo'
+duration: 'DURAÇÃO DO REEMBOLSO (MESES)'
+identitydocument: 'Documento de Identidade (Cartão de Cidadão ou Passaporte)'
+helperIdentiydocument: 'Por favor, digitalize ou fotografe seu documento de identidade (frente/verso ou páginas importantes) e salve-o em formato PDF.'
+identityphoto1: 'Foto de identidade 1'
+identityphoto2: 'Foto de identidade 2'
+helperPhoto: 'Formato JPG ou PNG ou JPEG.'
+consentCheckbox: >
+  Ao submeter este formulário, aceito os <a href="#" class="text-primary-custom text-decoration-none fw-bold">termos e condições</a> de <strong>%organization_name%</strong> e a <a href="#" class="text-primary-custom text-decoration-none fw-bold">política de privacidade</a>
+country.placeholder: 'Escolha o seu país'
+adresse.placeholder: 'Seu endereço completo'
+adresse.helper: 'Ex: Número, Rua, Bairro, Cidade/Localidade'
+helpdocument.generale: 'Documentos e Fotos'
+btn.submit: 'Enviar Pedido'
+context_form: 'Detalhes do pedido'
+Form.success.title: 'Pedido de empréstimo recebido, %name%!'
+Form.success.message: >
+  Olá **%name%**,
+  <br/><br/>
+  Agradecemos por submeter o seu pedido de empréstimo a **%organization%**.
+  O seu processo está agora em fase de tratamento.
+  <br/><br/>
+  A nossa equipa especializada analisará cuidadosamente o seu pedido e entrará em contacto
+  consigo dentro de **24 a 48 horas úteis** para o informar sobre o seguimento do seu processo
+  ou para solicitar informações complementares, se necessário.
+  <br/><br/>
+  Enquanto isso, pode consultar a nossa <a href="{{path('home')}}#faq">FAQ</a> para quaisquer
+  perguntas frequentes ou seguir-nos nas nossas redes sociais para se manter informado(a) sobre as nossas notícias.
+  <br/><br/>
+  Estamos ansiosos para o(a) acompanhar na realização dos seus projetos.
+  <br/><hr/>
+  Atenciosamente,<br/>
+  A equipa **%organization%**
+
+requestherosection.h1: >
+  Solicite o seu <span style="color: #ea3249;">Empréstimo</span> online
+
+requestherosection.p: >
+  Envie o seu pedido de financiamento de forma simples e segura.
+  Encontramos a melhor solução para o seu projeto.
+
+requestherosection.a: Aceder ao Formulário
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Formulário de Pedido</span>
+
+loanrequestform.p: >
+  Preencha este formulário para iniciar o seu pedido de empréstimo. Os nossos especialistas entrarão em contacto rapidamente.
+
+
+
+meta_description: >
+  {{NAME_SITE}}, o seu parceiro em empréstimos pessoais, créditos hipotecários e financiamentos empresariais.
+  Simule o seu empréstimo online. Financiamento de projetos e imóveis. Solicite online em apenas alguns cliques.
+
+meta_keywords: empréstimo pessoal, crédito imobiliário, financiamento estudantil
+
+page_title: Pedido de Empréstimo

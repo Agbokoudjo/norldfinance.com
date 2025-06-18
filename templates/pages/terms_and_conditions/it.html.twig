@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+{% block title %}Termini e Condizioni Generali – {{NAME_SITE}}{% endblock %}
+{% block meta_description %}
+    Consulta i termini e le condizioni generali di utilizzo dei servizi di {{NAME_SITE}}. Informazioni importanti su accesso, utilizzo e responsabilità.
+{% endblock %}
+{% block meta_keywords %}
+    termini e condizioni, condizioni generali, {{NAME_SITE}}, accordo utente, regole di utilizzo, responsabilità, proprietà intellettuale
+{% endblock %}
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-termes-conditions text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Termini e Condizioni Generali</h1>
+        <p class="lead mt-3">Che regolano l'uso dei servizi e del sito web di {{NAME_SITE}}.</p>
+    </div>
+</section>
+
+ <section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="text-secondary-dark">
+                        Benvenuti sul sito web di <strong>{{NAME_SITE}}</strong>. L'accesso e l'utilizzo del nostro sito, nonché tutti i nostri servizi finanziari, sono soggetti ai presenti Termini e Condizioni Generali di Utilizzo e Vendita (di seguito "T&C"). Accedendo e utilizzando questo sito, l'utente riconosce di aver letto, compreso e accettato di essere vincolato da questi T&C, nonché dalla nostra Informativa sulla privacy. Se non si accettano questi T&C, si prega di non utilizzare il nostro sito o i nostri servizi.
+                    </p>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> si riserva il diritto di modificare, aggiungere o eliminare parti di questi T&C in qualsiasi momento, a sua esclusiva discrezione. È responsabilità dell'utente consultare regolarmente questi T&C per prendere conoscenza di eventuali modifiche. L'uso continuato del sito dopo la pubblicazione delle modifiche implica l'accettazione delle stesse.
+                    </p>
+                    <p class="text-secondary-dark small fst-italic">Ultimo aggiornamento: {{UPDATED_SITE}}</p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2 class="section-title text-primary-dark mb-3">1. Definizioni</h2>
+                    <ul class="list-unstyled text-secondary-dark">
+                        <li class="mb-2"><strong>"Sito":</strong> Designa il sito web di <strong>{{NAME_SITE}}</strong>, accessibile all'indirizzo {{ path('home') }}.</li>
+                        <li class="mb-2"><strong>"Servizi":</strong> Designa l'insieme dei servizi finanziari (Credito al Consumo, Prestiti Studenti, Finanziamento di Investimento, Riacquisto di Credito, ecc.) offerti da <strong>{{NAME_SITE}}</strong> tramite il Sito.</li>
+                        <li class="mb-2"><strong>"Utente":</strong> Qualsiasi persona fisica o giuridica che accede e utilizza il Sito o i Servizi.</li>
+                        <li class="mb-2"><strong>"{{NAME_SITE}}":</strong> La società proprietaria e operatrice del Sito e dei Servizi.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="section-title text-primary-dark mb-3">2. Accesso e Utilizzo del Sito</h2>
+                    <p class="text-secondary-dark">
+                        L'accesso al Sito è gratuito e aperto a qualsiasi Utente che rispetti i presenti T&C. <strong>{{NAME_SITE}}</strong> si impegna a mantenere il Sito accessibile permanentemente, ma non può garantire un accesso ininterrotto e declina ogni responsabilità in caso di indisponibilità.
+                    </p>
+                    <p class="text-secondary-dark">
+                        L'Utente si impegna a utilizzare il Sito e i Servizi in modo leale, conformemente alla legge, ai presenti T&C e al buon costume. Qualsiasi utilizzo abusivo o fraudolento è strettamente proibito.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h2 class="section-title text-primary-dark mb-3">3. Proprietà Intellettuale</h2>
+                    <p class="text-secondary-dark">
+                        L'intero contenuto del Sito (testi, immagini, grafici, loghi, icone, suoni, software, ecc.) è di proprietà esclusiva di <strong>{{NAME_SITE}}</strong> o dei suoi partner ed è protetto dalle leggi francesi e internazionali relative alla proprietà intellettuale.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Qualsiasi riproduzione, rappresentazione, modifica, pubblicazione, adattamento di tutto o parte degli elementi del Sito, qualunque sia il mezzo o il procedimento utilizzato, è vietata, salvo autorizzazione scritta preventiva di <strong>{{NAME_SITE}}</strong>.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2 class="section-title text-primary-dark mb-3">4. Responsabilità</h2>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> si impegna a fornire informazioni accurate e aggiornate sul proprio Sito. Tuttavia, non possiamo garantire l'accuratezza, la completezza o la pertinenza di tutte le informazioni pubblicate. Le informazioni finanziarie fornite sul Sito sono a titolo indicativo e non costituiscono in alcun caso una consulenza personalizzata. Si raccomanda di consultare un professionista prima di qualsiasi decisione finanziaria.
+                    </p>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> non potrà essere ritenuta responsabile per danni diretti o indiretti, materiali o immateriali, derivanti dall'accesso o dall'utilizzo del Sito o dei Servizi, incluse perdite di dati, virus, interruzioni di servizio, ecc.
+                    </p>
+                    <p class="text-secondary-dark">
+                        L'Utente è l'unico responsabile dell'utilizzo che fa delle informazioni e dei servizi disponibili sul Sito.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <h2 class="section-title text-primary-dark mb-3">5. Protezione dei Dati Personali</h2>
+                    <p class="text-secondary-dark">
+                        La raccolta e il trattamento dei dati personali da parte di <strong>{{NAME_SITE}}</strong> sono regolati dalla nostra <a href="{{path('pages.privacy.policy')}}" class="text-accent-red">Informativa sulla Privacy</a>, che è parte integrante dei presenti T&C. Accettando questi T&C, si accetta anche la nostra Informativa sulla Privacy.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <h2 class="section-title text-primary-dark mb-3">6. Cookie</h2>
+                    <p class="text-secondary-dark">
+                        Il Sito utilizza i cookie per migliorare l'esperienza di navigazione. Per maggiori informazioni sull'uso dei cookie e su come gestirli, si prega di consultare la nostra <a href="{{path('pages.privacy.policy')}}" class="text-accent-red">Informativa sulla Privacy (sezione Informazioni personali)</a>.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <h2 class="section-title text-primary-dark mb-3">7. Collegamenti Esterni</h2>
+                    <p class="text-secondary-dark">
+                        Il Sito può contenere collegamenti a siti di terze parti. <strong>{{NAME_SITE}}</strong> non esercita alcun controllo su tali siti e declina ogni responsabilità per il loro contenuto, le loro pratiche o la loro politica sulla privacy. L'attivazione di questi collegamenti è di esclusiva responsabilità dell'Utente.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <h2 class="section-title text-primary-dark mb-3">8. Legge Applicabile e Giurisdizione</h2>
+                    <p class="text-secondary-dark">
+                        I presenti T&C sono regolati dal diritto <strong>francese</strong>. Qualsiasi controversia relativa all'interpretazione o all'esecuzione di questi T&C sarà di competenza esclusiva dei tribunali di <strong>Parigi</strong>. Si raccomanda di includere una clausola di risoluzione amichevole delle controversie prima di qualsiasi azione legale.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                    <h2 class="section-title text-primary-dark mb-3">9. Contatto</h2>
+                    <p class="text-secondary-dark">
+                        Per qualsiasi domanda riguardante questi Termini e Condizioni Generali, vi preghiamo di contattarci <a href="{{path('contact.form.us')}}" class="text-accent-red">tramite la nostra pagina di contatto compilando il modulo</a>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+{% endblock %}

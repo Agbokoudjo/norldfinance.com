@@ -1,0 +1,11 @@
+home: Home
+about: Chi Siamo
+services.home: Servizi
+contact.form.us: Contatti
+loan.application.credit: Richiesta di Prestito
+pages:
+  terms:
+    and:
+      conditions: "Termini e Condizioni"
+  privacy:
+    policy: "Informativa sulla Privacy"

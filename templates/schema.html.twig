@@ -1,0 +1,64 @@
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ NAME_SITE }}",
+    "url": "{{ BASE_HOST_URL }}",
+    "logo": "{{ asset('img/logo.svg') }}",
+    "description": "{{ 'description'|trans({"%NAME_SITE%": 'NORLD FINANCE'}, 'globals', app.locale) }}",
+    "telephone": "{{ PHONE_ADMIN }}",
+    "email": "{{ EMAIL_ADMIN }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ ADRESSE }}",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+        ],
+        "opens": "08:30",
+        "closes": "18:00"
+    },
+    "sameAs": [
+        "https://www.facebook.com/norldfinance",
+        "https://twitter.com/norldfinance",
+        "https://www.linkedin.com/company/norldfinance"
+    ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ content_title }}",
+    "url": "{{ app.request.uri }}",
+    "creator": {
+        "@type": "Organization",
+        "name": "{{ SITE_CREATOR }}",
+        "url": "{{ SITE_CREATOR_URL_LINKEDIN }}",
+        "telephone": "+229 0167 25 18 86",
+        "description": "{{ 'description.site.creator' |trans({}, 'globals', app.locale) }}",
+        "knowsAbout": "{{ 'knowsAbout.site.creator' |trans({}, 'globals', app.locale) }}",
+        "offers": [
+        {
+            "@type": "Service",
+            "name": "Conception de Sites Web",
+            "description": "{{ 'offers.description.site.creator' |trans({}, 'globals', app.locale) }}"
+        },
+        {
+            "@type": "Service",
+            "name": "Développement de Logiciels sur Mesure",
+            "description": "Création de logiciels métier et d'applications spécifiques pour entreprises et particuliers, avec des technologies telles que Django et PostgreSQL."
+        }
+        ]
+    }
+    }
+</script>

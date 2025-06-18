@@ -1,0 +1,67 @@
+lastname: 'YOUR LAST NAME'
+firstname: 'YOUR FIRST NAMES'
+email: 'EMAIL ADDRESS'
+phone: 'WHATSAPP'
+country: 'COUNTRY'
+city: 'CITY'
+adresse: 'ADDRESS'
+montant: 'AMOUNT'
+devise: 'CURRENCY'
+subject.placeholder: 'Ex: Credit Buyout Request'
+subject.label: 'SUBJECT OF YOUR LOAN APPLICATION'
+devise.placeholder: 'Choose your loan application currency'
+duration: 'REPAYMENT DURATION (MONTHS)'
+identitydocument: 'Identity Document (ID Card or Passport)'
+helperIdentiydocument: 'Please scan or photograph your identity document (front/back or important pages) and save it in PDF format.'
+identityphoto1: 'Identity Photo 1'
+identityphoto2: 'Identity Photo 2'
+helperPhoto: 'JPG or PNG or JPEG format.'
+consentCheckbox: >
+  By submitting this form, I accept the <a href="#" class="text-primary-custom text-decoration-none fw-bold">terms and conditions</a> of <strong>%organization_name%</strong> and the <a href="#" class="text-primary-custom text-decoration-none fw-bold">privacy policy</a>
+country.placeholder: 'Choose your country'
+adresse.placeholder: 'Your complete address'
+adresse.helper: 'Ex: Number, Street, Neighborhood, City/Locality'
+helpdocument.generale: 'Documents and Photos'
+btn.submit: 'Submit Application'
+context_form: 'Application Details'
+Form.success.title: 'Loan application received, %name%!'
+Form.success.message: >
+  Hello **%name%**,
+  <br/><br/>
+  Thank you for submitting your loan application to **%organization%**.
+  Your application is now being processed.
+  <br/><br/>
+  Our specialized team will carefully review your application and contact you
+  within **24 to 48 business hours** to inform you of the status of your application
+  or to request additional information if needed.
+  <br/><br/>
+  In the meantime, you can consult our <a href="{{path('home')}}#faq">FAQ</a> for any
+  frequently asked questions or follow us on our social media to stay informed about our news.
+  <br/><br/>
+  We look forward to helping you achieve your projects.
+  <br/><hr/>
+  Sincerely,<br/>
+  The **%organization%** team
+
+requestherosection.h1: >
+  Apply for Your <span style="color: #ea3249;">Loan</span> Online
+
+requestherosection.p: >
+  Submit your financing request easily and securely.
+  We’ll find the best solution for your project.
+
+requestherosection.a: Go to the Form
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Application Form</span>
+
+loanrequestform.p: >
+  Fill out this form to start your loan request. Our experts will contact you shortly.
+
+meta_description: >
+  {{NAME_SITE}}, your partner in personal loans, mortgage loans, and business financing.
+  Simulate your loan online. Project and real estate financing. Apply online in just a few clicks.
+
+meta_keywords: personal loan, mortgage loan, student financing
+
+page_title: Loan Request

@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+{% block title %}Privacybeleid – {{NAME_SITE}} {% endblock %}
+{% block meta_description %}
+    Ontdek het privacybeleid van {{NAME_SITE}}. We leggen uit hoe uw persoonsgegevens worden verzameld, gebruikt en beschermd in overeenstemming met de AVG.
+{% endblock %}
+{% block meta_keywords %}
+    privacybeleid, persoonsgegevens, AVG, gegevensbescherming, {{NAME_SITE}}, vertrouwelijkheid, gegevensbeveiliging
+{% endblock %}
+
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-confidentialite text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Privacybeleid</h1>
+        <p class="lead mt-3">Uw vertrouwen is onze prioriteit. Ontdek hoe wij uw persoonlijke gegevens beschermen.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="text-secondary-dark">
+                        De website van <strong>{{NAME_SITE}}</strong> is eigendom van <strong>{{NAME_SITE}}</strong>, die optreedt als verwerkingsverantwoordelijke voor uw persoonlijke gegevens.
+                        We hebben dit Privacybeleid opgesteld om gedetailleerd te beschrijven hoe we de door <strong>{{NAME_SITE}}</strong> verzamelde informatie verwerken. Dit beleid legt ook uit waarom we bepaalde persoonlijke gegevens over u moeten verzamelen. Het is daarom essentieel om dit beleid zorgvuldig te lezen voordat u de website van <strong>{{NAME_SITE}}</strong> gebruikt.
+                        Wij hechten het grootste belang aan de bescherming van uw persoonlijke gegevens en verbinden ons ertoe de vertrouwelijkheid en veiligheid ervan te waarborgen.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2 class="section-title text-primary-dark mb-3">1. Persoonlijke informatie die we verzamelen</h2>
+                    <p class="text-secondary-dark">
+                        Wanneer u <strong>{{NAME_SITE}}</strong> bezoekt, verzamelen we automatisch bepaalde informatie over uw apparaat. Dit omvat details over uw webbrowser, IP-adres, tijdzone en enkele van de cookies die op uw apparaat zijn geïnstalleerd. Bovendien verzamelen we, terwijl u door de site navigeert, informatie over de webpagina's of producten die u bekijkt, de websites of zoektermen die u naar de site hebben verwezen en hoe u met de site omgaat. We verwijzen gezamenlijk naar deze automatisch verzamelde informatie als "Apparaatinformatie".
+                    </p>
+                    <p class="text-secondary-dark">
+                        Bovendien kunnen we de persoonlijke gegevens verzamelen die u ons vrijwillig verstrekt (inclusief, maar niet beperkt tot, uw voornaam, achternaam, adres, betalingsinformatie, enz.) bij uw registratie of bij het gebruik van onze diensten, om de serviceovereenkomst die we met u hebben te kunnen uitvoeren.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="section-title text-primary-dark mb-3">2. Waarom verwerken wij uw gegevens?</h2>
+                    <p class="text-secondary-dark">
+                        De gegevensbeveiliging van onze klanten heeft de hoogste prioriteit. Daarom verwerken we alleen de minimale gebruikersgegevens die strikt noodzakelijk zijn voor de goede werking van de website. De automatisch verzamelde Apparaatinformatie wordt uitsluitend gebruikt om potentiële gevallen van misbruik te identificeren en om anonieme statistieken over het websitegebruik samen te stellen. Deze statistische informatie wordt op geen enkele manier geaggregeerd om een specifieke gebruiker van het systeem te identificeren.
+                    </p>
+                    <p class="text-secondary-dark">
+                        U hebt de mogelijkheid om onze website te bezoeken zonder uw identiteit prijs te geven of persoonlijke informatie te verstrekken die u specifiek kan identificeren.
+                        Als u echter bepaalde functies van de website wilt gebruiken, u wilt aanmelden voor onze nieuwsbrief of contact met ons wilt opnemen via een formulier, dan kan u gevraagd worden om persoonlijke gegevens te verstrekken, zoals uw e-mailadres, voornaam, achternaam, woonplaats, organisatie of telefoonnummer. U bent vrij om deze persoonlijke gegevens niet aan ons te verstrekken, maar dit kan u ervan weerhouden om bepaalde functies van de website te gebruiken, zoals het ontvangen van onze nieuwsbrief of direct contact via de site.
+                        Als u twijfelt over de verplichte informatie, aarzel dan niet om contact met ons op te nemen <a href="{{path('contact.form.us')}}" class="text-accent-red">op onze contactpagina</a>.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h2 class="section-title text-primary-dark mb-3">3. Uw rechten inzake gegevensbescherming (AVG)</h2>
+                    <p class="text-secondary-dark">
+                        Als u een inwoner bent van de Europese Economische Ruimte (EER), heeft u de volgende rechten met betrekking tot uw persoonlijke gegevens, in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG):
+                    </p>
+                    <ul class="list-unstyled text-secondary-dark">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op informatie over de verwerking van uw gegevens.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op toegang tot uw persoonlijke gegevens.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op rectificatie van onjuiste of onvolledige gegevens.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op het wissen van uw gegevens (recht op vergetelheid).</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op beperking van de verwerking van uw gegevens.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht op gegevensoverdraagbaarheid, om uw gegevens in een gestructureerd en algemeen gebruikt formaat te ontvangen.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Het recht om bezwaar te maken tegen de verwerking van uw gegevens op legitieme gronden.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Rechten met betrekking tot geautomatiseerde individuele besluitvorming en profilering.</li>
+                    </ul>
+                    <p class="text-secondary-dark">
+                        Om een van deze rechten uit te oefenen, kunt u contact met ons opnemen via het e-mailadres dat is opgegeven in het gedeelte "Contactgegevens" hieronder.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Bovendien willen we, als u een Europese ingezetene bent, verduidelijken dat we uw informatie verwerken om contracten uit te voeren die we met u hebben (bijvoorbeeld als u zich via de Site abonneert op een dienst), of om onze legitieme zakelijke belangen na te streven, zoals eerder beschreven. Houd er rekening mee dat uw informatie buiten de Europese Economische Ruimte kan worden overgedragen, met name naar Canada en de Verenigde Staten, naar landen die door de EU worden erkend als landen die een passend beschermingsniveau bieden, of via standaardcontractbepalingen.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2 class="section-title text-primary-dark mb-3">4. Links naar andere websites</h2>
+                    <p class="text-secondary-dark">
+                        Onze website kan links bevatten naar andere websites die niet van ons zijn of niet onder onze controle vallen. Wij willen benadrukken dat wij niet verantwoordelijk zijn voor de privacy van deze andere websites, noch voor de privacy praktijken van derden. Wij raden u aan waakzaam te zijn wanneer u onze website verlaat en de privacyverklaringen te lezen van elke website die persoonlijke informatie kan verzamelen.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <h2 class="section-title text-primary-dark mb-3">5. Informatiebeveiliging</h2>
+                    <p class="text-secondary-dark">
+                        Wij beveiligen de informatie die u verstrekt op computerservers die zich bevinden in een gecontroleerde en beveiligde omgeving, beschermd tegen ongeoorloofde toegang, gebruik of openbaarmaking. We implementeren redelijke administratieve, technische en fysieke beveiligingsmaatregelen om ons te beschermen tegen ongeoorloofde toegang, gebruik, wijziging en openbaarmaking van persoonlijke gegevens onder onze controle en bewaring. Geen enkele gegevensoverdracht via internet of een draadloos netwerk kan echter als volledig veilig worden gegarandeerd.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <h2 class="section-title text-primary-dark mb-3">6. Juridische kennisgeving en openbaarmaking</h2>
+                    <p class="text-secondary-dark">
+                        We kunnen alle informatie die we verzamelen, gebruiken of ontvangen openbaar maken indien dit wettelijk vereist of toegestaan is, bijvoorbeeld om te voldoen aan een dagvaarding, een soortgelijke juridische procedure, of wanneer we te goeder trouw van mening zijn dat openbaarmaking noodzakelijk is om onze rechten te beschermen, uw veiligheid of die van anderen te waarborgen, fraude te onderzoeken of te reageren op een overheidsverzoek.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <h2 class="section-title text-primary-dark mb-3">7. Contactgegevens</h2>
+                    <p class="text-secondary-dark">
+                        Voor vragen over dit privacybeleid,
+                        of als u uw rechten met betrekking tot uw persoonlijke informatie wilt uitoefenen,
+                        kunt u contact met ons opnemen via e-mail door het formulier <a href="{{path('contact.form.us')}}" class="text-accent-red">op de contactpagina</a> in te vullen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+{% endblock %}

@@ -1,0 +1,11 @@
+home: Home
+about: Over Ons
+services.home: Diensten
+contact.form.us: Contact
+loan.application.credit: Leningaanvraag
+pages:
+  terms:
+    and:
+      conditions: "Algemene Voorwaarden"
+  privacy:
+    policy: "Privacybeleid"

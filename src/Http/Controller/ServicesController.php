@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
@@ -16,8 +17,8 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function index():Response{
-        return $this->render('services/index.html.twig');
+    public function index(Request $requestIndex):Response{
+        return $this->render(sprintf('services/home/%s.html.twig',$requestIndex->getLocale()));
     }
 
     #[Route('/professional-loan', 
@@ -29,9 +30,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function professionalLoan(): Response
+    public function professionalLoan(Request  $requestLoan): Response
     {
-        return $this->render('services/professional_loan.html.twig');
+        return $this->render(sprintf('services/professional_loan/%s.html.twig',$requestLoan->getLocale()));
     }
 
     #[Route('/home-loan', 
@@ -43,9 +44,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function credit(): Response
+    public function credit(Request $request): Response
     {
-        return $this->render('services/immobilier_credit.html.twig');
+        return $this->render(sprintf('services/immobilier_credit/%s.html.twig',$request->getLocale()));
     }
     #[Route('/consumer-credit', 
         name: 'services.consumer.credit', 
@@ -56,9 +57,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function consumerCredit(): Response
+    public function consumerCredit(Request $requestConsumer): Response
     {
-        return $this->render('services/consumer_credit.html.twig');
+        return $this->render(sprintf('services/consumer_credit/%s.html.twig', $requestConsumer->getLocale()));
     }
     #[Route('/students-loans', 
         name: 'services.students.loans', 
@@ -69,9 +70,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function studentsLoans(): Response
+    public function studentsLoans(Request $requestStudents): Response
     {
-        return $this->render('services/students_loans.html.twig');
+        return $this->render(sprintf('services/students_loans/%s.html.twig',$requestStudents->getLocale()));
     }
     #[Route('/investment-financing', 
         name: 'services.investment.financing',
@@ -82,9 +83,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function investmentFinancing(): Response
+    public function investmentFinancing(Request $requestFinancing): Response
     {
-        return $this->render('services/investment_financing.html.twig');
+        return $this->render(sprintf('services/investment_financing/%s.html.twig', $requestFinancing->getLocale()));
     }
     #[Route('/loan-buyback', 
         name: 'services.loan.buyback',
@@ -95,9 +96,9 @@ final class ServicesController extends AbstractController{
                 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
             ]
         ])]
-    public function loanBuyback(): Response
+    public function loanBuyback(Request $requestBuyback): Response
     {
-        return $this->render('services/loan_buyback.html.twig');
+        return $this->render(sprintf('services/loan_buyback/%s.html.twig',$requestBuyback->getLocale()));
     }
     
 }

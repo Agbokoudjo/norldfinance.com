@@ -1,0 +1,11 @@
+home: Home
+about: About Us
+services.home: Services
+contact.form.us: Contact
+loan.application.credit: Loan Application
+pages:
+  terms:
+    and:
+      conditions: "Terms and Conditions"
+  privacy:
+    policy: "Privacy Policy"

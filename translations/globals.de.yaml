@@ -1,0 +1,12 @@
+description: "%NAME_SITE% ist Ihr vertrauenswürdiger Partner für Kredit- und Finanzierungsanfragen und bietet maßgeschneiderte Lösungen für Privatpersonen und Unternehmen."
+description.site.creator: "INTERNATIONALES WEB SERVICES ist ein Unternehmen, das sich auf maßgeschneiderte Website-Erstellung und leistungsstarke Softwareentwicklung für Unternehmen und Privatpersonen spezialisiert hat."
+knowsAbout.site.creator: >
+  "Webseitenerstellung",
+  "Softwareentwicklung",
+  "Maßgeschneiderte Weblösungen",
+  "Symfony",
+  "ReactJS",
+  "TypeScript",
+  "PostgreSQL",
+  "Django"
+offers.description.site.creator: "Dienstleistungen für die Erstellung professioneller Websites, Schaufenster- und E-Commerce-Seiten unter Verwendung von Symfony, ReactJS und TypeScript."

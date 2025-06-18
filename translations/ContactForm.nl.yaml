@@ -1,0 +1,46 @@
+fullname: 'Uw volledige naam'
+email: 'Uw e-mailadres'
+phone: 'Uw telefoonnummer (Optioneel)'
+subject.label: 'Onderwerp van het bericht'
+subject.placeholder: 'Informatieaanvraag, Offerte...'
+content.label: 'Uw bericht'
+content.placeholder: 'Beschrijf hier uw behoeften...'
+btn.submit: 'Bericht verzenden'
+Form.success.title: 'Bedankt voor uw bericht, %name%!'
+Form.success.message: >
+  Hallo %name%, Bedankt voor uw contact met %organization%. Uw bericht is goed ontvangen en ons team zal u zo snel mogelijk antwoorden. Aarzel in de tussentijd niet om ons direct te bellen of onze <a href="/faq">FAQ</a> te raadplegen of ons te volgen op onze sociale media. <br/><hr/> Met vriendelijke groet, <br/> Het team van %organization%
+sendEmailAdmin.header: 'Nieuw contactbericht ontvangen op %organization_name%'
+sendEmailAdmin.footer: 'Dit bericht is u automatisch verzonden via het contactformulier van %organization_name%'
+sendEmailAdmin.field.fullname: 'Naam'
+sendEmailAdmin.field.email: 'E-mail'
+sendEmailAdmin.field.phone: 'Telefoon'
+sendEmailAdmin.field.subject: 'Onderwerp'
+sendEmailAdmin.field.content: 'Bericht'
+
+contact.h1: >
+  Neem contact op met een <span style="color: #ea3249;">consumentenkrediet</span> adviseur
+contact.p: >
+  Wij staan voor u klaar om al uw vragen, offertes of adviesverzoeken te beantwoorden.
+  Vul het onderstaande formulier in of gebruik onze rechtstreekse contactgegevens.
+
+contactFormSectionAnchor: Naar het formulier
+contactInfoSectionAnchor: Bel ons
+
+contactFormSection.h2: >
+  Laten we praten over uw <span style="color: var(--danger-color);">Financiering</span>
+
+contactFormSection.p: >
+  Vul het onderstaande formulier in om ons uw verzoek te sturen.
+
+contactInfoSection.h2: >
+  Onze <span style="color: var(--primary-color);">Contactgegevens</span>
+
+contactInfoSection.p: >
+  Neem gerust rechtstreeks contact met ons op via de onderstaande informatie.
+
+contactInfoWrapper:
+  address: 
+    title: Adres
+    content: 123 Rue de la Finance, 75001 Parijs, Frankrijk
+  phone: Telefoon
+  email: E-mail

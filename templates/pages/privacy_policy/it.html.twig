@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+{% block title %}Informativa sulla Privacy – {{NAME_SITE}} {% endblock %}
+{% block meta_description %}
+    Scopri l'informativa sulla privacy di {{NAME_SITE}}. Spieghiamo come vengono raccolti, utilizzati e protetti i tuoi dati personali in conformità al GDPR.
+{% endblock %}
+{% block meta_keywords %}
+    informativa sulla privacy, dati personali, GDPR, protezione dei dati, {{NAME_SITE}}, riservatezza, sicurezza dei dati
+{% endblock %}
+
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-confidentialite text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Informativa sulla Privacy</h1>
+        <p class="lead mt-3">La vostra fiducia è la nostra priorità. Scoprite come proteggiamo i vostri dati personali.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="text-secondary-dark">
+                        Il sito web di <strong>{{NAME_SITE}}</strong> è di proprietà di <strong>{{NAME_SITE}}</strong>, che agisce in qualità di titolare del trattamento dei vostri dati personali.
+                        Abbiamo stabilito la presente Informativa sulla Privacy per descrivere in dettaglio le modalità di trattamento delle informazioni raccolte da <strong>{{NAME_SITE}}</strong>. Questa politica spiega anche i motivi per cui siamo tenuti a raccogliere alcuni dati personali che vi riguardano. È quindi essenziale leggere attentamente questa politica prima di utilizzare il sito web di <strong>{{NAME_SITE}}</strong>.
+                        Attribuiamo un'importanza fondamentale alla protezione dei vostri dati personali e ci impegniamo a garantirne la riservatezza e la sicurezza.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2 class="section-title text-primary-dark mb-3">1. Informazioni personali che raccogliamo</h2>
+                    <p class="text-secondary-dark">
+                        Quando visitate <strong>{{NAME_SITE}}</strong>, raccogliamo automaticamente alcune informazioni sul vostro dispositivo. Ciò include dettagli sul vostro browser web, il vostro indirizzo IP, il vostro fuso orario e alcuni dei cookie installati sul vostro dispositivo. Inoltre, mentre navigate sul Sito, raccogliamo informazioni sulle pagine web o sui prodotti che visualizzate, sui siti web o sui termini di ricerca che vi hanno indirizzato al Sito e su come interagite con il Sito. Ci riferiamo collettivamente a queste informazioni raccolte automaticamente come "Informazioni sul dispositivo".
+                    </p>
+                    <p class="text-secondary-dark">
+                        Inoltre, potremmo raccogliere i dati personali che ci fornite volontariamente (inclusi, a titolo esemplificativo ma non esaustivo, il vostro nome, cognome, indirizzo, informazioni di pagamento, ecc.) al momento della registrazione o dell'utilizzo dei nostri servizi, al fine di poter eseguire il contratto di servizio che abbiamo con voi.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="section-title text-primary-dark mb-3">2. Perché trattiamo i vostri dati?</h2>
+                    <p class="text-secondary-dark">
+                        La sicurezza dei dati dei nostri clienti è la nostra massima priorità. Pertanto, trattiamo solo il minimo di dati utente strettamente necessari per il corretto funzionamento del sito web. Le Informazioni sul dispositivo raccolte automaticamente vengono utilizzate esclusivamente per identificare potenziali casi di abuso e per compilare statistiche anonime sull'utilizzo del sito web. Queste informazioni statistiche non sono in alcun modo aggregate in modo da identificare un utente particolare del sistema.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Avete la possibilità di navigare sul nostro sito web senza rivelare la vostra identità o fornire informazioni personali che possano identificarvi specificamente.
+                        Tuttavia, se desiderate utilizzare alcune funzionalità del sito web, iscrivervi alla nostra newsletter o contattarci tramite un modulo, potreste essere invitati a fornirci dati personali come il vostro indirizzo email, il vostro nome, il vostro cognome, la vostra città di residenza, la vostra organizzazione o il vostro numero di telefono. Siete liberi di non fornirci questi dati personali, ma ciò potrebbe impedirvi di beneficiare di alcune funzionalità del sito web, come la ricezione della nostra newsletter o il contatto diretto dal sito.
+                        Se avete dubbi sulle informazioni obbligatorie, non esitate a contattarci <a href="{{path('contact.form.us')}}" class="text-accent-red">sulla nostra pagina di contatto</a>.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h2 class="section-title text-primary-dark mb-3">3. I vostri diritti in materia di protezione dei dati (GDPR)</h2>
+                    <p class="text-secondary-dark">
+                        Se siete residenti dello Spazio Economico Europeo (SEE), beneficiate dei seguenti diritti relativi ai vostri dati personali, in conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR):
+                    </p>
+                    <ul class="list-unstyled text-secondary-dark">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto di essere informati sul trattamento dei vostri dati.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto di accesso ai vostri dati personali.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto di rettifica dei dati inesatti o incompleti.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto alla cancellazione dei vostri dati (diritto all'oblio).</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto alla limitazione del trattamento dei vostri dati.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto alla portabilità dei dati, per ricevere i vostri dati in un formato strutturato e di uso comune.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> Il diritto di opposizione al trattamento dei vostri dati per motivi legittimi.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> I diritti in materia di processi decisionali individuali automatizzati e di profilazione.</li>
+                    </ul>
+                    <p class="text-secondary-dark">
+                        Per esercitare uno di questi diritti, vi preghiamo di contattarci all'indirizzo email fornito nella sezione "Informazioni di contatto" di seguito.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Inoltre, se siete residenti europei, desideriamo precisare che trattiamo le vostre informazioni sia per eseguire i contratti che potremmo avere con voi (ad esempio, se vi iscrivete a un servizio tramite il Sito), sia per perseguire i nostri legittimi interessi commerciali descritti in precedenza. Si prega di notare che le vostre informazioni potrebbero essere trasferite al di fuori dello Spazio Economico Europeo, in particolare in Canada e negli Stati Uniti, verso paesi riconosciuti dall'UE come in grado di offrire un livello di protezione adeguato o tramite clausole contrattuali tipo.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2 class="section-title text-primary-dark mb-3">4. Collegamenti ad altri siti web</h2>
+                    <p class="text-secondary-dark">
+                        Il nostro sito web può contenere collegamenti ad altri siti web che non sono di nostra proprietà o sotto il nostro controllo. Desideriamo sottolineare che non siamo responsabili della privacy di questi altri siti web né delle pratiche sulla privacy di terzi. Vi invitiamo a essere vigili quando lasciate il nostro sito web e a leggere le dichiarazioni sulla privacy di ogni sito web che potrebbe raccogliere informazioni personali.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <h2 class="section-title text-primary-dark mb-3">5. Sicurezza delle informazioni</h2>
+                    <p class="text-secondary-dark">
+                        Proteggiamo le informazioni che fornite su server informatici situati in un ambiente controllato e sicuro, protetti da accessi, usi o divulgazioni non autorizzati. Implementiamo misure di protezione amministrative, tecniche e fisiche ragionevoli per proteggerci da accessi, usi, modifiche e divulgazioni non autorizzati dei dati personali sotto il nostro controllo e la nostra custodia. Tuttavia, nessuna trasmissione di dati su Internet o su una rete wireless può essere garantita come totalmente sicura.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <h2 class="section-title text-primary-dark mb-3">6. Note legali e divulgazione</h2>
+                    <p class="text-secondary-dark">
+                        Potremmo essere tenuti a divulgare tutte le informazioni che raccogliamo, utilizziamo o riceviamo se la legge lo richiede o lo consente, ad esempio per rispettare una citazione in giudizio, un processo legale simile, o quando riteniamo in buona fede che la divulgazione sia necessaria per proteggere i nostri diritti, garantire la vostra sicurezza o quella di altri, indagare su una frode o rispondere a una richiesta governativa.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <h2 class="section-title text-primary-dark mb-3">7. Contatti</h2>
+                    <p class="text-secondary-dark">
+                        Per qualsiasi domanda relativa alla presente informativa sulla privacy,
+                        o se desiderate esercitare i vostri diritti relativi alle vostre informazioni personali,
+                        potete contattarci via e-mail compilando il modulo <a href="{{path('contact.form.us')}}" class="text-accent-red">della pagina di contatto</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+{% endblock %}

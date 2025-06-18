@@ -1,0 +1,46 @@
+fullname: 'Seu Nome Completo'
+email: 'Seu Endereço de E-mail'
+phone: 'Seu Número de Telefone (Opcional)'
+subject.label: 'Assunto da mensagem'
+subject.placeholder: 'Pedido de informação, Orçamento...'
+content.label: 'Sua Mensagem'
+content.placeholder: 'Descreva sua necessidade aqui...'
+btn.submit: 'Enviar Mensagem'
+Form.success.title: 'Obrigado pela sua mensagem, %name%!'
+Form.success.message: >
+  Olá %name%, Agradecemos o seu contato com %organization%. Sua mensagem foi recebida e nossa equipe responderá o mais breve possível. Enquanto isso, sinta-se à vontade para nos ligar diretamente ou consultar nossa <a href="/faq">FAQ</a> ou nos seguir em nossas redes sociais. <br/><hr/> Atenciosamente, <br/> A equipe %organization%
+sendEmailAdmin.header: 'Nova mensagem de contato recebida em %organization_name%'
+sendEmailAdmin.footer: 'Esta mensagem foi enviada automaticamente do formulário de contato de %organization_name%'
+sendEmailAdmin.field.fullname: 'Nome'
+sendEmailAdmin.field.email: 'E-mail'
+sendEmailAdmin.field.phone: 'Telefone'
+sendEmailAdmin.field.subject: 'Assunto'
+sendEmailAdmin.field.content: 'Mensagem'
+
+contact.h1: >
+  Contacte um consultor de <span style="color: #ea3249;">crédito ao consumo</span>
+contact.p: >
+  Estamos à sua disposição para responder a todas as suas dúvidas, pedidos de orçamento ou conselhos.
+  Preencha o formulário abaixo ou utilize os nossos contactos diretos.
+
+contactFormSectionAnchor: Aceder ao Formulário
+contactInfoSectionAnchor: Ligue-nos
+
+contactFormSection.h2: >
+  Vamos falar sobre o seu <span style="color: var(--danger-color);">Financiamento</span>
+
+contactFormSection.p: >
+  Preencha o formulário abaixo para nos enviar o seu pedido.
+
+contactInfoSection.h2: >
+  Os nossos <span style="color: var(--primary-color);">Contactos</span>
+
+contactInfoSection.p: >
+  Não hesite em contactar-nos diretamente através das informações abaixo.
+
+contactInfoWrapper:
+  address: 
+    title: Endereço
+    content: 123 Rue de la Finance, 75001 Paris, França
+  phone: Telefone
+  email: E-mail

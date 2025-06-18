@@ -10,7 +10,6 @@
  *
  * For more information, please feel free to contact the author.
  */
-
 namespace App\Http\EventListener;
 
 use Symfony\Component\EventDispatcher\Attribute\AsEventListener;

@@ -21,49 +21,50 @@
            id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="{{path('home')}}">Accueil</a>
+                <a class="nav-link" href="{{path('home')}}">{{ 'home' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{path('about')}}">À Propos</a>
+                <a class="nav-link" href="{{path('about')}}">{{ 'about' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link"   href="{{path('services.home')}}">Services</a>
+                <a class="nav-link"   href="{{path('services.home')}}">{{ 'services.home' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"  href="{{path('contact.form.us')}}">Contacts</a>
+                <a class="nav-link"  href="{{path('contact.form.us')}}">{{ 'contact.form.us' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"   href="{{path('loan.application.credit')}}">Demande de prêt</a>
+                <a class="nav-link"   href="{{path('loan.application.credit')}}">{{ 'loan.application.credit' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>
             </ul>
-            {# <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
-            <li class="nav-item dropdown no-translate" translate="no">
+            <div class="navbar-nav ms-3 mb-2 mb-lg-0">
+            <div class="nav-item dropdown no-translate" translate="no">
 
                 <a class="nav-link text-color-primary text-color-hover-dark dropdown-toggle" 
                     href="#" role="button" id="dropdownLanguage"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   data-bs-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+                    {% if currentLocale =="en" %}
+                        {% set currentLocale = "gb" %}
+                     {% endif %}
                   <i class="flag flag-icon flag-icon-{{ currentLocale }}"></i>
                   <span class="text-uppercase">{{ currentLocale }}</span>
                   <i class="fas fa-angle-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end min-width-0" aria-labelledby="dropdownLanguage">
                     {% for locale in availableLocales %}
+                     {% set displayLocale = (locale == 'en') ? 'gb' : locale %}
                 {% set targetRouteParams = currentRouteParams|merge({'_locale': locale}) %}
                 <a class="dropdown-item language-switcher" 
-                   hreflang="{{ locale }}" 
+                   hreflang="{{ displayLocale }}" 
                    href="{{ path(currentRoute, targetRouteParams) }}" 
-                   data-lang="{{ locale }}" 
-                   title="{{ locale|trans({}, 'lang',currentLocale) }}">
-                     {% if locale =="en" %}
-                        {% set locale = "gb" %}
-                     {% endif %}
-                    <i class="flag flag-icon flag-icon-{{ locale }}"></i>
-                    <span class="text-capitalize">{{ locale|trans({}, 'lang',currentLocale) }}</span>
+                   data-lang="{{ displayLocale }}" 
+                   title="{{ displayLocale|trans({}, 'lang',currentLocale) }}">
+                    <i class="flag flag-icon flag-icon-{{ displayLocale }}"></i>
+                    <span class="text-capitalize">{{ displayLocale |trans({}, 'lang',currentLocale) }}</span>
                 </a>
             {% endfor %}
                 </div>
-            </li>
-        </ul> #}
+            </div>
+        </div>
           </div>
        </div>
     </nav>

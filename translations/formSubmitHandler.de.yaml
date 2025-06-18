@@ -1,0 +1,4 @@
+submitButton: Versand läuft...
+messageBeforeSendData:
+  title: Verarbeitung
+  content: Die Datenübertragung läuft. Vielen Dank für Ihre Geduld.

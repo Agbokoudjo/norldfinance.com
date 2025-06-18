@@ -1,0 +1,645 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hypotheeksimulatie en online financiering{% endblock %}
+{% block meta_description %}
+    Vergelijk rentetarieven en ontvang een gepersonaliseerde hypotheeksimulatie. Start uw project met persoonlijke begeleiding.
+{% endblock %}
+{% block meta_keywords %}
+    hypotheek, lening simulatie, vastgoedfinanciering, hypotheekrente, woonlening
+{% endblock %}
+
+{% block body %}
+<section class="hero-section">
+  <div class="owl-carousel owl-theme hero-slider owl-carousel-light owl-carousel-light-init-fadeIn">
+    <div class="item hero-slide position-relative overlay overlay-show overlay-op-7"
+         style="background-image: url('{{asset('img/img3.jpg')}}');">
+      <div class="container hero-content">
+        <h1 class="display-3 fw-bold aos-item"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+            data-aos-duration="3000"
+            data-aos-once="false">
+          Uw Financieringspartner
+        </h1>
+        <p class="lead mt-4 aos-item"
+           data-aos="zoom-out-up"
+           data-aos-delay="1500"
+           data-aos-duration="3000"
+           data-aos-once="false">
+          Krijg eenvoudig uw financiering met persoonlijke begeleiding.
+        </p>
+        <a href="{{path('loan.application.credit')}}" class="btn loan-application btn-lg mt-3 aos-item"
+           data-aos="flip-left"
+           data-aos-duration="3000"
+           data-aos-once="false">
+          Vraag een lening aan
+        </a>
+      </div>
+    </div>
+    <div class="item hero-slide" style="background-image: url('{{asset('img/img6.jpg')}}');">
+      <div class="container hero-content">
+        <h1 class="display-3 fw-bold">Hypotheeksimulatie</h1>
+        <p class="lead mt-4">Eenvoudige financiering, zonder onnodig papierwerk.</p>
+        <a href="{{path('loan.application.credit')}}" class="btn btn-outline-light btn-lg mt-3">Simuleer mijn lening</a>
+      </div>
+    </div>
+    <div class="item hero-slide" style="background-image: url('{{asset('img/img8.jpg')}}');">
+      <div class="container hero-content">
+        <h1 class="display-3 fw-bold">Realiseer Uw Projecten</h1>
+        <p class="lead mt-4">Voor een auto, huis of noodgeval — wij staan voor u klaar.</p>
+        <a href="#" class="btn btn-outline-light btn-lg mt-3">Bekijk onze aanbiedingen</a>
+      </div>
+    </div>
+    <div class="item hero-slide" style="background-image: url('{{asset('img/img7.jpg')}}');">
+      <div class="container hero-content">
+        <h1 class="display-3 fw-bold">Uw <span style="color: #ea3249;">Krediet</span> met een Toegewijde Expert</h1>
+        <p class="lead mt-4">Onze experts begeleiden u bij elke stap van uw aanvraag.</p>
+        <a href="{{path('contact.form.us')}}" class="btn btn-outline-light btn-lg mt-3 aos-item"
+           data-aos="flip-right"
+           data-aos-duration="3000"
+           data-aos-once="false">
+          Maak een afspraak
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<main class="container my-5">
+<section id="pourquoi-nous-choisir" class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="fs-2 fw-bold aos-item" data-aos="fade-up" data-aos-once="false" data-aos-duration="800">
+          Waarom {{NAME_SITE}} kiezen?
+        </h2>
+        <p class="lead text-muted mt-3 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="false">
+          Ontdek de voordelen die ons tot de voorkeurskeuze maken voor uw <strong class="fw-bold">leningsaanvragen en financieringsoplossingen</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-right" data-aos-duration="1000">
+          <div class="card-body text-center">
+            <i class="fas fa-rocket fa-3x text-primary- icon-services-blue mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-blue">Snelheid en Efficiëntie</h3>
+            <p class="card-text text-muted">
+              Ontvang een antwoord op uw <strong class="text-dark">leningsaanvraag</strong> binnen <strong class="text-dark">minder dan 24 uur</strong>. We verwerken uw dossiers met ongeëvenaarde snelheid voor dringende projecten.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="card-body text-center">
+            <i class="fas fa-hand-pointer fa-3x text-success- icon-services-red mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-red">100% Vereenvoudigd Proces</h3>
+            <p class="card-text text-muted">
+              Zeg vaarwel tegen papierwerk! Ons intuïtieve platform stelt u in staat om uw <strong class="text-dark">financieringsaanvraag</strong> <strong class="text-dark">volledig online</strong> in te dienen met een paar klikken.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="card-body text-center">
+            <i class="fas fa-shield-alt fa-3x text-info- icon-services-blue mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-blue">Totale Transparantie</h3>
+            <p class="card-text text-muted">
+              Geen verborgen kosten of verrassingen. Onze <strong>leningaanbiedingen</strong> worden gepresenteerd met <strong class="text-dark">absolute duidelijkheid</strong>, voor wederzijds vertrouwen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+          <div class="card-body text-center">
+            <i class="fas fa-handshake fa-3x text-warning- icon-services-blue mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-blue">Persoonlijke Oplossingen</h3>
+            <p class="card-text text-muted">
+              Elk project is uniek. Wij bieden <strong class="text-dark">flexibele financieringsoplossingen</strong> die zijn afgestemd op uw specifieke situatie, voor optimale voorwaarden.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+          <div class="card-body text-center">
+            <i class="fas fa-users fa-3x text-danger- icon-services-red mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-red">Expertbegeleiding</h3>
+            <p class="card-text text-muted">
+              Ons team van financiële experts staat klaar om u te adviseren en te begeleiden bij elke stap van uw <strong class="text-dark">financieringsaanvraag</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0 aos-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
+          <div class="card-body text-center">
+            <i class="fas fa-lock fa-3x text-secondary- icon-services-blue mb-3"></i>
+            <h3 class="h5 card-title fw-bold text-services-blue">Veiligheid en Vertrouwelijkheid</h3>
+            <p class="card-text text-muted">
+              Uw gegevens zijn beschermd. Wij garanderen <strong class="text-dark">maximale veiligheid</strong> en absolute vertrouwelijkheid voor al uw persoonlijke informatie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center mt-5">
+      <div class="col-12">
+        <a href="#nos-services" class="btn btn-color-red btn-lg shadow-lg aos-item" data-aos="zoom-in" data-aos-duration="1200">
+          Ontdek al onze financieringsoplossingen <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="nos-services" class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="fw-bold fs-2" data-aos="fade-up" data-aos-duration="800">
+          Onze kredietoplossingen
+        </h2>
+        <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          Of u nu een particulier bent of een bedrijf runt – wij hebben de juiste financieringsoplossing voor u.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-user-friends fa-4x text-primary- icon-services-red mb-3"></i>
+            <h3 class="h4 card-title fw-bold text-services-red">Persoonlijke lening</h3>
+            <p class="card-text text-muted flex-grow-1">
+              Heeft u een project in gedachten? Kies voor een <strong>persoonlijke lening</strong> om het vrij te financieren. Met een <strong>krediet op maat</strong> kunt u uw wensen realiseren zonder verantwoording af te leggen. Een <strong>leningssimulatie</strong> berekent eenvoudig uw maandlasten. <strong>Online leningen</strong> maken het proces eenvoudiger en sneller. Krijg een <strong>snelle lening</strong> zonder papierwerk – ideaal voor dringende behoeften. Profiteer van een <strong>voordelig krediet</strong> voor een <strong>slimme en gecontroleerde financiering...</strong>
+            </p>
+            <a href="{{ path('services.consumer.credit') }}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="200">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos-delay="200" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-building fa-4x text-success- icon-services-blue mb-3"></i>
+            <h3 class="h4 card-title fw-bold text-services-blue">Bedrijfsfinanciering</h3>
+            <p class="card-text text-muted flex-grow-1">
+              <strong>Financiering voor bedrijven</strong> is een essentiële hefboom om uw <strong>groeiprojecten</strong> te ondersteunen. Investeringen, aanwervingen of innovatie – er bestaan aangepaste oplossingen. Gespecialiseerde partners bieden <strong>snelle en gepersonaliseerde financieringen</strong>. Anticipeer op uw liquiditeitsbehoeften. <strong>Simulatietools</strong> helpen u om uw <strong>financiële capaciteit</strong> in te schatten. Geef uw onderneming de middelen om veilig te groeien.
+            </p>
+            <a href="{{ path('services.investment.financing') }}" class="btn btn-outline-blue mt-auto" data-aos="fade-up" data-aos-delay="400">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos-delay="400" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-home fa-4x text-info- mb-3 icon-services-red"></i>
+            <h3 class="h4 card-title fw-bold text-services-red">Hypothecair krediet</h3>
+            <p class="card-text text-muted flex-grow-1">
+              Het <strong>hypothecair krediet</strong> is cruciaal bij het kopen van een woning of investering. Een <strong>hypotheekcalculator</strong> helpt u om uw maandlasten te berekenen en het beste aanbod te kiezen. De <strong>hypotheekrentes in 2025</strong> blijven aantrekkelijk, vooral met een sterk profiel. U kunt nu ook een <strong>hypotheek zonder eigen inbreng</strong> krijgen om de toegang tot eigendom te vergemakkelijken.
+            </p>
+            <a href="{{ path('services.immobilier.credit') }}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="600">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos-delay="600" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-sync-alt fa-4x text-warning- icon-services-red mb-3"></i>
+            <h3 class="h4 card-title fw-bold text-services-red">Krediethergroepering</h3>
+            <p class="card-text text-muted flex-grow-1">
+              <strong>Krediethergroepering</strong> maakt het mogelijk om meerdere <strong>leningen</strong> samen te voegen tot één. Zo verlaagt u uw maandlasten en vereenvoudigt u uw budgetbeheer. Of het nu gaat om <strong>persoonlijke leningen, autoleningen of hypotheken</strong> – u betaalt één enkele aflossing. U kunt zelfs een nieuwe <strong>financiering</strong> opnemen. Een persoonlijke analyse helpt u om het beste aanbod te kiezen.
+            </p>
+            <a href="{{ path('services.loan.buyback') }}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="800">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos-delay="800" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-car fa-4x text-danger- icon-services-blue mb-3"></i>
+            <h3 class="h4 card-title fw-bold text-services-blue">Auto- / motorkrediet</h3>
+            <p class="card-text text-muted flex-grow-1">
+              Het <strong>auto- of motorkrediet</strong> is een snelle en flexibele oplossing voor het <strong>financieren van uw voertuig</strong>, nieuw of tweedehands. Zowel particulieren als bedrijven kunnen profiteren van een <strong>wagenparkfinanciering</strong>. Als u al lopende leningen heeft, kies dan voor een <strong>krediethergroepering</strong> inclusief <strong>autokrediet</strong>. Ook <strong>renovatieprojecten</strong> kunnen hierin geïntegreerd worden...
+            </p>
+            <a href="{{ path('services.consumer.credit') }}" class="btn btn-outline-blue mt-auto" data-aos="fade-up" data-aos-delay="1000">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0 rounded-lg aos-item"
+          data-aos-duration="1000" data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-once="false">
+          <div class="card-body d-flex flex-column text-center">
+            <i class="fas fa-paint-roller fa-4x text-secondary- icon-services-red mb-3"></i>
+            <h3 class="h4 card-title fw-bold text-services-red">Renovatiekrediet</h3>
+            <p class="card-text text-muted flex-grow-1">
+              Met een <strong>renovatiekrediet</strong> financiert u uw werken, verbeteringen of verfraaiingen van uw woning. Keuken, badkamer of isolatie – start meteen met uw project. Het <strong>bedrag van het krediet</strong> past zich aan uw behoeften aan. Een <strong>simulatie</strong> helpt u om uw <strong>budget te plannen</strong>. Zonder eigen middelen kunt u toch profiteren van aantrekkelijke voorwaarden. Investeer in uw comfort en verhoog de waarde van uw eigendom.
+            </p>
+            <a href="{{ path('services.investment.financing') }}" class="btn btn-outline-red mt-auto" data-aos="fade-up" data-aos-delay="1200">
+              Meer informatie <i class="fas fa-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center mt-5">
+      <div class="col-12">
+        <p class="lead text-muted" data-aos="fade-up" data-aos-duration="1000">
+          Heeft u niet gevonden wat u zoekt? Ons team staat voor u klaar.
+        </p>
+        <a href="{{ path('contact.form.us') }}#contact-form-section" class="btn btn-color-red btn-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+          Neem contact op met een adviseur <i class="fas fa-headset ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="comment-ca-marche" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <h2 class="text-center aos-item fw-bold fs-2" data-aos="fade-right" data-aos-duration="800">
+          Een lening aanvragen: <span class="text-processus">Een eenvoudig proces</span>
+        </h2>
+      </div>
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="text-center text-lg-start mb-4">
+          <p class="lead text-muted mt-3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+            Volg onze eenvoudige stappen om snel de financiering te krijgen die u nodig heeft, zonder gedoe.
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="d-flex align-items-start mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="step-icon me-4 icon-check"><i class="fas fa-check-circle fs-3"></i></div>
+            <div>
+              <h3 class="h5 fw-bold">Online simulatie & aanvraag</h3>
+              <p class="text-muted">
+                Gebruik onze online simulator om uw behoefte te bepalen en vul het leenformulier in enkele minuten in. Simpel en intuïtief.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+            <div class="step-icon me-4 icon-check"><i class="fas fa-check-circle fs-3"></i></div>
+            <div>
+              <h3 class="h5 fw-bold">Beoordeling & snelle reactie</h3>
+              <p class="text-muted">
+                Ons expertteam beoordeelt uw aanvraag zorgvuldig. U ontvangt binnen 24 werkdagen een voorlopige goedkeuring.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+            <div class="step-icon me-4 icon-check"><i class="fas fa-check-circle fs-3"></i></div>
+            <div>
+              <h3 class="h5 fw-bold">Handtekening & uitbetaling</h3>
+              <p class="text-muted">
+                Na goedkeuring ondertekent u het contract online. De middelen worden vervolgens vrijgegeven en snel op uw rekening gestort.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-lg-start mt-4">
+          <a href="{{path('loan.application.credit')}}" class="btn loan-application btn-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1000">
+            Start mijn aanvraag nu <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 aos-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
+        <a href="{{asset('video/video7.mp4')}}" class="video-thumbnail-wrapper popup-vimeo">
+          <img src="{{asset('img/img10.jpg')}}" alt="Korte video-preview van het aanvraagproces voor een lening" class="img-fluid rounded-lg" loading="lazy">
+          <div class="play-icon"><i class="fas fa-play"></i></div>
+        </a>
+        <p class="text-center text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          Bekijk onze korte uitlegvideo om alle stappen te begrijpen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="nos-chiffres-cles" class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fs-2 fw-bold aos-item" data-aos="fade-up" data-aos-duration="800">
+                    Leer meer over ons <span style="color: #ea3249;">onze cijfers</span>
+                </h2>
+                <p class="lead text-muted mt-3 aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Ons succes wordt gemeten aan de hand van belangrijke indicatoren die onze toewijding aantonen.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-users fa-5x mb-3" style="color: #00427e;"></i>
+                        <h3 class="display-2 fw-bolder" style="color: #00427e;">850<span class="fs-4">+</span></h3>
+                        <p class="lead text-dark mb-0 text-statitiscs-chiffre">Toegewijde medewerkers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-building fa-5x mb-3" style="color: #ea3249;"></i>
+                        <h3 class="display-2 fw-bolder" style="color: #ea3249;">27<span class="fs-4">+</span></h3>
+                        <p class="lead text-dark mb-0 text-statitiscs-chiffre">Kantoren tot uw dienst</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0 rounded-3 text-center p-4 aos-item" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-smile-beam fa-5x mb-3" style="color: #00427e;"></i>
+                        <h3 class="display-2 fw-bolder" style="color: #00427e;">99<span class="fs-4">%</span></h3>
+                        <p class="lead text-dark mb-0 text-statitiscs-chiffre">Tevreden klanten</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="temoignages-clients" class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fs-2 fw-bold" data-aos="fade-up" data-aos-duration="800">
+                    Wat onze <span style="color: #00427e;">tevreden</span> klanten zeggen
+                </h2>
+                <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Ontdek de meningen en ervaringen van degenen die ons hebben vertrouwd.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/sophie.jpg')}}" 
+                            class="rounded-circle me-3 border border-3 img-fluid" 
+                             width="100"
+                             height="100"
+                             loading="lazy"
+                            style="border-color: #ea3249!important;"
+                             alt="Profiel foto Sophie L.">
+                            <div>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Sophie L.</p>
+                                <p class="text-muted small mb-0">Particuliere Klant</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "De snelheid en duidelijkheid van het proces hebben me onder de indruk gebracht. Ik kreeg mijn lening in recordtijd. Uitzonderlijke service en een zeer responsief team!"
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Persoonlijke Lening</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/marc.png')}}"
+                             class="rounded-circle me-3 border border-3 img-fluid"
+                             width="90"
+                             height="90"
+                             loading="lazy"
+                             style="border-color: #00427e!important;" 
+                             alt="Profiel foto Marc D.">
+                            <div>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Marc D.</p>
+                                <p class="text-muted small mb-0">Bedrijfsmanager</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "De financiering van ons project was cruciaal. De persoonlijke begeleiding en expertise van hun team maakten het verschil. Zeer tevreden!"
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Zakelijke Financiering</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100 testimonial-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{asset('img/julie.jpg')}}" 
+                            class="rounded-circle me-3 border border-3 img-fluid"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                             style="border-color: #ea3249!important;" 
+                             alt="Profiel foto Julie R.">
+                            <div>
+                                <p class="mb-0 fw-bold h5" style="color: #00427e;">Julie R.</p>
+                                <p class="text-muted small mb-0">Vaste Klant</p>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote flex-grow-1">
+                            <p class="mb-0 text-dark">
+                                "Ik had een snelle en efficiënte herfinanciering van mijn krediet nodig. Hun oplossing verlichtte mijn maandelijkse betalingen en gaf me onschatbare gemoedsrust."
+                            </p>
+                        </blockquote>
+                        <div class="text-warning mt-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Krediethervorming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <div class="col-12">
+                <a href="#" class="btn btn-lg shadow-lg" 
+                   style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold;" 
+                   data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
+                    Lees al onze getuigenissen <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="faq" class="py-5 bg-white">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fs-2 fw-bold" data-aos="fade-up" data-aos-duration="800">
+                    Uw vragen, onze <span style="color: #ea3249;">antwoorden</span>
+                </h2>
+                <p class="lead text-muted mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Vind hier de antwoorden op de meest gestelde vragen over onze leningdiensten.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Wie kan profiteren van een lening?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Onze leningen staan open voor een breed scala aan profielen: particulieren, professionals, jonge bedrijven en zelfs senioren. Elke aanvraag wordt individueel bestudeerd om zich aan te passen aan uw financiële situatie en uw specifieke behoeften. Wij bieden gepersonaliseerde oplossingen om financiële inclusie te garanderen.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Welke documenten zijn vereist voor een leningaanvraag?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Over het algemeen heeft u een **geldig identiteitsbewijs**, een **bewijs van adres**, uw **laatste salarisstroken of jaarrekeningen** (voor professionals) en een **bankrekeningafschrift (RIB)** nodig. Afhankelijk van het type lening en uw situatie kunnen aanvullende documenten worden gevraagd.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Hoe lang duurt het om een antwoord te krijgen?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                We doen er alles aan om u binnen **24 werkuren** na ontvangst van uw volledige aanvraag een principeantwoord te geven. De vrijgave van de fondsen vindt over het algemeen **enkele dagen** na de definitieve acceptatie en ondertekening van het contract plaats.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Kan ik een simulatie doen voordat ik mijn aanvraag indien?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Ja, absoluut! We raden u aan om onze **online lening simulator** te gebruiken. Het is een gratis en vrijblijvend hulpmiddel waarmee u uw maandelijkse betalingen en de totale kosten van uw lening kunt schatten op basis van het gewenste bedrag en de looptijd.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item shadow-sm mb-3 rounded-3">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fas fa-question-circle me-3" style="color: #00427e;"></i> Welke terugbetalingsopties zijn beschikbaar?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                We bieden **flexibele terugbetalingsopties**, aangepast aan uw financiële capaciteit. U kunt de duur van uw lening kiezen en in sommige gevallen profiteren van aflossingsvrije periodes of de mogelijkheid van **vervroegde aflossingen** (gedeeltelijk of volledig) zonder extra kosten.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-5">
+            <div class="col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <p class="lead text-muted">Heeft u de antwoord op uw vraag niet gevonden?</p>
+                <a href="{{path('contact.form.us')}}" class="btn btn-lg shadow-lg"
+                   style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold;">
+                    Neem direct contact met ons op <i class="fas fa-envelope ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cta-final" class="py-5 text-white">
+    <div class="container text-center position-relative z-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-4" data-aos="fade-up" data-aos-duration="900">
+                    Klaar om uw <span style="color: #ea3249;">projecten te realiseren</span>?
+                </h2>
+                <p class="lead mb-5" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="200">
+                    Wacht niet langer! Start vandaag nog uw online leningaanvraag en ontvang snel een antwoord voor de financiering van uw persoonlijke of professionele ambities.
+                </p>
+                <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+                    <a href="{{path('loan.application.credit')}}" class="btn btn-lg shadow-lg"
+                       style="background-color: #ea3249; border-color: #ea3249; color: white; font-weight: bold; padding: 0.8rem 2.5rem; font-size: 1.3rem;">
+                        Nu mijn aanvraag starten <i class="fas fa-arrow-circle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta-decoration-circle cta-circle-1" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600"></div>
+    <div class="cta-decoration-circle cta-circle-2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800"></div>
+    <div class="cta-decoration-circle cta-circle-3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000"></div>
+</section>
+</main>
+{% endblock %}

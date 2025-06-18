@@ -1,0 +1,479 @@
+{% extends 'base.html.twig' %}
+{% block title %} I nostri servizi di prestito e finanziamento - {{NAME_SITE}} {% endblock %}
+{% block meta_description %}
+Scopri la gamma completa dei servizi offerti da {{NAME_SITE}}: mutui immobiliari, prestiti al consumo, consolidamento debiti, prestiti aziendali, finanziamenti per investimenti e prestiti per studenti.
+Trova la soluzione adatta alle tue esigenze.
+Scopri i servizi di Norld Finance: prestito personale, prestito per studenti, mutuo immobiliare e molto altro.
+{{NAME_SITE}} offre soluzioni di prestito personale, mutui, finanziamenti aziendali e consolidamento del debito.
+Ottieni la tua simulazione gratuita e un supporto su misura.
+{% endblock %}
+{% block meta_keywords %}
+    prestito personale, prestito per studenti, mutuo immobiliare,
+    prestiti personali, mutui immobiliari, finanziamenti aziendali e consolidamento debiti
+{% endblock %}
+{% block body %}
+<section class="services-hero-section position-relative text-white d-flex align-items-center justify-content-center">
+    <video autoplay muted loop playsinline class="background-video"
+     poster="{{asset('img/img13.jpg')}}">
+        <source src="{{asset('video/video6.mp4')}}" type="video/mp4">
+        Il tuo browser non supporta i video HTML5.
+    </video>
+    <div class="overlay position-absolute w-100 h-100"></div> <div class="container text-center z-1 py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11">
+                <h1 class="display-3 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Le nostre <span style="color: #ea3249;">Soluzioni</span> di Finanziamento
+                </h1>
+                <p class="lead mb-4 px-3"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Che tu sia un privato o un'azienda, {{NAME_SITE}} ti supporta con una gamma completa di servizi di intermediazione adatti alle tue ambizioni.
+                </p>
+                <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
+                    <a href="#services-detailed" class="btn btn-outline-light btn-lg rounded-pill px-4 py-2 fw-bold me-3">
+                        Esplora i nostri Servizi <i class="fas fa-arrow-down ms-2"></i>
+                    </a>
+                    <a href="{{path('loan.application.credit')}}" class="btn btn-danger-custom btn-lg rounded-pill px-4 py-2 fw-bold">
+                        Richiedi un Preventivo <i class="fas fa-file-invoice-dollar ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-intro-section py-5 bg-light">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Semplifica la tua <span style="color: var(--primary-color);">Ricerca di Finanziamento</span>
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Su <strong>{{NAME_SITE}}</strong> crediamo in un approccio personalizzato ed efficiente. Il nostro processo è progettato per offrirti chiarezza, rapidità e le migliori condizioni possibili, indipendentemente dalla complessità del tuo progetto.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="service-process-item p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-circle mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-comments fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Consulenza Esperta Personalizzata</h3>
+                    <p class="text-muted small">
+                        I nostri specialisti ti ascoltano e analizzano la tua situazione per indirizzarti verso le soluzioni più adatte.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="service-process-item p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-circle mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-chart-line fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Ottimizzazione della Tua Offerta</h3>
+                    <p class="text-muted small">
+                        Grazie alla nostra rete, negoziamo per te i tassi e le condizioni più competitivi sul mercato.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="service-process-item p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-circle mb-3 mx-auto bg-primary-custom text-white">
+                        <i class="fas fa-tachometer-alt fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Processo Semplificato & Veloce</h3>
+                    <p class="text-muted small">
+                        Gestiamo la parte amministrativa per accelerare la tua pratica e farti risparmiare tempo prezioso.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="service-process-item p-4 h-100 rounded-3 shadow-sm">
+                    <div class="icon-circle mb-3 mx-auto bg-danger-custom text-white">
+                        <i class="fas fa-headset fa-2x"></i> </div>
+                    <h3 class="h5 fw-bold mb-2">Assistenza e Supporto</h3>
+                    <p class="text-muted small">
+                        Dal primo contatto alla conclusione, siamo al tuo fianco per rispondere a ogni domanda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services-detailed" class="services-detailed-section py-5 bg-white">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Scopri la Gamma delle nostre <span style="color: var(--primary-color);">Soluzioni</span>
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Offriamo una gamma completa di servizi di brokeraggio su misura per ogni esigenza, sia per privati che per aziende.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-home fa-4x text-danger-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Mutuo Immobiliare</h3>
+                    <p class="text-muted mb-4">
+                        Realizza il tuo <strong>sogno di proprietà</strong>. Troviamo il <strong>miglior mutuo immobiliare</strong> adatto al tuo progetto.
+                    </p>
+                    <a href="{{path('services.immobilier.credit')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-shopping-cart fa-4x text-primary-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Credito al Consumo</h3>
+                    <p class="text-muted mb-4">
+                        Finanzia i tuoi <strong>progetti personali (veicolo, lavori, tempo libero)</strong> con soluzioni flessibili.
+                    </p>
+                    <a href="{{path('services.consumer.credit')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-exchange-alt fa-4x text-danger-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Riacquisto del Credito</h3>
+                    <p class="text-muted mb-4">
+                        Semplifica il tuo bilancio raggruppando i tuoi <strong>crediti</strong> e riduci le tue rate mensili.
+                    </p>
+                    <a href="{{path('services.loan.buyback')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-building fa-4x text-primary-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Prestito Professionale</h3>
+                    <p class="text-muted mb-4">
+                        Sviluppa la tua attività con <strong>soluzioni di finanziamento</strong> su misura per le tue esigenze specifiche.
+                    </p>
+                    <a href="{{path('services.professional.loan')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="700">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-chart-pie fa-4x text-danger-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Finanziamento degli Investimenti</h3>
+                    <p class="text-muted mb-4">
+                        Ottimizza i tuoi investimenti con <strong>soluzioni finanziarie</strong> su misura.
+                    </p>
+                    <a href="{{path('services.investment.financing')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="800">
+                <div class="service-card h-100 p-4 p-md-5 text-center rounded-3 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-graduation-cap fa-4x text-primary-custom"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Prestiti Studenteschi</h3>
+                    <p class="text-muted mb-4">
+                        Finanziamento per i tuoi <strong>studi superiori</strong>, <strong>tasse scolastiche o alloggio</strong>.
+                    </p>
+                    <a href="{{path('services.students.loans')}}" class="btn btn-outline-primary-custom fw-bold px-4 rounded-pill">
+                        Scopri di più <i class="fas fa-angle-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="why-choose-us-services py-5 text-white bg-primary-custom">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Perché Scegliere {{NAME_SITE}} per il Tuo <span style="color: var(--danger-color);">Finanziamento</span>?
+                </h2>
+                <p class="lead"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Il nostro impegno va oltre la semplice messa in relazione. Siamo il tuo alleato per un finanziamento sereno e ottimizzato.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="300">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-lightbulb fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="h5 fw-bold mb-2">Competenza Approfondita</h3>
+                    <p class="small">
+                        Beneficia dell'esperienza dei nostri broker esperti in tutti i settori del finanziamento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="400">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-handshake fa-3x mb-3 text-white"></i>
+                    <h3 class="h5 fw-bold mb-2">Ampia Rete di Partner</h3>
+                    <p class="small">
+                        Accedi alle migliori offerte grazie alle nostre solide partnership con molteplici istituzioni.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="500">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-user-friends fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="h5 fw-bold mb-2">Supporto Personalizzato</h3>
+                    <p class="small">
+                        Un consulente dedicato ti guida in ogni fase, dalla simulazione alla firma.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="600">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-percent fa-3x mb-3 text-white"></i>
+                    <h3 class="h5 fw-bold mb-2">Ottimizzazione dei Tassi</h3>
+                    <p class="small">
+                        Facciamo tutto il possibile per ottenere le condizioni di prestito più vantaggiose.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="700">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-shield-alt fa-3x mb-3 text-danger-custom"></i>
+                    <h3 class="h5 fw-bold mb-2">Riservatezza & Sicurezza</h3>
+                    <p class="small">
+                        I tuoi dati e il tuo dossier sono trattati con la massima discrezione e sicurezza.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="800">
+                <div class="advantage-item text-center p-4 h-100">
+                    <i class="fas fa-hourglass-half fa-3x mb-3 text-white"></i>
+                    <h3 class="h5 fw-bold mb-2">Risparmio di Tempo & Energia</h3>
+                    <p class="small">
+                        Lasciaci gestire le procedure complesse, concentrati sui tuoi progetti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-faq-section py-5 bg-light" id="faq">
+    <div class="container py-md-5">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="fs-2 fw-bold mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Le vostre domande, le nostre <span style="color: var(--primary-color);">Risposte</span>
+                </h2>
+                <p class="lead text-muted"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Qui troverete le risposte alle domande più frequenti sui nostri <strong>servizi di finanziamento</strong>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion accordion-flush" id="faqAccordionServices">
+                    <div class="accordion-item"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="300">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Quali documenti sono necessari per una richiesta di prestito?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordionServices">
+                            <div class="accordion-body">
+                                <p>Generalmente sono necessari documenti d'identità, prova di residenza, buste paga (o bilanci per i professionisti), ultime dichiarazioni dei redditi, estratti conto e informazioni sul vostro progetto (compromesso di vendita, preventivi, ecc.). Il vostro consulente vi fornirà un elenco dettagliato.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="400">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Quanto tempo ci vuole per ricevere una risposta?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordionServices">
+                            <div class="accordion-body">
+                                <p>I tempi di risposta variano a seconda del tipo di finanziamento e della rapidità degli enti erogatori. Tuttavia, grazie ai nostri strumenti e alla nostra rete, ci impegniamo ad accelerare il processo e a fornirvi una risposta rapida, spesso entro 48-72 ore dalla ricezione della documentazione completa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="500">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                I vostri servizi sono a pagamento per il cliente?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordionServices">
+                            <div class="accordion-body">
+                                <p>Le nostre commissioni sono generalmente definite come percentuale dell'importo finanziato e sono chiaramente indicate nel mandato di ricerca che firmiamo insieme. Una parte dei nostri servizi può essere coperta dai partner bancari in base agli accordi. Trasparenza totale garantita prima di qualsiasi impegno.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="600">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Posso richiedere un finanziamento online?
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordionServices">
+                            <div class="accordion-body">
+                                <p>Sì, potete avviare la vostra richiesta di finanziamento direttamente tramite il nostro modulo di contatto o il nostro simulatore online. Un consulente vi ricontatterà per definire meglio le vostre esigenze e preparare la documentazione, sia a distanza che in agenzia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-delay="700">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Quali sono le condizioni per usufruire dei vostri servizi?
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordionServices">
+                            <div class="accordion-body">
+                                <p>I nostri servizi sono rivolti a privati e professionisti che soddisfano determinati criteri di solvibilità e hanno un progetto di finanziamento chiaro e realizzabile. Ogni richiesta viene esaminata individualmente dai nostri esperti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-cta-section py-5 bg-light text-white text-center">
+    <div class="container py-md-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-10">
+                <h2 class="fs-2 fw-bold mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+                    Pronto a Dare Vita al Tuo <span style="color: #00427E;">Progetto</span>?
+                </h2>
+                <p class="lead mb-5"
+                   data-aos="fade-up"
+                   data-aos-duration="1200"
+                   data-aos-delay="200">
+                    Il nostro team di esperti è qui per consigliarti e supportarti in ogni fase.
+                    Contattaci oggi stesso per una valutazione personalizzata e gratuita delle tue esigenze.
+                </p>
+                <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
+                    <a href="{{path('loan.application.credit')}}" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg">
+                        Richiedi un Preventivo Gratuito <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

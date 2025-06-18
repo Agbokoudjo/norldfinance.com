@@ -5,7 +5,8 @@ twig:
         NAME_SITE: "NORLD FINANCE"
         FOUNDATION_CREATED_AT: "2010"
         EMAIL_ADMIN: contact@norldfinance.com
-        PHONE_ADMIN: '+33757848285'
+        PHONE_ADMIN: '+33 7 57 84 82 85'
+        PHONE_ADMIN_2: +34 654 44 39 42
         LINK_WHATSAPP: https://api.whatsapp.com/send?phone=33757848285&amp;text=Hello!
         UPDATED_SITE: 03 Juin 2025
         AVAILABLE_LOCALES: 'fr,en,de,es,it,nl,pt'

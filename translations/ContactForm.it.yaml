@@ -1,0 +1,46 @@
+fullname: 'Il tuo nome completo'
+email: 'La tua email'
+phone: 'Il tuo numero di telefono (Opzionale)'
+subject.label: 'Oggetto del messaggio'
+subject.placeholder: 'Richiesta di informazioni, Preventivo...'
+content.label: 'Il tuo messaggio'
+content.placeholder: 'Descrivi qui la tua esigenza...'
+btn.submit: 'Invia messaggio'
+Form.success.title: 'Grazie per il tuo messaggio, %name%!'
+Form.success.message: >
+  Ciao %name%, Ti ringraziamo per aver contattato %organization%. Il tuo messaggio è stato ricevuto e il nostro team ti risponderà il prima possibile. Nel frattempo, non esitare a chiamarci direttamente o a consultare le nostre <a href="/faq">FAQ</a> o a seguirci sui nostri social network. <br/><hr/> Cordialmente, <br/> Il team di %organization%
+sendEmailAdmin.header: 'Nuovo messaggio di contatto ricevuto su %organization_name%'
+sendEmailAdmin.footer: 'Questo messaggio ti è stato inviato automaticamente dal modulo di contatto di %organization_name%'
+sendEmailAdmin.field.fullname: 'Nome'
+sendEmailAdmin.field.email: 'Email'
+sendEmailAdmin.field.phone: 'Telefono'
+sendEmailAdmin.field.subject: 'Oggetto'
+sendEmailAdmin.field.content: 'Messaggio'
+
+contact.h1: >
+  Contatta un consulente per il <span style="color: #ea3249;">credito al consumo</span>
+contact.p: >
+  Siamo a tua disposizione per qualsiasi domanda, richiesta di preventivo o consiglio.
+  Compila il modulo qui sotto o utilizza i nostri contatti diretti.
+
+contactFormSectionAnchor: Vai al Modulo
+contactInfoSectionAnchor: Chiamaci
+
+contactFormSection.h2: >
+  Parliamo del tuo <span style="color: var(--danger-color);">Finanziamento</span>
+
+contactFormSection.p: >
+  Compila il modulo sottostante per inviarci la tua richiesta.
+
+contactInfoSection.h2: >
+  I nostri <span style="color: var(--primary-color);">Contatti</span>
+
+contactInfoSection.p: >
+  Non esitare a contattarci direttamente utilizzando le informazioni qui sotto.
+
+contactInfoWrapper:
+  address: 
+    title: Indirizzo
+    content: 123 Rue de la Finance, 75001 Parigi, Francia
+  phone: Telefono
+  email: E-mail

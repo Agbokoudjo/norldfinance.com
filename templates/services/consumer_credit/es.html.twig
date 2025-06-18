@@ -1,0 +1,214 @@
+{% extends 'base.html.twig' %}
+{% block title %} Préstamo al consumo: simulación, tasas y condiciones {% endblock %}
+{% block meta_description %}
+    Financiación rápida y flexible para tus necesidades personales. Simula un préstamo al consumo adaptado a tu presupuesto.
+{% endblock %}
+{% block meta_keywords %}
+    préstamo al consumo
+{% endblock %}
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-consommation text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Crédito al Consumo</h1>
+        <p class="lead mt-3">Financia tus proyectos personales (vehículo, obras, ocio) con soluciones flexibles.</p>
+        <a href="#details" class="btn btn-primary-custom btn-lg mt-4">Saber más</a>
+    </div>
+</section>
+
+<section id="introduction" class="py-5 bg-light-blue">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title text-primary-dark mb-4">Comprender el Crédito al Consumo</h2>
+                <p class="lead text-secondary-dark">
+                    ¿Ganas de viajar, necesidad de obras, compra de un nuevo vehículo o equipamiento para el hogar? El <strong>Crédito al Consumo</strong> es la solución ideal para concretar tus proyectos personales sin afectar tus ahorros. En <strong>{{NAME_SITE}}</strong>, ofrecemos préstamos al consumo flexibles y adaptados, diseñados para darte la libertad de realizar tus deseos y mejorar tu día a día con total tranquilidad.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="details" class="py-5 bg-white">
+    <div class="container">
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="col-lg-10 col-md-12 mx-auto">
+                <h2 class="section-title text-primary-dark mb-4 text-center">Nuestro Enfoque del Crédito al Consumo</h2>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+            <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video autoplay muted loop playsinline preload="metadata" 
+                           poster="{{asset('img/img19.png')}}" 
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video14.mp4')}}" type="video/mp4">
+                        Su navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="feature-title text-accent-red mb-3">¿Qué es concretamente el Crédito al Consumo?</h3>
+                <p class="text-secondary-dark">
+                    El <strong>Crédito al Consumo</strong> es un préstamo concedido a particulares para financiar la compra de bienes de consumo o servicios, distintos de los inmuebles. Esto incluye proyectos variados como la compra de un coche, la <strong>financiación de obras de mejora</strong>, la organización de viajes, estudios, o la adquisición de electrodomésticos. Se presenta bajo diferentes formas (<strong>préstamo personal, préstamo con fines específicos, crédito revolving</strong>), y sus características (importe, duración, tipo de interés) se adaptan a la naturaleza de su proyecto y a su capacidad de reembolso.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video autoplay muted loop playsinline preload="metadata" 
+                           poster="{{asset('img/img20.png')}}" 
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video15.mp4')}}" type="video/mp4">
+                        Su navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title text-accent-red mb-3">¿Por qué elegir {{NAME_SITE}} para su Crédito al Consumo?</h3>
+                <p class="text-secondary-dark">
+                    Elegir nuestra institución significa optar por la simplicidad, la rapidez y la personalización:
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Soluciones Flexibles:** Ofertas de préstamo ajustadas a sus necesidades y a su presupuesto.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Trámites Simplificados:** Un proceso de solicitud claro y rápido para un desembolso de fondos eficiente.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Transparencia Absoluta:** Sin cargos ocultos, todas las condiciones se explican claramente.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Asesoramiento Experto:** Nuestros asesores están aquí para guiarle hacia la mejor opción de financiación.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Rapidez de Respuesta:** Obtenga una respuesta rápida a su solicitud.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">¿A quién va dirigido este servicio?</h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-car fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title text-primary-dark">Compra de Vehículo</h5>
+                                <p class="card-text text-secondary-dark">Financiar un coche, una moto, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-hammer fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title">Obras y Reformas</h5>
+                                <p class="card-text text-secondary-dark">Renovar, equipar su vivienda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-plane fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title">Viajes y Ocio</h5>
+                                <p class="card-text text-secondary-dark">Financiar vacaciones, un hobby, estudios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">¿Cómo funciona? (Proceso simplificado)</h3>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                        <h5 class="step-title text-primary-dark">Identifique su Proyecto</h5>
+                        <p class="text-secondary-dark">Defina claramente su necesidad de financiación.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                        <h5 class="step-title text-primary-dark">Solicitud en Línea</h5>
+                        <p class="text-secondary-dark">Rellene nuestro formulario rápido y seguro.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                        <h5 class="step-title text-primary-dark">Análisis y Propuesta</h5>
+                        <p class="text-secondary-dark">Evaluamos su expediente y le proponemos la oferta adecuada.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                        <h5 class="step-title text-primary-dark">Firma del Contrato</h5>
+                        <p class="text-secondary-dark">Valide las condiciones y firme su contrato de préstamo.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                        <h5 class="step-title text-primary-dark">Fondos Desembolsados</h5>
+                        <p class="text-secondary-dark">Los fondos se ponen rápidamente a su disposición.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto">
+                <h3 class="feature-title text-accent-red mb-4 text-center">Las ventajas para usted:</h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-sliders-h fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Flexibilidad</h5>
+                                <p class="card-text">Opciones de reembolso adaptadas a su capacidad financiera.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-hourglass-start fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Rapidez</h5>
+                                <p class="card-text">Obtenga una respuesta y los fondos rápidamente para sus proyectos urgentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-shield-alt fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Seguridad</h5>
+                                <p class="card-text">Un marco claro y transparente, sin sorpresas desagradables.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-user-friends fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Acompañamiento</h5>
+                                <p class="card-text">Nuestros expertos le asesoran para la mejor elección.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-piggy-bank fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Preservación del ahorro</h5>
+                                <p class="card-text">Realice sus proyectos sin tocar sus ahorros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section bg-white text-center py-5">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+        <h2 class="display-5 fw-bold text-primary-dark">¿Tienes un proyecto personal en mente?</h2>
+        <p class="lead mt-3 text-secondary-dark">¡Solicita tu préstamo al consumo hoy mismo y obtén una respuesta rápida!</p>
+        <a href="{{ path('loan.application.credit') }}" class="btn btn-secondary-custom btn-lg mt-4">Solicitar un préstamo al consumo</a>
+    </div>
+</section>
+    </main>
+{% endblock %}

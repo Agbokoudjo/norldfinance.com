@@ -20,22 +20,21 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
             <div class="col-lg-10 col-md-11">
                 <h1 class="display-3 fw-bold mb-3"
                     data-aos="fade-up"
-                    data-aos-duration="1000">
-                    Contactez un conseiller en <span style="color: #ea3249;">crédit à la consommation</span>
+                    data-aos-duration="1000"> 
+                   {{ "contact.h1" |trans([],"ContactForm",app.locale)|raw }}
                 </h1>
                 <p class="lead mb-4 px-3"
                    data-aos="fade-up"
                    data-aos-duration="1200"
                    data-aos-delay="200">
-                    Nous sommes à votre écoute pour toutes vos questions, demandes de devis ou de conseil.
-                    Remplissez le formulaire ci-dessous ou utilisez nos coordonnées directes.
+                    {{ "contact.p" |trans([],"ContactForm",app.locale)|raw }}
                 </p>
                 <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
                     <a href="#contact-form-section" class="btn btn-outline-light btn-lg rounded-pill px-4 py-2 fw-bold me-3">
-                        Accéder au Formulaire <i class="fas fa-arrow-down ms-2"></i>
+                       {{ "contactFormSectionAnchor" |trans([],"ContactForm",app.locale)|raw }} <i class="fas fa-arrow-down ms-2"></i>
                     </a>
                     <a href="#contact-info-section" class="btn btn-primary-custom btn-lg rounded-pill px-4 py-2 fw-bold">
-                        Appelez-nous ! <i class="fas fa-phone-alt ms-2"></i>
+                           {{ "contactInfoSectionAnchor" |trans([],"ContactForm",app.locale)|raw }} ! <i class="fas fa-phone-alt ms-2"></i>
                     </a>
                 </div>
             </div>
@@ -50,13 +49,13 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
                     <h2 class="fs-2 fw-bold mb-3"
                         data-aos="fade-up"
                         data-aos-duration="1000">
-                        Parlons de Votre <span style="color: var(--danger-color);">Financement</span>
+                         {{ "contactFormSection.h2" |trans([],"ContactForm",app.locale)|raw }}
                     </h2>
                     <p class="lead text-muted"
                        data-aos="fade-up"
                        data-aos-duration="1200"
                        data-aos-delay="200">
-                        Remplissez le formulaire ci-dessous pour nous envoyer votre demande.
+                        {{ "contactFormSection.p" |trans([],"ContactForm",app.locale)|raw }}
                     </p>
                 </div>
             </div>
@@ -99,13 +98,13 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
                     <h2 class="fs-2 fw-bold mb-3"
                         data-aos="fade-up"
                         data-aos-duration="1000">
-                        Nos <span style="color: var(--primary-color);">Coordonnées</span>
+                         {{ "contactInfoSection.h2" |trans([],"ContactForm",app.locale)|raw }}
                     </h2>
                     <p class="lead text-muted"
                        data-aos="fade-up"
                        data-aos-duration="1200"
                        data-aos-delay="200">
-                        N'hésitez pas à nous contacter directement via les informations ci-dessous.
+                          {{ "contactInfoSection.p" |trans([],"ContactForm",app.locale)|raw }}
                     </p>
                 </div>
             </div>
@@ -118,34 +117,35 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
                         <div class="info-item mb-4 d-flex align-items-center">
                             <i class="fas fa-map-marker-alt fa-2x text-primary-custom me-3"></i>
                             <div>
-                                <h4 class="h6 fw-bold mb-0">Adresse :</h4>
-                                <p class="mb-0 text-muted">123 Rue de la Finance, 75001 Paris, France</p>
+                                <h4 class="h6 fw-bold mb-0"> {{ "contactInfoWrapper.address.title" |trans([],"ContactForm",app.locale) }}</h4>
+                                <p class="mb-0 text-muted">{{ "contactInfoWrapper.address.content" |trans([],"ContactForm",app.locale) }}</p>
                             </div>
                         </div>
 
                         <div class="info-item mb-4 d-flex align-items-center">
                             <i class="fas fa-phone-alt fa-2x text-primary-custom me-3"></i>
                             <div>
-                                <h4 class="h6 fw-bold mb-0">Téléphone :</h4>
-                                <p class="mb-0 text-muted"><a href="tel:+33123456789" class="text-decoration-none text-muted">+33 1 23 45 67 89</a></p>
+                                <h4 class="h6 fw-bold mb-0">{{ "contactInfoWrapper.phone" |trans([],"ContactForm",app.locale) }} :</h4>
+                                <p class="mb-0 text-muted"><a href="tel:{{PHONE_ADMIN}}" class="text-decoration-none text-muted">{{PHONE_ADMIN}}</a></p><br>
+                                <p class="mb-0 text-muted"><a href="tel:{{PHONE_ADMIN_2}}" class="text-decoration-none text-muted">{{PHONE_ADMIN_2}}</a></p>
                             </div>
                         </div>
 
                         <div class="info-item mb-4 d-flex align-items-center">
                             <i class="fas fa-envelope fa-2x text-primary-custom me-3"></i>
                             <div>
-                                <h4 class="h6 fw-bold mb-0">E-mail :</h4>
-                                <p class="mb-0 text-muted"><a href="mailto:contact@worldfinance.com" class="text-decoration-none text-muted">contact@worldfinance.com</a></p>
+                                <h4 class="h6 fw-bold mb-0">{{ "contactInfoWrapper.email" |trans([],"ContactForm",app.locale) }} :</h4>
+                                <p class="mb-0 text-muted"><a href="mailto:{{EMAIL_ADMIN}}" class="text-decoration-none text-muted">{{EMAIL_ADMIN}}</a></p>
                             </div>
                         </div>
 
                         <div class="info-item mb-4 d-flex align-items-center">
                             <i class="fas fa-clock fa-2x text-primary-custom me-3"></i>
                             <div>
-                                <h4 class="h6 fw-bold mb-0">Horaires :</h4>
-                                <p class="mb-0 text-muted">Lundi-Vendredi: 8:30 à 18:00 pm</p>
-                                <p class="mb-0 text-muted">Samedi:9:30 à 13:00 pm</p>
-                                 <p class="mb-0 text-muted">Dimanche:Fermé</p>
+                                <h4 class="h6 fw-bold mb-0">{{ "horaire" |trans([],"footer",app.locale) }} :</h4>
+                                <p class="mb-0 text-muted">{{ "lun.ven" |trans([],"footer",app.locale) }}: 8:30 à 18:00 pm</p>
+                                <p class="mb-0 text-muted">{{ "sam" |trans([],"footer",app.locale) }}:9:30 à 13:00 pm</p>
+                                 <p class="mb-0 text-muted">{{ "dim" |trans([],"footer",app.locale) }}:~</p>
                             </div>
                         </div>
 

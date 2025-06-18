@@ -1,0 +1,12 @@
+description: "%NAME_SITE% é o seu parceiro de confiança para pedidos de empréstimos e financiamentos, oferecendo soluções adaptadas para particulares e empresas."
+description.site.creator: "INTERNATIONALES WEB SERVICES é uma empresa especializada na criação de sites personalizados e no desenvolvimento de software eficiente para empresas e indivíduos."
+knowsAbout.site.creator: >
+  "Criação de sites",
+  "Desenvolvimento de software",
+  "Soluções web personalizadas",
+  "Symfony",
+  "ReactJS",
+  "TypeScript",
+  "PostgreSQL",
+  "Django"
+offers.description.site.creator: "Serviços de criação de sites profissionais, vitrine e e-commerce, utilizando Symfony, ReactJS e TypeScript."

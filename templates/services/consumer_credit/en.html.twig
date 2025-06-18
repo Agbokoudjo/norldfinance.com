@@ -1,0 +1,214 @@
+{% extends 'base.html.twig' %}
+{% block title %} Personal Loan: Simulation, Rates and Conditions {% endblock %}
+{% block meta_description %}
+    Fast and flexible financing for your personal needs. Simulate a personal loan tailored to your budget.
+{% endblock %}
+{% block meta_keywords %}
+    personal loan
+{% endblock %}
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-consommation text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Consumer Credit</h1>
+        <p class="lead mt-3">Finance your personal projects (vehicle, renovations, leisure) with flexible solutions.</p>
+        <a href="#details" class="btn btn-primary-custom btn-lg mt-4">Learn more</a>
+    </div>
+</section>
+
+<section id="introduction" class="py-5 bg-light-blue">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title text-primary-dark mb-4">Understanding Consumer Credit</h2>
+                <p class="lead text-secondary-dark">
+                    Want to travel, need renovations, buying a new vehicle or home equipment? <strong>Consumer Credit</strong> is the ideal solution to realize your personal projects without impacting your savings. At <strong>{{NAME_SITE}}</strong>, we offer flexible and tailored consumer loans designed to give you the freedom to fulfill your desires and improve your daily life with peace of mind.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="details" class="py-5 bg-white">
+    <div class="container">
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="col-lg-10 col-md-12 mx-auto">
+                <h2 class="section-title text-primary-dark mb-4 text-center">Our Approach to Consumer Credit</h2>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-right" data-aos-duration="1000">
+            <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video autoplay muted loop playsinline preload="metadata" 
+                           poster="{{asset('img/img19.png')}}" 
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video14.mp4')}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="feature-title text-accent-red mb-3">What exactly is Consumer Credit?</h3>
+                <p class="text-secondary-dark">
+                    <strong>Consumer Credit</strong> is a loan granted to individuals to finance the purchase of consumer goods or services, other than real estate. This includes various projects such as buying a car, <strong>financing renovation work</strong>, organizing trips, studies, or acquiring household appliances. It comes in different forms (<strong>personal loan, assigned loan, revolving credit</strong>), and its characteristics (amount, duration, rate) are adapted to the nature of your project and your repayment capacity.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row" data-aos="fade-left" data-aos-duration="1000">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9 video-container shadow-sm rounded">
+                    <video autoplay muted loop playsinline preload="metadata" 
+                           poster="{{asset('img/img20.png')}}" 
+                           class="w-100 h-100 object-fit-cover">
+                        <source src="{{asset('video/video15.mp4')}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="feature-title text-accent-red mb-3">Why choose {{NAME_SITE}} for your Consumer Credit?</h3>
+                <p class="text-secondary-dark">
+                    Choosing our institution means opting for simplicity, speed, and personalization:
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Flexible Solutions:** Loan offers tailored to your needs and budget.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Simplified Procedures:** A clear and fast application process for efficient fund disbursement.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Absolute Transparency:** No hidden fees, all conditions are clearly explained.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Expert Advice:** Our advisors are here to guide you towards the best financing option.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-primary-dark me-2"></i> **Fast Response:** Get a quick response to your inquiry.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">Who is this service for?</h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-car fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title text-primary-dark">Vehicle Purchase</h5>
+                                <p class="card-text text-secondary-dark">Finance a car, motorcycle, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-hammer fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title">Works & Renovations</h5>
+                                <p class="card-text text-secondary-dark">Renovate, equip your home.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue">
+                            <div class="card-body text-center">
+                                <i class="fas fa-plane fa-3x text-primary-dark mb-3"></i>
+                                <h5 class="card-title">Travel & Leisure</h5>
+                                <p class="card-text text-secondary-dark">Finance vacations, a hobby, studies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto text-center">
+                <h3 class="feature-title text-accent-red mb-4">How it works? (Simplified Process)</h3>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-1"></i></div>
+                        <h5 class="step-title text-primary-dark">Identify Your Project</h5>
+                        <p class="text-secondary-dark">Clearly define your financing needs.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-2"></i></div>
+                        <h5 class="step-title text-primary-dark">Online Application</h5>
+                        <p class="text-secondary-dark">Fill out our quick and secure form.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-3"></i></div>
+                        <h5 class="step-title text-primary-dark">Analysis & Proposal</h5>
+                        <p class="text-secondary-dark">We evaluate your file and propose the suitable offer.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-4"></i></div>
+                        <h5 class="step-title text-primary-dark">Contract Signing</h5>
+                        <p class="text-secondary-dark">Validate the conditions and sign your loan agreement.</p>
+                    </div>
+                    <div class="process-step" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <div class="step-icon bg-primary-dark text-white"><i class="fas fa-5"></i></div>
+                        <h5 class="step-title text-primary-dark">Funds Disbursed</h5>
+                        <p class="text-secondary-dark">Funds are quickly made available to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-lg-10 mx-auto">
+                <h3 class="feature-title text-accent-red mb-4 text-center">The advantages for you:</h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-sliders-h fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Flexibility</h5>
+                                <p class="card-text">Repayment options adapted to your financial capacity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-hourglass-start fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Speed</h5>
+                                <p class="card-text">Get a quick response and funds for your urgent projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-shield-alt fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Security</h5>
+                                <p class="card-text">A clear and transparent framework, without unpleasant surprises.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light-blue text-primary-dark text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-user-friends fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Support</h5>
+                                <p class="card-text">Our experts advise you for the best choice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 bg-primary-dark text-white text-center p-3">
+                            <div class="card-body">
+                                <i class="fas fa-piggy-bank fa-2x mb-3 text-accent-red"></i>
+                                <h5 class="card-title">Savings Preservation</h5>
+                                <p class="card-text">Realize your projects without touching your savings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section bg-white text-center py-5">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+        <h2 class="display-5 fw-bold text-primary-dark">Got a personal project in mind?</h2>
+        <p class="lead mt-3 text-secondary-dark">Submit your personal loan application today and get a quick response!</p>
+        <a href="{{ path('loan.application.credit') }}" class="btn btn-secondary-custom btn-lg mt-4">Apply for a personal loan</a>
+    </div>
+</section>
+    </main>
+{% endblock %}

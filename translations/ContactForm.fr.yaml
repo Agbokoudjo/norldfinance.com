@@ -16,3 +16,35 @@ sendEmailAdmin.field.email: Email
 sendEmailAdmin.field.phone: Téléphone
 sendEmailAdmin.field.subject: Sujet
 sendEmailAdmin.field.content: Message
+
+contact.h1: >
+  Contactez un conseiller en <span style="color: #ea3249;">crédit à la consommation</span>
+contact.p: >
+   Nous sommes à votre écoute pour toutes vos questions, demandes de devis ou de conseil.
+   Remplissez le formulaire ci-dessous ou utilisez nos coordonnées directes.
+
+contactFormSectionAnchor:  Accéder au Formulaire
+contactInfoSectionAnchor: Appelez-nous
+
+contactFormSection.h2: >
+   Parlons de Votre <span style="color: var(--danger-color);">Financement</span>
+
+contactFormSection.p: >
+  Remplissez le formulaire ci-dessous pour nous envoyer votre demande.
+
+contactInfoSection.h2: >
+  Nos <span style="color: var(--primary-color);">Coordonnées</span>
+
+contactInfoSection.p: >
+   N'hésitez pas à nous contacter directement via les informations ci-dessous.
+
+contactInfoWrapper:
+  address: 
+    title: Adresse
+    content: 123 Rue de la Finance, 75001 Paris, France
+  phone: Téléphone
+  email: E-mail
+  
+
+
+

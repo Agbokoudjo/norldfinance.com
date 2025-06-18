@@ -1,2 +1,4 @@
 import config from "./_config.js";
-export {config}
+import appModule from "./AppModule.js";
+import translation from "./_translation.js";
+export {config,appModule,translation}

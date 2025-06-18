@@ -1,0 +1,68 @@
+lastname: 'UW ACHTERNAAM'
+firstname: 'UW VOORNAMEN'
+email: 'E-MAILADRES'
+phone: 'WHATSAPP'
+country: 'LAND'
+city: 'STAD'
+adresse: 'ADRES'
+montant: 'BEDRAG'
+devise: 'VALUTA'
+subject.placeholder: 'Bijv.: Aanvraag voor Kredietovername'
+subject.label: 'ONDERWERP VAN UW LENINGSVERZOEK'
+devise.placeholder: 'Kies de valuta voor uw leningsaanvraag'
+duration: 'TERUGBETAALTERMIJN (MAANDEN)'
+identitydocument: 'Identiteitsdocument (ID-kaart of Paspoort)'
+helperIdentiydocument: 'Gelieve uw identiteitsdocument (voor-/achterkant of belangrijke pagina''s) te scannen of te fotograferen en op te slaan in PDF-formaat.'
+identityphoto1: 'Identiteitsfoto 1'
+identityphoto2: 'Identiteitsfoto 2'
+helperPhoto: 'Formaat JPG of PNG of JPEG.'
+consentCheckbox: >
+  Door dit formulier in te dienen, ga ik akkoord met de <a href="#" class="text-primary-custom text-decoration-none fw-bold">algemene voorwaarden</a> van <strong>%organization_name%</strong> en het <a href="#" class="text-primary-custom text-decoration-none fw-bold">privacybeleid</a>
+country.placeholder: 'Kies uw land'
+adresse.placeholder: 'Uw volledige adres'
+adresse.helper: 'Bijv.: Nummer, Straat, Wijk, Stad/Plaats'
+helpdocument.generale: 'Documenten en Foto''s'
+btn.submit: 'Aanvraag indienen'
+context_form: 'Details van de aanvraag'
+Form.success.title: 'Leningsaanvraag ontvangen, %name%!'
+Form.success.message: >
+  Hallo **%name%**,
+  <br/><br/>
+  Bedankt voor het indienen van uw leningsaanvraag bij **%organization%**.
+  Uw aanvraag wordt nu verwerkt.
+  <br/><br/>
+  Ons gespecialiseerde team zal uw aanvraag zorgvuldig beoordelen en contact met u opnemen
+  binnen **24 tot 48 werkuren** om u te informeren over de status van uw aanvraag
+  of om indien nodig aanvullende informatie te vragen.
+  <br/><br/>
+  In de tussentijd kunt u onze <a href="{{path('home')}}#faq">Veelgestelde Vragen</a> raadplegen voor
+  veelgestelde vragen of ons volgen op onze sociale media om op de hoogte te blijven van ons nieuws.
+  <br/><br/>
+  We kijken ernaar uit u te helpen bij het realiseren van uw projecten.
+  <br/><hr/>
+  Met vriendelijke groet,<br/>
+  Het team van **%organization%**
+
+requestherosection.h1: >
+  Vraag uw <span style="color: #ea3249;">Lening</span> online aan
+
+requestherosection.p: >
+  Dien uw financieringsaanvraag eenvoudig en veilig in.
+  Wij vinden de oplossing die het beste bij uw project past.
+
+requestherosection.a: Naar het formulier
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Aanvraagformulier</span>
+
+loanrequestform.p: >
+  Vul dit formulier in om uw leningsaanvraag te starten. Onze experts nemen snel contact met u op.
+
+
+meta_description: >
+  {{NAME_SITE}}, uw partner voor persoonlijke leningen, hypotheken en bedrijfsfinanciering.
+  Simuleer uw lening online. Project- en vastgoedfinanciering. Vraag online aan in slechts enkele klikken.
+
+meta_keywords: persoonlijke lening, hypotheeklening, studentenfinanciering
+
+page_title: Leningsaanvraag

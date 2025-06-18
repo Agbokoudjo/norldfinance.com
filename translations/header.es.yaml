@@ -1,0 +1,11 @@
+home: Inicio
+about: Quiénes Somos
+services.home: Servicios
+contact.form.us: Contacto
+loan.application.credit: Solicitud de Préstamo
+pages:
+  terms:
+    and:
+      conditions: "Términos y Condiciones"
+  privacy:
+    policy: "Política de Privacidad"

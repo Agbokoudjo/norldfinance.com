@@ -1,0 +1,68 @@
+lastname: 'IL TUO COGNOME'
+firstname: 'I TUOI NOMI'
+email: 'INDIRIZZO EMAIL'
+phone: 'WHATSAPP'
+country: 'PAESE'
+city: 'CITTÀ'
+adresse: 'INDIRIZZO'
+montant: 'IMPORTO'
+devise: 'VALUTA'
+subject.placeholder: 'Es: Richiesta di Riacquisto Credito'
+subject.label: 'OGGETTO DELLA TUA RICHIESTA DI PRESTITO'
+devise.placeholder: 'Scegli la valuta della tua richiesta di prestito'
+duration: 'DURATA DEL RIMBORSO (MESI)'
+identitydocument: 'Documento d''identità (Carta d''identità o Passaporto)'
+helperIdentiydocument: 'Si prega di scansionare o fotografare il proprio documento d''identità (fronte/retro o pagine importanti) e salvarlo in formato PDF.'
+identityphoto1: 'Foto d''identità 1'
+identityphoto2: 'Foto d''identità 2'
+helperPhoto: 'Formato JPG o PNG o JPEG.'
+consentCheckbox: >
+  Inviando questo modulo, accetto le <a href="#" class="text-primary-custom text-decoration-none fw-bold">condizioni generali</a> di <strong>%organization_name%</strong> e la <a href="#" class="text-primary-custom text-decoration-none fw-bold">politica sulla privacy</a>
+country.placeholder: 'Scegli il tuo paese'
+adresse.placeholder: 'Il tuo indirizzo completo'
+adresse.helper: 'Es: Numero, Via, Quartiere, Città/Località'
+helpdocument.generale: 'Documenti e Foto'
+btn.submit: 'Invia Richiesta'
+context_form: 'Dettagli della richiesta'
+Form.success.title: 'Richiesta di prestito ricevuta, %name%!'
+Form.success.message: >
+  Ciao **%name%**,
+  <br/><br/>
+  Ti ringraziamo per aver inviato la tua richiesta di prestito a **%organization%**.
+  La tua pratica è ora in fase di elaborazione.
+  <br/><br/>
+  Il nostro team specializzato esaminerà attentamente la tua richiesta e ti contatterà
+  entro **24-48 ore lavorative** per informarti sullo stato della tua pratica
+  o per richiedere ulteriori informazioni se necessario.
+  <br/><br/>
+  Nel frattempo, puoi consultare le nostre <a href="{{path('home')}}#faq">FAQ</a> per qualsiasi
+  domanda frequente o seguirci sui nostri social media per rimanere aggiornato sulle nostre novità.
+  <br/><br/>
+  Non vediamo l'ora di accompagnarti nella realizzazione dei tuoi progetti.
+  <br/><hr/>
+  Cordialmente,<br/>
+  Il team di **%organization%**
+
+requestherosection.h1: >
+  Richiedi il tuo <span style="color: #ea3249;">Prestito</span> online
+
+requestherosection.p: >
+  Invia la tua richiesta di finanziamento in modo semplice e sicuro.
+  Troviamo la soluzione più adatta al tuo progetto.
+
+requestherosection.a: Accedi al Modulo
+
+loanrequestform.h2: >
+  <span style="color: var(--primary-color);">Modulo di Richiesta</span>
+
+loanrequestform.p: >
+  Compila questo modulo per avviare la tua richiesta di prestito. I nostri esperti ti contatteranno rapidamente.
+
+
+meta_description: >
+  {{NAME_SITE}}, il tuo partner per prestiti personali, mutui immobiliari e finanziamenti aziendali.
+  Simula il tuo prestito online. Finanziamento di progetti e immobili. Richiedi online in pochi clic.
+
+meta_keywords: prestito personale, mutuo immobiliare, finanziamento per studenti
+
+page_title: Richiesta di Prestito

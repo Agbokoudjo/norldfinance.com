@@ -1,0 +1,4 @@
+submitButton: Sending...
+messageBeforeSendData:
+  title: Processing
+  content: Data is being transmitted. Thank you for your patience.

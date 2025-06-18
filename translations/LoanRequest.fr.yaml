@@ -43,3 +43,25 @@ Form.success.message: >
   <br/><hr/>
   Cordialement,<br/>
   L’équipe **%organization%**
+
+requestherosection.h1: >
+  Demandez Votre <span style="color: #ea3249;">Prêt</span> en Ligne
+
+requestherosection.p: >
+   Déposez votre demande de financement facilement et en toute sécurité.
+   Nous trouvons la solution la plus adaptée à votre projet.
+
+requestherosection.a:
+   Accéder au Formulaire
+loanrequestform.h2: >
+   Formulaire de <span style="color: var(--primary-color);">Demande</span>
+loanrequestform.p: >
+  Complétez ce formulaire pour initier votre demande de prêt. Nos experts vous contacteront rapidement.
+
+meta_description: >
+    {{NAME_SITE}}, votre partenaire en prêts personnels,  crédits immobiliers et financements d'entreprise. 
+     Simulez votre prêt en ligne.Financement de projet et immobilier.Demandez en ligne en quelques clics.
+
+meta_keywords: prêt personnel, crédit immobilier, financement étudiant 
+
+page_title: Demande de prêt

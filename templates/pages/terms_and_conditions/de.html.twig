@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+{% block title %}Allgemeine Geschäftsbedingungen – {{NAME_SITE}}{% endblock %}
+{% block meta_description %}
+    Lesen Sie die allgemeinen Geschäftsbedingungen für die Nutzung der Dienste von {{NAME_SITE}}. Wichtige Informationen über Zugriff, Nutzung und Verantwortlichkeiten.
+{% endblock %}
+{% block meta_keywords %}
+    allgemeine geschäftsbedingungen, agb, {{NAME_SITE}}, nutzungsbedingungen, nutzervereinbarung, verantwortung, geistiges eigentum
+{% endblock %}
+{% block body %}
+    <main class="professional-loan">
+    <section class="hero-section hero-termes-conditions text-white d-flex align-items-center justify-content-center text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-3 fw-bold">Allgemeine Geschäftsbedingungen</h1>
+        <p class="lead mt-3">Für die Nutzung der Dienste und der Website von {{NAME_SITE}}.</p>
+    </div>
+</section>
+
+ <section class="py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="text-secondary-dark">
+                        Willkommen auf der Website von <strong>{{NAME_SITE}}</strong>. Der Zugriff und die Nutzung unserer Website sowie all unserer Finanzdienstleistungen unterliegen den vorliegenden Allgemeinen Nutzungs- und Verkaufsbedingungen (im Folgenden "AGB"). Durch den Zugriff und die Nutzung dieser Website erkennen Sie an, dass Sie diese AGB sowie unsere Datenschutzrichtlinie gelesen, verstanden und akzeptiert haben. Wenn Sie diesen AGB nicht zustimmen, nutzen Sie bitte unsere Website oder unsere Dienste nicht.
+                    </p>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> behält sich das Recht vor, Teile dieser AGB jederzeit nach eigenem Ermessen zu ändern, hinzuzufügen oder zu löschen. Es liegt in Ihrer Verantwortung, diese AGB regelmäßig auf Änderungen zu überprüfen. Ihre fortgesetzte Nutzung der Website nach der Veröffentlichung von Änderungen bedeutet, dass Sie diese akzeptieren.
+                    </p>
+                    <p class="text-secondary-dark small fst-italic">Letzte Aktualisierung: {{UPDATED_SITE}}</p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <h2 class="section-title text-primary-dark mb-3">1. Definitionen</h2>
+                    <ul class="list-unstyled text-secondary-dark">
+                        <li class="mb-2"><strong>"Website":</strong> Bezeichnet die Website von <strong>{{NAME_SITE}}</strong>, zugänglich unter der Adresse {{ path('home') }}.</li>
+                        <li class="mb-2"><strong>"Dienste":</strong> Bezeichnet alle Finanzdienstleistungen (Konsumentenkredit, Studentendarlehen, Investitionsfinanzierung, Kreditablösung usw.), die von <strong>{{NAME_SITE}}</strong> über die Website angeboten werden.</li>
+                        <li class="mb-2"><strong>"Nutzer":</strong> Jede natürliche oder juristische Person, die auf die Website oder die Dienste zugreift und diese nutzt.</li>
+                        <li class="mb-2"><strong>"{{NAME_SITE}}":</strong> Das Unternehmen, das Eigentümer und Betreiber der Website und der Dienste ist.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="section-title text-primary-dark mb-3">2. Zugang und Nutzung der Website</h2>
+                    <p class="text-secondary-dark">
+                        Der Zugang zur Website ist kostenlos und steht jedem Nutzer offen, der die vorliegenden AGB einhält. <strong>{{NAME_SITE}}</strong> ist bemüht, die Website ständig zugänglich zu halten, kann jedoch einen ununterbrochenen Zugang nicht garantieren und lehnt jede Verantwortung im Falle der Nichtverfügbarkeit ab.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Der Nutzer verpflichtet sich, die Website und die Dienste fair, gemäß dem Gesetz, den vorliegenden AGB und den guten Sitten zu nutzen. Jede missbräuchliche oder betrügerische Nutzung ist strengstens untersagt.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h2 class="section-title text-primary-dark mb-3">3. Geistiges Eigentum</h2>
+                    <p class="text-secondary-dark">
+                        Alle Inhalte der Website (Texte, Bilder, Grafiken, Logos, Icons, Sounds, Software usw.) sind das ausschließliche Eigentum von <strong>{{NAME_SITE}}</strong> oder seinen Partnern und sind durch französische und internationale Gesetze zum geistigen Eigentum geschützt.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Jede Reproduktion, Darstellung, Änderung, Veröffentlichung, Anpassung aller oder eines Teils der Elemente der Website, unabhängig von Mittel oder Verfahren, ist untersagt, es sei denn, <strong>{{NAME_SITE}}</strong> hat eine vorherige schriftliche Genehmigung erteilt.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2 class="section-title text-primary-dark mb-3">4. Haftung</h2>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> unternimmt alle Anstrengungen, um genaue und aktuelle Informationen auf seiner Website bereitzustellen. Wir können jedoch nicht die Richtigkeit, Vollständigkeit oder Relevanz aller veröffentlichten Informationen garantieren. Die auf der Website bereitgestellten Finanzinformationen dienen nur zu Informationszwecken und stellen in keinem Fall eine personalisierte Beratung dar. Es wird empfohlen, vor jeder finanziellen Entscheidung einen Fachmann zu konsultieren.
+                    </p>
+                    <p class="text-secondary-dark">
+                        <strong>{{NAME_SITE}}</strong> haftet nicht für direkte oder indirekte, materielle oder immaterielle Schäden, die aus dem Zugriff oder der Nutzung der Website oder der Dienste resultieren, einschließlich Datenverlust, Viren, Serviceunterbrechungen usw.
+                    </p>
+                    <p class="text-secondary-dark">
+                        Der Nutzer ist allein verantwortlich für die Nutzung der auf der Website verfügbaren Informationen und Dienste.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <h2 class="section-title text-primary-dark mb-3">5. Schutz personenbezogener Daten</h2>
+                    <p class="text-secondary-dark">
+                        Die Erfassung und Verarbeitung Ihrer personenbezogenen Daten durch <strong>{{NAME_SITE}}</strong> wird durch unsere <a href="{{path('pages.privacy.policy')}}" class="text-accent-red">Datenschutzrichtlinie</a> geregelt, die Bestandteil dieser AGB ist. Durch die Annahme dieser AGB stimmen Sie auch unserer Datenschutzrichtlinie zu.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <h2 class="section-title text-primary-dark mb-3">6. Cookies</h2>
+                    <p class="text-secondary-dark">
+                        Die Website verwendet Cookies, um Ihr Surferlebnis zu verbessern. Weitere Informationen zur Verwendung von Cookies und deren Verwaltung finden Sie in unserer <a href="{{path('pages.privacy.policy')}}" class="text-accent-red">Datenschutzrichtlinie (Abschnitt Persönliche Informationen)</a>.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <h2 class="section-title text-primary-dark mb-3">7. Externe Links</h2>
+                    <p class="text-secondary-dark">
+                        Die Website kann Links zu Websites Dritter enthalten. <strong>{{NAME_SITE}}</strong> übt keine Kontrolle über diese Websites aus und lehnt jede Verantwortung für deren Inhalt, Praktiken oder Datenschutzrichtlinien ab. Die Aktivierung dieser Links liegt in der alleinigen Verantwortung des Nutzers.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <h2 class="section-title text-primary-dark mb-3">8. Anwendbares Recht und Gerichtsbarkeit</h2>
+                    <p class="text-secondary-dark">
+                        Diese AGB unterliegen dem Recht <strong>Frankreichs</strong>. Alle Streitigkeiten bezüglich der Auslegung oder Ausführung dieser AGB fallen ausschließlich in die Zuständigkeit der Gerichte von <strong>Paris</strong>. Es wird empfohlen, vor Klageerhebung eine Klausel zur gütlichen Streitbeilegung aufzunehmen.
+                    </p>
+                </div>
+
+                <div class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                    <h2 class="section-title text-primary-dark mb-3">9. Kontakt</h2>
+                    <p class="text-secondary-dark">
+                        Bei Fragen zu diesen Allgemeinen Geschäftsbedingungen kontaktieren Sie uns bitte <a href="{{path('contact.form.us')}}" class="text-accent-red">über unsere Kontaktseite, indem Sie das Formular ausfüllen</a>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+{% endblock %}
