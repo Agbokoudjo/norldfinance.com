@@ -28,8 +28,8 @@ class ResponseHeaderListener
         $response = $event->getResponse();
 
         // Ajoute ou modifie d'autres si besoin
-        $response->headers->set('X-Content-Type-Options', 'nosniff');
-        $response->headers->set('X-Frame-Options', 'DENY');
+        // $response->headers->set('X-Content-Type-Options', 'nosniff');
+        $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
         $response->headers->set('X-Turbo-Charged-By', 'INTERNATIONALES WEB SERVICES');
         $response->headers->set('Server','INTERNATIONALES WEB SERVICES SERVER');
         $response->headers->set('X-Powered-By', '+229 0167251886');

@@ -1,4 +1,9 @@
-import { Logger, httpFetchHandler,
+import  AOS from "aos";
+import jQuery from "../vendor/jquery/jquery.index.js";
+import Swal from "sweetalert2"
+window.jQuery = window.$ = jQuery;
+import {
+    Logger, httpFetchHandler,
     HttpResponse, handleErrorsManyForm,
     HttpFetchError,
     addParamToUrl,
@@ -11,6 +16,7 @@ import { Logger, httpFetchHandler,
 } from "@wlindabla/form_validator";
 import config from "./_config.js"
 import { translation } from "./index.js";
+window.jQuery = window.$ = jQuery;
 const logger = Logger.getInstance();
 logger.APP_ENV = config.param('APP_ENV');
 logger.DEBUG = config.param('DEBUG');
@@ -49,7 +55,7 @@ export class AppModule {
      * @static
      */
     static #app_module = null;
-    constructor() { Logger.log('AppModule initializer',this) }
+    constructor() { Logger.log('AppModule initializer:',this) }
     /**
      * Récupère l'instance unique de AppModule.
      * @returns {AppModule}
@@ -60,19 +66,22 @@ export class AppModule {
     }
     initialize() {
          // Console log pour vérifier que la fonction est bien appelée
-         Logger.log("AppModule.initialize() called due to Turbo/Load event.");
+        Logger.log("AppModule.initialize():","AppModule.initialize() called due to Turbo/Load event.");
+        console.log("AppModule.initialize():","AppModule.initialize() called due to Turbo/Load event.")
         this.bootstrapHandler();
         this.initOwlCarousel();
         this.initMagnificPopup();
         this.initCounters();
         this.toggleAOSOnElements();
-        AOS.refresh();
         this.formSubmitHander();
         this.formValidator();
         this.setup_select2();
         this.updateCheckbox();
         this.formFormattingEvent();
+        AOS.refresh();
         this.disableUserInteractions();
+        window.jQuery = window.$ = jQuery;
+        Logger.log('jQuery version:', window.jQuery?.fn?.jquery);
     }
     bootstrapHandler() {
         if (typeof bootstrap !== 'undefined') {
@@ -188,6 +197,8 @@ export class AppModule {
                 AOS.refresh();
             }
     }
+    get __AOS(){return AOS}
+    get __Logger(){return Logger }
     initCounters=()=> {
         const observerOptions = {
             root: null,
@@ -461,7 +472,12 @@ export class AppModule {
                             showConfirmButton: false,
                              showCloseButton: true,
                             ...baseSweetAlert2Options
-                        });
+                    });
+                    originalText="Réessayer"
+                Logger.log(originalText)
+                $submitButton.prop('disabled', false);
+                $submitButton.removeAttr('disabled');
+                    return;
                 }
     
                 if (error instanceof HttpFetchError) {
@@ -481,12 +497,13 @@ export class AppModule {
                 Logger.log(originalText)
                 $submitButton.prop('disabled', false);
                 $submitButton.removeAttr('disabled');
+                
             } finally {
                 return;
             }
         });
     }
-    setup_select2() {
+    setup_select2=()=> {
         jQuery('select:not([data-sonata-select2="false"])', document).each((index, element) => {
             const select = jQuery(element);
             let allowClearEnabled = false;
@@ -520,7 +537,7 @@ export class AppModule {
             }
   
             select.select2({
-                width: () => get_select2_width(select),
+                width: () => this.get_select2_width(select),
                 dropdownAutoWidth: true,
                 minimumResultsForSearch,
                 placeholder: allowClearEnabled ? ' ' : '', // allowClear needs placeholder to work properly

@@ -243,9 +243,9 @@ final class LoanRequestType extends AbstractType
                     'data-maxsize-file' => 5,
                     'data-allowed-mime-type-accept' => 'image/jpg,image/png,image/jpeg',
                 'data-min-width' => 50,
-                'data-max-width' => 500,
-                'data-min-height' => 50,
-                'data-max-height' => 500,
+                'data-max-width' => 800,
+                'data-min-height' => 80,
+                'data-max-height' => 800,
                 'accept'=> 'image/jpg,image/png,image/jpeg'
                 ]
             ])
@@ -262,9 +262,9 @@ final class LoanRequestType extends AbstractType
                     'data-maxsize-file' => 5,
                     'data-allowed-mime-type-accept' => 'image/jpg,image/png,image/jpeg',
                 'data-min-width' => 50,
-                'data-max-width' => 500,
-                'data-min-height' => 50,
-                'data-max-height' => 500,
+                'data-max-width' => 800,
+                'data-min-height' => 80,
+                'data-max-height' => 800,
                     'accept'=> 'image/jpg,image/png,image/jpeg'
                 ]
             ])

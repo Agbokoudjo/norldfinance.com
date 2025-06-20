@@ -1,20 +1,20 @@
-import "./app.css";
-import './styles/responsive.css'
 import * as Turbo from "@hotwired/turbo"
-//import { Application,Controller } from '@hotwired/stimulus'
-import {appModule} from "./js/index.js"
-//const application = Application.start()
-/*application.register("example", class tubrno extends Controller {
-  connect() {
-    Logger.log("Controller connecté après navigation Turbo")
-  }
-})*/
-
-//Logger.log(application)
+import { appModule } from "./js/index.js"
+appModule.__AOS.init({
+    once: false,
+    startEvent: 'DOMContentLoaded',
+});
+jQuery(window).on("load", () => {
+    setTimeout(() => {
+        appModule.__AOS.refresh();
+    }, 500);
+    appModule.initialize()
+});
 jQuery(function app() {
-    window.NorldFinanceApp=appModule
-    jQuery(document).on("load", () => appModule.initialize());
-    jQuery(document).on("turbo:load", () => appModule.initialize());
+    window.NorldFinanceApp = appModule
+    jQuery(document).on("turbo:load", () =>
+        appModule.initialize()
+    );
     jQuery(document).on('turbo:frame-load', () => appModule.initialize());
    // jQuery(this).on('turbo:visit', appModule.initialize())
     let resizeTimer;
@@ -27,6 +27,26 @@ jQuery(function app() {
     jQuery(document).on('turbo:click', (e) => { // Utilisez 'document' pour les événements globaux
         appModule.anchorElementHandler(e);
     });
+    jQuery(document).on('initialize.owl.carousel', '.owl-carousel', function (event) {
+        appModule.__AOS.refresh()
+        appModule.__Logger.log(event)
+    })
+    jQuery(document).on('initialized.owl.carousel', '.owl-carousel', function (event) {
+        appModule.__AOS.refresh()
+        appModule.__Logger.log(event)
+    })
+    jQuery(document).on('change.owl.carousel', '.owl-carousel', function (event) {
+        appModule.__AOS.refresh()
+        appModule.__Logger.log(event)
+    })
+    jQuery(document).on('changed.owl.carousel', '.owl-carousel', function (event) {
+        appModule.__AOS.refresh()
+        appModule.__Logger.log(event)
+    })
+    jQuery(document).on('next.owl.carousel', function (event) {
+        appModule.__AOS.refresh()
+        appModule.__Logger.log(event)
+    })
     Turbo.start();
 })
 

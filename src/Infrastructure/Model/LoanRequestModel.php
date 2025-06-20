@@ -148,8 +148,8 @@ final class LoanRequestModel
             maxSize: '5120ki', // Exemple: taille maximale de 5 mégaoctets
             mimeTypes: ['image/jpeg', 'image/png', "image/jpg"], // Types MIME acceptés
             filenameMaxLength: 255,
-            maxWidth:500,
-            maxHeight: 500,
+            maxWidth:800,
+            maxHeight: 800,
             minWidth:50,
             minHeight:50
         )]
@@ -159,8 +159,8 @@ final class LoanRequestModel
             maxSize: '5120ki', // Exemple: taille maximale de 5 mégaoctets
             mimeTypes: ['image/jpeg', 'image/png', "image/jpg"], // Types MIME acceptés
             filenameMaxLength: 255,
-            maxWidth: 500,
-            maxHeight: 500,
+            maxWidth: 800,
+            maxHeight: 800,
             minWidth: 50,
             minHeight: 50
         )]

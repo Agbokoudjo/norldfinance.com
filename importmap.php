@@ -80,4 +80,47 @@ return [
     '@wlindabla/form_validator' => [
         'version' => '1.3.7',
     ],
+    'bootstrap' => [
+        'version' => '5.3.7',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
+    ],
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.7',
+        'type' => 'css',
+    ],
+    'aos' => [
+        'version' => '3.0.0-beta.6',
+    ],
+    'owl.carousel' => [
+        'version' => '2.3.4',
+    ],
+    'owl.carousel/dist/assets/owl.carousel.min.css' => [
+        'version' => '2.3.4',
+        'type' => 'css',
+    ],
+    'magnific-popup' => [
+        'version' => '1.2.0',
+    ],
+    'jquery' => [
+        'version' => '3.7.1',
+    ],
+    'magnific-popup/dist/magnific-popup.min.css' => [
+        'version' => '1.2.0',
+        'type' => 'css',
+    ],
+    'select2' => [
+        'version' => '4.1.0-rc.0',
+    ],
+    'select2/dist/css/select2.min.css' => [
+        'version' => '4.1.0-rc.0',
+        'type' => 'css',
+    ],
+    'lodash.throttle' => [
+        'version' => '4.1.1',
+    ],
+    'lodash.debounce' => [
+        'version' => '4.0.8',
+    ],
 ];

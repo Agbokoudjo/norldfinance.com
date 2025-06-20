@@ -50,8 +50,8 @@ final class LoanApplicationController extends AbstractController{
         if($form_loan_application->isSubmitted()){
             if(!$form_loan_application->isValid()){
                 return $this->json([
-                    'title' => $translator->trans('Form.Error.title', [], 'validators', $request->getLocale()),
-                    'details' => $translator->trans('Form.Error.detail', [], 'validators', $request->getLocale()),
+                    'title' => $translator->trans('Form.Error.title', [], 'Validators', $request->getLocale()),
+                    'details' => $translator->trans('Form.Error.detail', [], 'Validators', $request->getLocale()),
                     'violations' => $formErrorHandle->handleFormData(
                         $form_loan_application,
                         'validators',
