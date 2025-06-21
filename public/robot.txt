@@ -16,15 +16,16 @@ Allow: /privacy-policy
 Allow: /terms-and-conditions
 
 # Empêche l’indexation des pages sensibles ou inutiles pour le SEO
+# Bloquer les zones sensibles ou non pertinentes pour l'indexation
 Disallow: /admin/
 Disallow: /profile/
 Disallow: /api/
 Disallow: /_wdt/
 Disallow: /_error/
 Disallow: /.env
-Disallow: /compose.json
-Disallow: /compose.lock
-Disallow: /compose.yaml
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /composer.yaml
 
 # Sitemap(s)
 Sitemap: https://norldfinance.com/sitemap.xml

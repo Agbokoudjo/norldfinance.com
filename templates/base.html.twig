@@ -23,6 +23,7 @@
               <meta property="og:image" content="{% block og_image %} {{asset('img/logo.svg')}} {% endblock %}">
             <meta name="google-site-verification" content="_hEd8X5kXmy6ycu5uQkrlIlCMMyrEbJXJbChr6aqIsg">
             <meta name="google-site-verification" content="t0KDBpGkviLSxUksZVOn4FIJdmLcY4pEusLrQlnYhrg">
+            <meta name="google-site-verification" content="_hEd8X5kXmy6ycu5uQkrlIlCMMyrEbJXJbChr6aqIsg">
              <meta name="description" content="{% block meta_description %} {% endblock %}">
             <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
             {% block meta_opengraph %}
@@ -37,6 +38,7 @@
         {% endblock %}
       {% block link %}
           <link rel="canonical" href="{{ current_page_url }}">
+          <link rel="alternate" hreflang="{{app.locale}}"> 
           {% block cdn_link %}
                 {% include 'link.html.twig' %}
           {% endblock %}

@@ -4,6 +4,14 @@ parameters:
     asset.request_context.secure: true
     email.admin: norldsite8@gmail.com
     NAME_SITE: 'NORLD FINANCE'
+    locales:  
+            - fr
+            - en
+            - de
+            - es
+            - it
+            - nl
+            - pt
 services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
