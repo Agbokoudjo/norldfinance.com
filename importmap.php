@@ -23,7 +23,7 @@ return [
         'version' => '3.2.2',
     ],
     '@hotwired/turbo' => [
-        'version' => '8.0.13',
+        'version' => '8.0.18',
     ],
     'image-validator' => [
         'version' => '1.2.1',
@@ -32,13 +32,13 @@ return [
         'version' => '5.5.3',
     ],
     'pdfjs-dist' => [
-        'version' => '5.3.31',
+        'version' => '5.4.149',
     ],
     'xlsx' => [
         'version' => '0.18.5',
     ],
     'sweetalert2' => [
-        'version' => '11.22.0',
+        'version' => '11.23.0',
     ],
     'animate.css' => [
         'version' => '4.1.1',
@@ -53,10 +53,10 @@ return [
         'version' => '3.10.1',
     ],
     '@xmldom/xmldom' => [
-        'version' => '0.9.8',
+        'version' => '0.8.11',
     ],
     '@xmldom/xmldom/lib/dom' => [
-        'version' => '0.9.8',
+        'version' => '0.8.11',
     ],
     'xmlbuilder' => [
         'version' => '15.1.1',
@@ -75,23 +75,23 @@ return [
         'version' => '0.2.4',
     ],
     'libphonenumber-js' => [
-        'version' => '1.12.9',
+        'version' => '1.12.23',
     ],
     '@wlindabla/form_validator' => [
         'version' => '1.3.7',
     ],
     'bootstrap' => [
-        'version' => '5.3.7',
+        'version' => '5.3.8',
     ],
     '@popperjs/core' => [
         'version' => '2.11.8',
     ],
     'bootstrap/dist/css/bootstrap.min.css' => [
-        'version' => '5.3.7',
+        'version' => '5.3.8',
         'type' => 'css',
     ],
     'aos' => [
-        'version' => '3.0.0-beta.6',
+        'version' => '2.3.4',
     ],
     'owl.carousel' => [
         'version' => '2.3.4',

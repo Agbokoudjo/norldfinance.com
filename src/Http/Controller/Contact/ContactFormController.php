@@ -1,7 +1,9 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Http\Controller\Contact;
 
-use App\Application\UseCase\Command\ContactMessageCommand;
 use App\Http\Form\ContactFormType;
 use Symfony\Component\HttpFoundation\Request;
 use App\Infrastructure\Model\ContactFormModel;
@@ -10,35 +12,40 @@ use Symfony\Component\Routing\Attribute\Route;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use App\Application\UseCase\Command\ContactFormCommand;
 use App\Infrastructure\Helper\ProcessingErrorFormHandleInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
-#[Route('/contact-us/')]
+#[Route(path:'/contact-us/create',
+    name: 'contact.form.us',
+    methods: ['POST', 'GET'],
+    options: [
+        'sitemap' => [
+            'priority' => 0.7,
+            'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY
+        ]
+    ])]
 final class ContactFormController extends AbstractController{
     public function __construct(private readonly ParameterBagInterface $servicesController)
     {
         
     }
-    #[Route(
-        path:'create',
-        name:'contact.form.us',
-        methods: ['POST','GET'],
-        options:['sitemap' => [
-            'priority' => 0.7, 
-            'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]
-       ])
-    ]
-    public function create(
+   
+    public function __invoke(
     Request $requestContactForm,
     ProcessingErrorFormHandleInterface $formErrorHandle,
     TranslatorInterface $translator,
     MessageBusInterface $bus
     ):Response{
         $modelContactForm=$this->createForm(ContactFormType::class, new ContactFormModel());
+
         $modelContactForm->handleRequest($requestContactForm);
+
         if($modelContactForm->isSubmitted()){
+
             if (!$modelContactForm->isValid()) {
+
                 return $this->json([
                     'title' => $translator->trans('Form.Error.title', [], 'validators', $requestContactForm->getLocale()),
                     'details' => $translator->trans('Form.Error.detail', [], 'validators', $requestContactForm->getLocale()),
@@ -49,7 +56,9 @@ final class ContactFormController extends AbstractController{
                     ),
                     'formName'=> $modelContactForm->getName()
                 ],Response::HTTP_UNPROCESSABLE_ENTITY);
+
             }
+
             /**
              * @var ContactFormModel
              */
@@ -57,7 +66,7 @@ final class ContactFormController extends AbstractController{
             /**
              * Enregistrer les données du contacts dans la base de données en async avec messenger
              */
-        $bus->dispatch(new ContactMessageCommand(
+            $bus->dispatch(new ContactFormCommand(
                 $contactData->fullname,
                 $contactData->email,
                 $contactData->subject,
@@ -65,6 +74,7 @@ final class ContactFormController extends AbstractController{
                 $requestContactForm->getClientIp(),
                 $contactData->phone
             ));
+
             return $this->json([
                 'title' => $translator->trans(
                     'Form.success.title',
@@ -74,6 +84,7 @@ final class ContactFormController extends AbstractController{
                     'ContactForm',
                     $requestContactForm->getLocale()
                 ),
+
                 'message' => $translator->trans(
                     'Form.success.message',
                     [
@@ -85,6 +96,7 @@ final class ContactFormController extends AbstractController{
                 )
                 ],Response::HTTP_CREATED);
         }
+
         return $this->render('contact/index.html.twig',[
             'form'=>$modelContactForm
         ]);

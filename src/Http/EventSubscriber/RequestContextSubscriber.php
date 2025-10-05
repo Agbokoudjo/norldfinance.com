@@ -1,10 +1,14 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Http\EventSubscriber;
 
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Twig\Environment;
+
 class RequestContextSubscriber implements EventSubscriberInterface{
     public function __construct(private readonly Environment $twig)
     {
@@ -19,6 +23,7 @@ class RequestContextSubscriber implements EventSubscriberInterface{
                  $request->headers->has('Turbo-Stream');
         $this->twig->addGlobal('is_partial_request', $isAjax || $isTurbo);
     }
+    
     public static function getSubscribedEvents(): array
     {
         return [

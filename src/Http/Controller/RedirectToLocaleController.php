@@ -1,5 +1,7 @@
 <?php
-// src/Http/Controller/RedirectToLocaleController.php
+
+declare(strict_types=1);
+
 namespace App\Http\Controller;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;

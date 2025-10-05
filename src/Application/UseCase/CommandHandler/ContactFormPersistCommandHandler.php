@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  * This file is part of the project by AGBOKOUDJO Franck.
  *
@@ -15,21 +18,23 @@ namespace App\Application\UseCase\CommandHandler;
 use DateTimeImmutable;
 use App\Domain\Contact\ContactFormRequest;
 use App\Domain\Contact\ContactFormRepositoryInterface;
-use App\Application\UseCase\Command\ContactMessageCommand;
+use App\Application\UseCase\Command\ContactFormCommand;
 
 /**
  * @author AGBOKOUDJO Franck <franckagbokoudjo301@gmail.com>
  * @package <https://github.com/Agbokoudjo/norldfinance.com>
  */
-final class ContactMessagePersistCommandHandler{
+final class ContactFormPersistCommandHandler{
     public function __construct(private readonly ContactFormRepositoryInterface $managerRegistryContact)
     {
         
     }
-    public function hander(ContactMessageCommand $contactData):void
+    
+    public function hander(ContactFormCommand $contactData):void
     {
         $contactDataRequest = new ContactFormRequest();
-        $contactDataRequest->setFullname($contactData->name)
+        $contactDataRequest
+            ->setFullname($contactData->name)
             ->setEmail($contactData->email)
             ->setPhone($contactData->phone)
             ->setIp($contactData->ip)

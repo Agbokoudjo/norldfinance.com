@@ -2,15 +2,17 @@ twig:
     file_name_pattern: '*.twig'
     charset: "UTF-8"
     globals:
-        NAME_SITE: "NORLD FINANCE"
+        NAME_SITE: "MONETRA FINANCE"
+        NAME_FIRST: MONETRA
+        NAME_SECOND: FINANCE
         FOUNDATION_CREATED_AT: "2010"
-        EMAIL_ADMIN: contact@norldfinance.com
+        EMAIL_ADMIN: support@monetrafinance.com
         PHONE_ADMIN: '+33 7 57 84 82 85'
         PHONE_ADMIN_2: +34 654 44 39 42
         LINK_WHATSAPP: https://api.whatsapp.com/send?phone=33757848285&amp;text=Hello!
         UPDATED_SITE: 03 Juin 2025
         AVAILABLE_LOCALES: 'fr,en,de,es,it,nl,pt'
-        BASE_HOST_URL: https://norldfinance.com
+        BASE_HOST_URL: https://monetrafinance.com
         ADRESSE: 123 Rue de la Finance,75001 Paris France
         SITE_CREATOR: INTERNATIONALES WEB SERVICES
         SITE_CREATOR_URL_LINKEDIN: "https://www.linkedin.com/in/internationales-web-services-120520193/"

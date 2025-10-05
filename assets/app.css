@@ -29,6 +29,10 @@
     /* Classes personnalisées pour les couleurs de fond basées sur les variables */
     --primary-custom-bg: var(--primary-color);
     --danger-custom-bg: var(--danger-color);
+    --secondary-blue: #0057A0; /* Une teinte légèrement plus claire pour les rayures */
+    --danger-color: #ea3249;
+    --animation-speed: 5s;     /* 🚨 Vitesse du flux (plus rapide pour être visible) */
+    --stripe-size: 50px;       /* Taille des rayures pour la densité */
 }
 body{
   font-size:1rem;
@@ -42,6 +46,8 @@ body{
     -ms-user-select: none;      /* Internet Explorer/Edge */
     user-select: none;          /* Standard */
 }
+
+
 strong,p.text-statitiscs-chiffre{
     color:#212529;
 }
@@ -58,26 +64,217 @@ strong,p.text-statitiscs-chiffre{
   text-align: center;
   overflow: hidden;
 }
-.navbar {
-  position: absolute; /* Positionne la navbar par rapport au conteneur parent (.hero-section ou <body>) */
-  width: 100%; 
-  top: 0; /* Positionne la navbar en haut */
-  left: 0; /* Positionne la navbar à gauche */
-  z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
-  background-color: rgba(255, 255, 255, 0.8) !important; /* Fond blanc semi-transparent rgba(255, 255, 255, 0.8)*/
-            /* Ou si vous voulez une navbar transparente sans fond, utilisez : */
-}
 .navbar-nav .nav-link{
   color:#00427E; /* RGB(0,66,126)*/
   font-size:1.25rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
 }
+.navbar {
+  position: absolute; /* Positionne la navbar par rapport au conteneur parent (.hero-section ou <body>) */
+  width: 100%; 
+  height:80px;
+  top: 0; /* Positionne la navbar en haut */
+  left: 0; /* Positionne la navbar à gauche */
+  z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Fond blanc semi-transparent rgba(255, 255, 255, 0.8)*/
+            /* Ou si vous voulez une navbar transparente sans fond, utilisez : */
+}
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 .navbar-brand img {
-   height: 50px; 
-   width: auto;
-   border:none;
-   border-color:none;
+  margin-right: 8px;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color:transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+      background-color:transparent;
+}
+
+ .logo-img {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      background: linear-gradient(135deg, #0057A0, #00d9ff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      animation: rotating 2s linear;
+    animation-iteration-count: infinite;
+    }
+.navbar-brand span#name_first{
+    color:var(--primary-color);
+}
+.navbar-brand span#name_second{
+    color:var(--danger-color);
+}
+.logo-animated {
+     font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      /* animation: breathe 6s ease infinite;  */
+      animation: opacityPulse 2s ease-out;
+    animation-iteration-count: infinite; 
+    opacity: 1;
+      display: inline-block;
+}
+.footer-logo{
+     animation: pulsate 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1;
+}
+/* Make the element pulse (grow large and small slowly) */
+/* Usage
+    .myElement {
+        animation: pulsate 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1; 
+    }
+*/
+@keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/* Make the element's opacity pulse*/
+/* Usage
+    .myElement {
+        animation: opacityPulse 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 0; 
+    }
+*/
+@keyframes opacityPulse {
+    0% {opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {opacity: 0.0;}
+}
+
+/* Make the element's background pulse. I call this alertPulse because it is red. You can call it something more generic. */
+/* Usage
+    .myElement {
+        animation: alertPulse 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1; 
+    }
+*/
+@keyframes navigationLinkPulse {
+    0% {background-color:  rgb(255, 255, 255); opacity: 1;}
+    50% {opacity: rgb(255, 255, 255); opacity: 0.75; }
+    100% {opacity:  rgb(255, 255, 255); opacity: 1;}
+}
+@keyframes alertPulse {
+    0% {background-color: #9A2727; opacity: 1;}
+    50% {opacity: red; opacity: 0.75; }
+    100% {opacity: #9A2727; opacity: 1;}
+}
+
+
+/* Make the element rotate infinitely. */
+/* 
+Usage
+    .myElement {
+        animation: rotating 3s linear infinite;
+    }
+*/
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+  @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes breathe {
+      0%, 100% { 
+        transform: scale(1);
+        filter: brightness(1);
+      }
+      50% { 
+        transform: scale(1.08);
+        filter: brightness(1.2);
+      }
+    }
+ @keyframes neonPulse {
+      0%, 100% {
+        text-shadow: 
+          0 0 5px #00d9ff,
+          0 0 10px #00d9ff,
+          0 0 15px #00d9ff;
+        opacity: 0.9;
+      }
+      50% {
+        text-shadow: 
+          0 0 10px #00d9ff,
+          0 0 20px #00d9ff,
+          0 0 30px #00d9ff,
+          0 0 40px #0057A0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes neonGlow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(0, 217, 255, 1),
+                    0 0 40px rgba(0, 87, 160, 0.5);
+      }
+    }
+ @keyframes rotate360 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+ @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+@keyframes pulseGlow {
+    0%, 100% { 
+    box-shadow: 0 0 10px rgba(0, 87, 160, 0.5);
+    transform: scale(1);
+    }
+    50% { 
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.8);
+    transform: scale(1.05);
+    }
 }
 .navbar-toggler-icon {
   filter: invert(1); /* Pour que l'icône du menu burger soit visible sur fond clair */

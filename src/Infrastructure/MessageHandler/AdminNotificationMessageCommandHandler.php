@@ -33,27 +33,42 @@ final class AdminNotificationMessageCommandHandler
 
     public function __invoke(AdminNotificationMessageCommand $message): void
     {
-        $uploadsDir = sprintf('%s/public/medias', $this->params->get('kernel.project_dir')); // chemin vers le dossier public
+        // Récupère l'adresse sécurisée (support@monetrafinance.com) et l'adresse du client
+        $secureSenderAndRecipient = $this->params->get('email.admin');
+        $clientEmail = $message->email;
 
+        // Chemin vers le dossier public
+        $uploadsDir = sprintf('%s/public/medias', $this->params->get('kernel.project_dir'));
+
+        // Crée le nouvel objet e-mail
         $email = (new TemplatedEmail())
-            ->from($message->email)
-            ->to($this->params->get('email.admin'))
-            ->replyTo($message->email)
+            // Règle de sécurité cruciale : Utilise l'adresse SMTP d'authentification (support@monetrafinance.com)
+            ->from($secureSenderAndRecipient)
+
+            // Définit le destinataire, qui est vous-même (support@monetrafinance.com)
+            ->to($secureSenderAndRecipient)
+
+            // Définit l'adresse de réponse pour que vous puissiez répondre au client directement.
+            ->replyTo($clientEmail)
+
+            // Définit l'objet de l'e-mail
             ->subject(sprintf('Nouvelle demande de prêt de %s %s', $message->lastname, $message->firstname))
             ->htmlTemplate('loanapplication/loan_request_notification.html.twig');
 
-        // 🖼️ Embeds des images
-        $photo1Cid = $email->embedFromPath("{$uploadsDir}/images/identity/{$message->identityphotoname1}", 'photo1.jpg');
-        $photo2Cid = $email->embedFromPath("{$uploadsDir}/images/identity/{$message->identityphotoname2}", 'photo2.jpg'); // ⚠️ correction: identityphotoname2
+        // 🖼️ Embeds des images (code inchangé)
+        $email->embedFromPath("{$uploadsDir}/images/identity/{$message->identityphotoname1}", 'photo1.jpg');
+        // Correction de l'erreur potentielle : assurez-vous que la variable est correcte
+        $email->embedFromPath("{$uploadsDir}/images/identity/{$message->identityphotoname2}", 'photo2.jpg');
 
-        // 📎 Attache le document PDF
+        // 📎 Attache le document PDF (code inchangé)
         $email->attachFromPath("{$uploadsDir}/documents/identity/{$message->identitydocumentname}", 'document_identité.pdf');
 
         // 💡 Context Twig
+        // Le contexte reste le même, il contient les données du client pour l'affichage
         $email->context([
             'lastname' => $message->lastname,
             'firstname' => $message->firstname,
-            'request_sender_email' => $message->email,
+            'request_sender_email' => $clientEmail, // L'e-mail du client est dans le contexte pour l'affichage
             'phone' => sprintf('%s %s', $message->phone->getCountryCode(), $message->phone->getNationalNumber()),
             'adresse' => $message->adresse,
             'country' => $message->country,
@@ -61,10 +76,15 @@ final class AdminNotificationMessageCommandHandler
             'montant' => $message->montant,
             'devise' => $message->devise,
             'duration' => $message->duration,
-            'subject'=>$message->subject,
+            'subject' => $message->subject,
             'consentcheckbox' => $message->consentcheckbox,
-            'NAME_SITE'=> $this->params->get('NAME_SITE')
+            'NAME_SITE' => $this->params->get('NAME_SITE'),
+            // // Ajout des CID pour les images embeddées si le template en a besoin (souvent le cas)
+            // 'photo1Cid' => $photo1Cid,
+            // 'photo2Cid' => $photo2Cid,
         ]);
+
+        // Envoi de l'e-mail
         $this->mailer->send($email);
     }
 }

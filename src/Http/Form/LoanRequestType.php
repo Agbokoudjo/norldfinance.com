@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Http\Form;
 
 use libphonenumber\PhoneNumberFormat;
@@ -40,6 +43,8 @@ final class LoanRequestType extends AbstractType
                 'autocomplete' => 'on', // corrigé
                 'minlength' => 6,       // corrigé
                 'maxlength' => 200,     // corrigé
+                'min-length' => 6,
+                'max-length' => 200,
                 'data-pattern' => '^[\p{L}\p{M}]+$',
                 'data-eg-await' => 'AGBOKOUDJO',
                 'data-escapestrip-html-and-php-tags' => true,
@@ -56,6 +61,8 @@ final class LoanRequestType extends AbstractType
                 'autocomplete' => 'on', // corrigé
                 'minlength' => 6,       // corrigé
                 'maxlength' => 200,     // corrigé
+                'min-length' => 6,
+                'max-length' => 200,
                 'data-pattern' => '^[\p{L}\p{M}\s\']+$',
                 'data-eg-await' => 'Hounha Franck',
                 'data-escapestrip-html-and-php-tags' => true,
@@ -74,7 +81,9 @@ final class LoanRequestType extends AbstractType
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
                     'data-eg-await'=> 'franckagbokoudjo301@gmail.com',
-                    'data-type'=>'email'
+                    'data-type'=>'email',
+                    'min-length' => 6,
+                    'max-length' => 180,
                 ]
             ])
             ->add('phone',  PhoneNumberType::class, [
@@ -91,6 +100,8 @@ final class LoanRequestType extends AbstractType
                     'autocomplete' => 'on', 
                     'minlength' => 8,      
                     'maxlength' => 80,
+                    'min-length' => 8,
+                    'max-length' => 80,
                     'data-type'  =>'tel'   
                 ]
             ])
@@ -99,14 +110,16 @@ final class LoanRequestType extends AbstractType
                 'label_attr' => ['class' => 'form-label fw-bold'],
                 'required' => true,
                 "alpha3"=>true,
-            'choice_translation_domain'=>false,
+                'choice_translation_domain'=>false,
                 'attr' => [
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-change' => 'change',
-                'data-event-validate-blur' => 'blur',
+                 'data-event-validate-blur' => 'blur',
                     'autocomplete' => 'on', // corrigé
                     'minlength' => 3,      // corrigé
                     'maxlength' => 150,     // corrigé,
+                    'min-length' => 3,
+                    'max-length' => 150,
                     'data-pattern'=> '^[\p{L}\p{M}\s\'-]+$',
                 'class' => 'form-control select2 form-select form-select-lg',
                 'data-placeholder'=> 'country.placeholder',
@@ -126,7 +139,9 @@ final class LoanRequestType extends AbstractType
                     'autocomplete' => 'on', // corrigé
                     'minlength' => 2,      // corrigé
                     'maxlength' => 150,     // corrigé,
-                    'data-pattern' => '^[\p{L}\p{M}0-9\s\'-]+$'
+                'min-length' => 2,      // corrigé
+                'max-length' => 150,     // corrigé,
+                'data-pattern' => '^[\p{L}\p{M}0-9\s\'-]+$'
                 ]
             ])
             ->add('adresse', TextType::class, [
@@ -147,7 +162,9 @@ final class LoanRequestType extends AbstractType
                     'autocomplete' => 'on', // corrigé
                     'minlength' => 2,      // corrigé
                     'maxlength' => 150,     // corrigé,
-                    'data-pattern' => '^[\p{L}\p{N}\p{M}\s\',.\-()/#]+$'
+                'min-length' => 2,      // corrigé
+                'max-length' => 150,     // corrigé,
+                'data-pattern' => '^[\p{L}\p{N}\p{M}\s\',.\-()/#]+$'
                 ]
             ])
             ->add('montant',NumberType::class,[
@@ -208,7 +225,9 @@ final class LoanRequestType extends AbstractType
                     'autocomplete' => 'on', // corrigé
                     'minlength' => 10,      // corrigé
                     'maxlength' => 255,     // corrigé
-                    'data-eg-await' => $this->translator->trans('subject.placeholder'),
+                'min-length' => 10,      // corrigé
+                'max-length' => 255,     // corrigé
+                'data-eg-await' => $this->translator->trans('subject.placeholder'),
                     'data-escapestrip-html-and-php-tags' => true,
                     'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
@@ -242,11 +261,11 @@ final class LoanRequestType extends AbstractType
                     'data-unity-max-size-file' => 'MiB',
                     'data-maxsize-file' => 5,
                     'data-allowed-mime-type-accept' => 'image/jpg,image/png,image/jpeg',
-                'data-min-width' => 50,
-                'data-max-width' => 800,
-                'data-min-height' => 80,
-                'data-max-height' => 800,
-                'accept'=> 'image/jpg,image/png,image/jpeg'
+                    'data-min-width' => 50,
+                    'data-max-width' => 800,
+                    'data-min-height' => 80,
+                    'data-max-height' => 800,
+                    'accept'=> 'image/jpg,image/png,image/jpeg'
                 ]
             ])
             ->add('identityphotofile2', FileType::class, [
@@ -261,10 +280,10 @@ final class LoanRequestType extends AbstractType
                     'data-unity-max-size-file' => 'MiB',
                     'data-maxsize-file' => 5,
                     'data-allowed-mime-type-accept' => 'image/jpg,image/png,image/jpeg',
-                'data-min-width' => 50,
-                'data-max-width' => 800,
-                'data-min-height' => 80,
-                'data-max-height' => 800,
+                    'data-min-width' => 50,
+                    'data-max-width' => 800,
+                    'data-min-height' => 80,
+                    'data-max-height' => 800,
                     'accept'=> 'image/jpg,image/png,image/jpeg'
                 ]
             ])
@@ -291,7 +310,7 @@ final class LoanRequestType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => LoanRequestModel::class,
-            'csrf_protection' => true, // Généralement true par défaut, mais peut être explicité
+            'csrf_protection' => true, 
             'csrf_field_name' => '_token',
             'csrf_token_id'   => 'loan_request_item',
             'translation_domain' => 'LoanRequest'

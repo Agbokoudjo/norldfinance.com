@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Infrastructure\Repository;
 
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,6 +15,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 final class ContactFormRequestRepository extends ServiceEntityRepository implements ContactFormRepositoryInterface
 {
     use CrudTrait;
+    
     public function __construct(
         ManagerRegistry $registry
     ) {

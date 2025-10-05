@@ -58,8 +58,8 @@ final class ContactFormModel
         #[Assert\Length(
             min: 10, 
              max: 255,
-            minMessage: 'validator.contact_form.email.length',
-            maxMessage: 'validator.contact_form.email.length'
+            minMessage: 'validator.contact_form.subject.not_blank',
+            maxMessage: 'validator.contact_form.subject.not_null'
              )]
         #[Assert\Regex(
             pattern: "/^[\p{L}\p{M}\p{N}\s\.,;:!?\'\"()\-]+$/u",

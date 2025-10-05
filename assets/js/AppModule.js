@@ -3,11 +3,8 @@ import jQuery from "../vendor/jquery/jquery.index.js";
 import Swal from "sweetalert2"
 window.jQuery = window.$ = jQuery;
 import {
-    Logger, httpFetchHandler,
-    HttpResponse, handleErrorsManyForm,
-    HttpFetchError,
-    addParamToUrl,
-    mapStatusToResponseType,
+    Logger, 
+    handleErrorsManyForm,
     FieldValidationFailed, FormValidate,
     addHashToIds,FieldValidationSuccess,
     addErrorMessageFieldDom,
@@ -55,7 +52,10 @@ export class AppModule {
      * @static
      */
     static #app_module = null;
-    constructor() { Logger.log('AppModule initializer:',this) }
+    constructor()
+     {
+         Logger.log('AppModule initializer:',this);
+    }
     /**
      * Récupère l'instance unique de AppModule.
      * @returns {AppModule}
@@ -65,6 +65,7 @@ export class AppModule {
         return AppModule.#app_module;
     }
     initialize() {
+
          // Console log pour vérifier que la fonction est bien appelée
         Logger.log("AppModule.initialize():","AppModule.initialize() called due to Turbo/Load event.");
         console.log("AppModule.initialize():","AppModule.initialize() called due to Turbo/Load event.")
@@ -74,7 +75,7 @@ export class AppModule {
         this.initCounters();
         this.toggleAOSOnElements();
         this.formSubmitHander();
-        this.formValidator();
+        //this.formValidator();
         this.setup_select2();
         this.updateCheckbox();
         this.formFormattingEvent();
@@ -307,19 +308,19 @@ export class AppModule {
         }
         const form_current = formValidate.form;
         const $submitButton = jQuery('button[type="submit"]', form_current);
-         const idsBlur = addHashToIds(formValidate.idChildrenUsingEventBlur).join(",");
+        const idsBlur = addHashToIds(formValidate.idChildrenUsingEventBlur).join(",");
         const idsInput = addHashToIds(formValidate.idChildrenUsingEventInput).join(",");
-          const idsChange = addHashToIds(formValidate.idChildrenUsingEventChange).join(",");
-         form_current.on("blur", `${idsBlur}`, async (event) => {
-        const target = event.target;
-        if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
-            await formValidate.validateChildrenForm(event.target)
-        }
+        const idsChange = addHashToIds(formValidate.idChildrenUsingEventChange).join(",");
+        form_current.on("blur", `${idsBlur}`, async (event) => {
+            const target = event.target;
+            if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
+                await formValidate.validateChildrenForm(event.target)
+            }
              Logger.log(event);
          })
         form_current.on(FieldValidationFailed, (event) => {
             event.preventDefault();
-            event.stopPropagation();
+           
             const data = (event.originalEvent).detail;
             Logger.error('failled',data);
             addErrorMessageFieldDom(jQuery(data.targetChildrenForm), data.message)
@@ -329,7 +330,7 @@ export class AppModule {
         })
         form_current.on(FieldValidationSuccess, (event) => {
              event.preventDefault();
-            event.stopPropagation();
+            
             const data = (event.originalEvent).detail;
             Logger.log('success validate',data);
             $submitButton.removeAttr('disabled');
@@ -358,22 +359,39 @@ export class AppModule {
     }
 
     formSubmitHander() {
-        /**
-         * @var {string}
-         */
-        let originalText;
-        jQuery(document).on('submit', 'form.form-validator', async (event) => {
-            event.preventDefault();
-             event.stopPropagation();
-            const form = jQuery(event.target);
-            const $submitButton = jQuery('button[type="submit"]', form);
-            originalText = $submitButton.text();
-            $submitButton.prop('disabled', true);
-            $submitButton.text(translation.trans("submitButton"));
+        this.initializeTurboFormHandler();
+    }
+
+
+    /**
+     * Fonction principale qui initialise les écouteurs d'événements Turbo.
+     */
+    initializeTurboFormHandler() {
     
+         /**
+         * @var {Map<HTMLFormElement,string>}
+         */
+        let originalButtonTexts=new Map();
+        // =================================================================
+        // 1. ÉVÉNEMENT DE DÉPART (turbo:submit-start) : Gestion du Chargement
+        // =================================================================
+        jQuery(document).on('turbo:submit-start', 'form.form-validator', function (event) {
+            const $form = jQuery(this);
+            const $submitButton = $form.find('button[type="submit"]');
+            if ($submitButton.length) {
+                // Stocke le texte original du bouton
+                originalButtonTexts.set($form[0], $submitButton.text());
+
+                // Désactive le bouton et met le texte de chargement
+                $submitButton.prop('disabled', true);
+                // NOTE: Assurez-vous que 'translation.trans("submitButton")' est la bonne traduction pour "Envoi en cours..."
+                $submitButton.text(translation.trans("submitButton")); 
+            }
+        
+            // Affiche votre SweetAlert de "Message avant l'envoi des données"
             let timerInterval;
             Swal.fire({
-                title: `${translation.trans("messageBeforeSendData_title")}`,
+                title: translation.trans("messageBeforeSendData_title"),
                 icon: 'info',
                 html: `<div class="alert alert-info" role="alert">
                         ${translation.trans("messageBeforeSendData_content")}
@@ -385,7 +403,7 @@ export class AppModule {
                 color: "#fff",
                 timer: 60000,
                 timerProgressBar: true,
-                didOpen: () => {
+                 didOpen: () => {
                     document.querySelector('.swal2-container').style.zIndex = '99999';
                     Swal.showLoading();
                     const timerElement = Swal.getPopup()?.querySelector("b");
@@ -395,7 +413,7 @@ export class AppModule {
                         }
                     }, 100);
                 },
-                willClose: () => clearInterval(timerInterval),
+                 willClose: () => clearInterval(timerInterval),
                 showClass: {
                     popup: 'animate__animated animate__fadeInUp animate__faster'
                 },
@@ -407,102 +425,108 @@ export class AppModule {
                     timerProgressBar:"bg-info"
                 }
             });
-            try {
-                const response_data = await httpFetchHandler({
-                    url: addParamToUrl(window.location.href, { contact_form: true }),
-                    data: new FormData(form.get()[0]),
-                    methodSend: form.attr('method')?.toUpperCase() || "POST",
-                    timeout:60000,
-                    retryCount:2,
-                    responseType: "json"
-                });
-    
-                if (mapStatusToResponseType(response_data.status) === "error") {
-                    throw response_data;
+         });
+
+
+        // =================================================================
+        // 2. ÉVÉNEMENT DE FIN (turbo:submit-end) : Gestion de la Réponse JSON
+        // =================================================================
+        jQuery(document).on('turbo:submit-end', 'form.form-validator', async function (event) {
+            const $form = jQuery(this);
+            const formElement = $form[0];
+            const $submitButton = $form.find('button[type="submit"]');
+            const fetchResponse = event.detail.fetchResponse;
+            console.log(event.detail)
+            // Ferme le SweetAlert de chargement
+            Swal.close();
+            
+            // --- Réactivation du bouton ---
+            if ($submitButton.length) {
+                $submitButton.prop('disabled', false);
+                const originalText = originalButtonTexts.get(formElement);
+                if (originalText) {
+                    $submitButton.text(originalText);
+                    originalButtonTexts.delete(formElement);
                 }
-    
-                const data = response_data.data;
-                Swal.close();
+            }
+
+        // --- Vérification et traitement de la réponse ---
+        if (!fetchResponse || !fetchResponse.response) {
+             // Erreur réseau ou avant la réponse
+             Swal.fire({
+                 title: "Erreur réseau",
+                 icon: "error",
+                 html: `<div class="alert alert-danger" role="alert">Erreur de connexion ou timeout.</div>`,
+                 ...baseSweetAlert2Options, showCloseButton: true
+             });
+             return;
+        }
+
+        try {
+            const responseStatus = fetchResponse.response.status;
+            // Tente de lire la réponse JSON
+            const data = await fetchResponse.response.json();
+            
+            if (responseStatus === 201) {
+                // --- CAS DU SUCCÈS (HTTP 201 Created) ---
+                
                 Swal.fire({
                     title: data.title,
                     icon: "success",
                     html: `<div class="alert alert-success" role="alert">${data.message}</div>`,
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
                     timer: 40000,
                     showConfirmButton: false,
                     ...baseSweetAlert2Options,
-                      showCloseButton: true
+                    showCloseButton: true
                 });
-                form.get()[0].reset();
-                $submitButton.text(originalText);
-                Logger.log(originalText)
-                $submitButton.prop('disabled', false);
-                $submitButton.removeAttr('disabled');
-                return;
-            } catch (error) {
-                Logger.error('fetch result error',error)
-                if (error instanceof HttpResponse) {
-                    const errors_data = error.data;
-                    let message = "une erreur s'est produite";
-                    let title="Erreur"
-                    if (error.status === 422) {
-                        message = errors_data.details;
-                        title = errors_data.title;
-                        handleErrorsManyForm(
-                            form.attr('name') || '',
-                            form.attr('id') || '',
-                            errors_data.violations || {}
-                        );
-                    }
-                    else if (error.status === 404) {
-                        message =data;
-                        title = `Erreur 404 : Page introuvable pour Url ${window.location.href}`;
-                    }
-                    else {
-                        message = errors_data;
-                    }
-                    Swal.close();
-                    Swal.fire({
-                            title: title,
-                            icon: "error",
-                            html: `<div class="alert alert-danger" role="alert">${message}</div>`,
-                            allowOutsideClick: false,
-                            allowEscapeKey: false,
-                            showConfirmButton: false,
-                             showCloseButton: true,
-                            ...baseSweetAlert2Options
-                    });
-                    originalText="Réessayer"
-                Logger.log(originalText)
-                $submitButton.prop('disabled', false);
-                $submitButton.removeAttr('disabled');
-                    return;
-                }
-    
-                if (error instanceof HttpFetchError) {
-                    Swal.close();
-                    Swal.fire({
-                        title: "Erreur réseau",
-                        icon: "error",
-                        html: `<div class="alert alert-danger" role="alert">${error.message}</div>`,
-                        allowOutsideClick: false,
-                        allowEscapeKey: false,
-                        showConfirmButton: false,
-                        ...baseSweetAlert2Options,
-                         showCloseButton: true
-                    });
-                }
-                originalText="Réessayer"
-                Logger.log(originalText)
-                $submitButton.prop('disabled', false);
-                $submitButton.removeAttr('disabled');
+                // Réinitialise le formulaire
+                formElement.reset();
                 
-            } finally {
-                return;
+            } else if (responseStatus === 422) {
+                // --- CAS DES ERREURS DE VALIDATION (HTTP 422 Unprocessable Entity) ---
+                
+                Swal.fire({
+                    title: data.title,
+                    icon: "error",
+                    html: `<div class="alert alert-danger" role="alert">${data.details}</div>`,
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    ...baseSweetAlert2Options
+                });
+
+                // Affiche les erreurs spécifiques à chaque champ
+                handleErrorsManyForm(
+                    data.formName || $form.attr('name') || '',
+                    $form.attr('id') || '',
+                    data.violations || {}  
+                );
+                
+            } else {
+                // --- AUTRES ERREURS HTTP (404, 500, etc.) ---
+                Swal.fire({
+                    title: `Erreur ${responseStatus}`,
+                    icon: "error",
+                    html: `<div class="alert alert-danger" role="alert">Le serveur a retourné une erreur inattendue.</div>`,
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    ...baseSweetAlert2Options
+                });
             }
-        });
-    }
+
+        } catch (error) {
+            // Erreur de parsing JSON ou autre problème de promesse
+            Swal.fire({
+                title: "Erreur de traitement",
+                icon: "error",
+                html: `<div class="alert alert-danger" role="alert">Impossible de lire la réponse du serveur (JSON invalide).</div>`,
+                showConfirmButton: false,
+                showCloseButton: true,
+                ...baseSweetAlert2Options
+            });
+        }
+    });
+}
+
     setup_select2=()=> {
         jQuery('select:not([data-sonata-select2="false"])', document).each((index, element) => {
             const select = jQuery(element);

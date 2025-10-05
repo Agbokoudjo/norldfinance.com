@@ -1,6 +1,7 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
     secret: '%env(APP_SECRET)%'
+   
     # Note that the session will be started ONLY if you read or write from it.
     session: true
 
@@ -17,3 +18,14 @@ when@prod:
         http_cache: true
         router:
             default_uri: '%env(BASE_HOST)%'
+
+when@dev:
+    framework:
+        http_cache: false
+        assets:
+            base_urls: '%env(APP_URL_DEV)%'
+        router:
+            default_uri: '%env(APP_URL_DEV)%'
+        trusted_hosts: ['^.+\.ngrok-free\.app$','noldfinance.local']
+        trusted_proxies: ['127.0.0.1', 'REMOTE_ADDR','ngrok-agent-ips','3.125.209.94:443','41.85.162.158']
+        trusted_headers: ['x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto', 'x-forwarded-port', 'x-forwarded-prefix']

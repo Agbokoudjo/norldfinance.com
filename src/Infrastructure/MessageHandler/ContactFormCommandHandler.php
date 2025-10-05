@@ -1,23 +1,26 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Infrastructure\MessageHandler;
 
-use Symfony\Component\Messenger\MessageBusInterface;
-use App\Application\UseCase\Command\ContactMessageCommand;
-use App\Application\UseCase\Command\SendContactEmailCommand;
-use App\Application\UseCase\CommandHandler\ContactMessagePersistCommandHandler;
-use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 use Symfony\Component\Messenger\Envelope;
+use Symfony\Component\Messenger\MessageBusInterface;
+use App\Application\UseCase\Command\ContactFormCommand;
+use Symfony\Component\Messenger\Attribute\AsMessageHandler;
+use App\Application\UseCase\Command\SendContactEmailCommand;
 use Symfony\Component\Messenger\Stamp\DispatchAfterCurrentBusStamp;
+use App\Application\UseCase\CommandHandler\ContactFormPersistCommandHandler;
 
-#[AsMessageHandler(fromTransport: 'async',handles: ContactMessageCommand::class)]
-final class ContactMessageCommandHandler
+#[AsMessageHandler(fromTransport: 'async',handles: ContactFormCommand::class)]
+final class ContactFormCommandHandler
 {
     public function __construct(
         private readonly MessageBusInterface $messageBus,
-        private ContactMessagePersistCommandHandler $persistHandler
+        private ContactFormPersistCommandHandler $persistHandler
     ) {}
 
-    public function __invoke(ContactMessageCommand $data): void
+    public function __invoke(ContactFormCommand $data): void
     {
         $this->persistHandler->hander($data);
         // Dispatch du message d'envoi de notification à l'admin

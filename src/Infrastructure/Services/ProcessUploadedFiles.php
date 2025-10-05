@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This file is part of the project by AGBOKOUDJO Franck.
  *
@@ -52,6 +54,7 @@ final class ProcessUploadedFiles
          * @var string $type =image or document
         */
         foreach ($uploadedFiles as $type=> $uploadedFile) {
+            
             $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
             $newFilename = $originalFilename . '-' . uniqid() . '.' . $uploadedFile->guessExtension();
             $uploadedFile->move($tempDir, $newFilename);
@@ -59,6 +62,7 @@ final class ProcessUploadedFiles
         }
         return $fileNames ;
     }
+
     public function removeFiles(array $filesPath):void{
         foreach($filesPath as $file_as_remove){
             if($this->filesystem->exists($file_as_remove)){$this->filesystem->remove($file_as_remove);}

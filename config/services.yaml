@@ -1,9 +1,10 @@
 parameters:
-    router.request_context.host: 'norldfinance.com'
+    router.request_context.host: 'monetrafinance.com'
     router.request_context.scheme: 'https'
     asset.request_context.secure: true
-    email.admin: norldsite8@gmail.com
-    NAME_SITE: 'NORLD FINANCE'
+    email.admin: support@monetrafinance.com 
+    email.sender: support@monetrafinance.com
+    NAME_SITE: 'MONETRA FINANCE'
     locales:  
             - fr
             - en
@@ -27,6 +28,7 @@ services:
             $twig: '@twig'
         tags:
             - { name: kernel.event_subscriber }
+            
     App\Http\EventSubscriber\LocaleSubscriber:
          tags: [kernel.event_subscriber]
     

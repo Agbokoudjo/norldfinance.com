@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  * This file is part of the project by AGBOKOUDJO Franck.
  *
@@ -13,7 +16,7 @@
 
 namespace App\Application\UseCase\Command;
 
-use App\Application\UseCase\Command\ContactMessageCommand;
+use App\Application\UseCase\Command\ContactFormCommand;
 
 /**
  * @author AGBOKOUDJO Franck <franckagbokoudjo301@gmail.com>
@@ -21,6 +24,11 @@ use App\Application\UseCase\Command\ContactMessageCommand;
  */
 final class SendContactEmailCommand 
 {
-    public function __construct(private readonly ContactMessageCommand $contactCommandData){ }
-    public function getContactData(): ContactMessageCommand{return $this->contactCommandData;}
+    public function __construct(private readonly ContactFormCommand $contactCommandData){ }
+
+
+    public function getContactFormData():ContactFormCommand{
+
+        return $this->contactCommandData ;
+    }
 }

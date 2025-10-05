@@ -28,8 +28,11 @@ pages.privacy.policy:
     defaults:
         template:  'pages/privacy_policy.html.twig'
         statusCode: 200
-        maxAge:    86400
-        sharedAge: 86400
+        maxAge:    15778800
+        smaxAge:    15778800
+        sharedAge: 15778800
+        mustRevalidate: false
+        lastModified: '2020-01-01'
         private: false
         public : true
         headers:
@@ -49,11 +52,15 @@ pages.terms.and.conditions:
     defaults:
         template:  'pages/terms_and_conditions.html.twig'
         statusCode: 200
-        maxAge:    86400
-        sharedAge: 86400
+        maxAge:    15778800
+        smaxAge:   15778800
+        sharedAge: 15778800
+        mustRevalidate: false
+        lastModified: '2020-01-01'
         private: false
         public : true
         headers:
             Content-Type: 'text/html'
+            
 presta_sitemap:
   resource: "@PrestaSitemapBundle/config/routing.yml"

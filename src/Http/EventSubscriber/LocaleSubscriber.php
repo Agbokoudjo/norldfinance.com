@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 // src/EventSubscriber/LocaleSubscriber.php
 namespace App\Http\EventSubscriber;
 

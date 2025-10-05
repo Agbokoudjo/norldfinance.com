@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Http\Form;
 
 use libphonenumber\PhoneNumberFormat;
@@ -10,16 +13,21 @@ use Symfony\Component\Form\{FormBuilderInterface,AbstractType};
 use Symfony\Component\Form\Extension\Core\Type\{TextType, EmailType, TextareaType, TelType};
 
 final class ContactFormType extends AbstractType{
+
     public function __construct(private TranslatorInterface $translator) {}
+
     public function buildForm(FormBuilderInterface $builder, array $options) {
+
         $builder->add('fullname',TextType::class,[
             'label'=>'fullname',
             'label_attr'=>['class'=> 'form-label fw-bold'],
             'attr'=>[
                 'placeholder' => 'Ex:Jean Dupond',
                 'autocomplete' => 'on', // corrigé
-                'minlength' => 6,       // corrigé
-                'maxlength' => 200,     // corrigé
+                'minlength' => 6,      
+                'maxlength' => 200,
+                'min-length' => 6,
+                'max-length' => 200,
                 'data-pattern' => '^[\p{L}\p{M}\s\']+$',
                 'data-eg-await'=> 'AGBOKOUDJO Franck',
                 'data-escapestrip-html-and-php-tags'=>true,
@@ -38,9 +46,12 @@ final class ContactFormType extends AbstractType{
                 'data-escapestrip-html-and-php-tags' => false,
                 'data-event-validate-blur' => 'blur',
                 'data-event-validate-input' => 'input',
-                'data-type'=>'email'
+                'data-type'=>'email',
+                'min-length' => 6,
+                'max-length' => 180,
             ]
-            ])
+            ]
+            )
             ->add('phone',  PhoneNumberType::class, [
                 'label' => 'phone',
                 'label_attr' => ['class' => 'form-label fw-bold'],
@@ -55,6 +66,8 @@ final class ContactFormType extends AbstractType{
                     'autocomplete' => 'on',
                     'minlength' => 8,
                     'maxlength' => 80,
+                    'min-length' => 8,
+                    'max-length' => 80,
                     'data-type'  => 'tel'
                 ]
             ])
@@ -64,13 +77,15 @@ final class ContactFormType extends AbstractType{
                 'attr' => [
                     'placeholder' => 'subject.placeholder',
                     'autocomplete' => 'on', // corrigé
-                     'minlength' => 10,      // corrigé
-                     'maxlength' => 255,     // corrigé
+                     'minlength' => 10,     
+                     'maxlength' => 255,
+                    'min-length' => 10,
+                    'max-length' => 255,
                 'data-eg-await' => $this->translator->trans('subject.placeholder'),
                 'data-escapestrip-html-and-php-tags' => true,
                 'data-event-validate-blur' => 'blur',
                 'data-event-validate-input' => 'input',
-                'data-pattern' => "^[\p{L}\p{M}\p{N}\s\.,!'\"()\-]+$" // Regex unicode compatible
+                'data-pattern' => "^[\p{L}\p{M}\p{N}\s\.,!'&quot()\-]+$" // Regex unicode compatible
             ]
             ])
             ->add('content', TextareaType::class, [
@@ -79,13 +94,16 @@ final class ContactFormType extends AbstractType{
                 'attr' => [
                     'placeholder' => 'content.placeholder',
                     'autocomplete' => 'on', // 'true' n’est pas une valeur valide ici
-                'minlength' => 20, // corriger la faute de frappe (min-lenght)
-                'maxlength' => 20000, // corriger la faute de frappe (max-lenght)
+                    'minlength' => 20, 
+                    'maxlength' => 20000,
+                'min-length' => 20,
+                'max-length' => 20000,
                 'data-escapestrip-html-and-php-tags' => 'true', // custom attribute (JS)
                 'data-event-validate-blur' => 'blur',
                     'data-event-validate-input' => 'input',
-                'data-pattern' => "^[\p{L}\p{M}\p{N}\s.,;:!?\"'’()\[\]\-–—_€$%°\n\r]+$", // Corrigé
-                    'rows' => 5
+                'data-pattern' => "^[\\p{L}\\p{M}\\p{N}\\s.,:?&quot;’—_€$%°\\n\\r]+$",
+
+                'rows' => 5
                 ]
             ])
 
@@ -96,7 +114,8 @@ final class ContactFormType extends AbstractType{
         parent::configureOptions($resolver);
         $resolver->setDefaults([
             'data_class'=>ContactFormModel::class,
-            'translation_domain'=> 'ContactForm'
+            'translation_domain'=> 'ContactForm' ,
+            'csrf_protection' => true,
         ]);
     }
 }

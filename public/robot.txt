@@ -28,4 +28,4 @@ Disallow: /composer.lock
 Disallow: /composer.yaml
 
 # Sitemap(s)
-Sitemap: https://norldfinance.com/sitemap.xml
+Sitemap: https://monetrafinance.com/sitemap.xml

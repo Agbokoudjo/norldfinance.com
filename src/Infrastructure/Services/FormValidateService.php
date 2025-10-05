@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Services;
+namespace App\Infrastructure\Services;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -8,13 +8,13 @@ use App\Infrastructure\Helper\ProcessingErrorFormHandleInterface;
 class FormValidateService implements ProcessingErrorFormHandleInterface
 {
     public function __construct(private readonly TranslatorInterface $translator){}
-    public function handleFormData(FormInterface $dataform,
-        ?string $domain = null,
-        ?string $locales = null): array
+
+    public function handleFormData(FormInterface $dataform,?string $domain = null,?string $locales = null): array
     {
 
         return $this->getErrorMessages($dataform,$domain,$locales);
     }
+
     private function getErrorMessages(
         FormInterface $form,
         ?string $domain=null,

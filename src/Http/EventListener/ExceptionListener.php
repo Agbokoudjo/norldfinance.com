@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  * This file is part of the project by AGBOKOUDJO Franck.
  *
@@ -46,12 +49,15 @@ final class ExceptionListener
 
         // Requête Ajax
         if ($request->isXmlHttpRequest()) {
+
             $event->setResponse(new JsonResponse([
                 'message' => "Une erreur est survenue. Merci de réessayer plus tard.",
             ], $statusCode, $headers));
             return;
         }
+
         if($statusCode ===Response::HTTP_NOT_FOUND || $statusCode === Response::HTTP_FORBIDDEN){
+
             $event->setResponse(new RedirectResponse($this->router->generate('home')));
         }
     }

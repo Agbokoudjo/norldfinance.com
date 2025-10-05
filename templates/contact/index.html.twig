@@ -42,7 +42,7 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
     </div>
 </section>
 
-    <section id="contact-form-section" class="contact-form-section py-5 bg-white">
+    <section id="contact-form-section" class="contact-form-section py-5 bg-white" data-turbo="true">
         <div class="container py-md-5">
             <div class="row justify-content-center mb-5 text-center">
                 <div class="col-lg-8">
@@ -53,7 +53,7 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
                     </h2>
                     <p class="lead text-muted"
                        data-aos="fade-up"
-                       data-aos-duration="1200"
+                       data-aos-duration="1200" 
                        data-aos-delay="200">
                         {{ "contactFormSection.p" |trans([],"ContactForm",app.locale)|raw }}
                     </p>
@@ -64,8 +64,8 @@ conseiller crédit consommation, prêt personnel, crédit professionnel, contact
                      data-aos="fade-up"
                      data-aos-duration="1000"
                      data-aos-delay="300">
-                    <div class="contact-form-wrapper p-4 p-md-5 rounded-3 shadow-lg bg-light">
-                        {{ form_start(form, { attr: { 'data-turbo-submits-without-reload':"false",class: 'form-validator', id: form.vars.name, role: 'form'}}) }}
+                    <div class="contact-form-wrapper p-4 p-md-5 rounded-3 shadow-lg bg-light" data-turbo="true">
+                        {{ form_start(form, { attr: { 'data-turbo-submits-without-reload':"true",class: 'form-validator', id: form.vars.name, role: 'form'}}) }}
                               <div class="mb-3">
                                 {{ form_row(form.fullname) }}
                             </div>

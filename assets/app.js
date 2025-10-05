@@ -11,6 +11,7 @@ jQuery(window).on("load", () => {
     appModule.initialize()
 });
 jQuery(function app() {
+ 
     window.NorldFinanceApp = appModule
     jQuery(document).on("turbo:load", () =>
         appModule.initialize()
@@ -49,6 +50,15 @@ jQuery(function app() {
     })
     Turbo.start();
 })
+
+// jQuery(function name_site($) {
+//   $(".logo-animated").each(function() {
+//     let text = $(this).text();
+//     let colored = text.replace(/([EA])/g, "<span style='color: var(--danger-color);'>$1</span>");
+//     $(this).html(colored);
+//   });
+// });
+
 
 
 function autoApplyTurboFrame(frameId = 'main_content') {
@@ -94,7 +104,7 @@ function autoApplyTurboFrame(frameId = 'main_content') {
 
 
 
- 
+
   
 
 

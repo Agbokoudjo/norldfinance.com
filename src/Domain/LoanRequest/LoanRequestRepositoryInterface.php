@@ -1,8 +1,11 @@
 <?php
+
+declare(strict_types=1);
 namespace App\Domain\LoanRequest;
 
-use App\Domain\SharedRepository\EntityRepositoryInterface;
+use App\Domain\LoanRequest\LoanRequest;
 
-interface LoanRequestRepositoryInterface extends EntityRepositoryInterface{
-    
+interface LoanRequestRepositoryInterface {
+
+    public function add(LoanRequest $entity, bool $flush = false): void;
 }

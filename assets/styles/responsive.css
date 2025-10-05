@@ -17,6 +17,17 @@
         width: 90%; /* Encore un peu plus large */
     }
 }
+@media (max-width: 768.99px){
+   .logo-animated {
+    font-size: 18px;
+    letter-spacing: 0.75px;
+   }
+}
+@media (max-width: 992.99px){
+    .navigation-link{
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+}
 /* ----------------------------------------------------------- */
 /* AJUSTEMENTS POUR LES GRANDS ÉCRANS DE HAUTEUR (DESKTOP)   */
 /* (y compris les grands laptops, moniteurs externes, etc.)   */

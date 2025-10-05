@@ -1,25 +1,31 @@
 <header>
     <nav class="navbar navbar-expand-lg">
        <div class="container-fluid d-flex justify-content-between align-items-center">
-          <a class="navbar-brand aos-item" href="{{path('home')}}"
-           data-aos="fade-right"
-           data-aos-duration="2000"
+          <a class="navbar-brand aos-item  d-flex align-items-center" 
+              href="{{ path('home') }}"
+              data-aos="fade-right"
+            data-aos-duration="2000"
             data-aos-delay="500"
-          >
-            <img src="{{asset('img/logo.svg')}}" alt="NorldFinance Logo" 
-            class="d-block img-fluid">
-          </a>
+              >
+          <img src="{{ asset('img/LOGO5.jpg') }}" alt="{{ NAME_SITE }}" 
+              class="d-block img-fluid me-2 logo-glow logo-img" height="50" width="50">
+            <p class="d-flex flex-column">
+               <span class="logo-animated" id="name_first">{{ NAME_FIRST }}</span>
+               <span class="logo-animated" id="name_second">{{ NAME_SECOND }}</span>
+            </p>
+        </a>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-white" style="color:#ffff;"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end aos-item"
+          <div class="collapse navbar-collapse justify-content-end aos-item navigation-link"
           data-aos="fade-left"
            data-aos-duration="2000"
             data-aos-delay="500"
                 data-aos-once="false"
            id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navigation">
               <li class="nav-item">
                 <a class="nav-link" href="{{path('home')}}">{{ 'home' |trans(arguments = [], domain = "header", locale = app.locale) }}</a>
               </li>

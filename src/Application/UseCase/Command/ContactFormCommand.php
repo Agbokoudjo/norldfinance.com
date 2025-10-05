@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This file is part of the project by AGBOKOUDJO Franck.
  *
@@ -13,11 +15,13 @@
 
 namespace App\Application\UseCase\Command;
 
+use libphonenumber\PhoneNumber;
+
 /**
  * @author AGBOKOUDJO Franck <franckagbokoudjo301@gmail.com>
  * @package <https://github.com/Agbokoudjo/norldfinance.com>
  */
-final class ContactMessageCommand
+final class ContactFormCommand
 {
     public function __construct(
         public readonly string $name,
@@ -25,6 +29,6 @@ final class ContactMessageCommand
         public readonly string $subject,
         public readonly string $content,
         public readonly string $ip,
-        public readonly mixed $phone=null
+        public readonly PhoneNumber $phone
     ) {}
 }

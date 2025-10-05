@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Domain\LoanRequest;
 
 use libphonenumber\PhoneNumber;
@@ -6,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Domain\SharedModel\CreatedAt;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 #[ORM\Entity]
 #[Vich\Uploadable]
 class LoanRequest 

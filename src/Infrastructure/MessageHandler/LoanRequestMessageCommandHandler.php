@@ -20,7 +20,6 @@ use Vich\UploaderBundle\Handler\UploadHandler;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Messenger\MessageBusInterface;
 use App\Infrastructure\Services\ProcessUploadedFiles;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Domain\LoanRequest\LoanRequestRepositoryInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 use App\Application\UseCase\Command\LoanRequestMessageCommand;
@@ -69,7 +68,7 @@ final class LoanRequestMessageCommandHandler
         $this->uploadHandler->upload($loan_request, 'identitydocumentfile');
         $this->uploadHandler->upload($loan_request, 'identityphotofile1');
         $this->uploadHandler->upload($loan_request, 'identityphotofile2');
-        dd($loan_request);
+        
         $this->em->persist($loan_request);
         $this->em->flush();
         /**
