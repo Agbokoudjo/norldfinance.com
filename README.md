@@ -8,6 +8,8 @@ Bienvenue sur la plateforme **MONETRA FINANCE**, où les idées se transforment 
 Nous avons construit notre plateforme autour de la **simplicité numérique** et de la **transparence**. Oubliez les longs rendez-vous en agence et les piles de documents papier. Grâce à un processus de demande 100% en ligne, les entrepreneurs, les étudiants et les particuliers peuvent soumettre leur dossier en quelques minutes. Derrière cette interface intuitive, une puissante infrastructure d'analyse évalue rapidement la faisabilité de votre demande, garantissant une réponse dans les meilleurs délais. MONETRA FINANCE est le pont entre votre potentiel et sa concrétisation.
 
 -----
+<img width="1347" height="599" alt="home" src="https://github.com/user-attachments/assets/4292dfb2-5fb0-4a1b-a937-cefbc23e5fd1" />
+
 
 ## 💼 Notre Engagement : Financer Trois Piliers de l'Avenir
 
@@ -26,10 +28,14 @@ L'éducation est un investissement fondamental. Nous nous engageons à ce que le
 Chaque individu a des aspirations qui nécessitent un coup de pouce financier. Que ce soit pour le lancement d'un projet personnel qui deviendra votre prochaine source de revenus, la réalisation d'un rêve créatif, ou un besoin de consolidation financière, nos prêts projets sont flexibles et conçus pour s'adapter à la réalité de votre situation. Nous encourageons l'initiative personnelle et offrons le levier nécessaire pour transformer les idées en **actifs tangibles**.
 
 -----
+<img width="1352" height="600" alt="home_val" src="https://github.com/user-attachments/assets/32ffeba3-85ef-4da5-8f66-caa9b7cdb4d8" />
+<img width="1357" height="599" alt="about1" src="https://github.com/user-attachments/assets/bfd996f9-3c57-48ee-b96d-89b94342475c" />
 
-### Balise Markdown pour les Images
+<img width="1359" height="596" alt="about2" src="https://github.com/user-attachments/assets/8c6533d0-ad9e-44ca-962f-14e34468b887" />
 
-Utilisez la structure standard de Markdown :
+<img width="1357" height="596" alt="loan" src="https://github.com/user-attachments/assets/79e7c7c9-49d1-47c0-bcb4-3908124cc7ef" />
+<img width="1342" height="595" alt="services" src="https://github.com/user-attachments/assets/a9476b94-5a7d-4a42-92c5-119b6928ea82" />
+
 
 ```markdown
 ![image de la page d'accueill](public/dest/home.png)
