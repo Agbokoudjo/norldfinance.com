@@ -65,7 +65,7 @@
                     <h3 class="h4 fw-bold mb-4 text-danger-custom">
                     {{ "context_form" |trans([], domain:"LoanRequest", locale:app.request.locale)|raw }}
                     </h3>
-                     {{ form_start(form,{ attr: { 'data-turbo-submits-without-reload':"false",class: 'form-validator', id: form.vars.name, role: 'form'}}) }}
+                     {{ form_start(form,{ attr: { 'data-turbo-submits-without-reload':"false",class: 'form-validate', id: form.vars.name, role: 'form'}}) }}
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
                              {{ form_row(form.lastname) }}
