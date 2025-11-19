@@ -2,3 +2,5 @@ submitButton: Envoi en cours...
 messageBeforeSendData: 
     title: Traitement
     content: Transmission des données en cours. Merci de votre patience. 
+    
+

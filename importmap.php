@@ -32,13 +32,13 @@ return [
         'version' => '5.5.3',
     ],
     'pdfjs-dist' => [
-        'version' => '5.4.149',
+        'version' => '5.4.394',
     ],
     'xlsx' => [
         'version' => '0.18.5',
     ],
     'sweetalert2' => [
-        'version' => '11.23.0',
+        'version' => '11.26.3',
     ],
     'animate.css' => [
         'version' => '4.1.1',
@@ -75,10 +75,7 @@ return [
         'version' => '0.2.4',
     ],
     'libphonenumber-js' => [
-        'version' => '1.12.23',
-    ],
-    '@wlindabla/form_validator' => [
-        'version' => '1.3.7',
+        'version' => '1.12.26',
     ],
     'bootstrap' => [
         'version' => '5.3.8',
@@ -122,5 +119,8 @@ return [
     ],
     'lodash.debounce' => [
         'version' => '4.0.8',
+    ],
+    '@wlindabla/form_validator' => [
+        'version' => '2.3.3',
     ],
 ];

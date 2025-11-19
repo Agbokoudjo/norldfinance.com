@@ -5,11 +5,13 @@ window.jQuery = window.$ = jQuery;
 import {
     Logger, 
     handleErrorsManyForm,
-    FieldValidationFailed, FormValidate,
     addHashToIds,FieldValidationSuccess,
+     FormValidateController,
+    addHashToIds,
+    FieldValidationFailed,
     addErrorMessageFieldDom,
     clearErrorInput,
-    FormFormattingEvent
+   formatterEvent 
 } from "@wlindabla/form_validator";
 import config from "./_config.js"
 import { translation } from "./index.js";
@@ -75,7 +77,7 @@ export class AppModule {
         this.initCounters();
         this.toggleAOSOnElements();
         this.formSubmitHander();
-        //this.formValidator();
+        this.formValidator();
         this.setup_select2();
         this.updateCheckbox();
         this.formFormattingEvent();
@@ -292,70 +294,64 @@ export class AppModule {
         });
     }
     formValidator() {
-        const form_exist = document.querySelector('form.form-validator');
+         const form_exist = document.querySelector('form.form-validate');
         if (form_exist ===null) {
             return;
         }
-        /**
-         * @var {FormValidate}
-         */
-        let formValidate;
-        try{
-            formValidate = new FormValidate('.form-validator');
-        } catch (error) {
-            Logger.error('formValidate:', error);
-            return;
+        
+    const form_validate = new FormValidateController('.form-validate');
+    const __form = form_validate.form;
+
+    const idsBlur = addHashToIds(form_validate.idChildrenUsingEventBlur).join(",");
+    const idsInput = addHashToIds(form_validate.idChildrenUsingEventInput).join(",");
+    const idsChange = addHashToIds(form_validate.idChildrenUsingEventChange).join(",");
+
+    __form.on("blur", `${idsBlur}`, async (event) => {
+        const target = event.target;
+        if ((target instanceof HTMLInputElement ||
+            target instanceof HTMLTextAreaElement)
+           && target.type !== "file") {
+
+            await form_validate.validateChildrenForm(target);
         }
-        const form_current = formValidate.form;
-        const $submitButton = jQuery('button[type="submit"]', form_current);
-        const idsBlur = addHashToIds(formValidate.idChildrenUsingEventBlur).join(",");
-        const idsInput = addHashToIds(formValidate.idChildrenUsingEventInput).join(",");
-        const idsChange = addHashToIds(formValidate.idChildrenUsingEventChange).join(",");
-        form_current.on("blur", `${idsBlur}`, async (event) => {
-            const target = event.target;
-            if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
-                await formValidate.validateChildrenForm(event.target)
-            }
-             Logger.log(event);
-         })
-        form_current.on(FieldValidationFailed, (event) => {
-            event.preventDefault();
-           
-            const data = (event.originalEvent).detail;
-            Logger.error('failled',data);
-            addErrorMessageFieldDom(jQuery(data.targetChildrenForm), data.message)
-            if (data.message.lenght !==0) {
-                $submitButton.prop('disabled', true);
-            }
-        })
-        form_current.on(FieldValidationSuccess, (event) => {
+    });
+
+    __form.on(FieldValidationFailed, (event) => {
+        const data = (event.originalEvent).detail;
+
+        addErrorMessageFieldDom(jQuery(data.targetChildrenForm), data.message,'container-div-error-message');
+    });
+
+    __form.on('input', `${idsInput}`, (event) => {
+        const target = event.target;
+        if ((target instanceof HTMLInputElement ||
+            target instanceof HTMLTextAreaElement)
+             && target.type !== "file") {
+
+            clearErrorInput(jQuery(target));
+        }
+    });
+    __form.on('change', `${idsChange}`, async (event) => {
+         const target = event.target;
+        if (target instanceof HTMLInputElement && target.type === "file") {
+
+            await form_validate.validateChildrenForm(target);
+        }
+    })
+    __form.on('dragenter',`${idsChange}`, (event) => {
+        const target = event.target;
+        if (target instanceof HTMLInputElement && target.type === "file") {
+
+            clearErrorInput(jQuery(target));
+        }
+    });
+    __form.on(FieldValidationSuccess, (event) => {
              event.preventDefault();
             
             const data = (event.originalEvent).detail;
             Logger.log('success validate',data);
             $submitButton.removeAttr('disabled');
         })
-        form_current.on('input', `${idsInput}`, (event) => {
-            const target = event.target;
-            if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
-                if (jQuery(target).val()) {
-                    clearErrorInput(jQuery(target))
-                    formValidate.clearErrorDataChildren(target)
-                }
-            }
-            $submitButton.removeAttr('disabled');
-             Logger.log(target);
-        })
-        form_current.on('change', `${idsChange}`, (event) => {
-        const target = event.target;
-        if (target instanceof HTMLInputElement) {
-          if (target) {
-            clearErrorInput(jQuery(target))
-            formValidate.clearErrorDataChildren(target)
-          }
-        }
-        Logger.log(event);
-      });
     }
 
     formSubmitHander() {
@@ -601,9 +597,9 @@ export class AppModule {
     return '100%';
   }
   formFormattingEvent(){
-        const formFormattingEvent = FormFormattingEvent.getInstance();
-        const lang = jQuery('html', document).attr('lang') ?? "fr";
-        formFormattingEvent.init(document," "," ",{locales:lang})
+    formatterEvent.lastnameToUpperCase(document);
+    formatterEvent.capitalizeUsername(document);
+    formatterEvent.usernameFormatDom(document);
   }
  /**
   * @param {Event} e 
