@@ -7,7 +7,6 @@ import {
     handleErrorsManyForm,
     addHashToIds,FieldValidationSuccess,
      FormValidateController,
-    addHashToIds,
     FieldValidationFailed,
     addErrorMessageFieldDom,
     clearErrorInput,
